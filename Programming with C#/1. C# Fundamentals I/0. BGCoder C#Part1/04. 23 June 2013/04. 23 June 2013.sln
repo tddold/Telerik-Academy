@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Coffee Vending Machine", "01. Coffee Vending Machine\01. Coffee Vending Machine.csproj", "{460DC040-5594-4960-8EE0-90FCA35FD102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Drunken Numbers", "02. Drunken Numbers\02. Drunken Numbers.csproj", "{BAD64DBD-1E84-465E-BE38-BC1DC065062D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Fire", "04. Fire\04. Fire.csproj", "{19B063E4-C6C6-4335-AF46-86630C93BDFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Neuron Mapping", "05. Neuron Mapping\05. Neuron Mapping.csproj", "{AABE3C44-2CC7-451E-BFAB-C1CAA2F12AA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Neuron_Mapping_Bits", "05. Neuron_Mapping_Bits\05. Neuron_Mapping_Bits.csproj", "{0BF2E421-A624-4DA0-B47B-3422851A1EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Bulls and Cows", "03. Bulls and Cows\03. Bulls and Cows.csproj", "{DB843F4E-2A8D-4CDA-99B6-F658AC5D604B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{460DC040-5594-4960-8EE0-90FCA35FD102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460DC040-5594-4960-8EE0-90FCA35FD102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460DC040-5594-4960-8EE0-90FCA35FD102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460DC040-5594-4960-8EE0-90FCA35FD102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAD64DBD-1E84-465E-BE38-BC1DC065062D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAD64DBD-1E84-465E-BE38-BC1DC065062D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAD64DBD-1E84-465E-BE38-BC1DC065062D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAD64DBD-1E84-465E-BE38-BC1DC065062D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B063E4-C6C6-4335-AF46-86630C93BDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B063E4-C6C6-4335-AF46-86630C93BDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B063E4-C6C6-4335-AF46-86630C93BDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B063E4-C6C6-4335-AF46-86630C93BDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AABE3C44-2CC7-451E-BFAB-C1CAA2F12AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABE3C44-2CC7-451E-BFAB-C1CAA2F12AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABE3C44-2CC7-451E-BFAB-C1CAA2F12AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABE3C44-2CC7-451E-BFAB-C1CAA2F12AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF2E421-A624-4DA0-B47B-3422851A1EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF2E421-A624-4DA0-B47B-3422851A1EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF2E421-A624-4DA0-B47B-3422851A1EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF2E421-A624-4DA0-B47B-3422851A1EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB843F4E-2A8D-4CDA-99B6-F658AC5D604B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB843F4E-2A8D-4CDA-99B6-F658AC5D604B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB843F4E-2A8D-4CDA-99B6-F658AC5D604B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB843F4E-2A8D-4CDA-99B6-F658AC5D604B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
