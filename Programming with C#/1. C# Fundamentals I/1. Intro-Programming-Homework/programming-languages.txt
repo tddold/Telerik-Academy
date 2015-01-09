@@ -1,0 +1,61 @@
+C#
+
+	It is a compiled, multi-paradigm and object-oriented language 
+written by Microsoft. It is an open specifications, but rarely seen
+on any non-Windows platform. It is very similar to Java in both
+syntax and nature.
+C# Additional:
+         	Strengths:  Powerful and pretty fast
+		Weaknesses: Only really suitable for Windows
+----------------------------------------------------------------------------
+
+C++
+
+It is a compiled, multi-paradigm and object-oriented language
+written as an update to C in 1979. Despite it's age, C++ is used to
+create a wide array of applications from games to office suites.
+C++ Additional:
+            	Strengths:  Speed
+		Weaknesses: Older & considered clumsy if compared with Java
+----------------------------------------------------------------------------
+
+VisualBasic(VB) 
+
+	Interpreted, multi-paradigm language developed by
+Microsoft Corporation for the Windows Platform. VB is a good language
+for scripting Windows applications that do not need the power and
+the speed of C#.
+VB Additional :
+            	Strengths: None
+		Weaknesses: Only runs in Windows
+----------------------------------------------------------------------------
+
+Java
+
+	It uses a compiler, and is an object-oriented language released in
+1995 by Sun Microsystems. Java is the number one programming
+language today for many reasons.
+Java Additional :
+            	Strengths: WORA (Write once, run anywhere), popularity
+		Weaknesses: Slower than natively compiled languages
+----------------------------------------------------------------------------
+
+JavaScript
+ 
+	Interpreded, multi-paradigm, and is a prototype-based
+scripting language that is dynamic, weakly typed, and has first-class
+functions. Its syntax was influenced by the language C.
+JavaScript Additional: 
+            	Strengths: Only reliable way to do client-side web programming
+		Weaknesses: Only really useful in a web browser
+-----------------------------------------------------------------------------
+
+Php 
+
+	It uses a run-time interpreter, and is a multi-paradigm language
+originally developed in 1996 by Rasmus Lerdorf to create dynamic
+web pages.
+Php Additional:
+            	Strengths: Web programming, good documentation
+		Weaknesses: Inconsistent syntax, too many ways to do the same 
+			    things,a history of bizarre security decisions
