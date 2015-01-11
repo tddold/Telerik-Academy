@@ -17,7 +17,7 @@ using System;
             Console.Write("Company address: ");
             string address = Console.ReadLine();
             Console.Write("Phone number (10 digits): ");
-            string tel = Console.ReadLine();
+            ulong tel = ulong.Parse(Console.ReadLine());
             
             Console.Write("Fax number: ");
 
