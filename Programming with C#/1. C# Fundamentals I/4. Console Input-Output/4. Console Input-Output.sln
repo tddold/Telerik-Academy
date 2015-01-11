@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Sum Of 3 Numbers", "01. Sum Of 3 Numbers\01. Sum Of 3 Numbers.csproj", "{572276C6-2F60-47E3-A7E5-083985150403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Print Company Information", "2. Print Company Information\02. Print Company Information.csproj", "{C0E2B6A3-D995-4793-AB57-523F073D62C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{572276C6-2F60-47E3-A7E5-083985150403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{572276C6-2F60-47E3-A7E5-083985150403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{572276C6-2F60-47E3-A7E5-083985150403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{572276C6-2F60-47E3-A7E5-083985150403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E2B6A3-D995-4793-AB57-523F073D62C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E2B6A3-D995-4793-AB57-523F073D62C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E2B6A3-D995-4793-AB57-523F073D62C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E2B6A3-D995-4793-AB57-523F073D62C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
