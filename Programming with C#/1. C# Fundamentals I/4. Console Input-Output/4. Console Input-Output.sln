@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Sum of n Numbers", "09.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Fibonacci Numbers", "10. Fibonacci Numbers\10. Fibonacci Numbers.csproj", "{0D6DAD64-69B5-493A-B2B7-3FEB4C58EC07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Numbers In Interval Divid By", "11. Numbers In Interval Divid By\11. Numbers In Interval Divid By.csproj", "{AEE6093B-5E9A-4B6D-8D13-E2436DD97915}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{0D6DAD64-69B5-493A-B2B7-3FEB4C58EC07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D6DAD64-69B5-493A-B2B7-3FEB4C58EC07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D6DAD64-69B5-493A-B2B7-3FEB4C58EC07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE6093B-5E9A-4B6D-8D13-E2436DD97915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE6093B-5E9A-4B6D-8D13-E2436DD97915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE6093B-5E9A-4B6D-8D13-E2436DD97915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE6093B-5E9A-4B6D-8D13-E2436DD97915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
