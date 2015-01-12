@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Numbers from 1 to N", "01. Numbers from 1 to N\01. Numbers from 1 to N.csproj", "{E2D4BF81-8F5C-4E48-90DF-067FAC8DC00C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Numbers Not Divisible by 3 and 7", "02. Numbers Not Divisible by 3 and 7\02. Numbers Not Divisible by 3 and 7.csproj", "{870E3881-3FA0-4B03-93C2-A675D250623C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. MinMaxSumAverage of N Numbers", "03. MinMaxSumAverage of N Numbers\03. MinMaxSumAverage of N Numbers.csproj", "{498A7B91-23F9-49F5-8755-C3CD64CDF5E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Print a Deck of 52 Cards", "04. Print a Deck of 52 Cards\04. Print a Deck of 52 Cards.csproj", "{663C0194-CD32-418C-82AA-FD0BD296D87A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2D4BF81-8F5C-4E48-90DF-067FAC8DC00C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D4BF81-8F5C-4E48-90DF-067FAC8DC00C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D4BF81-8F5C-4E48-90DF-067FAC8DC00C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D4BF81-8F5C-4E48-90DF-067FAC8DC00C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870E3881-3FA0-4B03-93C2-A675D250623C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870E3881-3FA0-4B03-93C2-A675D250623C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870E3881-3FA0-4B03-93C2-A675D250623C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870E3881-3FA0-4B03-93C2-A675D250623C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{498A7B91-23F9-49F5-8755-C3CD64CDF5E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{498A7B91-23F9-49F5-8755-C3CD64CDF5E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{498A7B91-23F9-49F5-8755-C3CD64CDF5E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{498A7B91-23F9-49F5-8755-C3CD64CDF5E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{663C0194-CD32-418C-82AA-FD0BD296D87A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{663C0194-CD32-418C-82AA-FD0BD296D87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{663C0194-CD32-418C-82AA-FD0BD296D87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{663C0194-CD32-418C-82AA-FD0BD296D87A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
