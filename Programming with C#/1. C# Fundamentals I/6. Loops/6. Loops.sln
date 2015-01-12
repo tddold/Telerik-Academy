@@ -11,6 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. MinMaxSumAverage of N N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Print a Deck of 52 Cards", "04. Print a Deck of 52 Cards\04. Print a Deck of 52 Cards.csproj", "{663C0194-CD32-418C-82AA-FD0BD296D87A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Calculate Sum Of Two Numbers", "05. Calculate Sum Of Two Numbers\05. Calculate Sum Of Two Numbers.csproj", "{82FDCA30-F17B-40E0-827F-9ADC74D14747}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Calculate N! divide K!", "06. Calculate N! divide K!\06. Calculate N! divide K!.csproj", "{F818276E-1598-4AFB-9BCF-A8502F7B9319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Calculate N! Divide (K! (N-K)!)", "07. Calculate N! Divide (K! (N-K)!)\07. Calculate N! Divide (K! (N-K)!).csproj", "{CBF58660-53C5-4549-A9E9-2C5FD77A155C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Catalan Numbers", "08. Catalan Numbers\08. Catalan Numbers.csproj", "{010B3050-04F7-41CC-B0DA-05CE7CEA21EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +41,22 @@ Global
 		{663C0194-CD32-418C-82AA-FD0BD296D87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{663C0194-CD32-418C-82AA-FD0BD296D87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{663C0194-CD32-418C-82AA-FD0BD296D87A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82FDCA30-F17B-40E0-827F-9ADC74D14747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82FDCA30-F17B-40E0-827F-9ADC74D14747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82FDCA30-F17B-40E0-827F-9ADC74D14747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82FDCA30-F17B-40E0-827F-9ADC74D14747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F818276E-1598-4AFB-9BCF-A8502F7B9319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F818276E-1598-4AFB-9BCF-A8502F7B9319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F818276E-1598-4AFB-9BCF-A8502F7B9319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F818276E-1598-4AFB-9BCF-A8502F7B9319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF58660-53C5-4549-A9E9-2C5FD77A155C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF58660-53C5-4549-A9E9-2C5FD77A155C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF58660-53C5-4549-A9E9-2C5FD77A155C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF58660-53C5-4549-A9E9-2C5FD77A155C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{010B3050-04F7-41CC-B0DA-05CE7CEA21EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{010B3050-04F7-41CC-B0DA-05CE7CEA21EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{010B3050-04F7-41CC-B0DA-05CE7CEA21EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{010B3050-04F7-41CC-B0DA-05CE7CEA21EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
