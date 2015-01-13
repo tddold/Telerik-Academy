@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16. Decimal to Hexadecimal 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17. Calculate GCD", "17. Calculate GCD\17. Calculate GCD.csproj", "{3A1580F1-28BE-4473-9C57-42974171BE39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18. Trailing Zeroes in N!", "18. Trailing Zeroes in N!\18. Trailing Zeroes in N!.csproj", "{507B6BC1-2486-4BBB-B966-FCDAD3DF5B81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19. Spiral Matrix", "19. Spiral Matrix\19. Spiral Matrix.csproj", "{BD8C865C-6DA1-4AC2-86E7-63B8C6967CD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{3A1580F1-28BE-4473-9C57-42974171BE39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A1580F1-28BE-4473-9C57-42974171BE39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A1580F1-28BE-4473-9C57-42974171BE39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507B6BC1-2486-4BBB-B966-FCDAD3DF5B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507B6BC1-2486-4BBB-B966-FCDAD3DF5B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507B6BC1-2486-4BBB-B966-FCDAD3DF5B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507B6BC1-2486-4BBB-B966-FCDAD3DF5B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD8C865C-6DA1-4AC2-86E7-63B8C6967CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD8C865C-6DA1-4AC2-86E7-63B8C6967CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD8C865C-6DA1-4AC2-86E7-63B8C6967CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD8C865C-6DA1-4AC2-86E7-63B8C6967CD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
