@@ -13,7 +13,7 @@ class CatalanNumbers
 
         Console.WriteLine("Enter number:");
         Console.WriteLine(new string('-', 40));
-        Console.WriteLine("n --> ");
+        Console.Write("n --> ");
         int n = int.Parse(Console.ReadLine());
 
         BigInteger nFacturelN = 1;
