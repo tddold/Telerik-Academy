@@ -249,6 +249,20 @@ internal class Smetalnik
 
     private static void PrintBitNum(long num, int width)
     {
-        Console.WriteLine(Convert.ToString(num, 2).PadLeft(width, '0') + " -> " + num);
+        string str = Convert.ToString(num, 2).PadLeft(width, '0');
+        for (int i = 0; i < str.Length; i++)
+        {
+            if (str[i] == '0')
+            {
+                Console.Write(".");
+            }
+            else
+            {
+                Console.Write("*");
+            }
+            // Console.WriteLine();
+        }
+
+        Console.WriteLine(" {0}", Convert.ToString(num, 2).PadLeft(width, '0') + " -> " + num);
     }
 }
