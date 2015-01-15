@@ -12,7 +12,6 @@ class NaBabaMiSmetalnika
         int[,] matrix = new int[8, n];
 
         int[] testNumber = new int[n];
-        ;
 
         for (int row0 = 0; row0 < matrix.GetLength(0); row0++)
         {
@@ -53,7 +52,7 @@ class NaBabaMiSmetalnika
                 }
 
                 col++;
-                col = n -1- col;  // campare position
+                col = n - col;  // campare position
                 pos = 0;
                 for (int i = col; i< n; i++)
                 {
@@ -97,11 +96,11 @@ class NaBabaMiSmetalnika
                 col++;
                 col = n - col;  // campare position
                 pos = n-1;
-                for (int i = 0; i <= col; i++)
+                for (int i = col; i >=0; i--)
                 {
-                    if (matrix[row, i] == 1 && pos > i)
+                    if (matrix[row, n-1-i] == 1 && pos > n-1-i)
                     {
-                        matrix[row, i] = 0;
+                        matrix[row, n-1-i] = 0;
                         matrix[row, pos] =1;
                         pos--;
                         while ( matrix[row, pos] == 1)
