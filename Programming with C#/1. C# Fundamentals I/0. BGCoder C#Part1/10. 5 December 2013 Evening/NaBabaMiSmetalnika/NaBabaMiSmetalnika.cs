@@ -5,17 +5,14 @@ class NaBabaMiSmetalnika
     static void Main()
     {
         Console.BufferHeight = 7000;
-
+        // input
         int n = int.Parse(Console.ReadLine());
 
-
-        int[,] matrix = new int[8, n];
-
-        int[] testNumber = new int[n];
+        long[,] matrix = new long[8, n];
 
         for (int row0 = 0; row0 < matrix.GetLength(0); row0++)
         {
-            int number = int.Parse(Console.ReadLine());
+            long number = long.Parse(Console.ReadLine());
 
             for (int col0 = 0; col0 < matrix.GetLength(1); col0++)
             {
@@ -24,9 +21,9 @@ class NaBabaMiSmetalnika
         }
 
         //print
-        PrintMatrix(matrix, n);
+        // PrintMatrix(matrix, n);
 
-        //solution
+        // solution
         string comand = String.Empty;
         int row = 0;
         int col = 0;
@@ -46,37 +43,38 @@ class NaBabaMiSmetalnika
                     col = 0;
                 }
 
-                if (col > n)
+                if (col >= n)
                 {
                     col = n - 1;
                 }
-
-                col++;
-                col = n - col;  // campare position
+                
                 pos = 0;
-                for (int i = col; i< n; i++)
+                for (int i = col; i >= 0; i--)
                 {
-                    if (matrix[row, i] == 1)
+                    if (pos >= n)
                     {
-                        if (matrix[row, i] == 1)
+                        break;
+                    }
+                    else
+                    {
+                        while (matrix[row, pos] == 1)
+                        {
+                            pos++;
+                        }
+
+                        if (matrix[row, i] == 1 && pos < i)
                         {
                             matrix[row, i] = 0;
                             matrix[row, pos] = 1;
                             pos++;
-                            while (matrix[row, pos] == 1)
-                            {
-                                pos++;
-                            }
-                        }    
-                    }
+
+                        }
+                    }                    
                 }
 
-                //print
-                PrintMatrix(matrix, n);
-
+                // print
+                // PrintMatrix(matrix, n);
             }
-
-            
 
             if (comand == "right")
             {
@@ -90,68 +88,74 @@ class NaBabaMiSmetalnika
 
                 if (col > n)
                 {
-                    col = n-1;
+                    col = n - 1;
                 }
-
-                col++;
-                col = n - col;  // campare position
-                pos = n-1;
-                for (int i = col; i >=0; i--)
+                
+                pos = n - 1;
+                for (int i = col; i <= n - 1; i++)
                 {
-                    if (matrix[row, n-1-i] == 1 && pos > n-1-i)
+                    if (pos >= n)
                     {
-                        matrix[row, n-1-i] = 0;
-                        matrix[row, pos] =1;
-                        pos--;
-                        while ( matrix[row, pos] == 1)
+                        break;
+                    }
+                    else
+                    {
+                        while (matrix[row, pos] == 1)
                         {
                             pos--;
                         }
-                    }
-                        
-                }
 
-                //print
-                PrintMatrix(matrix, n);
-
-            }
-
-            
-
-            if (comand == "reset")
-            {
-                for (int m = 0; m < 8; m++)
-                {
-                    for (int i = 0; i < n; i++)
-                    {
-                        if (matrix[m, i] == 1) // && i < n)
+                        if (matrix[row, i] == 1 && pos > i)
                         {
-                            for (int j = n - 1; j >= 0; j--)
-                            {
-                                if (matrix[m, j] == 0 && matrix[m, i] == 1)
-                                {
-                                    matrix[m, j] = 1;
-                                    matrix[m, i] = 0;
-                                    i++;
-                                    if (i > 31)
-                                    {
-                                        break;
-                                    }
-                                }
-                            }
+                            matrix[row, i] = 0;
+                            matrix[row, pos] = 1;
+                            pos--;
                         }
                     }
                 }
 
-                //print
-                PrintMatrix(matrix, n);
+                // print
+                // PrintMatrix(matrix, n);
+            }
+
+            if (comand == "reset")
+            {   
+                row = 0;
+                while (row <= 7)
+                {
+                    pos = 0;
+                    for (int i = n - 1; i >= 0; i--)
+                    {
+                        if (pos >= n)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            while (matrix[row, pos] == 1)
+                            {
+                                pos++;
+                            }
+
+                            if (matrix[row, i] == 1 && pos < i)
+                            {
+                                matrix[row, i] = 0;
+                                matrix[row, pos] = 1;
+                                pos++;
+                            }
+                        }
+                    }
+
+                    row++;  
+                }
+
+                // print
+                // PrintMatrix(matrix, n);
             }
         }
 
-        
-
         // result
-        int result = CalcRowNumber(n, matrix);
+        long result = CalcRowNumber(n, matrix);
 
         int count = 0;
         for (int col3 = 0; col3 < matrix.GetLength(1); col3++)
@@ -174,23 +178,23 @@ class NaBabaMiSmetalnika
         Console.WriteLine(result * count);
     }
 
-    private static int CalcRowNumber(int n, int[,] matrix)
+    private static long CalcRowNumber(int n, long[,] matrix)
     {
-        int result = 0;
+        long result = 0;
         for (int row2 = 0; row2 < matrix.GetLength(0); row2++)
         {
             for (int col2 = n - 1; col2 >= 0; col2--)
             {
-                result += matrix[row2, col2] * (int) Math.Pow(2, n - 1 - col2);
+                result += matrix[row2, col2] * (long) Math.Pow(2, n - 1 - col2);
             }
 
-            // Console.WriteLine();
-            Console.WriteLine(result);
+            //Console.WriteLine();
+            // Console.WriteLine(result);
         }
         return result;
     }
 
-    private static void PrintMatrix(int[,] matrix, int n)
+    private static void PrintMatrix(long[,] matrix, int n)
     {
         int row2 = 0;
         for (int row1 = 0; row1 < matrix.GetLength(0); row1++)
@@ -208,11 +212,11 @@ class NaBabaMiSmetalnika
             }
 
             Console.Write(" ");
-            int result = 0;          
+            long result = 0;
             for (int col2 = n - 1; col2 >= 0; col2--)
             {
                 Console.Write("{0}", matrix[row2, col2]);
-                result += matrix[row2, col2] * (int) Math.Pow(2, n - 1 - col2);
+                result += matrix[row2, col2] * (long) Math.Pow(2, n - 1 - col2);
             }
 
             row2++;
