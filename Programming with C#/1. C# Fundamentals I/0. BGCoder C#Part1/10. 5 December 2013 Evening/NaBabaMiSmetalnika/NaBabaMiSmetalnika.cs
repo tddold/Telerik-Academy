@@ -4,7 +4,7 @@ class NaBabaMiSmetalnika
 {
     static void Main()
     {
-        Console.BufferHeight = 7000;
+        // Console.BufferHeight = 7000;
         // input
         int n = int.Parse(Console.ReadLine());
 
