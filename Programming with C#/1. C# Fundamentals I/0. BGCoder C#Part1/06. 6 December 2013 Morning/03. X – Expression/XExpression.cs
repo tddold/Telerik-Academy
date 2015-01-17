@@ -5,76 +5,68 @@ class XExpression
     static void Main()
     {
         // input
-
         string expression = Console.ReadLine();
 
-        long first = 0;
-        int endBrackets = 0;
-        string subExpression = String.Empty;
+        double first;
+        int endBracket = 0;
 
-        int count = 0;
-        while (count < expression.Length)
+        if (expression[0] == '(')
         {
-            if (expression[count] == '=')
+            endBracket = expression.IndexOf(')', 0);
+            string subExpresion = expression.Substring(1, endBracket - 1);
+            first = CalcSubExpression(subExpresion);
+        }
+        else
+        {
+            first = expression[0] - 48;
+        }
+
+        double second;
+        int newIndex = 0;
+        for (int i = endBracket + 1; i < expression.Length; i++)
+        {
+            newIndex = i + 1;
+            if (expression[i] == '=')
             {
                 break;
             }
 
-            if (expression[count] == '-' || expression[count] == '+' ||
-                expression[count] == '/' || expression[count] == '*')
+            if (expression[newIndex] == '(')
             {
-                count++;
-            }
-
-            if (expression[count] == '(')
-            {
-                endBrackets = expression.IndexOf(')', count);
-                count++;
-                subExpression = expression.Substring(count, (endBrackets - count));
-                first = GetOperation(count, first, expression, subExpression);
-                count = endBrackets + 1;
+                endBracket = expression.IndexOf(')', i);
+                string subExpresion = expression.Substring(i + 2, endBracket - i - 2);
+                second = CalcSubExpression(subExpresion);
+                newIndex = endBracket;
             }
             else
             {
-                int subCount = count;
-                while (subCount < expression.Length)
-                {
-                    if (expression[subCount] == '(')
-                    {
-                        endBrackets = expression.IndexOf('(', count);
-                        subExpression = expression.Substring(count, (endBrackets - 1));
-                        first = GetOperation(count, first, expression, subExpression);
-                        count = endBrackets;
-                    }
-
-                    subCount++;
-                }
-
-                endBrackets = expression.IndexOf('=', count);
-                subExpression = expression.Substring(count, (endBrackets - 1));
-                first = GetOperation(count, first, expression, subExpression);
-                count = endBrackets;
-               
+                second = expression[newIndex] - 48;
             }
 
+            first = GetOperatorBetweenFirstAndSecondAndCalc(expression, first, second, i);
+
+            i = newIndex;
         }
+
+        //print
+        Console.WriteLine("{0:0.00}", first);
     }
 
-    private static long GetOperation(int count, long first, string expression, string subExpression)
+    private static double GetOperatorBetweenFirstAndSecondAndCalc(string expression, double first, double second, int i)
     {
-        switch (expression[count-2])
+        switch (expression[i])
         {
-            case '-':
-                first -= CalcSubExpression(subExpression);
-                break;
             case '+':
-                first += CalcSubExpression(subExpression);
+                first += second;
+                break;
+            case '-':
+                first -= second;
                 break;
             case '*':
-                first *= CalcSubExpression(subExpression);
+                first *= second;
                 break;
             case '/':
-                first /= CalcSubExpression(subExpression);
+                first /= second;
                 break;
             default:
                 throw new ArgumentException();
@@ -84,31 +76,28 @@ class XExpression
         return first;
     }
 
-    
-
-    private static long CalcSubExpression(string subExpression)
+    private static double CalcSubExpression(string subExpresion)
     {
-        long result = subExpression[0] - 48;
-
-        for (int i = 1; i < subExpression.Length-1; i++)
+        double first = subExpresion[0] - 48;
+        for (int i = 1; i < subExpresion.Length; i++)
         {
-            switch (subExpression[i])
+            switch (subExpresion[i])
             {
-                case '-':
-                    i++;
-                    result -= subExpression[i] - 48;
-                    break;
                 case '+':
                     i++;
-                    result += subExpression[i] - 48;
+                    first += subExpresion[i] - 48;
                     break;
-                case '*':
+                case '-':
                     i++;
-                    result *= subExpression[i] - 48;
+                    first -= subExpresion[i] - 48;
                     break;
                 case '/':
                     i++;
-                    result /= subExpression[i] - 48;
+                    first /= subExpresion[i] - 48;
+                    break;
+                case '*':
+                    i++;
+                    first *= subExpresion[i] - 48;
                     break;
                 default:
                     throw new ArgumentException();
@@ -116,6 +105,6 @@ class XExpression
             }
         }
 
-        return result;
+        return first;
     }
 }

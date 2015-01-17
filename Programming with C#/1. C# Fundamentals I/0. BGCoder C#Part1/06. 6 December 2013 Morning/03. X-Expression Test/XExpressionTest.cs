@@ -95,7 +95,7 @@ namespace _03.X_Expression_Test
                 i = newIndex;
             }
 
-            Console.WriteLine("{0:0.000}", first);
+            Console.WriteLine("{0:0.00}", first);
         }
     }
 }
