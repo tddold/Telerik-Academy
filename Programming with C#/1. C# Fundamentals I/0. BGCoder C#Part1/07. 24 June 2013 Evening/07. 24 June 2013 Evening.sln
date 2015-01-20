@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Card Wars", "03. Card W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Bittris Author Sol", "05. Bittris Author Sol\05. Bittris Author Sol.csproj", "{73325606-4075-414C-BBF0-286B378F6196}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Garden", "01. Garden\01. Garden.csproj", "{B9B33867-393F-4CB5-A263-52CF65F08D5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.TheSecretOfNumbers", "02.TheSecretOfNumbers\02.TheSecretOfNumbers.csproj", "{866B51AB-86FD-4114-BBC4-B141266A9878}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{73325606-4075-414C-BBF0-286B378F6196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73325606-4075-414C-BBF0-286B378F6196}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73325606-4075-414C-BBF0-286B378F6196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9B33867-393F-4CB5-A263-52CF65F08D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B33867-393F-4CB5-A263-52CF65F08D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B33867-393F-4CB5-A263-52CF65F08D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B33867-393F-4CB5-A263-52CF65F08D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866B51AB-86FD-4114-BBC4-B141266A9878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866B51AB-86FD-4114-BBC4-B141266A9878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866B51AB-86FD-4114-BBC4-B141266A9878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866B51AB-86FD-4114-BBC4-B141266A9878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
