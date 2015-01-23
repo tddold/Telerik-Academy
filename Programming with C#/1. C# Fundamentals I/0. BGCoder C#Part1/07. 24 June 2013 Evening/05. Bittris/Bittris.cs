@@ -11,9 +11,10 @@ class Bittris
         {
             Console.SetIn(new StreamReader("input.txt"));
         }
+        // Console.WriteLine();
 
         // input
-        
+
         int totalNumberOfComands = int.Parse(Console.ReadLine());
 
         const int columnLenght = 8;
@@ -42,6 +43,8 @@ class Bittris
 
             }
 
+            Console.WriteLine();
+            Console.WriteLine("Print input number {0}", inputNumber);
             PrintMatrix(matrix);
 
 
@@ -67,16 +70,39 @@ class Bittris
                 if (duration == "D" && currentRow + 1 <= 3)
                 {
                     // move down
+
+                    // check will we be able to move down
                     isCheckDuration = MoveDown(matrix, currentRow, columnLenght, isCheckDuration);
                     if (isCheckDuration && currentRow == 0)
                     {
+                        int checkBits = 0;
+                        for (int i = 0; i < 2; i++)
+                        {
+                            for (int j = 0; j < columnLenght; j++)
+                            {
+                                if (matrix[i, j] == 1)
+                                {
+                                    checkBits++;
+                                }
+                            }
+                        }
+
+                        if (checkBits <= columnLenght)
+                        {
+                            isCheckDuration = false;
+                            numberComands--;
+                            Console.WriteLine("Duration {0}. Can move left/rigt an down", duration);
+                            continue;
+                        }
+
                         totalNumberOfComands = 0;
                         break;
                     }
-                    else if (numberComands > 1 && isCheckDuration)
+                    else if (numberComands >= 1 && isCheckDuration)
                     {
                         isCheckDuration = false;
                         numberComands--;
+                        Console.WriteLine("Duration {0}. Don't move down", duration);
                         // currentRow--;
                         continue;
                     }
@@ -99,10 +125,50 @@ class Bittris
                         currentRow++;
                     }
 
+                    Console.WriteLine();
+                    Console.WriteLine("Down");
                     PrintMatrix(matrix);
                 }
                 else if (duration == "R")
                 {
+                    // check after the shift to the right will we be able to move down
+                    isCheckDuration = MoveDown(matrix, currentRow, columnLenght, isCheckDuration);
+                    if (isCheckDuration && currentRow == 0)
+                    {
+                        // check after the shift to the right will we be able to move down
+                        int checkBits = 0;
+                        for (int i = 0; i < 2; i++)
+                        {
+                            for (int j = 0; j < columnLenght; j++)
+                            {
+                                if (matrix[i, j] == 1)
+                                {
+                                    checkBits++;
+                                }
+                            }
+                        }
+
+                        if (checkBits <= columnLenght)
+                        {
+                            isCheckDuration = false;
+                            numberComands--;
+                            Console.WriteLine("Duration {0}. Can move left/rigt an down", duration);
+                        }
+                        else
+                        {
+                            totalNumberOfComands = 0;
+                            break;
+                        }
+                    }
+                    else if (numberComands >= 1 && isCheckDuration)
+                    {
+                        isCheckDuration = false;
+                        numberComands--;
+                        Console.WriteLine("Duration {0}. Don't move down", duration);
+                        // currentRow--;
+                        continue;
+                    }
+
                     for (int col = 1; col < columnLenght; col++)
                     {
                         if (matrix[currentRow, col - 1] >= 0 && matrix[currentRow, col] == 1)
@@ -116,10 +182,19 @@ class Bittris
                         }
                     }
 
+                    Console.WriteLine();
+                    Console.WriteLine("Right");
                     PrintMatrix(matrix);
+                    
+
+                    // check bits in line for bonus                   
                     rowBits = 0;
                     rowBits = GetBitsForBonus(matrix, currentRow, rowBits);
                     isCheckDuration = MoveDown(matrix, currentRow, columnLenght, isCheckDuration);
+
+                    // check full line is bits
+                    numberComands = MoveDownAftreEraseRow(columnLenght, numberComands, matrix, currentRow, bonusPoint, isCheckDuration);
+
                     bonusPoint = GetBonusPoint(matrix, bonusPoint, inputNumber, currentRow, rowBits);
                     if (isCheckDuration)
                     {
@@ -129,8 +204,10 @@ class Bittris
                     {
                         currentRow++;
                     }
-                    
+
+                    Console.WriteLine("Print after move R <--");
                     Console.WriteLine();
+                    Console.WriteLine("Next down after move");
                     PrintMatrix(matrix);
                     if (numberComands > 1)
                     {
@@ -140,6 +217,42 @@ class Bittris
                 }
                 else if (duration == "L")
                 {
+                    // check after the shift to the лleft will we be able to move down
+                    isCheckDuration = MoveDown(matrix, currentRow, columnLenght, isCheckDuration);
+                    if (isCheckDuration && currentRow == 0)
+                    {
+                        int checkBits = 0;
+                        for (int i = 0; i < 2; i++)
+                        {
+                            for (int j = 0; j < columnLenght; j++)
+                            {
+                                if (matrix[i, j] == 1)
+                                {
+                                    checkBits++;
+                                }
+                            }
+                        }
+
+                        if (checkBits <= columnLenght)
+                        {
+                            isCheckDuration = false;
+                            numberComands--;
+                            Console.WriteLine("Duration {0}. Can move left/rigt an down", duration);
+                            continue;
+                        }
+
+                        totalNumberOfComands = 0;
+                        break;
+                    }
+                    else if (numberComands >= 1 && isCheckDuration)
+                    {
+                        isCheckDuration = false;
+                        numberComands--;
+                        Console.WriteLine("Duration {0}. Don't move down", duration);
+                        // currentRow--;
+                        continue;
+                    }
+
                     for (int col = 7; col >= 0; col--)
                     {
                         if (matrix[currentRow, col + 1] < columnLenght && matrix[currentRow, col] == 1)
@@ -153,6 +266,9 @@ class Bittris
                         }
                     }
 
+                    Console.WriteLine();
+                    Console.WriteLine("Left");
+                    PrintMatrix(matrix);
                     rowBits = 0;
                     rowBits = GetBitsForBonus(matrix, currentRow, rowBits);
                     isCheckDuration = MoveDown(matrix, currentRow, columnLenght, isCheckDuration);
@@ -167,6 +283,9 @@ class Bittris
                         currentRow++;
                     }
 
+                    Console.WriteLine("Print after move L -->");
+                    Console.WriteLine();
+                    Console.WriteLine("Next down after move");
                     PrintMatrix(matrix);
                     if (numberComands > 1)
                     {
@@ -222,6 +341,8 @@ class Bittris
         tmpResult += resultAfterBonus;
 
         // print matrix
+        Console.WriteLine();
+        Console.WriteLine("Finale print");
         PrintMatrix(matrix);
         Console.WriteLine(tmpResult);
     }
@@ -363,7 +484,7 @@ class Bittris
     {
         for (int row = 0; row < matrix.GetLength(0); row++)
         {
-            for (int col = 0; col < matrix.GetLength(1); col++)
+            for (int col = 0; col < 8; col++)
             {
                 Console.Write(matrix[row, col]);
             }
