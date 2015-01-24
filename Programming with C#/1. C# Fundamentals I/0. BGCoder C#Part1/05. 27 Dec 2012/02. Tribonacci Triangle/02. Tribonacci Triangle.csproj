@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{152C01B8-5D65-4107-B520-893F2CC7EF54}</ProjectGuid>
+    <ProjectGuid>{BA7F4008-15AD-4BC2-BD2A-C868341EBC8B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sheets</RootNamespace>
-    <AssemblyName>Sheets</AssemblyName>
+    <RootNamespace>_02.Tribonacci_Triangle</RootNamespace>
+    <AssemblyName>_02.Tribonacci_Triangle</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sheets.cs" />
+    <Compile Include="TribonacciTriangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Poker", "Poker\03. Poke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Poker01", "Poker01\03. Poker01.csproj", "{49B50C0D-184D-4148-AA5B-D902A2B7783B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Angry Bits", "05. Angry Bits\05. Angry Bits.csproj", "{2D3C2721-3FBB-4BA9-92B9-0244F2D849C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{49B50C0D-184D-4148-AA5B-D902A2B7783B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49B50C0D-184D-4148-AA5B-D902A2B7783B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49B50C0D-184D-4148-AA5B-D902A2B7783B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D3C2721-3FBB-4BA9-92B9-0244F2D849C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3C2721-3FBB-4BA9-92B9-0244F2D849C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3C2721-3FBB-4BA9-92B9-0244F2D849C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3C2721-3FBB-4BA9-92B9-0244F2D849C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
