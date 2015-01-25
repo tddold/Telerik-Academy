@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Fighter Attack", "01. F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Lines", "05. Lines\05. Lines.csproj", "{AB0F18AC-F718-45EC-8905-A664F44B4445}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Astrological Digits II", "02. Astrological Digits II\02. Astrological Digits II.csproj", "{321B50F7-FC50-4685-B939-9B935A016F46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{AB0F18AC-F718-45EC-8905-A664F44B4445}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB0F18AC-F718-45EC-8905-A664F44B4445}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB0F18AC-F718-45EC-8905-A664F44B4445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{321B50F7-FC50-4685-B939-9B935A016F46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321B50F7-FC50-4685-B939-9B935A016F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321B50F7-FC50-4685-B939-9B935A016F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{321B50F7-FC50-4685-B939-9B935A016F46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
