@@ -16,7 +16,7 @@ class FourDigitNumber
 
         Console.Write("Enter fout-digit number: ");
         int number = int.Parse(Console.ReadLine());
-
+         
         while (number < 1000 || number > 9999)
         {
             Console.Write("Oops! Enter fout-digit number: ");
