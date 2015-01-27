@@ -7,13 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Telerik Logo", "04. Tel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Sevenland Numbers", "01. Sevenland Numbers\01. Sevenland Numbers.csproj", "{27E6F5C3-A09F-4EC4-9B73-666EEDE412F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Bit Ball", "5. Bit Ball\05. Bit Ball.csproj", "{63F1DD48-8E0E-42C8-A1BD-16748F403193}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Telerik Logo Matrix", "04 Telerik Logo Matrix\04 Telerik Logo Matrix.csproj", "{8117677C-2E3C-49CB-8937-E0695ACFDF7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Telerik Logo Matrix Primer", "04. Telerik Logo Matrix Primer\04. Telerik Logo Matrix Primer.csproj", "{151EE8EE-C149-45DC-9274-DF0F2638E112}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Excel Columns", "ExcelColumns\03. Excel Columns.csproj", "{9E9EB851-B198-472F-AA99-A2C82A35EFA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Excel Columns New", "03. Excel Columns New\03. Excel Columns New.csproj", "{C27C23AB-AB28-4C63-8457-DD0245CCEB73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Bit Ball New", "05. Bit Ball New\05. Bit Ball New.csproj", "{3798D969-237D-4FEA-8C77-399AC5971479}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. A-nacci", "02. A-nacci\02. A-nacci.csproj", "{4F756654-9DE4-4783-893A-59C17B8C4878}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +31,6 @@ Global
 		{27E6F5C3-A09F-4EC4-9B73-666EEDE412F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27E6F5C3-A09F-4EC4-9B73-666EEDE412F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27E6F5C3-A09F-4EC4-9B73-666EEDE412F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63F1DD48-8E0E-42C8-A1BD-16748F403193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63F1DD48-8E0E-42C8-A1BD-16748F403193}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63F1DD48-8E0E-42C8-A1BD-16748F403193}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63F1DD48-8E0E-42C8-A1BD-16748F403193}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8117677C-2E3C-49CB-8937-E0695ACFDF7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8117677C-2E3C-49CB-8937-E0695ACFDF7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8117677C-2E3C-49CB-8937-E0695ACFDF7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,10 +39,18 @@ Global
 		{151EE8EE-C149-45DC-9274-DF0F2638E112}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{151EE8EE-C149-45DC-9274-DF0F2638E112}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{151EE8EE-C149-45DC-9274-DF0F2638E112}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E9EB851-B198-472F-AA99-A2C82A35EFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E9EB851-B198-472F-AA99-A2C82A35EFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E9EB851-B198-472F-AA99-A2C82A35EFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E9EB851-B198-472F-AA99-A2C82A35EFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C27C23AB-AB28-4C63-8457-DD0245CCEB73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C27C23AB-AB28-4C63-8457-DD0245CCEB73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C27C23AB-AB28-4C63-8457-DD0245CCEB73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C27C23AB-AB28-4C63-8457-DD0245CCEB73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3798D969-237D-4FEA-8C77-399AC5971479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3798D969-237D-4FEA-8C77-399AC5971479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3798D969-237D-4FEA-8C77-399AC5971479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3798D969-237D-4FEA-8C77-399AC5971479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F756654-9DE4-4783-893A-59C17B8C4878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F756654-9DE4-4783-893A-59C17B8C4878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F756654-9DE4-4783-893A-59C17B8C4878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F756654-9DE4-4783-893A-59C17B8C4878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
