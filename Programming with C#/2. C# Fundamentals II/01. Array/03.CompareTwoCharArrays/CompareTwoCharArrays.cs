@@ -7,10 +7,10 @@ class CompareTwoCharArrays
     static void Main()
     {
         //input
-        Console.Write("Lenht first array:");
+        Console.Write("Lenght first array:");
         int n1 = int.Parse(Console.ReadLine());
 
-        Console.Write("Lenht second array:");
+        Console.Write("Lenght second array:");
         int n2 = int.Parse(Console.ReadLine());
 
         int compareLenght;
@@ -29,7 +29,7 @@ class CompareTwoCharArrays
             secondArray[i] = char.Parse(Console.ReadLine());
         }
 
-        //chec elements of Arrays
+        //check elements of Arrays
         Console.Write("First array :");
         foreach (var item in firstArray)
         {
