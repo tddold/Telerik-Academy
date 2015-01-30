@@ -8,7 +8,7 @@ class CompareCharArrays
 {
     static void Main()
     {
-        Console.Title = "Problem 2. Compare arrays";
+        Console.Title = "Problem 2. Compare arrays!";
 
         // setting  for culture
         Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;        
