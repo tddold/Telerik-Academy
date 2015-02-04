@@ -40,7 +40,7 @@ class SelectionSort
         // print input array
         PrintSeparateLine();
         Console.Write("Print input array :");
-        PrintArray(array);                          //             <--  using print metod - using for loops
+        PrintArray(array);                          //             <--  using print metod -  loops
 
         // Classical implementation of Selection Sort Algorithm
         SelectionSortAlgorithm(array);
