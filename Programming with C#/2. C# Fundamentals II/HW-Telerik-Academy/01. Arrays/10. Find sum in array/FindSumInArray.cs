@@ -53,8 +53,6 @@ class FindSumInArray
         // TestRunner(resultArray);
     }
 
-
-
     private static void PrintResult(List<int> resultArray, int sum)
     {
         Console.WriteLine("On given sum {0}, sequence of number is: {1}", sum, string.Join(" ", resultArray));
