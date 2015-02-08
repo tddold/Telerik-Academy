@@ -13,6 +13,8 @@ using System.Collections.Generic;
 
 class FindSumInArray
 {
+    // EASE OF USE: The program contains test method that show us how the program work on diffent inputs
+    // The method that tests the program is called "TestRunner"
     static void Main()
     {
         Console.Title = "Problem 10. Find sum in array";

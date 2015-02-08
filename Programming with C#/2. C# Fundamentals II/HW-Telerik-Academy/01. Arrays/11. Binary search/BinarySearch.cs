@@ -60,7 +60,7 @@ class BinarySearch
         PrintSeparateLine();
 
         // TEST METHOD
-        TestRunner();
+        // TestRunner();
     }
 
     private static void PrintResult(int searchNumber, int index)
