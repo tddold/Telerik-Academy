@@ -35,6 +35,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15. Prime numbers", "15. Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16. Subset with sum S", "16. Subset with sum S\16. Subset with sum S.csproj", "{00EF1412-60ED-4747-911E-FABECC4EEE4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17. Subset K with sum S", "17. Subset K with sum S\17. Subset K with sum S.csproj", "{07BB386D-D191-4938-A37A-2ABD37A5D569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18. Remove elem from array", "18. Remove elem from array\18. Remove elem from array.csproj", "{45115628-D422-43E9-B7DE-80CB59F91027}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19. Permutations of set", "19. Permutations of set\19. Permutations of set.csproj", "{3DFCA39B-B517-4537-AC40-B55E6A5F88C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20. Variations of set", "20. Variations of set\20. Variations of set.csproj", "{9A4B4D92-8F84-4E83-ADD9-761FFFBA2F8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21. Combinations of set", "21. Combinations of set\21. Combinations of set.csproj", "{7526E61C-5AD1-4140-94E6-B8836DCD0DF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +115,26 @@ Global
 		{00EF1412-60ED-4747-911E-FABECC4EEE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00EF1412-60ED-4747-911E-FABECC4EEE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00EF1412-60ED-4747-911E-FABECC4EEE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07BB386D-D191-4938-A37A-2ABD37A5D569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BB386D-D191-4938-A37A-2ABD37A5D569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BB386D-D191-4938-A37A-2ABD37A5D569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BB386D-D191-4938-A37A-2ABD37A5D569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45115628-D422-43E9-B7DE-80CB59F91027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45115628-D422-43E9-B7DE-80CB59F91027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45115628-D422-43E9-B7DE-80CB59F91027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45115628-D422-43E9-B7DE-80CB59F91027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DFCA39B-B517-4537-AC40-B55E6A5F88C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFCA39B-B517-4537-AC40-B55E6A5F88C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFCA39B-B517-4537-AC40-B55E6A5F88C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFCA39B-B517-4537-AC40-B55E6A5F88C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4B4D92-8F84-4E83-ADD9-761FFFBA2F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4B4D92-8F84-4E83-ADD9-761FFFBA2F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4B4D92-8F84-4E83-ADD9-761FFFBA2F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4B4D92-8F84-4E83-ADD9-761FFFBA2F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7526E61C-5AD1-4140-94E6-B8836DCD0DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7526E61C-5AD1-4140-94E6-B8836DCD0DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7526E61C-5AD1-4140-94E6-B8836DCD0DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7526E61C-5AD1-4140-94E6-B8836DCD0DF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

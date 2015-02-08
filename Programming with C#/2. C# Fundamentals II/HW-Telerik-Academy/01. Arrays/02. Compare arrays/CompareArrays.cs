@@ -34,6 +34,14 @@ class CompareArrays
         Console.Write("Lenght second array: ");
         int lenghtSecondArray = int.Parse(Console.ReadLine());
 
+        if (lenghtFirstarray != lenghtSecondArray)
+        {
+            Console.WriteLine(new string('-', 40));
+            Console.WriteLine("\nThe arrays is not simetric.");
+            Console.WriteLine(new string('-', 40));
+            return;
+        }
+
         int[] firstArray = new int[lenghtFirstarray];
         int[] secondArray = new int[lenghtSecondArray];
 

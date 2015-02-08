@@ -52,7 +52,7 @@ class MaximalSequence
         {
             int count = 1;
 
-            for (int j = i + 1; j < lenghtArray - 1; j++)
+            for (int j = i + 1; j < lenghtArray; j++)
             {
                 if (array[i] != array[j])
                 {

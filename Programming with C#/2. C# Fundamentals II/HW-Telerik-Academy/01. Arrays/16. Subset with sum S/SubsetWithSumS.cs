@@ -54,25 +54,25 @@ class SubsetWithSumS
     static bool SubsetWithSum(int[] array, int s, bool isSum)
     {
         int n = array.Length;
-        int combinationN = (int)Math.Pow(2, n);
+        int subsetCombination = (int) Math.Pow(2, n);
 
-        for (int i = 0; i < combinationN; i++)
+        for (int i = 0; i < subsetCombination; i++)
         {
             string str = Convert.ToString(i, 2).PadLeft(n, '0');
-            int sum = 0;
+            int cubsetSum = 0;
 
             for (int j = 0; j < n; j++)
             {
                 if (str[j] == '1')
                 {
-                    sum += array[j];
+                    cubsetSum += array[j];
 
-                    if (sum == s)
+                    if (cubsetSum == s)
                     {
                         isSum = true;
                         return isSum;
                     }
-                    else if (sum > s)
+                    else if (cubsetSum > s)
                     {
                         break;
                     }

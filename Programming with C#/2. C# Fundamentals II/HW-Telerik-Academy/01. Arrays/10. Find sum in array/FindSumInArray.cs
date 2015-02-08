@@ -25,6 +25,10 @@ class FindSumInArray
         int n = int.Parse(Console.ReadLine());
         PrintSeparateLine();
 
+        // given sum
+        Console.Write("\nEnter given sum: ");
+        int sum = int.Parse(Console.ReadLine());
+
         // input array elements
         int[] array = new int[n];
         Console.WriteLine("\nEnter a {0} number(s) to array", n);
@@ -34,10 +38,6 @@ class FindSumInArray
             Console.Write(" {0}: ", i + 1);
             array[i] = int.Parse(Console.ReadLine());
         }
-
-        // given sum
-        Console.Write("\nEnter given sum: ");
-        int sum = int.Parse(Console.ReadLine());
 
         // Print input array
         PrintInputArray(array);
