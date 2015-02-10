@@ -14,3 +14,7 @@
 * [Console Input/Output](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/4.%20Console%20Input-Output) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-1/blob/master/4.%20Console%20In%20and%20Out/README.md)) - 11.01.2015 
 * [Conditional Statements](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/5.%20Conditional%20Statements) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-1/blob/master/6.%20Loops/README.md)) - 16.01.2015
 * [BGCoder C# Part1](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/0.%20BGCoder%20C%23Part1) - ([conditions](http://bgcoder.com/Contests/#!/List/ByCategory/23/Telerik-Software-Academy)) - 16.01.2015
+
+## C# - Part II
+
+1. [Arrays](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/HW-Telerik-Academy/01.%20Arrays) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-2/blob/master/01.%20Arrays/README.md)) - 9.02.2015
