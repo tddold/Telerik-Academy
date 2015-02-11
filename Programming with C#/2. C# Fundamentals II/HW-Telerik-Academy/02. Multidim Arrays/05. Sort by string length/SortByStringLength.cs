@@ -9,5 +9,45 @@ class SortByStringLength
 {
     static void Main()
     {
+        Console.Write("Enter the lenght of the array : ");
+        int n = int.Parse(Console.ReadLine());
+        string[] array = new string[n];
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write(" arr[{0}] : ", i);
+            array[i] = Console.ReadLine();
+        }
+
+        PrintSeparateLine();
+        Console.WriteLine("\nBefore sorting: {0}", string.Join(", ", array));
+        PrintSeparateLine();
+
+        SelectionSortByLength(ref array);
+
+        Console.WriteLine("After sorting: {0}\n", string.Join(", ", array));
+        PrintSeparateLine();
+    }
+
+    static void SelectionSortByLength(ref string[] array)
+    {
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            int index = i;
+
+            for (int j = i + 1; j < array.Length; j++)
+            {
+                if (array[j].Length < array[index].Length)
+                    index = j;
+            }
+
+            string swap = array[i];
+            array[i] = array[index];
+            array[index] = swap;
+        }
+    }
+
+    static void PrintSeparateLine()
+    {
+        Console.WriteLine(new string('-', 40));
     }
 }

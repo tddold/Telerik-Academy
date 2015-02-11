@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading;
 class MatrixClass
 {
-    static void Main(string[] args)
+    static void Main()
     {
     }
 }
