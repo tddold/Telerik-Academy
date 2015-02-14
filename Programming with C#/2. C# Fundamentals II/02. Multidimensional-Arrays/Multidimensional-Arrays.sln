@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximalPlatform", "MaximalPlatform\MaximalPlatform.csproj", "{26127972-A4A9-4F8E-A758-FB084FA2308D}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.SortArrayOfStrings", "05.SortArrayOfStrings\05.SortArrayOfStrings.csproj", "{3D6828BD-7571-4D43-87AF-412772AD2716}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.MatrixUI", "06.MatrixUI\06.MatrixUI.csproj", "{76ED19E3-D401-4A13-B6E1-488A3148AE09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Matrix class Marto", "06. Matrix class Marto\06. Matrix class Marto.csproj", "{CF67FD16-3702-4161-9150-A28561D267CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{76ED19E3-D401-4A13-B6E1-488A3148AE09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76ED19E3-D401-4A13-B6E1-488A3148AE09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76ED19E3-D401-4A13-B6E1-488A3148AE09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF67FD16-3702-4161-9150-A28561D267CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF67FD16-3702-4161-9150-A28561D267CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF67FD16-3702-4161-9150-A28561D267CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF67FD16-3702-4161-9150-A28561D267CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

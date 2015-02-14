@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("06. Matrix class")]
+[assembly: AssemblyTitle("06. Matrix class Marto")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("06. Matrix class")]
+[assembly: AssemblyProduct("06. Matrix class Marto")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8825a8d8-9cfe-456b-835a-b3faaac09a33")]
+[assembly: Guid("1b6aa1eb-1ccf-459f-841d-78f0ed19ffc9")]
 
 // Version information for an assembly consists of the following four values:
 //
