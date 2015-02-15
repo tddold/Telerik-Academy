@@ -24,7 +24,7 @@ class SequenceNMatrix
         PrintSeparateLine();
 
         string[,] matrix = new string[rows, cols];
-        Console.WriteLine("Enter the element of the matrix:\n");
+        Console.WriteLine("Enter the strings element of the matrix:\n");
         for (int row = 0; row < rows; row++)
         {
             for (int col = 0; col < cols; col++)

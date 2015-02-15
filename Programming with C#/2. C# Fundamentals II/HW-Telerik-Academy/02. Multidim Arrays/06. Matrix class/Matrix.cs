@@ -54,18 +54,15 @@ namespace _06.Matrix_class
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
-            //  string result = String.Empty;
 
             for (int row = 0; row < this.Rows; row++)
             {
                 for (int col = 0; col < this.Cols; col++)
                 {
                     result.AppendFormat("{0,4}", this.matrix[row, col]);
-                    // result += matrix[row, col] + " ";
                 }
 
                 result.AppendLine();
-                // result += Environment.NewLine;
             }
 
             return result.ToString();

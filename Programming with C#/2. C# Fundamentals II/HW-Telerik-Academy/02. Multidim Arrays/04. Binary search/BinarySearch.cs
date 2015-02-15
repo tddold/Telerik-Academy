@@ -16,6 +16,7 @@ class BinarySearch
         PrintSeparateLine();
 
         int[] array = new int[n];
+
         for (int i = 0; i < n; i++)
         {
             Console.Write(" arr[{0}] : ", i);

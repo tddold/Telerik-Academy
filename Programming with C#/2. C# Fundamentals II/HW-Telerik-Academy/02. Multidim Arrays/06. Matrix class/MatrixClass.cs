@@ -10,6 +10,11 @@ namespace _06.Matrix_class
     {
         static void Main()
         {
+            Console.Title = "Problem 7.* Largest area in matrix";
+
+            Console.WriteLine("Problem 7.* Largest area in matrix!");
+            PrintSeparateLine();
+
             Matrix matrix1 = new Matrix(3, 3,
                 1, 2, 0,
                 0, 1, 1,
@@ -34,6 +39,13 @@ namespace _06.Matrix_class
 
             Console.WriteLine("Multiplication of the Matrices:");
             Console.WriteLine(matrix1 * matrix2);
+
+            PrintSeparateLine();
+        }
+
+        static void PrintSeparateLine()
+        {
+            Console.WriteLine(new string('-', 40));
         }
     }
 }
