@@ -27,8 +27,8 @@ class NumberAsArray
         {
             List<int> result = AccumulateTwoNumbers(first, second);
 
-            Console.Write("\nResult: ");
-            Console.WriteLine(string.Join(",", result));
+            Console.Write("\nResult: ");            
+            PrintResult(result);
         }
         else
         {
@@ -36,6 +36,24 @@ class NumberAsArray
         }
 
         PrintSeparateLine();
+    }
+
+    static void PrintResult(List<int> result)
+    {
+        for (int i = result.Count-1; i >= 0; i--)
+        {
+            if (i > 0)
+            {
+                Console.Write("{0}, ", result[i]);
+            }
+            else
+            {
+                Console.Write("{0}", result[i]);
+            }
+            
+        }
+
+        Console.WriteLine();
     }
 
     static List<int> AccumulateTwoNumbers(string first, string second)
@@ -63,7 +81,6 @@ class NumberAsArray
         }
 
         return result;
-
     }
 
     static bool IsCorectNumber(string number)
