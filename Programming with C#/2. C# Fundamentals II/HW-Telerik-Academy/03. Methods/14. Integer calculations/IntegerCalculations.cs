@@ -38,6 +38,7 @@ class IntegerCalculations
                 min = sequence[i];
             }
         }
+
         return min;
     }
 
@@ -52,6 +53,7 @@ class IntegerCalculations
                 max = sequence[i];
             }
         }
+
         return max;
     }
 
@@ -88,7 +90,7 @@ class IntegerCalculations
         return prodact;
     }
 
-    public static void PrintSeparateLine()
+    static void PrintSeparateLine()
     {
         Console.WriteLine(new string('-', 40));
     }

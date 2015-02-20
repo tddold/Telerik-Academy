@@ -27,7 +27,7 @@ class NumberAsArray
         {
             List<int> result = AccumulateTwoNumbers(first, second);
 
-            Console.Write("\nResult: ");            
+            Console.Write("\nResult: ");
             PrintResult(result);
         }
         else
@@ -40,7 +40,7 @@ class NumberAsArray
 
     static void PrintResult(List<int> result)
     {
-        for (int i = result.Count-1; i >= 0; i--)
+        for (int i = result.Count - 1; i >= 0; i--)
         {
             if (i > 0)
             {
@@ -50,7 +50,6 @@ class NumberAsArray
             {
                 Console.Write("{0}", result[i]);
             }
-            
         }
 
         Console.WriteLine();
@@ -96,7 +95,7 @@ class NumberAsArray
         return true;
     }
 
-    public static void PrintSeparateLine()
+    static void PrintSeparateLine()
     {
         Console.WriteLine(new string('-', 40));
     }

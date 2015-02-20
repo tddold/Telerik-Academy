@@ -30,11 +30,10 @@ class LargerThanNeighbours
 
         PrintSeparateLine();
         PrintArray(array);
-       
-        Console.WriteLine("\nNumber {0} (at index {1}) is bigger than its neighbours -> {2}\n",
-            array[position], position, IsBiggerThanHeighbors(array, position));
-        PrintSeparateLine();
 
+        Console.WriteLine("\nNumber {0} (at index {1}) is bigger than its neighbours -> {2}\n", array[position], position, IsBiggerThanHeighbors(array, position));
+
+        PrintSeparateLine();
     }
 
     static bool IsBiggerThanHeighbors(int[] array, int position)
@@ -65,12 +64,12 @@ class LargerThanNeighbours
         return isEqual;
     }
 
-    public static void PrintArray(int[] array)
+    static void PrintArray(int[] array)
     {
         Console.WriteLine("Input array is: {0}", string.Join(",", array));
     }
 
-    public static void PrintSeparateLine()
+    static void PrintSeparateLine()
     {
         Console.WriteLine(new string('-', 40));
     }

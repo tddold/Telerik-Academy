@@ -42,7 +42,6 @@ class FirstLargerThanNeighbours
         }
 
         PrintSeparateLine();
-
     }
 
     static int FindFirstBiggerThanNeighbors(int[] array)
@@ -58,7 +57,6 @@ class FirstLargerThanNeighbours
         }
 
         return -1;
-
     }
 
     static bool IsBiggerThanHeighbors(int[] array, int position)
@@ -89,12 +87,12 @@ class FirstLargerThanNeighbours
         return isEqual;
     }
 
-    public static void PrintArray(int[] array)
+    static void PrintArray(int[] array)
     {
         Console.WriteLine("Input array is: {0}", string.Join(",", array));
     }
 
-    public static void PrintSeparateLine()
+    static void PrintSeparateLine()
     {
         Console.WriteLine(new string('-', 40));
     }

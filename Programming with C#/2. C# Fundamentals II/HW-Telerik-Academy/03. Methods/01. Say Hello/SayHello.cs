@@ -24,7 +24,6 @@ class SayHello
 
         PrintYorName(userName);
         PrintSeparateLine();
-        
     }
 
     static void PrintYorName(string userName)
@@ -34,6 +33,6 @@ class SayHello
 
     static void PrintSeparateLine()
     {
-        Console.WriteLine(new string('-', 40));    
+        Console.WriteLine(new string('-', 40));
     }
 }

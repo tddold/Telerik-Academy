@@ -45,7 +45,6 @@ class SortingArray
         Console.WriteLine("Numbers in Descending order: {0}\n", string.Join(" ", SortDescending(array)));
 
         PrintSeparateLine();
-       
     }
 
     static int FindMaxElementInPartitionOfArray(int[] array, int start, int end, int index = 0)
@@ -81,10 +80,9 @@ class SortingArray
         for (int i = sortedArray.Length - 1; i >= 0; i--)
         {
             sortedArray[i] = FindMaxElementInPartitionOfArray(array, 0, i, i);
-;
         }
 
-        return sortedArray;  
+        return sortedArray;
     }
 
     static int[] SortDescending(int[] array)
@@ -93,13 +91,13 @@ class SortingArray
 
         for (int i = 0; i < sortedArray.Length; i++)
         {
-            sortedArray[i] = FindMaxElementInPartitionOfArray(array, i, array.Length-1, i);
+            sortedArray[i] = FindMaxElementInPartitionOfArray(array, i, array.Length - 1, i);
         }
 
         return sortedArray;
     }
 
-    public static void PrintSeparateLine()
+    static void PrintSeparateLine()
     {
         Console.WriteLine(new string('-', 40));
     }

@@ -21,14 +21,14 @@ class SolveTasks
 {
     static void Main()
     {
-        Console.Title="Problem 13. Solve tasks";
+        Console.Title = "Problem 13. Solve tasks";
 
-        Thread.CurrentThread.CurrentCulture=CultureInfo.InvariantCulture;
+        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
         Console.WriteLine("Problem 13. Solve tasks!");
         PrintSeparateLine();
 
-        int choice=0;
+        int choice = 0;
 
         do
         {
@@ -39,7 +39,7 @@ class SolveTasks
             PrintSeparateLine();
 
             Console.Write("Enter your choice:");
-            choice=int.Parse(Console.ReadLine());
+            choice = int.Parse(Console.ReadLine());
 
             switch (choice)
             {
@@ -53,11 +53,11 @@ class SolveTasks
                     SolveLinerEquation();
                     return;
                 default:
-                    choice=0;
+                    choice = 0;
                     break;
             }
-
-        } while (choice==0);
+        }
+        while (choice == 0);
     }
 
     private static void ReversDigitsOfNumber()
@@ -67,18 +67,17 @@ class SolveTasks
         do
         {
             Console.Write("Enter a positive number (real or integer):");
-            number=decimal.Parse(Console.ReadLine());
+            number = decimal.Parse(Console.ReadLine());
+        }
+        while (!(number > 0));
 
-        } while (!(number>0));
+        string nArray = number.ToString();
 
+        string result = string.Empty;
 
-        string nArray=number.ToString();
-
-        string result=String.Empty;
-
-        for (int i=nArray.Length-1; i>=0; i--)
+        for (int i = nArray.Length - 1; i >= 0; i--)
         {
-            result+=nArray[i];
+            result += nArray[i];
         }
 
         Console.WriteLine("\nResult: {0} -> {1}\n", number, decimal.Parse(result));
@@ -87,7 +86,7 @@ class SolveTasks
 
     private static void AverageOfSequenceOfNumbers()
     {
-        bool notEmpty=true;
+        bool notEmpty = true;
         double[] numbers;
 
         do
@@ -98,40 +97,39 @@ class SolveTasks
             }
 
             Console.Write("Enter numbers, separated by a comma: ");
-            numbers=Console.ReadLine()
+            numbers = Console.ReadLine()
             .Split(new char[] { ' ', '\t', ',' }, StringSplitOptions.RemoveEmptyEntries)
             .Select(x => double.Parse(x))
             .ToArray();
 
-            notEmpty=numbers.Length>0;
+            notEmpty = numbers.Length > 0;
         }
         while (!notEmpty);
 
-        double result=numbers.Sum()/numbers.Length;
+        double result = numbers.Sum() / numbers.Length;
         Console.WriteLine("Average: {0:F2}", result);
         PrintSeparateLine();
     }
 
     private static void SolveLinerEquation()
     {
-        decimal a=0;
+        decimal a = 0;
 
         do
         {
             Console.Write("Enter a non-zero number a: ");
-            a=decimal.Parse(Console.ReadLine());
-
+            a = decimal.Parse(Console.ReadLine());
         }
-        while (a==0);
+        while (a == 0);
 
         Console.Write("Enter a non-zero number b: ");
-        decimal b=decimal.Parse(Console.ReadLine());
+        decimal b = decimal.Parse(Console.ReadLine());
 
-        Console.WriteLine("Result -> x = - b/ a = {0}", -b/a);
+        Console.WriteLine("Result -> x = - b/ a = {0}", -b / a);
         PrintSeparateLine();
     }
 
-    public static void PrintSeparateLine()
+    static void PrintSeparateLine()
     {
         Console.WriteLine(new string('-', 40));
     }

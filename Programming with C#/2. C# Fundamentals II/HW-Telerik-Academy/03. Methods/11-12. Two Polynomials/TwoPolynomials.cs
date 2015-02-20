@@ -159,8 +159,6 @@ class TwoPolynomials
         PrintPolinom(secondPolynom);
         Console.Write("   =\n");
 
-
-
         var result = new decimal[firstPolynom.Length + secondPolynom.Length];
 
         for (int i = 0; i < firstPolynom.Length; i++)
@@ -180,7 +178,7 @@ class TwoPolynomials
         {
             if (i == polynom.Length - 1 && polynom[i] != 0)
             {
-                Console.Write("    {0}{1}x^{2} ", polynom[i] > 0 ? "" : "-", Math.Abs(polynom[i]), i);
+                Console.Write("    {0}{1}x^{2} ", polynom[i] > 0 ? string.Empty : "-", Math.Abs(polynom[i]), i);
             }
             else if (i == 0)
             {
@@ -201,15 +199,17 @@ class TwoPolynomials
                 }
                 else if (polynom[i] > 0)
                 {
-                    Console.Write("{0}{1}x^{2} ", (polynom[polynom.Length - 1] == 0 ? "" : "+ "), polynom[i], i);
+                    Console.Write("{0}{1}x^{2} ", (polynom[polynom.Length - i] != 0 ? "+ " : string.Empty), polynom[i], i);
                 }
             }
+
+
+
+
         }
 
         Console.WriteLine();
     }
-
-
 
     static void PrintSeparateLine()
     {

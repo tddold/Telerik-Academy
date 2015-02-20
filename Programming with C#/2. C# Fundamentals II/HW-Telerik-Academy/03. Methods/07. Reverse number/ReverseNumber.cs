@@ -22,7 +22,7 @@ class ReverseNumber
 
         int result = PrintReverNumber(number);
 
-        Console.WriteLine("\n{0} -> {1}",number, result);
+        Console.WriteLine("\n{0} -> {1}", number, result);
 
         PrintSeparateLine();
     }
@@ -31,7 +31,7 @@ class ReverseNumber
     {
         StringBuilder sb = new StringBuilder();
 
-        for (int i = number.Length-1; i >= 0; i--)
+        for (int i = number.Length - 1; i >= 0; i--)
         {
             sb.Append(number[i]);
         }
@@ -39,7 +39,7 @@ class ReverseNumber
         return int.Parse(sb.ToString());
     }
 
-    public static void PrintSeparateLine()
+    static void PrintSeparateLine()
     {
         Console.WriteLine(new string('-', 40));
     }
