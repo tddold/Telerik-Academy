@@ -6,15 +6,21 @@ using System.IO;
 
 class OddLines
 {
+    static string path = "../../input.txt";
     static void Main()
     {
         Console.WriteLine("Problem 1. Odd lines");
         PrintSeparateLine();
 
-        string path = "../../input.txt";
-
         Console.WriteLine("> Print ood line of text file...\n");
 
+        GetOddLines();
+
+        PrintSeparateLine();
+    }
+
+    private static void GetOddLines()
+    {
         using (StreamReader reader = new StreamReader(path))
         {
             int count = 1;
@@ -31,8 +37,6 @@ class OddLines
                 line = reader.ReadLine();
             }
         }
-
-        PrintSeparateLine();
     }
 
     public static void PrintSeparateLine()
