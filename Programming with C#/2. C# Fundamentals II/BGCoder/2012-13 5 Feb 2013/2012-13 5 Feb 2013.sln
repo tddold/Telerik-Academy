@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Tests", "06. Tests\06. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.1 Durankulak Numbers Avtor", "01.1 Durankulak Numbers\01.1 Durankulak Numbers Avtor.csproj", "{66FF8CB6-FB66-4B98-A624-2465C6B97210}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Joro the Rabbit", "02. Joro the Rabbit\02. Joro the Rabbit.csproj", "{560E6F4B-66B6-462A-BEA6-B35F803A021D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{66FF8CB6-FB66-4B98-A624-2465C6B97210}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66FF8CB6-FB66-4B98-A624-2465C6B97210}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66FF8CB6-FB66-4B98-A624-2465C6B97210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{560E6F4B-66B6-462A-BEA6-B35F803A021D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{560E6F4B-66B6-462A-BEA6-B35F803A021D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{560E6F4B-66B6-462A-BEA6-B35F803A021D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{560E6F4B-66B6-462A-BEA6-B35F803A021D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

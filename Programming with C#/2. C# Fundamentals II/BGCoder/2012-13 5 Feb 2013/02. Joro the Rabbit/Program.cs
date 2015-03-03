@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _01.Durankulak_Numbers
+namespace _02.Joro_the_Rabbit
 {
-    class DurankulakNumbers
+    class Program
     {
         static void Main()
         {
@@ -15,7 +15,6 @@ namespace _01.Durankulak_Numbers
             int[] path = input.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(x => int.Parse(x))
                 .ToArray();
-
 
             int pathCount = 1;
             int maxPath = 1;
@@ -27,14 +26,16 @@ namespace _01.Durankulak_Numbers
 
                 for (int step = 1; step < path.Length; step++)
                 {
-                    nextIndex = (currIndex + step) % path.Length;
+
+                    nextIndex = NextIndex(path, currIndex, nextIndex, step);
 
                     while (path[currIndex] < path[nextIndex])
                     {
                         pathCount++;
                         currIndex = nextIndex;
 
-                        nextIndex = (currIndex + step) % path.Length;
+                        nextIndex = NextIndex(path, currIndex, nextIndex, step);
+
 
                         if (maxPath < pathCount)
                         {
@@ -48,6 +49,18 @@ namespace _01.Durankulak_Numbers
             }
 
             Console.WriteLine(maxPath);
+        }
+
+        private static int NextIndex(int[] path, int currIndex, int nextIndex, int step)
+        {
+            nextIndex = currIndex + step;
+
+            if (nextIndex > path.Length - 1)
+            {
+                nextIndex -= path.Length;
+            }
+
+            return nextIndex;
         }
     }
 }
