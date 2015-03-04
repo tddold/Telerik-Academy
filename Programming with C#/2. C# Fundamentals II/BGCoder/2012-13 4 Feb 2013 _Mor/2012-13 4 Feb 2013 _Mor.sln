@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Kaspichan Numbers", "01. Kaspichan Numbers\01. Kaspichan Numbers.csproj", "{524EEF2C-CB22-484A-A8AE-F557C92162C7}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Slides", "03.Slides\03.Slides.csproj", "{BA1BD13B-AFC5-4D26-A7C7-0086C69DBE25}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Console Justification", "04. Console Justification\04. Console Justification.csproj", "{D5D74D84-DFCB-4790-BD7F-EEEBBDC46359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.1 Kaspichan Numbers", "01.1 Kaspichan Numbers\01.1 Kaspichan Numbers.csproj", "{33E90188-E00C-4D64-8B34-F1D8CB0D733E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D5D74D84-DFCB-4790-BD7F-EEEBBDC46359}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5D74D84-DFCB-4790-BD7F-EEEBBDC46359}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5D74D84-DFCB-4790-BD7F-EEEBBDC46359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E90188-E00C-4D64-8B34-F1D8CB0D733E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E90188-E00C-4D64-8B34-F1D8CB0D733E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E90188-E00C-4D64-8B34-F1D8CB0D733E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E90188-E00C-4D64-8B34-F1D8CB0D733E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

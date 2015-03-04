@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Multiverse Communicat", "01. Multiverse Communicat\01. Multiverse Communicat.csproj", "{7CC3E8DE-DD23-45FE-A4AE-31EE04E88DF5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Magic Words", "02. Magic Words\02. Magic Words.csproj", "{D72A0FBA-6BDD-43F1-8AE8-504084B5A639}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Decode and Decrypt", "04. Decode and Decrypt\04. Decode and Decrypt.csproj", "{50461578-E1E6-44CE-84B2-A7C54104AB34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.1 Multiverse Communicat", "01.1 Multiverse Communicat\01.1 Multiverse Communicat.csproj", "{B3514EBB-72D1-44BB-BA11-8AB21B7F0EE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{50461578-E1E6-44CE-84B2-A7C54104AB34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50461578-E1E6-44CE-84B2-A7C54104AB34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50461578-E1E6-44CE-84B2-A7C54104AB34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3514EBB-72D1-44BB-BA11-8AB21B7F0EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3514EBB-72D1-44BB-BA11-8AB21B7F0EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3514EBB-72D1-44BB-BA11-8AB21B7F0EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3514EBB-72D1-44BB-BA11-8AB21B7F0EE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

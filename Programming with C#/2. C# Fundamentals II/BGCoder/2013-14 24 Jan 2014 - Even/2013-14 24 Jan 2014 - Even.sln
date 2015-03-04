@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. StrangeLand Numbers", "01. StrangeLand Numbers\01. StrangeLand Numbers.csproj", "{C3B98823-372A-4A25-B612-230D83FFE21C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Two Girls-One Path", "02. Two Girls-One Path\02. Two Girls-One Path.csproj", "{7E3BC0AD-3171-412F-AA78-F6F99D716A3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.1 StrangeLand Numbers", "01.1 StrangeLand Numbers\01.1 StrangeLand Numbers.csproj", "{696677ED-192A-4F3D-AF88-EB43230EBC06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Relevance Index", "04. Relevance Index\04. Relevance Index.csproj", "{256C5A05-243B-4FFB-9A0F-1592CA18B998}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Test-DecimalRepresentacion", "06. Test-DecimalRepresentacion\06. Test-DecimalRepresentacion.csproj", "{7DD51AF5-3DFC-49B4-BDFE-D5E808B12019}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{7E3BC0AD-3171-412F-AA78-F6F99D716A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E3BC0AD-3171-412F-AA78-F6F99D716A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E3BC0AD-3171-412F-AA78-F6F99D716A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{696677ED-192A-4F3D-AF88-EB43230EBC06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696677ED-192A-4F3D-AF88-EB43230EBC06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696677ED-192A-4F3D-AF88-EB43230EBC06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696677ED-192A-4F3D-AF88-EB43230EBC06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{256C5A05-243B-4FFB-9A0F-1592CA18B998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256C5A05-243B-4FFB-9A0F-1592CA18B998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256C5A05-243B-4FFB-9A0F-1592CA18B998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256C5A05-243B-4FFB-9A0F-1592CA18B998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD51AF5-3DFC-49B4-BDFE-D5E808B12019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD51AF5-3DFC-49B4-BDFE-D5E808B12019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD51AF5-3DFC-49B4-BDFE-D5E808B12019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD51AF5-3DFC-49B4-BDFE-D5E808B12019}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
