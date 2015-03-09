@@ -1,6 +1,7 @@
 ﻿namespace MobilePhone
 {
     using System;
+    using System.Collections.Generic;
     using System.Text;
 
     public class GSM
@@ -13,24 +14,20 @@
         private Battery battery;
         private Display display;
 
-        static GSM iPhone6Pluse;
+        private static GSM iPhone4S;
+
+        private List<Call> callHistory = new List<Call>();
 
         // making the constructor
-        public GSM()
+        public GSM(string model = null, string manufacturer = null, string owner = null, decimal price = 0, Battery battery = null, Display display = null)
         {
-        
-        }
-        
-        public GSM(string model = null, string manufacturer = null, string owner = null, decimal price = 0)
-        {
+            
             this.model = model;
             this.manufacturer = manufacturer;
             this.owner = owner;
             this.price = price;
-            //this.Battery = battery;
-            //this.Display = display;
-            battery = new Battery();
-            display = new Display();
+            this.PhoneBattery = battery;
+            this.PhoneDisplay = display;
         }
 
         // making the properties - making it public so it can be adjusted by the outside
@@ -94,42 +91,69 @@
             }
         }
 
-        private Battery Battery
+        public Battery PhoneBattery
         {
             get { return this.battery; }
 
             set
             {
-                if (value == null)
-                {
-                    throw new ArgumentException("Incorect battery parametars!");
-                }
+                //if (value == null)
+                //{
+                //    throw new ArgumentException("Incorect battery parametars!");
+                //}
 
                 this.battery = value;
             }
         }
 
-        private Display Display
+        public Display PhoneDisplay
         {
             get { return this.display; }
             set
             {
-                if (value == null)
-                {
-                    throw new ArgumentException("Incorect display parametars!");
-                }
+                //if (value == null)
+                //{
+                //    throw new ArgumentException("Incorect display parametars!");
+                //}
 
                 this.display = value;
             }
         }
 
-        public GSM IPhone6Pluse
+        public GSM IPhone4S
         {
-            get { return iPhone6Pluse; }
+            get { return iPhone4S; }
 
-            set { iPhone6Pluse = value; }
+            set { iPhone4S = value; }
         }
 
+        public List<Call> CallHistory
+        {
+            get { return this.callHistory; }
+
+            set { this.callHistory = value; }
+        }
+
+        // making a method to add a Call in my List<Calls>
+        public void AddCall(string dialedNumbe, uint duration)
+        {
+            DateTime now = DateTime.Now;
+            dialedNumbe = "+359889889889";
+            duration = 120;
+            callHistory.Add(new Call(now.Date, now.Date, dialedNumbe, duration));
+        }
+
+        // this method deletes the element by the given index
+        public void DeleteCall(int index)
+        {
+            this.callHistory.RemoveAt(index);
+        }
+
+        // removing all elements in the List<Calls>
+        public void ClearCall()
+        {
+            this.callHistory.Clear();
+        }
 
         //overriding ToString() method
         public override string ToString()
@@ -140,6 +164,7 @@
             informations.AppendLine(string.Format("Manufacturer: --> {0}", manufacturer));
             informations.AppendLine(string.Format("Owner:        --> {0,5}", owner));
             informations.AppendLine(string.Format("Price:        --> {0,5:F2}lv", price));
+            informations.AppendLine(string.Format("Battery:      --> {0}", BatteryType.LiPo));
             return informations.ToString();
         }
 

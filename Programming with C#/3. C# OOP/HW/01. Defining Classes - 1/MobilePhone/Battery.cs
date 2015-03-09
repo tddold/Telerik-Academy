@@ -3,7 +3,7 @@
     using System;
     using System.Text;
 
-    class Battery
+    public class Battery
     {
         // defining the battery information (fields)
         private string model;

@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Display
+    public class Display
     {
         // defining the display information (fields)
         private double size;
