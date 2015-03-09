@@ -50,6 +50,20 @@
                 this.hoursIdle = value;
             }
         }
-        
+
+        public uint HoursTalk
+        {
+            get { return this.hoursTalk; }
+
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Incorect hours talk");
+                }
+
+                this.hoursTalk = value;
+            }            
+        }
     }
 }

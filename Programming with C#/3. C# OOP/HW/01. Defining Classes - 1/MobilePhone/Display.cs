@@ -14,5 +14,35 @@
             this.size = size;
             this.colors = colors;
         }
+
+        public double Size
+        {
+            get { return this.size; }
+
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Incorect size!");
+                }
+
+                this.size = value;
+            }
+        }
+
+        public uint Colors
+        {
+            get { return this.colors; }
+
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Incorect colors!");
+                }
+
+                this.colors = value;
+            }
+        }
     }
 }

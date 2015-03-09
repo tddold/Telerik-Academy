@@ -13,20 +13,24 @@
         private Battery battery;
         private Display display;
 
+        static GSM iPhone6Pluse;
+
         // making the constructor
         public GSM()
         {
         
         }
         
-        public GSM(string model = null, string manufacturer = null, string owner = null, decimal price = 0 )
+        public GSM(string model = null, string manufacturer = null, string owner = null, decimal price = 0)
         {
             this.model = model;
             this.manufacturer = manufacturer;
             this.owner = owner;
             this.price = price;
             //this.Battery = battery;
-            //this.Dysplay = display;
+            //this.Display = display;
+            battery = new Battery();
+            display = new Display();
         }
 
         // making the properties - making it public so it can be adjusted by the outside
@@ -90,34 +94,41 @@
             }
         }
 
-        //public Battery Battery
-        //{
-        //    get { return this.battery; }
+        private Battery Battery
+        {
+            get { return this.battery; }
 
-        //    set
-        //    {
-        //        if (value == null)
-        //        {
-        //            throw new ArgumentException("Incorect battery parametars!");
-        //        }
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentException("Incorect battery parametars!");
+                }
 
-        //        this.battery = value;
-        //    }
-        //}
+                this.battery = value;
+            }
+        }
 
-        //public Display Dysplay
-        //{
-        //    get { return this.display; }
-        //    set
-        //    {
-        //        //if (true)
-        //        //{
-                    
-        //        //}
+        private Display Display
+        {
+            get { return this.display; }
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentException("Incorect display parametars!");
+                }
 
-        //        this.display = value;
-        //    }
-        //}
+                this.display = value;
+            }
+        }
+
+        public GSM IPhone6Pluse
+        {
+            get { return iPhone6Pluse; }
+
+            set { iPhone6Pluse = value; }
+        }
 
 
         //overriding ToString() method
