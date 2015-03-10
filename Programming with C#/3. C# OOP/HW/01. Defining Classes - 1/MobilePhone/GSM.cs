@@ -6,14 +6,9 @@
 
     public class GSM
     {
-        private const decimal PricePerMinet = 0.30M;
+        private const decimal PricePerMinute = 0.37M;
 
         // defining the mobile phone information (fields)
-        private static GSM iPhone4S; 
-        /* new GSM(
-            model = "iPhone5S", manufacturer = "Apple", owner = "Gosho Goshev", price = 800,
-            new Battery(BatteryType.LiPo, "1560mAh", 250, 10),
-            new Display(4, 16000000));*/
        
         private string model;
         private string manufacturer;
@@ -25,26 +20,25 @@
 
         private List<Call> callHistory;
 
-        // making the constructor
-        public GSM()
-        {
-        }
+        public static GSM iPhone4S = new GSM("iPhone5S", "Apple", "Gosho Goshev", 800,
+    new Battery("1560mAh", 250, 10, BatteryType.LiPo),
+    new Display(3.5, 16000000));
 
-        public GSM(string model = null, string owner = null, decimal price = 0)
+        // making the constructor
+        public GSM(string model, string manufacturer)
         {
             this.model = model;
-            this.owner = owner;
-            this.price = price;
+            this.manufacturer = manufacturer;
             this.callHistory = new List<Call>();
         }
 
-        public GSM(string model = null, string manufacturer = null, string owner = null, decimal price = 0)
-            : this(model, owner, price)
-        {
-            this.manufacturer = manufacturer;
-        }
+        public GSM(string model, string manufacturer, string owner = null, decimal price = 0) : this(model, manufacturer)
+        {            
+            this.owner = owner;
+            this.price = price;
+        }        
 
-        public GSM(string model = null, string manufacturer = null, string owner = null, decimal price = 0, Battery battery = null, Display display = null)
+        public GSM(string model, string manufacturer, string owner = null, decimal price = 0, Battery battery = null, Display display = null)
             : this(model, manufacturer, owner, price)
         {
             this.PhoneBattery = battery;
@@ -206,14 +200,14 @@
         }
 
         // this method call price
-        public decimal CalculateTotalCallPrice(decimal pricePerMinet)
+        public decimal CalculateTotalCallPrice(decimal pricePerMinute)
         {
             decimal totalPrice = 0;
 
             foreach (var call in this.callHistory)
             {
                 decimal min = (decimal)TimeSpan.FromSeconds(call.Duration).TotalMinutes;
-                totalPrice += min * pricePerMinet;
+                totalPrice += min * pricePerMinute;
             }
 
             return totalPrice;
@@ -229,6 +223,7 @@
             informations.AppendLine(string.Format("Owner:        --> {0,5}", this.owner));
             informations.AppendLine(string.Format("Price:        --> {0,5:F2}lv", this.price));
             informations.AppendLine(string.Format("Battery:      --> {0}", BatteryType.LiPo));
+            informations.AppendLine(string.Format("Display:      --> {0}in", display));
             return informations.ToString();
         }
     }

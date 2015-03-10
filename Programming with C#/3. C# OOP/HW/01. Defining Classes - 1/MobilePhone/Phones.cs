@@ -6,32 +6,24 @@
     {
         static void Main()
         {
-            GSM phoneIPhone4S = new GSM();
-
-            phoneIPhone4S.Model = "iPhone 4S";
-            phoneIPhone4S.Manufacturer = "Apple";
-            phoneIPhone4S.Owner = "Pesho";
-            phoneIPhone4S.Price = 1024M;
-
-            GSM phoneIPhone6Pluse = new GSM("iPhone6Plus", "Apple", "Gosho", 100);
-
-            GSMTest iPhone = new GSMTest();
-            iPhone.DisplayGSMs();
-            //iPhone.IPhone4SInfo();
+            GSMTest testGsm = new GSMTest();            
 
             GSMCallHistoryTest phoneIPhone6 = new GSMCallHistoryTest();
 
             PrintSeparateLine();
-            Console.WriteLine(phoneIPhone4S);
+            Console.WriteLine("GSM Test - information about the GSMs in the array");
+            PrintSeparateLine();
+            testGsm.DisplayGSMs();
+           
+            PrintSeparateLine();
+            Console.WriteLine("GSM Test - information about the static property IPhone4S");
+            PrintSeparateLine();
+            testGsm.IPhone4SInfo();
             PrintSeparateLine();
 
+            Console.WriteLine("Call history test");
             PrintSeparateLine();
-            Console.WriteLine(phoneIPhone6Pluse);
-            PrintSeparateLine();
-
-            PrintSeparateLine();
-            Console.WriteLine(phoneIPhone6);
-            PrintSeparateLine();
+            phoneIPhone6.CallTest();
         }
 
         public static void PrintSeparateLine()

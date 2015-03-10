@@ -5,7 +5,7 @@
     public class GSMTest
     {
         // making an array with empty GSM classes in it
-        private GSM[] phones = new GSM[3] { new GSM(), new GSM(), new GSM() };
+        private GSM[] phones = new GSM[3] { new GSM("iPhone5C", "Apple", "Ivan Ivanov", 700), new GSM("iPhone6", "Apple", "Pesho Peshev", 1500), new GSM("iPhone6Pluse", "Apple", "Asen Asenov", 1800) };
 
         public void DisplayGSMs()
         {
@@ -17,8 +17,8 @@
 
         public void IPhone4SInfo()
         {
-            GSM iPhone4SInfo = new GSM();
-            Console.WriteLine(iPhone4SInfo.IPhone4S.ToString());
+            Console.WriteLine(GSM.iPhone4S.ToString());
         }
     }
 }
+ 

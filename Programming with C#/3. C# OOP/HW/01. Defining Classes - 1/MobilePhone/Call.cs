@@ -9,7 +9,7 @@
         private string dialledNumber;
         private uint duration;
 
-        public Call(DateTime date, DateTime time, string dialledNumber = "112", uint duration = 60)
+        public Call(DateTime date, DateTime time, string dialledNumber = null, uint duration = 0)
         {
             this.callDate = date;
             this.callTime = time;
