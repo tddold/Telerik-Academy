@@ -13,17 +13,18 @@
             PrintSeparateLine();
             Console.WriteLine("GSM Test - information about the GSMs in the array");
             PrintSeparateLine();
-            testGsm.DisplayGSMs();
+            testGsm.GSMSpecs();
            
             PrintSeparateLine();
             Console.WriteLine("GSM Test - information about the static property IPhone4S");
             PrintSeparateLine();
-            testGsm.IPhone4SInfo();
+            testGsm.GSMSpecsToString();
             PrintSeparateLine();
 
             Console.WriteLine("Call history test");
             PrintSeparateLine();
             phoneIPhone6.CallTest();
+            PrintSeparateLine();
         }
 
         public static void PrintSeparateLine()

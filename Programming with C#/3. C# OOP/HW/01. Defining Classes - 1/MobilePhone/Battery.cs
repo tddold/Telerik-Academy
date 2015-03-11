@@ -29,7 +29,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentException("Incorect model!");
+                    throw new ArgumentException("The battery model cannot be null or emtpy!");
                 }
 
                 this.model = value;

@@ -6,7 +6,8 @@
 
     public class GSM
     {
-        private const decimal PricePerMinute = 0.37M;
+        public const decimal PricePerMinute = 0.37M;
+        private const decimal ConvertConst = 1000000M;
 
         // defining the mobile phone information (fields)
        
@@ -20,9 +21,9 @@
 
         private List<Call> callHistory;
 
-        public static GSM iPhone4S = new GSM("iPhone5S", "Apple", "Gosho Goshev", 800,
+        public static GSM iPhone4S = new GSM("iPhone5S", "Apple", "Gosho Goshev", 900,
     new Battery("1560mAh", 250, 10, BatteryType.LiPo),
-    new Display(3.5, 16000000));
+    new Display(4.0, 16000000));
 
         // making the constructor
         public GSM(string model, string manufacturer)
@@ -127,10 +128,10 @@
 
             set
             {
-                // if (value == null)
-                // {
-                //    throw new ArgumentException("Incorect battery parametars!");
-                // }
+                if (value == null)
+                {
+                    throw new ArgumentException("Incorect battery parametars!");
+                }
                 this.battery = value;
             }
         }
@@ -144,10 +145,10 @@
 
             set
             {
-                // if (value == null)
-                // {
-                //    throw new ArgumentException("Incorect display parametars!");
-                // }
+                if (value == null)
+                {
+                    throw new ArgumentException("Incorect display parametars!");
+                }
                 this.display = value;
             }
         }
@@ -182,8 +183,8 @@
         public void AddCall(string dialedNumbe, uint duration)
         {
             DateTime now = DateTime.Now;
-            dialedNumbe = "+359889889889";
-            duration = 120;
+            dialedNumbe = dialedNumbe;
+            duration = duration;
             this.callHistory.Add(new Call(now.Date, now.Date, dialedNumbe, duration));
         }
 
@@ -222,9 +223,11 @@
             informations.AppendLine(string.Format("Manufacturer: --> {0}", this.manufacturer));
             informations.AppendLine(string.Format("Owner:        --> {0,5}", this.owner));
             informations.AppendLine(string.Format("Price:        --> {0,5:F2}lv", this.price));
-            informations.AppendLine(string.Format("Battery:      --> {0}", BatteryType.LiPo));
-            informations.AppendLine(string.Format("Display:      --> {0}in", display));
+            informations.AppendLine(string.Format("Battery specs:-->\n\tmodel\t\t - {0}\n\ttype\t\t - {1}\n\ttalk time\t - {2}\n\tidle taime\t - {3}", this.PhoneBattery.Model, BatteryType.LiPo, this.PhoneBattery.HoursTalk, this.PhoneBattery.HoursIdle));
+            informations.AppendLine(string.Format("Display specs:-->\n\tsize\t\t - {0} inches\n\tcolors\t\t - {1}M colors", this.PhoneDisplay.Size, this.PhoneDisplay.Colors / GSM.ConvertConst));
+            Console.WriteLine("</:");
             return informations.ToString();
         }
     }
 }
+ 

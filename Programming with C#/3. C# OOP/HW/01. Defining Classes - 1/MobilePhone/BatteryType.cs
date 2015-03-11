@@ -4,6 +4,7 @@
 
     public enum BatteryType
     {
+        Unknown,
         LiIon,
         LiPo,
         NiMH,
