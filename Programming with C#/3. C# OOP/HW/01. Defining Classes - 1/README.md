@@ -1,20 +1,55 @@
- <p align="center"><a href="http://telerikacademy.com//"><img src="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/Presentation/Telerik.png" /></a></p>
- 
--<h1 align="center">Telerik Academy 2015/2016</h1>
+Homework: Defining Classes - Part 1
+===================================
 
----
+### Problem 1. Define class
+*	Define a class that holds information about a mobile phone device: model, manufacturer, price, owner, battery characteristics (model, hours idle and hours talk) and display characteristics (size and number of colors).
+*	Define 3 separate classes (class `GSM` holding instances of the classes `Battery` and `Display`).
 
-# Programming with C# 
+### Problem 2. Constructors
+*	Define several constructors for the defined classes that take different sets of arguments (the full information for the class or part of it).
+*	Assume that model and manufacturer are mandatory (the others are optional). All unknown data fill with null.
 
-## C# - Part I
+### Problem 3. Enumeration
+*	Add an enumeration `BatteryType` (Li-Ion, NiMH, NiCd, …) and use it as a new field for the batteries.
 
-1. [Introduction to Programming](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/1.%20Intro-Programming-Homework) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-1/blob/master/1.%20Introduction%20to%20Programming/README.md)) - 10.01.2015
-* [Primitive Data Types and Variables](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/2.%20Primitive-Data-Types-Variables) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-1/blob/master/2.%20Data%20Types%20and%20Variables/README.md)) - 10.01.2015
-* [Operators, Expressions and Statements](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/3.%20Operators%20and%20Expressions) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-1/blob/master/3.%20Operators%20and%20Expressions/README.md)) - 10.01.2015
-* [Console Input/Output](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/4.%20Console%20Input-Output) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-1/blob/master/4.%20Console%20In%20and%20Out/README.md)) - 11.01.2015 
-* [Conditional Statements](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/5.%20Conditional%20Statements) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-1/blob/master/6.%20Loops/README.md)) - 16.01.2015
-* [BGCoder C# Part1](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/1.%20C%23%20Fundamentals%20I/0.%20BGCoder%20C%23Part1) - ([conditions](http://bgcoder.com/Contests/#!/List/ByCategory/23/Telerik-Software-Academy)) - 16.01.2015
+### Problem 4. ToString
+*	Add a method in the `GSM` class for displaying all information about it.
+*	Try to override `ToString()`.
 
-## C# - Part II
+### Problem 5. Properties
+*	Use properties to encapsulate the data fields inside the `GSM`, `Battery` and `Display` classes.
+*	Ensure all fields hold correct data at any given time.
 
-1. [Arrays](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/HW-Telerik-Academy/01.%20Arrays) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-2/blob/master/01.%20Arrays/README.md)) - 9.02.2015
+### Problem 6. Static field
+*	Add a static field and a property `IPhone4S` in the GSM class to hold the information about iPhone 4S.
+
+### Problem 7. GSM test
+*	Write a class `GSMTest` to test the `GSM` class:
+	*	Create an array of few instances of the `GSM` class.
+	*	Display the information about the GSMs in the array.
+	*	Display the information about the static property `IPhone4S`.
+
+### Problem 8. Calls
+*	Create a class `Call` to hold a call performed through a GSM.
+*	It should contain date, time, dialled phone number and duration (in seconds).
+
+### Problem 9. Call history
+*	Add a property `CallHistory` in the `GSM` class to hold a list of the performed calls.
+*	Try to use the system class `List<Call>`.
+
+### Problem 10. Add/Delete calls
+*	Add methods in the `GSM` class for adding and deleting calls from the calls history.
+*	Add a method to clear the call history.
+
+### Problem 11. Call price
+*	Add a method that calculates the total price of the calls in the call history.
+*	Assume the price per minute is fixed and is provided as a parameter.
+
+### Problem 12. Call history test
+*	Write a class `GSMCallHistoryTest` to test the call history functionality of the `GSM` class.
+	*	Create an instance of the `GSM` class.
+	*	Add few calls.
+	*	Display the information about the calls.
+	*	Assuming that the price per minute is `0.37` calculate and print the total price of the calls in the history.
+	*	Remove the longest call from the history and calculate the total price again.
+	*	Finally clear the call history and print it.
