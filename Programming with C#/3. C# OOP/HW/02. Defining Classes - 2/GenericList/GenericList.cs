@@ -1,10 +1,11 @@
 ﻿namespace GenericList
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Text;
 
-    public class GenericList<T> where T : IComparable
+    public class GenericList<T> : IEnumerable<T> // where T : IComparable
     {
         // Constant Fields
         private const int DefautCapacity = 8;
@@ -16,9 +17,11 @@
         public GenericList()
         {
             this.elements = new T[DefautCapacity];
+            this.Capacity = DefautCapacity;
         }
 
-        public GenericList(int capacity = DefautCapacity)
+        public GenericList(int capacity)
+            : this()
         {
             this.Count = 0;
             this.Capacity = capacity;
@@ -48,64 +51,143 @@
         }
 
         // Methods
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < this.Count; i++)
+            {
+                yield return this.elements[i];
+            }
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+
         public T Min()
         {
-            throw new NotImplementedException();
+            return this.MinMax(false);
         }
 
         public T Max()
         {
-            throw new NotImplementedException();
+            return this.MinMax(true);
         }
+
         public void Add(T element)
         {
-            if (this.Count ==  this.Capacity)
+            if (this.Count == this.Capacity)
             {
-                this.Resaize(this.Capacity);
+                this.Resaize();
             }
 
             this.elements[this.Count] = element;
             this.Count++;
         }
 
-        public void RemoveAt(T element)
+        public void RemoveAt(int index)
         {
-            throw new NotImplementedException();
-        }
-        public void Insert(T element)
-        {
-            throw new NotImplementedException();
-        }
-        public void Clear(T element)
-        {
-            throw new NotImplementedException();
+            if (index < 0 || index >= this.Count)
+            {
+                throw new IndexOutOfRangeException("Invalid index - Out of range");
+            }
+
+            for (int i = index; i < this.Count; i++)
+            {
+                this.elements[i] = this.elements[i +1];
+                this.elements[i+1] = default(T);
+            }
+
+            this.Count--;
         }
 
-        public void Contains(T element)
+        public void InsertOf(T element, int index)
         {
-            throw new NotImplementedException();
+            for (int i = this.Count - 1; i >= index; i--)
+            {
+                if (this.Count == this.Capacity)
+                {
+                  this.Resaize();
+                }
+
+                this.elements[i + 1] = this.elements[i];
+            }
+
+            this.elements[index] = element;
+            this.Count++;
         }
 
-        public void IndexOf(T element)
+        public void Clear()
         {
-            throw new NotImplementedException();
+            this.elements = new T[DefautCapacity];
+            this.Capacity = DefautCapacity;
+            this.Count = 0;
+        }
+
+        public bool Contain(T element)
+        {
+            for (int i = 0; i < this.Count; i++)
+            {
+                if (this.elements[i].Equals(element))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public int IndexOf(T element)
+        {
+            for (int i = 0; i < this.Count; i++)
+            {
+                if (this.elements[i].Equals(element))
+                {
+                    return i;
+                }
+            }
+
+            return -1;
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            if (this.Count == 0)
+            {
+                return String.Empty;
+            }
+
+            return string.Join(",", this.elements);
         }
 
         // Private methods
-        private void Resaize(int capacity)
+        private void Resaize()
         {
-            throw new NotImplementedException();
+            int newSize = this.Capacity * 2;
+            T[] newElements = new T[newSize];
+
+            for (int i = 0; i < this.Count; i++)
+            {
+                newElements[i] = elements[i];
+            }
+                       
+            this.elements = newElements;
+            this.Capacity = newSize;
         }
 
         private T MinMax(bool value)
         {
-            throw new NotImplementedException();
+            T best = this.elements[0];
 
+            for (int i = 1; i < this.Count; i++)
+            {
+                if (value ? (best < (dynamic) this.elements[i]) : (best > (dynamic) this.elements[i]))
+                {
+                    best = this.elements[i];
+                }                   
+            }                
+
+            return best;
         }
     }
 }
