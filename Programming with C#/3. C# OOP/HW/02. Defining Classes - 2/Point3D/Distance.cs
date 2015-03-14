@@ -4,18 +4,17 @@
 
     public static class Distance
     {
-        private static double xDistance;
-        private static double yDistance;
-        private static double zDistance;
+        private static double distanceX;
+        private static double distanceY;
+        private static double distanceZ;
         private static double distance;
-
 
         public static double CalculateDistance(Point3D startPointe, Point3D endPoint)
         {
-            xDistance = startPointe.X - endPoint.X;
-            yDistance = startPointe.Y - endPoint.Y;
-            zDistance = startPointe.Z - endPoint.Z;
-            distance = Math.Sqrt((Math.Pow(xDistance, 2) + Math.Pow(yDistance, 2) + Math.Pow(zDistance, 2)));
+            distanceX = startPointe.X - endPoint.X;
+            distanceY = startPointe.Y - endPoint.Y;
+            distanceZ = startPointe.Z - endPoint.Z;
+            distance = Math.Sqrt(Math.Pow(distanceX, 2) + Math.Pow(distanceY, 2) + Math.Pow(distanceZ, 2));
 
             return distance;
         }

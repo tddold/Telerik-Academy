@@ -1,57 +1,59 @@
 ﻿namespace Point3D
 {
-	using System;
-	using System.Collections.Generic;
-	using System.IO;
-	using System.Linq;
-	using System.Text;
-	public static class PathStorage
-	{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
 
-		public static void SavePath(List<Point3D> points)
-		{
-			string saveFilePath = "..\\..\\output.txt";           
+    public static class PathStorage
+    {
+        public static void SavePath(Path point, string fileName)
+        {
+            string saveFilePath = string.Format("..\\..\\{0}.txt", fileName.Trim());
 
-			StreamWriter writer = new StreamWriter(saveFilePath);
-			using (writer)
-			{
-				for (int i = 0; i < points.Count; i++)
-				{
-					writer.Write(string.Format("point {0} --> ", i));
-					writer.WriteLine(string.Format("x = {0}, y = {1}, z = {2}", points[i].X, points[i].Y, points[i].Z));
-				}
+            // defining a streamwriter class and making a new file
+            StreamWriter writer = new StreamWriter(saveFilePath);
 
-			}
-		}
+            using (writer)
+            {
+                writer.Write(point);
+            }
+        }
 
-		public static Path LoadFromFile(string fileName)
-		{
-			string loadFilePath = string.Format( "..\\..\\{0}.txt", fileName.Trim());
-			StreamReader reader = new StreamReader(loadFilePath);
-			StringBuilder points = new StringBuilder();
-			Path path = new Path();
+        public static Path LoadFromFile(string fileName)
+        {
+            string loadFilePath = string.Format("..\\..\\{0}.txt", fileName.Trim());
 
-			try
-			{	
-				using (reader)
-				{
-					points.Append(reader.ReadToEnd());
-				}
+            Path path = new Path();
 
-				//foreach (var point in points)
-				//{
-				//    path.AddPoints(double.Parse(point.ToString()));
-				//}
-			}
-			catch (FileNotFoundException)
-			{
-				
-				Console.WriteLine("The file whit file name {0} is not found!", fileName);
-				return null;
-			}
+            // defining a streamreader class to reade a file
+            StreamReader reader = new StreamReader(loadFilePath);
 
+            try
+            {
+                using (reader)
+                {
+                    string[] allPoints = reader.ReadToEnd()
+                        .Split(new string[] { " -> " }, StringSplitOptions.RemoveEmptyEntries);
 
-			return points.ToString();
-		}
-	}
+                    foreach (var point in allPoints)
+                    {
+                        double[] coordinates = point.Trim('{').Trim('}')
+                            .Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)
+                            .Select(x => double.Parse(x))
+                            .ToArray();
+                        path.AddPoint(new Point3D(coordinates[0], coordinates[1], coordinates[2]));
+                    }
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("The file whit file name {0} is not found!", fileName);
+                return null;
+            }
+
+            return path;
+        }
+    }
 }

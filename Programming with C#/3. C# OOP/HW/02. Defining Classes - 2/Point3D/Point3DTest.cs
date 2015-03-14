@@ -4,9 +4,12 @@
 
     public class Point3DTest
     {
-        static void Main()
+        public static void Main()
         {
-            Point3D startPoint = new Point3D();           
+            Console.WriteLine("Structure Point3D");
+            PrintSeparateLine();
+
+            Point3D startPoint = new Point3D();
 
             Point3D endPoint = new Point3D();
             endPoint.X = 1;
@@ -21,9 +24,18 @@
             Console.WriteLine(endPoint);
             PrintSeparateLine();
 
-            Console.WriteLine("Distance --> {0:F2}",Distance.CalculateDistance(startPoint, endPoint));
+            Console.WriteLine("\nDistance --> {0:F2}", Distance.CalculateDistance(startPoint, endPoint));
             PrintSeparateLine();
 
+            Path path = new Path();
+            path.AddPoints(startPoint, endPoint);
+            Console.Write("\nData sent to the file:    ");
+            Console.WriteLine(path);
+
+            PathStorage.SavePath(path, "output");
+            Console.Write("Data taken from the file: ");
+            Console.WriteLine(PathStorage.LoadFromFile("output"));
+            PrintSeparateLine();
         }
 
         public static void PrintSeparateLine()
