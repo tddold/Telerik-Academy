@@ -32,6 +32,7 @@
 
         public int Capacity { get; private set; }
 
+        //Indexer
         public T this[int index]
         {
             get
@@ -94,8 +95,8 @@
 
             for (int i = index; i < this.Count; i++)
             {
-                this.elements[i] = this.elements[i +1];
-                this.elements[i+1] = default(T);
+                this.elements[i] = this.elements[i + 1];
+                this.elements[i + 1] = default(T);
             }
 
             this.Count--;
@@ -107,7 +108,7 @@
             {
                 if (this.Count == this.Capacity)
                 {
-                  this.Resaize();
+                    this.Resaize();
                 }
 
                 this.elements[i + 1] = this.elements[i];
@@ -154,10 +155,10 @@
         {
             if (this.Count == 0)
             {
-                return String.Empty;
+                return string.Empty;
             }
 
-            return string.Join(",", this.elements);
+            return string.Join(", ", this.elements);
         }
 
         // Private methods
@@ -168,9 +169,9 @@
 
             for (int i = 0; i < this.Count; i++)
             {
-                newElements[i] = elements[i];
+                newElements[i] = this.elements[i];
             }
-                       
+
             this.elements = newElements;
             this.Capacity = newSize;
         }
@@ -181,11 +182,21 @@
 
             for (int i = 1; i < this.Count; i++)
             {
-                if (value ? (best < (dynamic) this.elements[i]) : (best > (dynamic) this.elements[i]))
+                if (value)
                 {
-                    best = this.elements[i];
-                }                   
-            }                
+                    if (best < (dynamic)this.elements[i])
+                    {
+                        best = this.elements[i];
+                    }
+                }
+                else
+                {
+                    if (best > (dynamic)this.elements[i])
+                    {
+                        best = this.elements[i];
+                    }
+                }
+            }
 
             return best;
         }
