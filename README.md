@@ -25,3 +25,5 @@
 6. [Strings and Text Processing](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/HW-Telerik-Academy/06.%20Strings%20and%20Text%20Pr) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/06.%20Strings%20and%20Text%20Processing)) - 19.02.2015
 7. [Exception Handling](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/HW-Telerik-Academy/07.%20Exception%20Handling) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/07.%20Exception%20Handling)) - 22.02.2015
 8.  [Text Files](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/HW-Telerik-Academy/08.%20Text%20Files) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/08.%20Text%20Files)) - 23.02.2015
+
+## C# - Object-Oriented-Programming
