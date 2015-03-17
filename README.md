@@ -19,3 +19,4 @@
 
 1. [Arrays](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/HW-Telerik-Academy/01.%20Arrays) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-2/blob/master/01.%20Arrays/README.md)) - 9.02.2015
 2. [Multidimensional-Arrays](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/02.%20Multidimensional-Arrays) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-2/blob/master/02.%20Multidimensional%20Arrays/README.md)) - 14.02.2015
+3. [Methods](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/03.%20Methods) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/03.%20Methods))
