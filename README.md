@@ -27,3 +27,5 @@
 8.  [Text Files](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/2.%20C%23%20Fundamentals%20II/HW-Telerik-Academy/08.%20Text%20Files) - ([conditions](https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/08.%20Text%20Files)) - 23.02.2015
 
 ## C# - Object-Oriented-Programming
+
+1. [Defining Classes - Part 1](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/01.%20Defining%20Classes%20-%201) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/01.%20Defining%20Classes%20-%20Part%201)) - 10.03.2015
