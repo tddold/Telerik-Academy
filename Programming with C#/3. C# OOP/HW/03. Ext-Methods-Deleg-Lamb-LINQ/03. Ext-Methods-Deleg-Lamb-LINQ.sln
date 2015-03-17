@@ -11,7 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. First before last", "Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Age range", "Age range\04. Age range.csproj", "{B640A73A-1C90-4B30-9287-A33938AAA0D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order students", "Order students\Order students.csproj", "{37BA6460-B2D6-42D3-8108-CC2C834C4F79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Order students", "Order students\05. Order students.csproj", "{37BA6460-B2D6-42D3-8108-CC2C834C4F79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Divisible by 7 and 3", "Divisible by 7 and 3\06. Divisible by 7 and 3.csproj", "{DB108F2E-1FFE-4D8D-8278-518759D2FF95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer", "Timer\Timer.csproj", "{8333103B-7D1D-4E66-A54A-28A0E8F717B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{37BA6460-B2D6-42D3-8108-CC2C834C4F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37BA6460-B2D6-42D3-8108-CC2C834C4F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37BA6460-B2D6-42D3-8108-CC2C834C4F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB108F2E-1FFE-4D8D-8278-518759D2FF95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB108F2E-1FFE-4D8D-8278-518759D2FF95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB108F2E-1FFE-4D8D-8278-518759D2FF95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB108F2E-1FFE-4D8D-8278-518759D2FF95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8333103B-7D1D-4E66-A54A-28A0E8F717B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8333103B-7D1D-4E66-A54A-28A0E8F717B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8333103B-7D1D-4E66-A54A-28A0E8F717B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8333103B-7D1D-4E66-A54A-28A0E8F717B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

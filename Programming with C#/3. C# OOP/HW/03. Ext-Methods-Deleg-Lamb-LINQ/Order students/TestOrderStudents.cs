@@ -44,7 +44,7 @@ namespace Order_students
                 select student;
 
 
-            Console.WriteLine("Methods OrderBy() and ThenBy() with lambda expressions.\n");
+            Console.WriteLine("Methods with LINQ.\n");
             Console.WriteLine(string.Join(Environment.NewLine, sortedByLinq));
             PrintSeparateLine();
         }
