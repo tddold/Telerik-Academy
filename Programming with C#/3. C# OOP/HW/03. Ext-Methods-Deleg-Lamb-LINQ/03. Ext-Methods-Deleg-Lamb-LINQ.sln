@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilderSubstring", "StringBuilderSubstring\StringBuilderSubstring.csproj", "{ADAD2533-EDB1-4770-8493-1DCD95D3BD0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. StringBuilderSubstring", "StringBuilderSubstring\01. StringBuilderSubstring.csproj", "{ADAD2533-EDB1-4770-8493-1DCD95D3BD0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. IEnumerable extensions", "IEnumerable extensions\02. IEnumerable extensions.csproj", "{BCACF328-94B4-49E4-A85C-23D7D4555610}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. First before last", "First before last\03. First before last.csproj", "{88BF5B69-6516-40E2-A2D1-AFC2DBC13CAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{ADAD2533-EDB1-4770-8493-1DCD95D3BD0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADAD2533-EDB1-4770-8493-1DCD95D3BD0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADAD2533-EDB1-4770-8493-1DCD95D3BD0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCACF328-94B4-49E4-A85C-23D7D4555610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCACF328-94B4-49E4-A85C-23D7D4555610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCACF328-94B4-49E4-A85C-23D7D4555610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCACF328-94B4-49E4-A85C-23D7D4555610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88BF5B69-6516-40E2-A2D1-AFC2DBC13CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88BF5B69-6516-40E2-A2D1-AFC2DBC13CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88BF5B69-6516-40E2-A2D1-AFC2DBC13CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88BF5B69-6516-40E2-A2D1-AFC2DBC13CAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
