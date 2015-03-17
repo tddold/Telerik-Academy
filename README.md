@@ -29,3 +29,4 @@
 ## C# - Object-Oriented-Programming
 
 1. [Defining Classes - Part 1](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/01.%20Defining%20Classes%20-%201) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/01.%20Defining%20Classes%20-%20Part%201)) - 10.03.2015
+2.  [Defining Classes - Part 2](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/02.%20Defining%20Classes%20-%202) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/02.%20Defining%20Classes%20-%20Part%202)) - 16.03.2015
