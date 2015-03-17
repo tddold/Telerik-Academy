@@ -20,7 +20,7 @@ namespace First_before_last
             var students = new[] 
             {
                 new { FirstName = "Ivan", LastName = "Petrov" },
-                new { FirstName = "Ptar", LastName = "Ivanov" },
+                new { FirstName = "Petar", LastName = "Ivanov" },
                 new { FirstName = "Gosho", LastName = "Goshev" },
                 new { FirstName = "Asen", LastName = "Georgiev" },
                 new { FirstName = "Ivan", LastName = "Asenov" },
