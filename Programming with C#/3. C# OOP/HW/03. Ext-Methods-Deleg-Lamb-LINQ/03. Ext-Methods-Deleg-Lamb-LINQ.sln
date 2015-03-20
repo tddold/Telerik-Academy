@@ -17,7 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Divisible by 7 and 3", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Timer", "Timer\07. Timer.csproj", "{8333103B-7D1D-4E66-A54A-28A0E8F717B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events", "Events\Events.csproj", "{72096834-57AF-4C7A-AFCF-3C7599170635}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Events", "Events\08. Events.csproj", "{72096834-57AF-4C7A-AFCF-3C7599170635}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-16. Student", "Student\09-16. Student.csproj", "{A4043718-5057-41C6-AF13-E1A9BB8AC0EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{72096834-57AF-4C7A-AFCF-3C7599170635}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72096834-57AF-4C7A-AFCF-3C7599170635}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72096834-57AF-4C7A-AFCF-3C7599170635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4043718-5057-41C6-AF13-E1A9BB8AC0EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4043718-5057-41C6-AF13-E1A9BB8AC0EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4043718-5057-41C6-AF13-E1A9BB8AC0EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4043718-5057-41C6-AF13-E1A9BB8AC0EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

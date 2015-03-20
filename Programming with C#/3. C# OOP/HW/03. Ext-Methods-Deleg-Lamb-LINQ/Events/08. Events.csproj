@@ -42,7 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Publisher.cs" />
-    <Compile Include="SimpleEvent.cs" />
+    <Compile Include="SampleEvent.cs" />
+    <Compile Include="Subscriber.cs" />
     <Compile Include="TestEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -6,13 +6,13 @@
     using System.Text;
 
     // Define class to hold even info
-    public class SimpleEvent : EventArgs
+    public class SampleEvent : EventArgs
     {
         private string message;
 
-        public SimpleEvent(string msg)
+        public SampleEvent(string msg)
         {
-            this.message = msg;
+            this.Message = msg;
         }
 
         public string Message

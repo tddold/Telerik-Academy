@@ -8,12 +8,25 @@ namespace Events
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+    using System.Threading;
     using System.Threading.Tasks;
 
-    class TestEvents
-    {
-        static void Main()
+    public class TestEvents
+    {      
+        public static void Main()
         {
+            Publisher eventPublisher = new Publisher();
+
+            //create subscribers for the event
+            Subscriber sub1 = new Subscriber("Pesho", eventPublisher); 
+            Subscriber sub2 = new Subscriber("Gosho", eventPublisher);
+
+            //sample event is raised by the publisher and handled by the subscribers
+            eventPublisher.RaiseSampleEvent();
+
+            // Keep the console window open
+            Console.WriteLine("Press Enter to close this window.");
+            Console.ReadLine();
         }
     }
 }
