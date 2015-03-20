@@ -25,13 +25,8 @@ namespace Student
             this.FacultyNumber = facultyNumber;
             this.Phone = phone;
             this.Email = email;
-            this.Marks = new List<int>();
+            this.Marks = marks;
             this.Group = group;
-        }
-
-        public Student()
-        {
-            // TODO: Complete member initialization
         }
 
         public string FirstName
@@ -108,7 +103,6 @@ namespace Student
                 this.email = value;
             }
         }
-
         public List<int> Marks
         {
             get
@@ -134,16 +128,16 @@ namespace Student
             set
             {
                 CheckGroup(value);
-
+                
                 this.group = value;
             }
         }
 
         public override string ToString()
         {
-            return string.Format("First name: {0}\nLast name: {1}\nFaculty number: {2}\n" +
-                                 "Group number: {3}\nMarks: {4}\nPhone: {5}\nEmail: {6}",
-                this.firstName, this.lastName, this,facultyNumber, this.group,
+            return string.Format("First name: {0}\nLast name : {1}\nFaculty number: {2}\n" +
+                                 "Group: {3}\nMarks: {4}\nPhone: {5}\nEmail: {6}",
+                this.firstName, this.lastName, this.facultyNumber, this.group,
                 string.Join(", ", this.marks), this.phone, this.email);
         }
 

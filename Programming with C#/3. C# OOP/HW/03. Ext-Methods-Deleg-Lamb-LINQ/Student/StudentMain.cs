@@ -42,23 +42,55 @@ namespace Student
         {
             var students = new List<Student>()
             {
-                new Student {FirstName = "Ivan",
-                            LastName = "Ivanov",
-                            FacultyNumber = "100101",
-                            Phone = "+35988123456",
-                            Email = new MailAddress ("ivan@abv.bg"),
-                            Marks =  new List<int> { 1,2,3},
-                            Group =  new Group("1", "Informatica")},
-               new Student {FirstName = "Pesho",
-                            LastName = "Peshev",
-                            FacultyNumber = "100102",
-                            Phone = "+35988123457",
-                            Email = new MailAddress ("pesho@abv.bg"),
-                            Marks =  new List<int> { 1,2,3},
-                            Group =  new Group("2", "Informatica")},
+                new Student("Ivan",
+                           "Ivanov",
+                           "100101",
+                           "+35988123456",
+                            new MailAddress ("ivan@abv.bg"),
+                            new List<int> { 6, 5, 6},
+                            new Group(1, "Informatica")),
+               new Student ("Pesho",
+                           "Peshev",
+                           "100102",
+                           "+35988123457",
+                           new MailAddress ("pesho@abv.bg"),
+                           new List<int> { 4, 3, 4},
+                           new Group(2, "Informatica")),
+               new Student ("Asen",
+                           "Asenow",
+                           "100103",
+                           "+35988123458",
+                           new MailAddress ("asen@abv.bg"),
+                           new List<int> { 5, 5, 5},
+                           new Group(2, "Informatica")),
+               new Student ("Gosho",
+                           "Goshev",
+                           "100104",
+                           "+35988123459",
+                           new MailAddress ("gosho@abv.bg"),
+                           new List<int> { 4, 5, 6},
+                           new Group(4, "Informatica")),
+               new Student ("Stamat",
+                           "Stamatov",
+                           "100105",
+                           "+35988123467",
+                           new MailAddress ("stamat@abv.bg"),
+                           new List<int> { 5,4,5},
+                           new Group(3, "Informatica")),
+               new Student ("Tosho",
+                           "Toshev",
+                           "100106",
+                           "+35988123477",
+                           new MailAddress ("tosho@abv.bg"),
+                           new List<int> { 5, 6, 4},                            
+                           new Group(2, "Informatica")),
             };
 
-            Console.WriteLine(string.Join(", ", students));
+            var studentsGroupTwo = students
+                .Where(x => x.Group.GroupNumber == 2)
+                .OrderBy(x => x.FirstName)
+                .Select(s => s).ToList();
+            Console.WriteLine(string.Join("\n\n", studentsGroupTwo));
         }
     }
 }

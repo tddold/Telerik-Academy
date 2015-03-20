@@ -7,16 +7,16 @@
 
     public class Group
     {
-        private string groupNumber;
+        private int groupNumber;
         private string departmentName;
 
-        public Group(string groupNum, string deptName)
+        public Group(int groupNum, string deptName)
         {
             this.GroupNumber = groupNum;
             this.DepartamenrName = deptName;
         }
 
-        public string GroupNumber
+        public int GroupNumber
         {
             get
             {
@@ -40,6 +40,11 @@
             {
                 this.departmentName = value;
             }
+        }
+
+        public override string ToString()
+        {
+            return string.Format("\t -> Group Number: {0},\n\t -> Departament Name: {1}", this.groupNumber, this.departmentName);
         }
     }
 }
