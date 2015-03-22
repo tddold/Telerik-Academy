@@ -26,7 +26,7 @@ namespace IEnumerable_extensions
             Console.WriteLine("\nThe min element is: {0}", source.Min());
             PrinSeparateLine();
 
-            Console.WriteLine("\nThe min element is: {0}", source.Max());
+            Console.WriteLine("\nThe max element is: {0}", source.Max());
             PrinSeparateLine();
 
             Console.WriteLine("\nThe average of sequence {0} is: {1}", string.Join(", ", source), source.Average());

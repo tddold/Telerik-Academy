@@ -135,8 +135,8 @@ namespace Student
 
         public override string ToString()
         {
-            return string.Format("First name: {0}\nLast name : {1}\nFaculty number: {2}\n" +
-                                 "Group: {3}\nMarks: {4}\nPhone: {5}\nEmail: {6}",
+            return string.Format("1. First name: {0}\n2. Last name : {1}\n3. Faculty number: {2}\n" +
+                                 "4. Group: {3}\n5. Marks: {4}\n6. Phone: {5}\n7. Email: {6}",
                 this.firstName, this.lastName, this.facultyNumber, this.group,
                 string.Join(", ", this.marks), this.phone, this.email);
         }
@@ -153,7 +153,7 @@ namespace Student
         {
             if (value == null)
             {
-                throw new ArgumentException("First name is empty.");
+                throw new ArgumentException("Faculty number is empty.");
             }
         }
 
@@ -161,7 +161,7 @@ namespace Student
         {
             if (value == null)
             {
-                throw new ArgumentException("First name is empty.");
+                throw new ArgumentException("Phone is empty.");
             }
         }
 
@@ -169,7 +169,7 @@ namespace Student
         {
             if (value == null)
             {
-                throw new ArgumentException("First name is empty.");
+                throw new ArgumentException("E-mail is empty.");
             }
         }
 
@@ -177,7 +177,7 @@ namespace Student
         {
             if (value == null)
             {
-                throw new ArgumentException("First name is empty.");
+                throw new ArgumentException("Marks is empty.");
             }
         }
 
@@ -185,7 +185,7 @@ namespace Student
         {
             if (value == null)
             {
-                throw new ArgumentException("First name is empty.");
+                throw new ArgumentException("Group is empty.");
             }
         }
 

@@ -37,8 +37,9 @@ namespace First_before_last
             PrintSeparateLine();
 
             // Extendet method
-            var extSortName =
-                students.Where(x => x.FirstName.CompareTo(x.LastName) < 0);
+            var extSortName = students
+                .Where(x => x.FirstName
+                    .CompareTo(x.LastName) < 0);
 
             Console.WriteLine("#2: Using Lambda expression\n");
             Console.WriteLine(string.Join(Environment.NewLine, extSortName));

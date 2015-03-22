@@ -44,7 +44,7 @@
 
         public override string ToString()
         {
-            return string.Format("\t -> Group Number: {0},\n\t -> Departament Name: {1}", this.groupNumber, this.departmentName);
+            return string.Format("\t -> Group Number: {0},\n\t\t -> Departament Name: {1}", this.groupNumber, this.departmentName);
         }
     }
 }
