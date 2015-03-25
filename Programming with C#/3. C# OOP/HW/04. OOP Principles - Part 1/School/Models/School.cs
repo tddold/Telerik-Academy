@@ -9,6 +9,11 @@
     {
         private List<Classes> classes;
 
+        public School()
+        {
+
+        }
+        
         public School(params Classes[] classes)
         {
             this.Classes = new List<Classes>();

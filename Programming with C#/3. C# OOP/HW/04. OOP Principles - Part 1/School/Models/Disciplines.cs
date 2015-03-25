@@ -75,7 +75,7 @@ namespace School.Models
 
         public override string ToString()
         {
-            return "Discipline" + this.Name;
+            return "Discipline:" + " " + this.Name;
         }
     }
 }

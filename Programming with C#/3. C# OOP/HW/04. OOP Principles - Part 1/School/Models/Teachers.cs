@@ -38,8 +38,8 @@ namespace School.Models
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("Name: " + base.Name);
-            sb.AppendLine("Discipline: ");
+            sb.AppendLine("Name: Mr." + base.Name);
+            //sb.AppendLine("Discipline: ");
             sb.AppendLine(string.Join(", ", Disciplines));
 
             return sb.ToString();
