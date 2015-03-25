@@ -40,8 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\ICommentable.cs" />
+    <Compile Include="Models\Classes.cs" />
     <Compile Include="Models\Disciplines.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\School.cs" />
     <Compile Include="Models\Students.cs" />
     <Compile Include="Models\Teachers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

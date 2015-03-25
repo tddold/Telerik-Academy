@@ -4,7 +4,8 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    interface ICommentable
+
+    public interface ICommentable
     {
         // the class should have a list of comments
         List<string> Comments { get; set; }

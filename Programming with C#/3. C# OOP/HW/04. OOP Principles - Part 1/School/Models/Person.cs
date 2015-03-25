@@ -1,8 +1,9 @@
-﻿namespace School.Models
+﻿using School.Interfaces;
+
+namespace School.Models
 {
     using System;
     using System.Collections.Generic;
-    using School.Interfaces;
 
     public class Person : ICommentable
     {
@@ -12,9 +13,14 @@
         {
             this.Name = name;
         }
+
         public string Name
         {
-            get { return this.name; }
+            get
+            {
+                return this.name;
+            }
+
             set
             {
                 if (value == string.Empty)
