@@ -1,4 +1,4 @@
-﻿namespace School.Interfaces
+﻿namespace School_classes.Interfaces
 {
     using System;
     using System.Collections.Generic;
@@ -7,10 +7,8 @@
 
     public interface ICommentable
     {
-        // the class should have a list of comments
         List<string> Comments { get; set; }
 
-        // the class should have a method to add something to those comments
         void AddComment(string comment);
     }
 }

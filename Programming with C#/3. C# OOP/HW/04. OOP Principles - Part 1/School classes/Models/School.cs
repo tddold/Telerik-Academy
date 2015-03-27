@@ -1,4 +1,4 @@
-﻿namespace School.Models
+﻿namespace School_classes.Models
 {
     using System;
     using System.Collections.Generic;
@@ -13,7 +13,7 @@
         {
 
         }
-        
+
         public School(params Classes[] classes)
         {
             this.Classes = new List<Classes>();
@@ -33,14 +33,19 @@
             }
         }
 
-        public void AddClass(Classes newClasses)
+        public void AddClasses(Classes newClasses)
         {
             this.classes.Add(newClasses);
         }
 
-        public void RemoveClass(Classes removeClasses)
+        public void RemoveClasses(Classes removeClasses)
         {
             this.classes.Remove(removeClasses);
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Class: {0}", this.Classes);
         }
     }
 }

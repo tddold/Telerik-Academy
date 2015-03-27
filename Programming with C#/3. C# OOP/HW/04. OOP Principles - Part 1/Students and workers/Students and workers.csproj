@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E8DD40E-B8D5-48C3-87D1-D7B94FAED397}</ProjectGuid>
+    <ProjectGuid>{0E527A88-CDA9-4346-A14F-936DD0AC0E98}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SchoolSystem</RootNamespace>
-    <AssemblyName>SchoolSystem</AssemblyName>
+    <RootNamespace>Students_and_workers</RootNamespace>
+    <AssemblyName>Students and workers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,17 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SchoolSystem.cs" />
+    <Compile Include="StudentsАndWorkers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\School\School.csproj">
-      <Project>{4b0adad2-2217-48f1-9043-e5e32d5ba44f}</Project>
-      <Name>School</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4B0ADAD2-2217-48F1-9043-E5E32D5BA44F}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{1B5C47D1-A892-4581-A6AA-13DFAD4EEDFA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>School</RootNamespace>
-    <AssemblyName>School</AssemblyName>
+    <RootNamespace>School_classes</RootNamespace>
+    <AssemblyName>School classes</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,14 +43,19 @@
   <ItemGroup>
     <Compile Include="Interfaces\ICommentable.cs" />
     <Compile Include="Models\Classes.cs" />
+    <Compile Include="Models\CommentableSchoolObject.cs" />
+    <Compile Include="Models\Commenter.cs" />
     <Compile Include="Models\Disciplines.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\School.cs" />
+    <Compile Include="Models\SchoolObject.cs" />
     <Compile Include="Models\Students.cs" />
     <Compile Include="Models\Teachers.cs" />
+    <Compile Include="SchoolMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="SchoolClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
