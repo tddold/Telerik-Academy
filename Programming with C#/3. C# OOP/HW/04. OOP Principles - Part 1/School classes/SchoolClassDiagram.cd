@@ -37,7 +37,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="School_classes.Models.School" Collapsed="true">
-    <Position X="8.25" Y="0.75" Width="1.5" />
+    <Position X="7.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAAAAFAAAAAQAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\School.cs</FileName>
@@ -64,8 +64,15 @@
       <FileName>Models\Teachers.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="School_classes.SchoolMain" Collapsed="true">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>SchoolMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="School_classes.Interfaces.ICommentable" Collapsed="true">
-    <Position X="1" Y="1.25" Width="1.5" />
+    <Position X="6" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Interfaces\ICommentable.cs</FileName>

@@ -22,28 +22,54 @@ namespace School_classes
     {
         static void Main()
         {
+            Console.WriteLine("School");
+            PrintSeparateLine();
+
             var school = new School(new Classes("10b", Guid.NewGuid().ToString()),
                                     new Classes("10a", Guid.NewGuid().ToString()),
                                     new Classes("11b", Guid.NewGuid().ToString()));
 
-            var teachers = new Teachers("Ivan Ivanov", new Disciplines("History", 10, 5));
-            var discipline = new Disciplines("Matemathic", 15, 15);
+            List<Students> students = new List<Students>
+            {
+                new Students("Pepo", 12),
+                new Students("Gosho", 13),
+                new Students("Ivo", 14),
+                new Students("Hari", 15),
 
 
+            };
+
+            Console.WriteLine("\n> Students:\n");
+
+            foreach (var student in students)
+            {
+                Console.WriteLine("Name: {0, -5} | ID: {1}", student.Name, student.UniqueClassNumber);
+            }
+
+            List<Teachers> teachers = new List<Teachers>
+            {
+                new Teachers("Ivan Ivanoiv", new Disciplines("Biologic", 5, 5)),
+                new Teachers("Pesho Pesev", new Disciplines("Mathematic", 15, 15)),
+                new Teachers("Asen Asenv", new Disciplines("History", 5, 5)),
+            };
+
+            Console.WriteLine("\n\n> Teachers:\n");
             
+            foreach (var teacher in teachers)
+            {
+                Console.WriteLine("Name: Mr.{0, -12} | Discipline: {1}", teacher.Name, string.Join(", ", teacher.Discipline));
+            }
 
-            Students student = new Students("Ivan Ivanov", 1);
-            Teachers teacher1 = new Teachers("Pesho Peshev", new Disciplines("Mathematic", 1, 1));
-            Teachers teacher2 = new Teachers("Asen asenov", new Disciplines("Sport", 4, 4));
+            Console.WriteLine("\n\n> Classes:\n");
+            Console.WriteLine(string.Join(Environment.NewLine, school.Classes));
+
+            PrintSeparateLine();
            
+        }
 
-            Console.WriteLine("st." + student.Name + ", ID:" + student.UniqueClassNumber);
-
-            Console.WriteLine("teacher1: {0}", teacher1);
-            Console.WriteLine("teacher2: {0}", teacher2);
-
-            Console.WriteLine(school.ToString());
-           
+        private static void PrintSeparateLine()
+        {
+            Console.WriteLine(new string('-', 40));
         }
     }
 }
