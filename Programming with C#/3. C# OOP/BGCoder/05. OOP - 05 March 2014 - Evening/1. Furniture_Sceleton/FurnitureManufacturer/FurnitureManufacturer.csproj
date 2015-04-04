@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D8D04BC7-F11B-43FF-A30B-58B68EBB7007}</ProjectGuid>
+    <ProjectGuid>{8E9B15A2-1CE6-48E4-8143-E6B4BE5CB7B2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AcademyEcosystem</RootNamespace>
-    <AssemblyName>AcademyEcosystem</AssemblyName>
+    <RootNamespace>FurnitureManufacturer</RootNamespace>
+    <AssemblyName>Furnitures</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,31 +41,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="AnimalState.cs" />
-    <Compile Include="Boar.cs" />
-    <Compile Include="Bush.cs" />
-    <Compile Include="Deer.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="ExtendedEngine.cs" />
-    <Compile Include="Grass.cs" />
-    <Compile Include="ICarnivore.cs" />
-    <Compile Include="IHerbivore.cs" />
-    <Compile Include="IOrganism.cs" />
-    <Compile Include="Lion.cs" />
-    <Compile Include="Organism.cs" />
-    <Compile Include="Plant.cs" />
-    <Compile Include="Point.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Engine\Command.cs" />
+    <Compile Include="Engine\ConsoleRenderer.cs" />
+    <Compile Include="Engine\EngineConstants.cs" />
+    <Compile Include="Engine\Factories\CompanyFactory.cs" />
+    <Compile Include="Engine\Factories\FurnitureFactory.cs" />
+    <Compile Include="Engine\FurnitureManufacturerEngine.cs" />
+    <Compile Include="FurnitureProgram.cs" />
+    <Compile Include="Interfaces\Engine\IRenderer.cs" />
+    <Compile Include="Models\AdjustableChair.cs" />
+    <Compile Include="Models\Chair.cs" />
+    <Compile Include="Models\Common\Validator.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\ConvertibleChair.cs" />
+    <Compile Include="Models\DeleteMe.cs" />
+    <Compile Include="Models\ExtendedCompany.cs" />
+    <Compile Include="Models\Furniture.cs" />
+    <Compile Include="Models\MaterialType.cs" />
+    <Compile Include="Interfaces\IAdjustableChair.cs" />
+    <Compile Include="Interfaces\IChair.cs" />
+    <Compile Include="Interfaces\Engine\ICommand.cs" />
+    <Compile Include="Interfaces\ICompany.cs" />
+    <Compile Include="Interfaces\Engine\ICompanyFactory.cs" />
+    <Compile Include="Interfaces\IConvertibleChair.cs" />
+    <Compile Include="Interfaces\IFurniture.cs" />
+    <Compile Include="Interfaces\Engine\IFurnitureFactory.cs" />
+    <Compile Include="Interfaces\Engine\IFurnituresManufacturerEngine.cs" />
+    <Compile Include="Interfaces\ITable.cs" />
+    <Compile Include="Models\Table.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tree.cs" />
-    <Compile Include="Wolf.cs" />
-    <Compile Include="Zombie.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AcademyEcosystemDiagram.cd" />
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

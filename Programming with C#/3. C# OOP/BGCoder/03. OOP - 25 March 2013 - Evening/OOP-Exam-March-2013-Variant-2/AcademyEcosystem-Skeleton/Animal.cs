@@ -18,7 +18,6 @@ namespace AcademyEcosystem
         {
             this.Name = name;
             this.sleepRemaining = 0;
-           // this.State = AnimalState.Awake; //TODO.................
         }
 
         public virtual int GetMeatFromKillQuantity()

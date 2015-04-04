@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace AcademyEcosystem
 {
-   public class Program
+    class Program
     {
-        private static Engine GetEngineInstance()
+        static Engine GetEngineInstance()
         {
-            return new ExtendedEngine();
+            return new Engine();
         }
 
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             Engine engine = GetEngineInstance();
 

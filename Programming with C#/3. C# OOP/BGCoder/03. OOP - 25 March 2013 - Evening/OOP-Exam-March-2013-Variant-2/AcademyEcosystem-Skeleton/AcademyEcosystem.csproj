@@ -6,7 +6,6 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D8D04BC7-F11B-43FF-A30B-58B68EBB7007}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AcademyEcosystem</RootNamespace>
     <AssemblyName>AcademyEcosystem</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -43,28 +42,20 @@
   <ItemGroup>
     <Compile Include="Animal.cs" />
     <Compile Include="AnimalState.cs" />
-    <Compile Include="Boar.cs" />
     <Compile Include="Bush.cs" />
     <Compile Include="Deer.cs" />
     <Compile Include="Engine.cs" />
-    <Compile Include="ExtendedEngine.cs" />
-    <Compile Include="Grass.cs" />
     <Compile Include="ICarnivore.cs" />
     <Compile Include="IHerbivore.cs" />
     <Compile Include="IOrganism.cs" />
-    <Compile Include="Lion.cs" />
     <Compile Include="Organism.cs" />
     <Compile Include="Plant.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree.cs" />
-    <Compile Include="Wolf.cs" />
-    <Compile Include="Zombie.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AcademyEcosystemDiagram.cd" />
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
