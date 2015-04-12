@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HTML Tables</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o, #p, #q {
+            border: 2px solid white;
+            border-style: inset;
+            text-align: center;
+        }
+
+        #a {
+            border-style: outset;
+        }
+
+        #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o, #p, #q {
+            width: 30px;
+            height:20px;
+           
+        }
+
+        #e {
+            text-align: left;
+        }
+
+        #d, #i, #l {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0" cellpadding="5">
+        <colgroup><col style="width:250px" /></colgroup>
+        <tr>
+            <td colspan="2">
+                <h1><i>Fresh Fruits</i></h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>It has long been known that a diet</div>
+                <div>that includes at least a few</div>
+                <div> that includes at least a few</div>
+                <div>servings of fresh fruit every day</div>
+                <div>will help keep you healthy, fit and</div>
+                <div>trim.</div>
+            </td>
+            <td><img src="pic.png" alt="Fresh Fruits" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table id="a" cellspacing="0" cellspadding="5">                    
+                    <thead>
+                        <tr>
+                            <th id="b" colspan="3">Title goes here</th>
+                            <td id="c">A</td>
+                            <td id="d">B</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="e" rowspan="3">C</td>
+                            <td id="f">D</td>
+                            <td id="g">E</td>
+                            <td id="h">F</td>
+                            <td id="i">G</td>
+                        </tr>
+                        <tr>
+                            <td id="j">H</td>
+                            <td id="k" colspan="2">I</td>
+                            <td id="l" rowspan="2" valign="bottom">J</td>
+                        </tr>
+                        <tr>
+                            <td id="m">K</td>
+                            <td id="n">L</td>
+                            <td id="o">M</td>
+                        </tr>
+                        <tr>
+                            <td id="p">N</td>
+                            <td id="q" colspan=" 4">O</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
