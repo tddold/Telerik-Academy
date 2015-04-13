@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{00D70B05-36E0-46FD-A43C-67210106D315}</ProjectGuid>
+    <ProjectGuid>{D532076E-56C0-4B69-991A-198B641272AE}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HTML_Fundamentals</RootNamespace>
-    <AssemblyName>HTML Fundamentals</AssemblyName>
+    <RootNamespace>Registration_form</RootNamespace>
+    <AssemblyName>Registration form</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -65,11 +65,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="friends.html" />
-    <Content Include="home.html" />
-    <Content Include="Nested Lists.html" />
-    <Content Include="profile.html" />
-    <Content Include="Runners Home page.html" />
+    <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -88,9 +84,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>24908</DevelopmentServerPort>
+          <DevelopmentServerPort>3802</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:24908/</IISUrl>
+          <IISUrl>http://localhost:3802/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
