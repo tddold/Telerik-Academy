@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. HTML Tables", "HTML Tab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. HTML Form", "HTML Form\02. HTML Form.csproj", "{1C7A92D2-7053-4E24-990F-86E0C5F1C32D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Calculator", "Calculator\03. Calculator.csproj", "{4D316D07-9D11-4078-BDFC-9CC0BE297C19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1C7A92D2-7053-4E24-990F-86E0C5F1C32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C7A92D2-7053-4E24-990F-86E0C5F1C32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C7A92D2-7053-4E24-990F-86E0C5F1C32D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D316D07-9D11-4078-BDFC-9CC0BE297C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D316D07-9D11-4078-BDFC-9CC0BE297C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D316D07-9D11-4078-BDFC-9CC0BE297C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D316D07-9D11-4078-BDFC-9CC0BE297C19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

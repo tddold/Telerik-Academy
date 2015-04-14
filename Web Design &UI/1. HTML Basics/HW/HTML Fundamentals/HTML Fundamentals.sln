@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40302.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTML Fundamentals", "HTML Fundamentals\HTML Fundamentals.csproj", "{00D70B05-36E0-46FD-A43C-67210106D315}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Runners Home page", "HTML Fundamentals\01. Runners Home page.csproj", "{00D70B05-36E0-46FD-A43C-67210106D315}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Nested Lists", "Nested Lists\02. Nested Lists.csproj", "{5C24CFE1-2117-4DA6-8E30-76944C5C14F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Social site", "Social site\03. Social site.csproj", "{19FA4265-E0DA-4DB0-B2FF-307EEE2BB17C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{00D70B05-36E0-46FD-A43C-67210106D315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00D70B05-36E0-46FD-A43C-67210106D315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00D70B05-36E0-46FD-A43C-67210106D315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C24CFE1-2117-4DA6-8E30-76944C5C14F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C24CFE1-2117-4DA6-8E30-76944C5C14F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C24CFE1-2117-4DA6-8E30-76944C5C14F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C24CFE1-2117-4DA6-8E30-76944C5C14F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FA4265-E0DA-4DB0-B2FF-307EEE2BB17C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FA4265-E0DA-4DB0-B2FF-307EEE2BB17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FA4265-E0DA-4DB0-B2FF-307EEE2BB17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FA4265-E0DA-4DB0-B2FF-307EEE2BB17C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

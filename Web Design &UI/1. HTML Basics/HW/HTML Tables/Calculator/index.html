@@ -1,0 +1,82 @@
+﻿<!-- Problem 3. Calculator
+Create a Calculator-like table. You should use a HTML 5 form for the Calculator.
+Buttons for all the numbers and operators (+, -, etc.)
+Textbox for the result-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calculator</title>
+    <style>
+        table, tr, td, button, input {
+            background: #F3F9FA;
+            border: 1px solid #8DF6F4;
+            border-collapse: collapse;
+            font-family: consolas;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 3px #aaa;
+            color: #8bf3f1;
+            text-align: right;
+        }
+
+        button, input {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 1px;           
+            color: #8bf3f1;            
+        }
+
+        button {           
+            text-align: center;
+        }
+
+        input {           
+            padding: 0px 10px 0px;
+        }
+
+        #a {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="4">
+                        <input type="text" value="123" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>*</button></td>
+                </tr>
+                <tr>
+                    <td id="a" colspan="2"><button>0</button></td>
+                    <td><button>.</button></td>
+                    <td><button>/</button></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </form>
+</body>
+</html>
