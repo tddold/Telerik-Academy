@@ -1,70 +1,103 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta charset="utf-8" />
     <title>Registration form</title>
+    <style>
+        th {
+            text-align: center;
+        }
+
+        textarea {
+            width: 250px;
+            height: 80px;
+        }
+        #a{
+            background-color:#87CDEA;
+        }
+    </style>
 </head>
 <body>
     <form name="Registration form">
         <table border="1" cellspacing="0">
             <colgroup>
-                <col width="150" />
+                <col />
             </colgroup>
             <tbody>
                 <tr>
-                    <td>First Name</td>
-                    <td width="250"><input type="text" placeholder="Ivan" /></td>
+                    <th width="20">First Name</th>
+                    <td width="100"><input type="text" placeholder="Ivan" size="23" /></td>
                 </tr>
                 <tr>
-                    <td>Last Name</td>
-                    <td width="250"><input type="text" placeholder="Ivanov" /></td>
+                    <th>Last Name</th>
+                    <td><input type="text" placeholder="Ivanov" size="23" /></td>
                 </tr>
                 <tr>
-                    <td>Address</td>
-                    <td width="250" height="80"><textarea name="Address" placeholder="17 Hristo Botev Str. floor 3, apt. 12"></textarea></td>
+                    <th>Address</th>
+                    <td><textarea name="Address" placeholder="17 Hristo Botev Str. floor 3, apt. 12"></textarea></td>
                 </tr>
                 <tr>
-                    <td>City</td>
-                    <td width="250">
-                        <input type="text" placeholder="Sofia" />
+                    <th>City</th>
+                    <td>
+                        <input type="text" placeholder="Sofia" size="20" />
                         <lable for="state">State</lable>
-                    <input type="text" id="state"/>
+                        <input type="text" id="state" size="5" />
                     </td>
                 </tr>
                 <tr>
-                    <td>Zip/Postal/Copy</td>
-                    <td width="250"><input type="text" placeholder="Ivan" /></td>
+                    <th>Zip/Postal/Copy</th>
+                    <td><input type="text" placeholder="1000" /></td>
                 </tr>
                 <tr>
-                    <td>Phone(contry code, area code, number)</td>
-                    <td width="250"><input type="text" placeholder="Ivan" /></td>
+                    <th>Country</th>
+                    <td>
+                        <select name="Country">
+                            <option value="1">ALbania</option>
+                            <option value="2" selected="selected">Bulgaria</option>
+                            <option value="3">Other</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-                    <td>E-mail</td>
-                    <td width="250"><input type="text" placeholder="Ivan" /></td>
+                    <th>Phone(contry code, area code, number)</th>
+                    <td>(+<input type="text" placeholder="359" size="5" />) <input type="text" placeholder="88" size="4" /> <input type="tel" placeholder="123456" size="20" /></td>
                 </tr>
                 <tr>
-                    <td>Birth date</td>
-                    <td width="250"><input type="text" placeholder="Ivan" /></td>
+                    <th>E-mail</th>
+                    <td><input type="email" placeholder="iivanov@abv.bg" size="25" /></td>
                 </tr>
                 <tr>
-                    <td>Gender</td>
-                    <td width="250"><input type="text" placeholder="Ivan" /></td>
+                    <th>Birth date</th>
+                    <td><input type="text" placeholder="дд. мм. гггг г." size="20" /></td>
                 </tr>
                 <tr>
-                    <td>Starting date</td>
-                    <td width="250"><input type="text" placeholder="Ivan" /></td>
+                    <th>Gender</th>
+                    <td>
+                        <select name="Gender">
+                            <option value="1" selected="selected">Male</option>
+                            <option value="2">Female</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-                    <td>First Name</td>
-                    <td width="250"><input type="text" placeholder="Ivan" /></td>
+                    <th>Starting date</th>
+                    <td>
+                        <input type="radio" id="sp" name="date" value="Spring 2015" />
+                        <label for="sp">Sprint 2015</label>
+                        <input type="radio" id="sm" name="date" value="Summer 2015" />
+                        <label for="sm">Summer 2015</label>
+
+                    </td>
                 </tr>
                 <tr>
-                    <td>Comments/Questions</td>
-                    <td width="250"><input type="text" placeholder="Ivan" /></td>
+                    <th>Comments/Questions</th>
+                    <td><textarea name="Comments"></textarea></td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td width="250"><input type="text" placeholder="Ivan" /></td>
+                <tr id="a">
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submmit" />
+                        <input type="reset" value="Clean This Form"/>
+                    </td>
                 </tr>
             </tbody>
         </table>
