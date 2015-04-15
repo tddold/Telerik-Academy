@@ -4,37 +4,46 @@
     <meta charset="utf-8" />
     <title>Registration form</title>
     <style>
+        table {
+            width: 430px;
+        }
+
         th {
+           
             text-align: center;
         }
 
+        td{
+            width:280px;
+        }
+
         textarea {
-            width: 250px;
+            width: 240px;
             height: 80px;
         }
-        #a{
-            background-color:#87CDEA;
+
+        #a {
+            background-color: #87CDEA;
         }
     </style>
 </head>
 <body>
     <form name="Registration form">
         <table border="1" cellspacing="0">
-            <colgroup>
-                <col />
-            </colgroup>
             <tbody>
                 <tr>
-                    <th width="20">First Name</th>
-                    <td width="100"><input type="text" placeholder="Ivan" size="23" /></td>
+                    <th>First Name</th>
+                    <td><input type="text" placeholder="Ivan" size="35" /></td>
                 </tr>
                 <tr>
                     <th>Last Name</th>
-                    <td><input type="text" placeholder="Ivanov" size="23" /></td>
+                    <td><input type="text" placeholder="Ivanov" size="35" /></td>
                 </tr>
                 <tr>
                     <th>Address</th>
-                    <td><textarea name="Address" placeholder="17 Hristo Botev Str. floor 3, apt. 12"></textarea></td>
+                    <td>
+                        <textarea name="Address" placeholder="17 Hristo Botev Str. floor 3, apt. 12"></textarea>
+                    </td>
                 </tr>
                 <tr>
                     <th>City</th>
@@ -46,7 +55,7 @@
                 </tr>
                 <tr>
                     <th>Zip/Postal/Copy</th>
-                    <td><input type="text" placeholder="1000" /></td>
+                    <td><input type="text" placeholder="1000" size="6"/></td>
                 </tr>
                 <tr>
                     <th>Country</th>
@@ -54,17 +63,21 @@
                         <select name="Country">
                             <option value="1">ALbania</option>
                             <option value="2" selected="selected">Bulgaria</option>
-                            <option value="3">Other</option>
+                            <option value="3">Other...............................</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <th>Phone(contry code, area code, number)</th>
-                    <td>(+<input type="text" placeholder="359" size="5" />) <input type="text" placeholder="88" size="4" /> <input type="tel" placeholder="123456" size="20" /></td>
+                    <td>
+                        (+<input type="text" placeholder="359" size="4" />)
+                        <input type="text" placeholder="88" size="3" />
+                        <input type="tel" placeholder="123456" size="12" />
+                    </td>
                 </tr>
                 <tr>
                     <th>E-mail</th>
-                    <td><input type="email" placeholder="iivanov@abv.bg" size="25" /></td>
+                    <td><input type="email" placeholder="iivanov@abv.bg" size="34" /></td>
                 </tr>
                 <tr>
                     <th>Birth date</th>
@@ -96,7 +109,7 @@
                 <tr id="a">
                     <td colspan="2" align="center">
                         <input type="submit" value="Submmit" />
-                        <input type="reset" value="Clean This Form"/>
+                        <input type="reset" value="Clean This Form" />
                     </td>
                 </tr>
             </tbody>
