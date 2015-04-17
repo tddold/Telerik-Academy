@@ -65,8 +65,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GirdComponent.css" />
     <Content Include="index.html" />
+    <Content Include="styles\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
