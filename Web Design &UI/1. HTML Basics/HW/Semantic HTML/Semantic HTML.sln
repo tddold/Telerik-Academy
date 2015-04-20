@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Refactoring", "Refactoring\01. Refactoring.csproj", "{32CDFA60-A2A2-4C38-B1F1-4736A815D638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Student System", "Student System\02. Student System.csproj", "{664B487F-1EFD-4013-8102-419E51298774}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32CDFA60-A2A2-4C38-B1F1-4736A815D638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32CDFA60-A2A2-4C38-B1F1-4736A815D638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32CDFA60-A2A2-4C38-B1F1-4736A815D638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32CDFA60-A2A2-4C38-B1F1-4736A815D638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{664B487F-1EFD-4013-8102-419E51298774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664B487F-1EFD-4013-8102-419E51298774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664B487F-1EFD-4013-8102-419E51298774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664B487F-1EFD-4013-8102-419E51298774}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
