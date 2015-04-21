@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Refactoring", "Refactor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Student System", "Student System\02. Student System.csproj", "{664B487F-1EFD-4013-8102-419E51298774}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. LinkedIn", "LinkedIn\03. LinkedIn.csproj", "{EE5EC63D-6D03-4106-AA01-889AD69F7997}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{664B487F-1EFD-4013-8102-419E51298774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{664B487F-1EFD-4013-8102-419E51298774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{664B487F-1EFD-4013-8102-419E51298774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5EC63D-6D03-4106-AA01-889AD69F7997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5EC63D-6D03-4106-AA01-889AD69F7997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5EC63D-6D03-4106-AA01-889AD69F7997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5EC63D-6D03-4106-AA01-889AD69F7997}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
