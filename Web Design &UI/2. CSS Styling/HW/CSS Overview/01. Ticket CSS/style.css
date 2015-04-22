@@ -16,6 +16,7 @@ table {
 
 td {
     vertical-align: text-top;
+    height:20px;
 }
 
 a {
@@ -33,12 +34,13 @@ a {
     border-radius: 50%;
     position: absolute;
     left: 130px;
-    top: 54px;
+    top: 47px;
 }
 
 #ticket {
     font-size: 18px;
-    padding: 5px 0;
+    padding-top: 5px;
+    padding-bottom:15px;
 }
 
 #park {
@@ -46,8 +48,18 @@ a {
     font-size: 14px;
 }
 
+#email {
+    height:30px;
+    padding-top:10px;
+}
+
+#link{
+    padding-bottom:10px;
+}
+
 .yellow {
     color: #FDF5B3;
+    margin:0;
 }
 
 .white {

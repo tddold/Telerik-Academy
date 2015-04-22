@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Ticket CSS", "01. Ticket CSS\01. Ticket CSS.csproj", "{936CB01B-83F1-432A-AB9C-92A846D2A0AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. International Employees", "02. International Employees\02. International Employees.csproj", "{51CEA255-B388-4192-89CF-AEEF18A53CDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{936CB01B-83F1-432A-AB9C-92A846D2A0AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{936CB01B-83F1-432A-AB9C-92A846D2A0AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{936CB01B-83F1-432A-AB9C-92A846D2A0AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51CEA255-B388-4192-89CF-AEEF18A53CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CEA255-B388-4192-89CF-AEEF18A53CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51CEA255-B388-4192-89CF-AEEF18A53CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51CEA255-B388-4192-89CF-AEEF18A53CDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
