@@ -1,0 +1,63 @@
+﻿body, table {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Ariel;
+    text-align: left;
+}
+
+table {
+    width: 304px;
+    height: 205px;
+    background-color: #595959;
+}
+
+td {
+    vertical-align: text-top;
+}
+
+a {
+    text-decoration: none;
+}
+
+.brown {
+    color: #acaba0;
+}
+
+#circle {
+    background: #71B47A;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    position: absolute;
+    left: 130px;
+    top: 54px;
+}
+
+#ticket {
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+#park {
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.yellow {
+    color: #FDF5B3;
+}
+
+.white {
+    color: white;
+}
+
+#red {
+    color: red;
+}
+
+#oringe {
+    color: #D16A1D;
+}

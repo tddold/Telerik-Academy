@@ -1,0 +1,54 @@
+﻿<!-- Problem 1. Ticket CSS
+Create the following page section using HTML and external CSS (no inline styles).
+Use a table or a definition list (the layout will be different).-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ticket CSS</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td colspan="2" id="ticket" class="brown">
+                    Ticket ID: 409788
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="white">Name:</td>
+                <td>
+                    <div id="circle"></div>
+                    <p class="yellow">
+                        <span id="park">Parker Seidel</span><br /><span id="red">No Active Support</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="white">Email:</td>
+                <td>
+                    <a href="mailto:seidel@aptmail.com" class="yellow">seidel@aptmail.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="white">Response Time:</td>
+                <td class="brown">72 hours, 60 hours left</td>
+            </tr>
+            <tr>
+                <td class="white">Last Action:</td>
+                <td>
+                    <p class="brown">Never been locked.</p>
+                    <p class="yellow">Link public post</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="white">Status:</td>
+                <td id="oringe">Not answered</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
