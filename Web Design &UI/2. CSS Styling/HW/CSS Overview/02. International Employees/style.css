@@ -4,7 +4,8 @@
 }
 
 table {
-    border-bottom: 1px solid black;
+    margin-left: 10px;
+    border-bottom: 2px solid #CFCEBB;
 }
 
 thead {
@@ -13,20 +14,32 @@ thead {
 
 th {
     color: white;
+    text-align: left;
+    border-bottom: 2px solid #407F29;
+    border-left: 2px solid #407F29;
+    /*border-right: 2px solid #67C120;*/
+    /*margin:0 2px;*/
+    padding: 5px;
 }
 
 tr:nth-child(2n) {
     background-color: #EBEBD8;
 }
 
-/*td, th {
+table, td {
+    padding: 5px;
+    border-collapse: collapse;
     border-left: 2px solid #CFCEBB;
 }
 
-td:nth-child(1), th:nth-child(1){
-    border-left:none;
-}*/
-
-tbody{
-    border-left:2px solid #CFCEBB;
+.first {
+    border-left: hidden;
 }
+
+img {
+    padding-right: 5px;
+}
+
+/*input[type="checkbox"] {
+    outline: 2px solid #C2C2C2;
+}*/
