@@ -5,21 +5,23 @@
 
 table {
     margin-left: 10px;
+    margin-top: 10px;
     border-bottom: 2px solid #CFCEBB;
+    width: 550px;
 }
 
 thead {
-    background-color: #54B815;
+    background-color: #56B906;
 }
 
 th {
     color: white;
     text-align: left;
+    font-weight: 100;
     border-bottom: 2px solid #407F29;
-    border-left: 2px solid #407F29;
-    /*border-right: 2px solid #67C120;*/
-    /*margin:0 2px;*/
-    padding: 5px;
+    border-left:2px solid #4AAC02;
+    /*border-left: 2px solid #407F29;*/
+    padding: 5px 10px;
 }
 
 tr:nth-child(2n) {
@@ -40,6 +42,7 @@ img {
     padding-right: 5px;
 }
 
-/*input[type="checkbox"] {
-    outline: 2px solid #C2C2C2;
-}*/
+input[type="checkbox"] {
+    box-shadow: 1px 1px 3px #555 inset;
+    background-color:#555;
+}
