@@ -1,8 +1,72 @@
 ﻿body {
     margin: 0;
     padding: 0;
+    background-color: #A9A9A9;
 }
 
+h1 {
+    color: #FAFAD1;
+}
+
+body > header h1 {
+    text-align: center;
+}
+
+article h1 {
+    font-size: 25px;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+    li a {
+        color: #FFFEFE;
+    }
+
+    li:nth-child(2) a {
+        background-color: #D3D3D3;
+    }
+
+    li:last-child a {
+        text-decoration: underline;
+    }
+
 a {
- 
+    text-decoration: none;
+}
+
+article:first-child p {
+    width: 1000px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+article:nth-child(even) p, article:nth-child(2) h1 {
+    display: none;
+}
+
+article:last-child p {
+    width: 870px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+article footer, p a {
+    text-align: left;
+    font-size: small;
+}
+
+p a {
+    color: black;
+}
+
+footer {
+    text-align: center;
 }

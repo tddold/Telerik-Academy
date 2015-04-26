@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Lorem Ipsum page", "01. Lorem Ipsum page\01. Lorem Ipsum page.csproj", "{312FCD01-3E4F-4590-8AE0-DFC663D98D29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Forum Posts", "02. Forum Posts\02. Forum Posts.csproj", "{6CF50ECC-5AA3-41FB-8B8D-B040A18CE92F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{312FCD01-3E4F-4590-8AE0-DFC663D98D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312FCD01-3E4F-4590-8AE0-DFC663D98D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312FCD01-3E4F-4590-8AE0-DFC663D98D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312FCD01-3E4F-4590-8AE0-DFC663D98D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF50ECC-5AA3-41FB-8B8D-B040A18CE92F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF50ECC-5AA3-41FB-8B8D-B040A18CE92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF50ECC-5AA3-41FB-8B8D-B040A18CE92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF50ECC-5AA3-41FB-8B8D-B040A18CE92F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
