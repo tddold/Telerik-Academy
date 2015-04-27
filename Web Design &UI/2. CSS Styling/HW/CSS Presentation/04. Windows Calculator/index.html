@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head lang="en">
+    <meta charset="utf-8" />
+    <title>Windows Calculator</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <div id="img"></div>
+        <p id="claculator">Calculator</p>
+        <div id="calc">
+            <ul>
+                <li>View</li>
+                <li>Edit</li>
+                <li>Help</li>
+            </ul>
+            <div id="main-calc">
+                <table id="main-table">
+                    <tr>
+                        <td colspan="10" id="displ">8854455</td>
+                    </tr>
+                    <tr>
+                        <td colspan="10" id="bits">
+                            <table id="table-bits">
+                                <tr>
+                                    <td class="bit-left">0000</td>
+                                    <td class="bit-left">0000</td>
+                                    <td class="bit-left">0000</td>
+                                    <td class="bit-left">0000</td>
+                                    <td class="bit-left">0000</td>
+                                    <td class="bit-left">0000</td>
+                                    <td class="bit-left">0000</td>
+                                    <td class="bit-left">0000</td>                                    
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="bit-left bit-color">63</td>
+                                    <td colspan="3" class="bit-left bit-color">47</td>
+                                    <td class="bit-right bit-color" >32</td>
+                                </tr>
+                                <tr>
+                                    <td class="bit-left">0000</td>
+                                    <td class="bit-left">0000</td>
+                                    <td class="bit-left">1000</td>
+                                    <td class="bit-left">0111</td>
+                                    <td class="bit-left">0001</td>
+                                    <td class="bit-left">1011</td>
+                                    <td class="bit-left">1011</td>
+                                    <td class="bit-left">0111</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="bit-left bit-color">31</td>
+                                    <td colspan="3" class="bit-left bit-color">15</td>
+                                    <td class="bit-right bit-color">0</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="3">
+                            <table id="numsystem">
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="hex" name="numb" />
+                                        <label for="hex">Hex</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="dec" name="numb" checked />
+                                        <label for="dec">Dec</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="oct" name="numb" />
+                                        <label for="oct">Oct</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="bin" name="numb" />
+                                        <label for="bin">Bin</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <button disabled></button>
+                        </td>
+                        <td>
+                            <button class="func">Mod</button>
+                        </td>
+                        <td>
+                            <button disabled>A</button>
+                        </td>
+                        <td>
+                            <button class="memo">MC</button>
+                        </td>
+                        <td>
+                            <button class="memo">MR</button>
+                        </td>
+                        <td>
+                            <button class="memo">MS</button>
+                        </td>
+                        <td>
+                            <button class="memo">M+</button>
+                        </td>
+                        <td>
+                            <button class="memo">M-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="func">(</button>
+                        </td>
+                        <td>
+                            <button class="func">)</button>
+                        </td>
+                        <td>
+                            <button disabled>B</button>
+                        </td>
+                        <td>
+                            <button class="func" id="larr">&#8592;</button>
+                        </td>
+                        <td>
+                            <button class="func">CE</button>
+                        </td>
+                        <td>
+                            <button class="func">C</button>
+                        </td>
+                        <td>
+                            <button class="func">&plusmn;</button>
+                        </td>
+                        <td>
+                            <button disabled>&radic;</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="func">RoL</button>
+                        </td>
+                        <td>
+                            <button class="func">RoR</button>
+                        </td>
+                        <td>
+                            <button disabled>C</button>
+                        </td>
+                        <td>
+                            <button class="numpad">7</button>
+                        </td>
+                        <td>
+                            <button class="numpad">8</button>
+                        </td>
+                        <td>
+                            <button class="numpad">9</button>
+                        </td>
+                        <td>
+                            <button class="func">&#8725;</button>
+                        </td>
+                        <td>
+                            <button disabled>&#37;</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="3">
+                            <table id="table-word">
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="qword" name="wrd" checked />
+                                        <label for="qword">Qword</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="dword" name="wrd" />
+                                        <label for="dword">Dword</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="word" name="wrd" />
+                                        <label for="word">Word</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="byte" name="wrd" />
+                                        <label for="byte">Byte</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <button class="func">Or</button>
+                        </td>
+                        <td>
+                            <button class="func">Xor</button>
+                        </td>
+                        <td>
+                            <button disabled>D</button>
+                        </td>
+                        <td>
+                            <button class="numpad">4</button>
+                        </td>
+                        <td>
+                            <button class="numpad">5</button>
+                        </td>
+                        <td>
+                            <button class="numpad">6</button>
+                        </td>
+                        <td>
+                            <button class="func" id="asterix">&#42;</button>
+                        </td>
+                        <td>
+                            <button disabled>1/x</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="func">Lsh</button>
+                        </td>
+                        <td>
+                            <button class="func">Rsh</button>
+                        </td>
+                        <td>
+                            <button disabled>E</button>
+                        </td>
+                        <td>
+                            <button class="numpad">1</button>
+                        </td>
+                        <td>
+                            <button class="numpad">2</button>
+                        </td>
+                        <td>
+                            <button class="numpad">3</button>
+                        </td>
+                        <td>
+                            <button class="func">-</button>
+                        </td>
+                        <td rowspan="2">
+                            <button class="func" id="equal">=</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="func">Not</button>
+                        </td>
+                        <td>
+                            <button class="func">And</button>
+                        </td>
+                        <td>
+                            <button disabled>F</button>
+                        </td>
+                        <td colspan="2">
+                            <button class="numpad" id="zero">0</button>
+                        </td>
+                        <td>
+                            <button disabled>.</button>
+                        </td>
+                        <td>
+                            <button class="func">+</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

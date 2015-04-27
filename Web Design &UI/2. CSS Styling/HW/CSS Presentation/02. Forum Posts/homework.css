@@ -25,7 +25,7 @@ div, h1, h3, h4, h5, h6, header, footer, body, section, nav, article, aside {
 
 body {
     font: 14px normal Arial;
-    width:1650px;
+    width: 1650px;
     color: white;
     background: #d891ff; /* Old browsers */
     background: -moz-linear-gradient(top, #d891ff 0%, #9018f0 20%, #9215f2 100%); /* FF3.6+ */
@@ -75,15 +75,15 @@ body {
                 }
 
             body header div#header-container div#reg-form-container button {
-                margin-left:auto;
+                margin-left: auto;
                 margin-right: auto;
-                font-weight: bold;                
-                color:white;                
+                font-weight: bold;
+                color: white;
                 border: 3px solid #B25DF2;
                 border-style: outset;
                 border-radius: 10px;
                 padding: 5px 8px;
-                background-color:#B25DF2;
+                background-color: #B25DF2;
             }
 
                 body header div#header-container div#reg-form-container button:hover {
@@ -97,7 +97,7 @@ body {
             margin: 20px 20px 20px 20px;
             padding: 12px;
             border: 3px solid #50187B;
-            border-radius:15px;
+            border-radius: 15px;
         }
 
             body header nav ul.nav-list {
@@ -162,8 +162,8 @@ body {
             margin: 20px;
             padding: 20px;
             border: 3px solid #50187B;
-            border-radius:15px;
-            color:white;
+            border-radius: 15px;
+            color: white;
         }
 
             body section article header {
@@ -192,7 +192,7 @@ body {
 
                     body section article footer p a {
                         text-decoration: none;
-                        color:wheat;
+                        color: wheat;
                     }
 
                         body section article footer p a:hover {
@@ -275,5 +275,5 @@ body {
         body footer p {
             font-size: 1.2em;
             font-weight: bold;
-            text-align:center;
+            text-align: center;
         }

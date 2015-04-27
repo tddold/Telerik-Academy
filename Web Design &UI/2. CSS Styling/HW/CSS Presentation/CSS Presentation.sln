@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Lorem Ipsum page", "01.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Forum Posts", "02. Forum Posts\02. Forum Posts.csproj", "{6CF50ECC-5AA3-41FB-8B8D-B040A18CE92F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Nested Divs", "03. Nested Divs\03. Nested Divs.csproj", "{6366E8BA-751F-4A6D-AFD1-A9A0FE0CEF9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Windows Calculator", "04. Windows Calculator\04. Windows Calculator.csproj", "{D1D48D10-B0BF-45BC-81A5-3E3C0B36857D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6CF50ECC-5AA3-41FB-8B8D-B040A18CE92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CF50ECC-5AA3-41FB-8B8D-B040A18CE92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CF50ECC-5AA3-41FB-8B8D-B040A18CE92F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6366E8BA-751F-4A6D-AFD1-A9A0FE0CEF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6366E8BA-751F-4A6D-AFD1-A9A0FE0CEF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6366E8BA-751F-4A6D-AFD1-A9A0FE0CEF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6366E8BA-751F-4A6D-AFD1-A9A0FE0CEF9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D48D10-B0BF-45BC-81A5-3E3C0B36857D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D48D10-B0BF-45BC-81A5-3E3C0B36857D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D48D10-B0BF-45BC-81A5-3E3C0B36857D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D48D10-B0BF-45BC-81A5-3E3C0B36857D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
