@@ -1,0 +1,27 @@
+﻿body, ul, li {
+    padding:0;
+    margin:0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:16px;
+}
+
+ul.hidden{
+    visibility:hidden;
+}
+
+.visibility{
+    visibility:visible;
+}
+
+ul{
+    position:relative;
+    top:-106px;
+    left:5px;
+    display:inline-block;
+    list-style-type:none;
+    text-decoration:underline;
+}
+
+li{
+   
+}
