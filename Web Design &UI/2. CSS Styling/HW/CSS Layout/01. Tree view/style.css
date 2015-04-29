@@ -1,27 +1,43 @@
-﻿body, ul, li {
-    padding:0;
-    margin:0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:16px;
+﻿body, ul, li, a {
+    padding: 0;
+    margin: 0;
 }
 
-ul.hidden{
-    visibility:hidden;
+#wrapper {
+    color: #000;
+    font-size: 16px;
+    margin: 4px;
 }
 
-.visibility{
-    visibility:visible;
+nav > ul > li > a:first-of-type {
+    color: #000;
+    font-weight: 600;
 }
 
-ul{
-    position:relative;
-    top:-106px;
-    left:5px;
-    display:inline-block;
-    list-style-type:none;
-    text-decoration:underline;
+a {
+    text-decoration: none;
 }
 
-li{
-   
+    a:hover {
+        text-decoration: underline;
+    }
+
+li ul {
+    display: none;
 }
+
+ul li:hover .sublist, .sublist:hover .subsublist {
+    display: block;
+    position: relative;
+    left: 10px;
+    list-style-type: none;
+}
+
+
+.subsublist {
+    display: none;
+}
+
+    .sublist a, .subsublist a {
+        color: #808080;
+    }

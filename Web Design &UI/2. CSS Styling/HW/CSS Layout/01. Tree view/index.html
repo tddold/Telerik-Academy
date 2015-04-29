@@ -1,32 +1,51 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head lang="en">
-    
+
     <title>Tree view</title>
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-    <ul class="visibility">
-        <li>
-            List item
-            <ul class="hidden sublist">
-                <li>
-                    Sublist item
-                    <ul class="hidden subsublist">
-                        <li>Subsublist item</li>
-                        <li>Subsublist item</li>
-                        <li>Subsublist item</li>
-                        <li>Subsublist item</li>
-                    </ul>
-                </li>
-                <li>Sublist item</li>
-                <li>Sublist item</li>
-                <li>Sublist item</li>
-            </ul>
-        </li>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-    </ul>
+    <div id="wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li class="selected">
+                        <a href="#">List item</a>
+                        <ul class="sublist">
+                            <li>
+                                <a href="#">Sublist item</a>
+                                <ul class="subsublist">
+                                    <li><a href="#">Subsublist item</a></li>
+                                    <li><a href="#">Subsublist item</a></li>
+                                    <li><a href="#">Subsublist item</a></li>
+                                    <li><a href="#">Subsublist item</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Sublist item</a>
+                            </li>
+                            <li>
+                                <a href="#">Sublist item</a>
+                            </li>
+                            <li>
+                                <a href="#">Sublist item</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">List item</a>
+                    </li>
+                    <li>
+                        <a href="#">List item</a>
+                    </li>
+                    <li>
+                        <a href="#">List item</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+    </div>
 </body>
 </html>
