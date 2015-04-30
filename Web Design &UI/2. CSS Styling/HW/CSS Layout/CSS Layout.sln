@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Tree view", "01. Tree v
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Music Categories", "02. Music Categories\02. Music Categories.csproj", "{2DD15B4A-BE95-4ECD-B921-C4AC913E64A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Members login", "03. Members login\03. Members login.csproj", "{B67A610F-A81F-4FA5-8959-78BDFDE2D1E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2DD15B4A-BE95-4ECD-B921-C4AC913E64A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DD15B4A-BE95-4ECD-B921-C4AC913E64A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DD15B4A-BE95-4ECD-B921-C4AC913E64A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67A610F-A81F-4FA5-8959-78BDFDE2D1E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67A610F-A81F-4FA5-8959-78BDFDE2D1E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67A610F-A81F-4FA5-8959-78BDFDE2D1E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67A610F-A81F-4FA5-8959-78BDFDE2D1E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
