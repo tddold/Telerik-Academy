@@ -1,6 +1,6 @@
 ﻿body, section, header, h1, p, img {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 section {
@@ -8,32 +8,100 @@ section {
     width: 662px;
     height: 299px;
     border-radius: 8px;
-    font-size:16px;
+    font-size: 16px;
+    font-family: 'Times New Roman';
 }
 
-form{    
-    display:inline-block;
+header {
+    background: #3b3b3b; /* Old browsers */
+    background: -moz-linear-gradient(top, #3b3b3b 0, #343434 90%, #282828 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#3b3b3b), color-stop(90%,#343434), color-stop(100%,#282828)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #3b3b3b 0,#343434 90%,#282828 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #3b3b3b 0,#343434 90%,#282828 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #3b3b3b 0,#343434 90%,#282828 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #3b3b3b 0,#343434 90%,#282828 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b3b3b', endColorstr='#282828',GradientType=0 ); /* IE6-9 */
+    border-radius: 8px;
+    height: 68px;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
 }
 
-img{
-    padding-top:7px;
-    padding-bottom:20px;
-    padding-left:11px;
+form {
+    display: inline-block;
 }
 
-label, input, button{
-    position:relative;
-    top:-36px;
-    left:18px;
-    color:#fff;    
+img {
+    padding-top: 7px;
+    padding-bottom: 20px;
+    padding-left: 11px;
 }
 
-input{
-    color:#000;
-    padding-left:10px;
+label, input, button {
+    position: relative;
+    top: -35px;
+    left: 18px;
+    color: #fff;
+    margin-right: 10px;
 }
 
-label{
-    font-size:1.3em;
-    font-weight:600;
+input {
+    color: #000;
+    padding-left: 10px;
+    top: -38px;
 }
+
+    input[type=text] {
+        width: 135px;
+    }
+
+    input[type=email] {
+        width: 135px;
+        margin-left: 10px;
+    }
+
+label {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+button {
+    background: url("images/go.png");
+    width: 58px;
+    height: 30px;
+    border: 0 solid black;
+    top: -28px;
+    left: 28px;
+}
+
+article {
+    padding-left: 11px;
+    color: #959595;
+}
+
+    article h1 {
+        color: #F8D61C;
+        font-size: 2em;
+        font-weight: 100;
+        padding-top: 15px;
+    }
+
+p {
+    font-weight: 100;
+    line-height:17px;
+    letter-spacing:0.9px;
+    font-size:0.9em;
+}
+
+    p:first-of-type {
+        padding-top: 15px;
+        width: 575px;
+    }
+
+    p:last-of-type{
+        width:575px;
+    }
+
+    strong{
+        color:#fff;
+    }

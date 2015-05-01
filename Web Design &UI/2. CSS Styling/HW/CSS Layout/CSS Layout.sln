@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Music Categories", "02.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Members login", "03. Members login\03. Members login.csproj", "{B67A610F-A81F-4FA5-8959-78BDFDE2D1E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. CSS Documentation site", "04. CSS Documentation site\04. CSS Documentation site.csproj", "{D7ACCE98-EB16-4F70-87C6-1096D9DE79FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B67A610F-A81F-4FA5-8959-78BDFDE2D1E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B67A610F-A81F-4FA5-8959-78BDFDE2D1E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B67A610F-A81F-4FA5-8959-78BDFDE2D1E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7ACCE98-EB16-4F70-87C6-1096D9DE79FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7ACCE98-EB16-4F70-87C6-1096D9DE79FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7ACCE98-EB16-4F70-87C6-1096D9DE79FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7ACCE98-EB16-4F70-87C6-1096D9DE79FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
