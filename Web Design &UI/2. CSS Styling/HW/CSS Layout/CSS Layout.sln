@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Members login", "03. Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. CSS Documentation site", "04. CSS Documentation site\04. CSS Documentation site.csproj", "{D7ACCE98-EB16-4F70-87C6-1096D9DE79FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Laptop store", "05. Laptop store\05. Laptop store.csproj", "{42BE28D3-26FD-4E6E-AF6D-789FBE9895F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. News site", "06. News site\06. News site.csproj", "{56273039-86E6-4340-A426-F337BC60C6EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{D7ACCE98-EB16-4F70-87C6-1096D9DE79FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7ACCE98-EB16-4F70-87C6-1096D9DE79FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7ACCE98-EB16-4F70-87C6-1096D9DE79FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42BE28D3-26FD-4E6E-AF6D-789FBE9895F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42BE28D3-26FD-4E6E-AF6D-789FBE9895F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42BE28D3-26FD-4E6E-AF6D-789FBE9895F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42BE28D3-26FD-4E6E-AF6D-789FBE9895F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56273039-86E6-4340-A426-F337BC60C6EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56273039-86E6-4340-A426-F337BC60C6EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56273039-86E6-4340-A426-F337BC60C6EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56273039-86E6-4340-A426-F337BC60C6EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

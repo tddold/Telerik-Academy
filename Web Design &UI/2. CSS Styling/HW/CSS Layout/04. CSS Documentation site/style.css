@@ -20,7 +20,7 @@ time, mark, audio, video {
 }
 
 #wrapper {
-    width: 790px;
+    width: 792px;
     height: 583px;
     margin-top: 1px;
     background: #F1F1F1;
@@ -30,7 +30,7 @@ time, mark, audio, video {
 }
 
 main {
-    width: 784px;
+    width: 786px;
     height: 577px;
     position: absolute;
     top: 3px;
@@ -40,8 +40,8 @@ main {
 }
 
 #content {
-    width: 485px;
-    height: 508px;
+    width: 486px;
+    height: 515px;
     padding: 16px 4px;
     position: absolute;
     top: 1px;
@@ -56,36 +56,102 @@ main {
         font-size: 1.6em;
     }
 
-    #content header button {
+    #content header button, footer button {
         width: 100px;
         height: 20px;
-        margin-bottom:6px;
+        margin-bottom: 6px;
         background-color: #fff;
         border: 2px solid #000;
         font-size: 11px;
     }
 
-    #content > header{
-        border-bottom:2px solid #B4B4B4;
+    #content > header {
+        border-bottom: 2px solid #B4B4B4;
     }
 
-#prev:before {
+    #content img {
+        width: 92px;
+        padding-top: 19px;
+        padding-left: 3px;
+    }
+
+.prev:before {
     content: '◄';
     float: left;
+    position: absolute;
+    left: 6px;
 }
 
-#next:after {
+#content .prev:hover {
+    background-color: #B4B4B4;
+}
+
+.next:after {
     content: '►';
     float: right;
+    position: absolute;
+    right: 287px;
 }
 
-h2{
-    margin:4px;
-    background:#808080;
-    color:#FFF;
-    font-size:1.1em;
+#content .next:hover {
+    background-color: #B4B4B4;
 }
 
+#tutorial {
+    height: 136px;
+}
+
+    #tutorial > p {
+        position: relative;
+        display: inline-block;
+        width: 400px;
+        left: 110px;
+        top: -73px;
+        font-weight: 900;
+    }
+
+        #tutorial > p:first-of-type {
+            padding-bottom: 10px;
+        }
+
+        #tutorial > p:nth-child(2n) {
+            width: 360px;
+        }
+
+    #tutorial a {
+        position: relative;
+        left: -254px;
+        top: -48px;
+    }
+
+a {
+    color: #9C211F;
+    font-weight: 600;
+}
+
+#exam {
+    height: 81px;
+}
+
+    #exam p, #ref p, #test p {
+        padding: 10px 0 11px 0;
+    }
+
+#ref {
+    height: 82px;
+}
+
+#test {
+    height: 73px;
+}
+
+h2 {
+    margin-top: 6px;
+    padding-left: 4px;
+    background: #808080;
+    color: #FFF;
+    font-size: 1.1em;
+}
 
 #header h1 {
     padding: 15px 0 0 2px;
@@ -111,30 +177,91 @@ nav {
     font-weight: 600;
 }
 
-.line {
+footer {
+    padding-top: 6px;
+    padding-bottom: 1px;
+    border-top: 2px solid #B4B4B4;
+    border-bottom: 2px solid #B4B4B4;
 }
 
 aside {
-    width: 141px;
+    width: 143px;
     height: 552px;
     position: absolute;
     top: 1px;
-    left: 638px;
+    left: 639px;
     background: #FFF;
-    border: 2px solid #B4B4B4;
+    font-size: 10px;
     text-align: center;
 }
 
-/*footer{    
-   position:absolute;
-   left:150px;
-}*/
+    aside section {
+        width: 143px;
+        margin-bottom: 1px;
+        padding-top: 4px;
+        padding-bottom: 6px;
+        border: 1px solid #B4B4B4;
+    }
+
+        aside section:first-of-type {
+            padding-top: 0;
+        }
+
+        aside section:nth-child(3) {
+            padding-top: 0;
+        }
+
+            aside section:nth-child(3) > ul > li:first-of-type > a {
+                padding-top: 5px;
+            }
+
+    aside h2 {
+        margin-top: 0;
+        padding-bottom: 2px;
+        font-size: 11px;
+        font-weight: 100;
+    }
+
+    aside a {
+        display: inline-block;
+    }
+
+#search {
+    width: 18px;
+    height: 17px;
+    position: relative;
+    left: -5px;
+    top: 9px;
+    padding: 0 0 2px 3px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #F6F6F3;
+    font-weight: 600;
+    text-align: left;
+}
 
 ul {
     list-style-type: none;
 }
 
-
 input {
-    width: 80px;
+    width: 92px;
+    height: 15px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 12px;
+    float: left;
+    border: 1px solid #9AB2C8;
+}
+
+#style {
+    padding: 0;
+    border: 0;
+    width: 100px;
+    height: 31px;
+    position: relative;
+    left: -5px;
+    top: -1px;
+    margin-left: 5px;
+    background-image: url("images/styles1.png");
 }

@@ -1,0 +1,89 @@
+﻿html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+main{
+    width:611px;
+    height:326px;
+    background-color:#1E3741;
+    border-radius:5px;font-family:Arial sans-serif;
+    font-size:16px;
+}
+
+li{
+    display:inline;
+}
+
+li  a{
+    position:relative;
+    top:14px;
+    padding:7px 11px;
+    background:#5B747D;
+    font-size:0.8em;
+    text-decoration:none;
+}
+
+li:first-of-type a{
+
+    background:#1E3741;
+    opacity:1;
+}
+
+a{
+    color:#FFF;
+    opacity:0.6;
+}
+section{
+    width:238px;
+    font-size:14px;
+}
+
+section a{
+    display:block;
+    position:relative;
+    top:33px;
+    padding:8px 20px 8px 9px;
+    border-bottom:2px solid #364C55;
+    text-decoration:none;
+}
+
+section a:hover, li a:hover{
+    text-decoration:underline;
+}
+
+article:first-of-type a{
+    background:#00968C;
+    opacity:0.9;
+}
+
+article:last-of-type a{
+    border:none;
+}
+
+#video{
+    position:fixed;  
+    left:240px;
+    top:50px;  
+}
+
+iframe{
+    width:340px;
+    height:260px;
+}
