@@ -1,0 +1,65 @@
+﻿.clearfix() {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        content: "\0020";
+        height: 0;
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+body main nav ul li label img input {
+    .clearfix();
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    main {
+        width: 700px;
+        height: 600px;
+
+        fieldset {
+            height: 600px;
+
+            nav {
+                ul {
+                    list-style-type: none;
+
+                    li {
+                        display: inline-block;
+
+                        div img {
+                            display: none;
+                        }
+
+                        label img {
+                            width: 100px;
+                        }
+
+                        &:hover {
+                            border: 3px solid #333;
+                            border: outset;
+                            background-color: #efefef;
+                        }
+
+                        input {
+                            display: none;
+
+                            &:checked + div img {
+                                display: block;
+                                position: absolute;
+                                top: 160px;
+                                left: 50px;
+                                float: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

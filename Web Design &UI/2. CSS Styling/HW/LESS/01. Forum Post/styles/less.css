@@ -1,0 +1,220 @@
+﻿body header nav section article footer div p h1 h2 h3 h4 ul li a time button form label input {
+  zoom: 1;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+body header nav section article footer div p h1 h2 h3 h4 ul li a time button form label input:after {
+  display: block;
+  content: "\0020";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+body {
+  font: 14px normal Arial;
+  width: 1650px;
+  color: white;
+  background: #d891ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d891ff 0%, #9018f0 20%, #9215f2 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d891ff), color-stop(20%, #9018f0), color-stop(100%, #9215f2));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d891ff 0%, #9018f0 20%, #9215f2 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d891ff 0%, #9018f0 20%, #9215f2 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d891ff 0%, #9018f0 20%, #9215f2 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #d891ff 0%, #9018f0 20%, #9215f2 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@from-color', endColorstr='@to-color', GradientType=0);
+  /* IE6-9 */
+  background-repeat: no-repeat;
+}
+body header {
+  padding: 25px 15px 5px;
+}
+body header #header-container #log-container {
+  float: left;
+  position: relative;
+}
+body header #header-container #reg-form-container {
+  float: right;
+  position: relative;
+  top: 50%;
+  right: 5%;
+}
+body header #header-container #reg-form-container div {
+  text-align: right;
+}
+body header #header-container #reg-form-container div label {
+  width: 50px;
+  margin: 5px;
+}
+body header #header-container #reg-form-container div input {
+  width: 130px;
+  padding: 2px 5px;
+  margin: 5px;
+  background-color: #b35ef3;
+  border: 2px solid #6c3596;
+  border-radius: 10px;
+}
+body header #header-container #reg-form-container button {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 8px;
+  color: white;
+  font-weight: bold;
+  background-color: #b25df2;
+  border: 3px solid #b25df2;
+  border-radius: 10px;
+  border-style: outset;
+}
+body header #header-container #reg-form-container button:hover {
+  background-color: #8949b9;
+  border-style: inset;
+}
+body header nav {
+  width: 75%;
+  margin: 20px;
+  padding: 12px;
+  display: inline-block;
+  border: 3px solid #50187b;
+}
+body header nav .nav-list {
+  list-style-type: none;
+}
+body header nav ul li {
+  margin: 0;
+  float: left;
+}
+body header nav ul li a {
+  padding: 0 10px;
+  color: white;
+  font: 1.4em normal Arial;
+  text-decoration: none;
+}
+body header nav ul li a.selected {
+  font-weight: bold;
+}
+body header nav ul li:hove > a {
+  text-decoration: underline;
+  color: #a8a8a8;
+}
+body header nav ul li:hove > a + ul {
+  display: block;
+}
+body header nav ul li .sub-nav-list {
+  position: absolute;
+  display: none;
+  background-color: rgba(179, 94, 243, 0.9);
+}
+body header nav ul li ul li {
+  margin: 0 15px;
+  padding: 10px 0;
+  float: none;
+  border-bottom: 1px solid black;
+}
+body header nav ul li ul li:last-of-type {
+  border-bottom: none;
+}
+body header nav ul li ul li > a {
+  font-size: 1.2em;
+  color: white;
+}
+body section {
+  width: 75%;
+  float: left;
+  color: black;
+}
+body section article {
+  margin: 20px;
+  padding: 20px;
+  color: white;
+  border: 3px solid #50187b;
+  border-radius: 15px;
+}
+body section article header {
+  padding: 5px;
+  background: none;
+}
+body section article header h1 {
+  padding: 0;
+  font-size: 1.4em;
+}
+body section article footer {
+  padding: 5px;
+}
+body section article footer p {
+  font-size: 16px;
+  font-weight: normal;
+  text-align: right;
+}
+body section article footer p time {
+  font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+}
+body section article footer p a {
+  color: wheat;
+  text-decoration: none;
+}
+body section article footer p a:hover {
+  text-decoration: underline;
+}
+body aside {
+  width: 20%;
+  margin: 20px;
+  float: left;
+}
+body aside > ul {
+  list-style-type: none;
+}
+body aside > ul > li {
+  margin: 15px 0;
+  padding: 15px;
+  border: 3px solid #50187b;
+  border-radius: 5px;
+}
+body aside > ul > li h2 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+body aside > ul > li p {
+  margin: 10px 5px;
+  font-size: 14px;
+}
+body aside > ul > li p a {
+  color: #aaaaaa;
+  text-decoration: none;
+}
+body aside > ul > li p strong {
+  color: #cccccc;
+  font-weight: bold;
+  font-style: normal;
+}
+body aside > ul > li p em {
+  color: #cccccc;
+  font-weight: normal;
+  font-style: italic;
+}
+body aside > ul > li ul {
+  margin: 10px 0;
+  list-style-type: none;
+}
+body aside > ul > li ul li {
+  margin: 5px 0 0 10px;
+  padding-left: 25px;
+  background: url(../images/li-dot.png) no-repeat;
+  background-position: 0 50%;
+}
+body footer {
+  clear: both;
+  padding: 15px 0 25px;
+}
+body footer p {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+/*# sourceMappingURL=less.css.map */

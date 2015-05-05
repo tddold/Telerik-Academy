@@ -20,6 +20,11 @@
 @border-color: #6c3596;
 @button-background-color: #B25DF2;
 @button-hover-color: #8949b9;
+@nav-color: #50187B;
+@li-hover-color: #a8a8a8;
+@sub-nav-list-color: rgba(179, 94, 243, 0.9);
+@aside-a-color:#aaaaaa;
+@aside-strong-color:#cccccc;
 
 .gradient(@from-color, @from-pos, @midle-color, @midle-pos, @to-color, @to-pos,@repeat: no-repeat) {
     background: @from-color; /* Old browsers */
@@ -97,6 +102,181 @@ body {
                     }
                 }
             }
+        }
+
+        nav {
+            width: 75%;
+            margin: 20px;
+            padding: 12px;
+            display: inline-block;
+            border: 3px solid @nav-color;
+
+            .nav-list {
+                list-style-type: none;
+            }
+
+            ul {
+                li {
+                    margin: 0;
+                    float: left;
+
+                    a {
+                        padding: 0 10px;
+                        color: white;
+                        font: 1.4em normal Arial;
+                        text-decoration: none;
+
+                        &.selected {
+                            font-weight: bold;
+                        }
+                    }
+
+                    &:hove > a {
+                        text-decoration: underline;
+                        color: @li-hover-color;
+
+                        & + ul {
+                            display: block;
+                        }
+                    }
+
+                    .sub-nav-list {
+                        position: absolute;
+                        display: none;
+                        background-color: @sub-nav-list-color;
+                    }
+
+                    ul li {
+                        margin: 0 15px;
+                        padding: 10px 0;
+                        float: none;
+                        border-bottom: 1px solid black;
+
+                        &:last-of-type {
+                            border-bottom: none;
+                        }
+
+                        & > a {
+                            font-size: 1.2em;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        width: 75%;
+        float: left;
+        color: black;
+
+        article {
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            border: 3px solid @nav-color;
+            border-radius: 15px;
+
+            header {
+                padding: 5px;
+                background: none;
+
+                h1 {
+                    padding: 0;
+                    font-size: 1.4em;
+                }
+            }
+
+            footer {
+                padding: 5px;
+
+                p {
+                    font-size: 16px;
+                    font-weight: normal;
+                    text-align: right;
+
+                    time {
+                        font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+                    }
+
+                    a {
+                        color: wheat;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    aside {
+        width: 20%;
+        margin: 20px;
+        float: left;
+
+        & > ul {
+            list-style-type: none;
+
+            & > li {
+                margin: 15px 0;
+                padding: 15px;
+                border: 3px solid @nav-color;
+                border-radius: 5px;
+
+                h2 {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                }
+
+                p{
+                    margin:10px 5px;
+                    font-size:14px;
+
+                    a{
+                        color:@aside-a-color;
+                        text-decoration:none;
+                    }
+
+                    strong{
+                        color:@aside-strong-color;
+                        font-weight:bold;
+                        font-style:normal;
+                    }
+
+                    em{
+                        color:@aside-strong-color;
+                        font-weight:normal;
+                        font-style:italic;
+                    }
+                }
+
+                ul{
+                    margin:10px 0;
+                    list-style-type:none;
+
+                    li{
+                        margin:5px 0 0 10px;
+                        padding-left:25px;
+                        background:url(../images/li-dot.png) no-repeat;
+                        background-position:0 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    footer{
+        clear:both;
+        padding:15px 0 25px;
+
+        p{
+            font-size:1.2em;
+            font-weight:bold;
+            text-align:center;
         }
     }
 }

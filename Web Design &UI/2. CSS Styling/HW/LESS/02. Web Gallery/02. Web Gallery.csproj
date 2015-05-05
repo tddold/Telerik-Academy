@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{48DE54F8-3E70-435D-82C3-04A31A070DA9}</ProjectGuid>
+    <ProjectGuid>{BD5BC883-29E7-464C-AC59-6EE36D253D07}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_01.Forum_Post</RootNamespace>
-    <AssemblyName>_01.Forum_Post</AssemblyName>
+    <RootNamespace>_02.Web_Gallery</RootNamespace>
+    <AssemblyName>_02.Web_Gallery</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,12 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="styles\less.css">
-      <DependentUpon>less.less</DependentUpon>
-    </Content>
-    <Content Include="styles\less.less" />
-    <Content Include="styles\less.css.map">
-      <DependentUpon>less.css</DependentUpon>
+    <Content Include="styles\WebGalery.less" />
+    <Content Include="styles\WebGalery.css.map">
+      <DependentUpon>WebGalery.css</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -72,17 +69,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\bear.png" />
+    <Content Include="images\cheetah.png" />
+    <Content Include="images\galery.png" />
+    <Content Include="images\horse.png" />
+    <Content Include="images\lion.png" />
+    <Content Include="images\squirrel.png" />
+    <Content Include="images\tiger.png" />
     <Content Include="index.html" />
-    <Content Include="images\li-dot.png" />
-    <Content Include="images\Sample Logo.png" />
-    <Content Include="styles\less.min.css">
-      <DependentUpon>less.less</DependentUpon>
+    <Content Include="styles\WebGalery.css">
+      <DependentUpon>WebGalery.less</DependentUpon>
+    </Content>
+    <Content Include="styles\WebGalery.min.css">
+      <DependentUpon>WebGalery.css</DependentUpon>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -96,9 +102,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>32659</DevelopmentServerPort>
+          <DevelopmentServerPort>4031</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:32659/</IISUrl>
+          <IISUrl>http://localhost:4031/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

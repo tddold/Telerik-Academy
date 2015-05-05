@@ -1,0 +1,48 @@
+﻿body main nav ul li label img input {
+  zoom: 1;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+body main nav ul li label img input:after {
+  display: block;
+  content: "\0020";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+body main {
+  width: 700px;
+  height: 600px;
+}
+body main fieldset {
+  height: 600px;
+}
+body main fieldset nav ul {
+  list-style-type: none;
+}
+body main fieldset nav ul li {
+  display: inline-block;
+}
+body main fieldset nav ul li div img {
+  display: none;
+}
+body main fieldset nav ul li label img {
+  width: 100px;
+}
+body main fieldset nav ul li:hover {
+  border: 3px solid #333;
+  border: outset;
+  background-color: #efefef;
+}
+body main fieldset nav ul li input {
+  display: none;
+}
+body main fieldset nav ul li input:checked + div img {
+  display: block;
+  position: absolute;
+  top: 160px;
+  left: 50px;
+  float: left;
+}
+/*# sourceMappingURL=WebGalery.css.map */
