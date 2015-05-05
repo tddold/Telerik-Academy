@@ -1,0 +1,102 @@
+﻿.clearfix() {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        content: "\0020";
+        height: 0;
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+@from-color: #d891ff;
+@from-pos: 0%;
+@midle-color: #9018f0;
+@midle-pos: 20%;
+@to-color: #9215f2;
+@to-pos: 100%;
+@background-color: #B35EF3;
+@border-color: #6c3596;
+@button-background-color: #B25DF2;
+@button-hover-color: #8949b9;
+
+.gradient(@from-color, @from-pos, @midle-color, @midle-pos, @to-color, @to-pos,@repeat: no-repeat) {
+    background: @from-color; /* Old browsers */
+    background: -moz-linear-gradient(top, @from-color @from-pos, @midle-color @midle-pos, @to-color @to-pos); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop( @from-pos, @from-color), color-stop( @midle-pos,@midle-color), color-stop( @to-pos,@to-color)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @from-color @from-pos,@midle-color @midle-pos,@to-color @to-pos); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @from-color @from-pos,@midle-color @midle-pos,@to-color @to-pos); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @from-color @from-pos,@midle-color @midle-pos,@to-color @to-pos); /* IE10+ */
+    background: linear-gradient(to bottom, @from-color @from-pos,@midle-color @midle-pos,@to-color @to-pos); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from-color', endColorstr='@to-color',GradientType=0 ); /* IE6-9 */
+    background-repeat: @repeat;
+}
+
+body header nav section article footer div p h1 h2 h3 h4 ul li a time button form label input {
+    .clearfix();
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    font: 14px normal Arial;
+    width: 1650px;
+    color: white;
+    .gradient(@from-color, @from-pos, @midle-color, @midle-pos, @to-color, @to-pos);
+
+    header {
+        padding: 25px 15px 5px;
+
+        #header-container {
+
+            #log-container {
+                float: left;
+                position: relative;
+            }
+
+            #reg-form-container {
+                float: right;
+                position: relative;
+                top: 50%;
+                right: 5%;
+
+                div {
+                    text-align: right;
+
+                    label {
+                        width: 50px;
+                        margin: 5px;
+                    }
+
+                    input {
+                        width: 130px;
+                        padding: 2px 5px;
+                        margin: 5px;
+                        background-color: @background-color;
+                        border: 2px solid @border-color;
+                        border-radius: 10px;
+                    }
+                }
+
+                button {
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 5px 8px;
+                    color: white;
+                    font-weight: bold;
+                    background-color: @button-background-color;
+                    border: 3px solid @button-background-color;
+                    border-radius: 10px;
+                    border-style: outset;
+
+                    &:hover {
+                        background-color: @button-hover-color;
+                        border-style: inset;
+                    }
+                }
+            }
+        }
+    }
+}

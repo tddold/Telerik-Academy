@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DD1F37BB-6F5D-4A52-9C43-83390B910945}</ProjectGuid>
+    <ProjectGuid>{48DE54F8-3E70-435D-82C3-04A31A070DA9}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -57,7 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="StyleSheet1.less" />
+    <Content Include="styles\sass.scss" />
+    <Content Include="styles\sass.css.map">
+      <DependentUpon>sass.css</DependentUpon>
+    </Content>
+    <Content Include="styles\less.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -67,6 +71,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="images\li-dot.png" />
+    <Content Include="images\Sample Logo.png" />
+    <Content Include="styles\less.min.css">
+      <DependentUpon>less.less</DependentUpon>
+    </Content>
+    <Content Include="styles\sass.css">
+      <DependentUpon>sass.scss</DependentUpon>
+    </Content>
+    <Content Include="styles\sass.min.css">
+      <DependentUpon>sass.css</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,9 +100,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>16277</DevelopmentServerPort>
+          <DevelopmentServerPort>32659</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:16277/</IISUrl>
+          <IISUrl>http://localhost:32659/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
