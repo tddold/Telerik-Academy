@@ -1,0 +1,103 @@
+﻿.clearfix() {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        height: 0;
+        content: "\00020";
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+html, body, div, p, #wrapper, .clear, header, nav, ul, li, h1, h2, h3, h4, article, #searchBar, #archives {
+    .clearfix();
+    padding: 0;
+    margin: 0;
+}
+
+
+html, body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    #wrapper {
+        width: 960px;
+        margin: 0 4px;
+
+        .clear {
+            clear: both;
+        }
+
+
+        header {
+            height: 50px;
+            font-size: 14px;
+            background-image: url("../images/header-bg.png");
+            background-repeat: repeat;
+
+            h1 {
+                padding-left: 14px;
+                padding-top: 16px;
+                font-size: 16px;
+            }
+
+            #nav ul {
+                list-style-type: none;
+            }
+
+            li {
+                margin-right: 16px;
+                display: inline-block;
+                position: relative;
+                left: 719px;
+                top: -17px;
+                font-size: 14px;
+                font-weight: 100;
+            }
+        }
+
+        #searchBar {
+            height: 35px;
+            font-size: 14px;
+            color: white;
+            background-color: black;
+
+            #archives {
+                position: relative;
+                top: 10px;
+                padding-left: 8px;
+            }
+
+            #search {
+                float: right;
+
+                a {
+                    position: relative;
+                    top: -6px;
+                    padding-right: 8px;
+                }
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        #content {
+            h1 {
+                margin: 17px 0 16px 0;
+                font-size: 24px;
+                letter-spacing:0.2px;
+            }
+
+            article p {
+                margin: 15px 0;
+                font-size: 14px;
+                word-spacing: -0.1px;
+            }
+        }
+    }
+}
