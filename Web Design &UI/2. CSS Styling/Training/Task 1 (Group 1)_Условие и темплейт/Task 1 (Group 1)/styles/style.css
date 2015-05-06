@@ -1,0 +1,90 @@
+﻿#archives, #searchBar, #wrapper, .clear, article, body, div, h1, h2, h3, h4, header, html, li, nav, p, ul {
+    zoom: 1;
+    padding: 0;
+    margin: 0;
+}
+#archives:after, #searchBar:after, #wrapper:after, .clear:after, article:after, body:after, div:after, h1:after, h2:after, h3:after, h4:after, header:after, html:after, li:after, nav:after, p:after, ul:after {
+    display: block;
+    height: 0;
+    content: "\20";
+    clear: both;
+    overflow: hidden;
+}
+body, html {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body #wrapper {
+    width: 960px;
+    margin: 0 4px;
+}
+body #wrapper .clear {
+    clear: both;
+}
+body #wrapper header {
+    height: 50px;
+    font-size: 14px;
+    color: #524157;
+    background-image: url(../images/header-bg.png);
+    background-repeat: repeat;
+}
+body #wrapper header h1 {
+    padding-left: 14px;
+    padding-top: 16px;
+
+    font-size: 16px;
+    text-transform:uppercase;
+}
+body #wrapper header #nav ul {
+    list-style-type: none;
+}
+body #wrapper header li {
+    margin-right: 16px;
+    display: inline-block;
+    position: relative;
+    left: 719px;
+    top: -17px;
+    font-size: 14px;
+    font-weight: 100;
+}
+body #wrapper #searchBar {
+    height: 35px;
+    font-size: 14px;
+    color: #C3C5C1;
+    background-color: #000;
+}
+
+body #wrapper #searchBar #archives, body #wrapper #searchBar #search{
+    display: inline-block;
+}
+
+body #wrapper #searchBar #archives {
+    position: relative;
+    top: 10px;
+    padding-left: 8px;
+}
+body #wrapper #searchBar #search {
+    float: right;
+}
+body #wrapper #searchBar #search a {
+    position: relative;
+    top: 10px;
+    padding-right: 8px;
+}
+body #wrapper #searchBar a {
+    color: #C3C5C1;
+    text-decoration: none;
+}
+body #wrapper #content{
+    color: #585D58;
+}
+
+body #wrapper #content h1 {
+    margin: 17px 0 16px;
+    font-size: 24px;
+    letter-spacing: .2px;
+}
+body #wrapper #content article p {
+    margin: 15px 0;
+    font-size: 14px;
+    word-spacing: -.1px;
+}
