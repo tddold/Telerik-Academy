@@ -12,19 +12,21 @@ html, body {
         font-size: 16px;
     }
 
-#wrapper ul {
-    margin: 19px 7px;
+.menu {
+    margin: 20px 0 0 10px;
     list-style-type: none;
 }
 
-    #wrapper ul li {
+    /*#wrapper ul li {
         display: inline-block;
-    }
+    }*/
 
-    #wrapper ul > li a {
-        padding: 10px 21px;
-        text-decoration: none;
-        color: #1B00FD;
+    .menu > li {
+        padding: 10px 20px;
+
+        float:left;
+        margin-left: 10px;
+        /*display: inline-block;*/
         border: 1px solid #000;
         border-radius: 10px;
         background: #25dcf2; /* Old browsers */
@@ -37,57 +39,93 @@ html, body {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25dcf2', endColorstr='#7994e2',GradientType=0 ); /* IE6-9 */
     }
 
-    #wrapper ul li a:hover {
-        padding: 13px 43px;
-        font-size: 1.5em;
-        vertical-align: top;
-    }
+        .menu > li a {
+            text-decoration: none;
+            color: blue;
+        }
 
-    #wrapper ul li:hover .content {
-        padding: 20px 10px;
-        display: block;
+    .menu li .content {
+        display: none;
         position: absolute;
-        margin-left: 20px;
-        margin-top: -2px;
+        padding: 10px 20px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        /*word-spacing: -1px;*/
+        background: #fcfefe; /* Old browsers */
+        background: -moz-linear-gradient(top, #fcfefe 0%, #a0d8ef 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfefe), color-stop(100%,#a0d8ef)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #fcfefe 0%,#a0d8ef 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #fcfefe 0%,#a0d8ef 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #fcfefe 0%,#a0d8ef 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #fcfefe 0%,#a0d8ef 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfefe', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
     }
 
+        .menu li .content li {
+            list-style-type: square;
+        }
 
-        #wrapper ul li:hover .content a {
-            padding: 0;
-            border: none;
-            background: none;
-            font-size: 1em;
+        .menu li .content h3 {
+            padding: 10px 10px 10px 9px;
+            text-decoration: underline;
         }
 
 
-.content {
-    display: none;
-    border: 1px solid #000;
-    border-radius: 5px;
-    word-spacing: -1px;
-    background: #fcfefe; /* Old browsers */
-    background: -moz-linear-gradient(top, #fcfefe 0%, #a0d8ef 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfefe), color-stop(100%,#a0d8ef)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #fcfefe 0%,#a0d8ef 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #fcfefe 0%,#a0d8ef 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #fcfefe 0%,#a0d8ef 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #fcfefe 0%,#a0d8ef 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfefe', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
-          
+        .menu li .content a:hover {
+            text-decoration: underline;
+        }
 
+
+    .menu > li:hover > a {
+        padding: 15px 25px;
+        font-size: 1.5em;
+        vertical-align: top;
+        /*position: static;*/
+    }
+
+    .menu li:hover > .content {
+        /*padding: 20px 10px;*/
+        display: block;
+        /*margin-left: 20px;
+        margin-top: -2px;*/
+    }
+
+/*#wrapper ul li:hover .content li {
+    display: block;
+    width: 185px;
+    position: relative;
+    top: -10px;
+    line-height: 19px;
+    word-spacing: 5px;
+}*/
+
+    /*#wrapper ul li:hover .content li:last-of-type {
+        padding-bottom: 0;
+    }*/
+
+/*#wrapper ul li:hover .content a {
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 1em;
+}*/
+
+
+
+
+
+
+/*.content p {
+    padding: 8px 20px 5px 8px;
+    word-spacing: 1px;
+}*/
+
+
+
+/*.content ul {
+    height: 15px;
+}*/
+
+.bold {
+    font-weight: bold;
 }
-
-    .content h3 {
-        padding: 10px 10px 10px 9px;
-        text-decoration: underline;
-    }
-
-    .content p {
-        padding: 8px 20px 5px 8px;
-        word-spacing: 1px;
-    }
-
-       .content ul li{
-          list-style-type:square;
-         
-    }
