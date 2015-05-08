@@ -1,0 +1,102 @@
+﻿body, header, article, aside, div, p, h1, h2, h3, nav, form, input {
+    padding: 0;
+    margin: 0;
+}
+
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 0 4px;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    header {
+        height:98px;
+        background: url("../images/header-bg.png");
+
+        #title {
+            padding:20px;
+            /*font-size: 34px;*/
+            h1{
+            color: #EEFFEE;
+            font-size: 34px;
+
+
+            }
+            h2{
+                color:#C0C0C0;
+                font-size:14px;
+                font-weight:lighter;
+            }
+        }
+
+        nav {
+            color: #CC6600;
+
+            ul {
+                list-style-type: none;
+            }
+
+            li {
+                padding:10px;
+                display: inline-block;
+                position: relative;
+                top:-74px;
+                left: 725px;
+                font-size:18px;
+                font-weight:bold;
+            }
+        }
+
+      
+    }
+
+      #line {
+            height: 5px;
+            position:relative;           
+            background-color: #39C518;
+        }
+
+      #content{
+          width:765px;
+          h1{
+              padding:20px 0;
+              color:#59770E;
+              font-size:30px;
+          }
+
+          article{
+              p{
+                  margin-bottom:15px;
+              }
+          }
+      }
+
+      #aside{
+          position:absolute;  
+         left:765px;
+         top:125px;
+             text-transform:uppercase;
+             font-weight:bold;
+             color:#59770E;
+
+         hr{
+            width:200px;
+            margin-top:5px;
+         }
+
+         input{
+             height:22px;
+             width:155px;
+         }
+      }
+}
