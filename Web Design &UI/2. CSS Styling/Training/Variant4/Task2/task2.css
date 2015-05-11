@@ -1,0 +1,78 @@
+﻿body,
+div,
+p,
+img,
+h1,
+ul,
+li,
+span {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+body {
+  /*background: url('imgs/initial.png') no-repeat;*/
+}
+body #wrapper {
+  width: 960px;
+  font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  font-size: 16px;
+  padding: 15px;
+}
+body #wrapper > div {
+  width: 691px;
+  padding: 10px 0 10px 10px;
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 6px;
+}
+body #wrapper > div:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+body #wrapper .holder {
+  float: left;
+}
+body #wrapper .holder img {
+  width: 550px;
+  border-radius: 5px;
+}
+body #wrapper .playlist {
+  float: left;
+}
+body #wrapper .playlist ul {
+  padding: 0 10px;
+}
+body #wrapper .playlist ul li {
+  width: 120px;
+  height: 101px;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+}
+body #wrapper .playlist ul li:hover span {
+  text-decoration: underline;
+}
+body #wrapper .playlist ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+body #wrapper .playlist ul li img {
+  margin: 0 0 0 17px;
+  display: block;
+  border-radius: 10px;
+}
+body #wrapper .playlist ul li span {
+  margin: 0 8px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=task2.css.map */

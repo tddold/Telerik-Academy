@@ -1,0 +1,108 @@
+﻿/*.clearfix(){
+	zoom1;
+	&:after{
+		content:'';
+		display:block;
+		clear:both;
+		height:0;
+	}
+}*/
+
+
+.linear-gradient(@from-color @from-pos, @to-color @to-pos) {
+    background: @from-color; /* Old browsers */
+    background: -moz-linear-gradient(top, @from-color @from-pos, @to-color @to-pos); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@from-pos,@from-color), color-stop(@to-pos,@to-color)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @from-color @from-pos,@to-color @to-pos); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @from-color @from-pos,@to-color @to-pos); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @from-color @from-pos,@to-color @to-pos); /* IE10+ */
+    background: linear-gradient(to bottom, @from-color @from-pos,@to-color @to-pos); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from-color', endColorstr='@to-color',GradientType=0 ); /* IE6-9 */
+}
+
+
+html, body, header, nav, article, aside, div, p, h1, h2, h3, form, input, ul, li hr, img,a {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    .menu {
+        li {
+            padding: 5px 0;
+            display: inline-block;
+            border: 20px solid #808080;
+            .linear-gradient(#727272, 0%, #FFF, 100%);
+
+            h3 {
+                color: white;
+                text-align: center;
+            }
+
+            .image-container {
+                width: 180px;
+                height: 110px;
+
+                img {
+                    width: 120px;
+                    height: 100px;
+                    margin: 5px 30px 30px 30px;
+                    border-radius: 20px;
+                    /*vertical-align: central;*/
+                }
+            }
+
+            .subtitle {
+                padding: 10px;
+                text-align: center;
+            }
+
+            .click-here {
+                display: none;
+                color: white;
+                text-transform: uppercase;
+            }
+
+
+            &:hover {
+                border: 20px solid #454545;
+                background: #808080;
+
+                h3 {
+                    text-decoration: underline;
+                }
+
+                img {
+                    width: 140px;
+                    height: 110px;
+                    margin: 5px 20px 30px 20px;
+                    border-radius: 20px;
+                    vertical-align: central;
+                }
+
+                .subtitle {
+                    display: none;
+                }
+
+                .click-here {
+                    display: block;
+                    padding: 10px 10px 10px 15px;
+                }
+            }
+        }
+    }
+}
