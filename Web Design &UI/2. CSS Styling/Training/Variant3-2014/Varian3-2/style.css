@@ -1,0 +1,74 @@
+﻿body,
+div,
+ul,
+li,
+a,
+img {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+html,
+body {
+  width: 960px;
+  font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+  font-size: 16px;
+}
+#wrapper .menu {
+  list-style-type: none;
+  margin: 5px;
+}
+#wrapper .menu li {
+  width: 150px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #B6FF00;
+  position: relative;
+}
+#wrapper .menu li:hover a {
+  text-decoration: underline;
+}
+#wrapper .menu li:hover .content {
+  display: block;
+}
+#wrapper .menu li:hover .content .sub-menu li {
+  padding: 20px;
+  text-align: left;
+}
+#wrapper .menu li:hover .content .sub-menu li a {
+  text-decoration: none;
+  color: white;
+}
+#wrapper .menu li:hover .content .sub-menu li a:hover {
+  text-decoration: underline;
+}
+#wrapper .menu li:hover .content .sub-menu li a:hover + img {
+  display: block;
+}
+#wrapper .menu li a {
+  text-decoration: none;
+  color: black;
+}
+#wrapper .menu li .content {
+  display: none;
+  position: absolute;
+  left: 170px;
+  top: 0;
+}
+#wrapper .menu li .content .sub-menu li {
+  width: 500px;
+  border-radius: 10px;
+  background-color: #008000;
+}
+#wrapper .menu li .content .sub-menu li a {
+  color: white;
+}
+#wrapper .menu li .content .sub-menu li img {
+  display: none;
+  width: 500px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+Background:
+background-image  = Снимка за бекграунд от url.
+background-color  = Цвят на бекграунда.С този селектор се прави и Градиент.
+background-repeat = Повторение на бекграунда.
+Text:
+font-size = Големина на шрифта. (пример 12px)
+font-family = Шрифт на текста.(Arial, Vergana, Consolas и др.)
+text-transform = С какви букви да е целият текст. (големи, малки,главни)
+text-align = Подравняване на текст.(ляво,дясно,център)
+text-decoration = Подчертаване на текста с линия.(последата,отгоре,отдолу) 
+font-slyle = Стил на текста.(bold, italic, normal)
+text-indent  = Колко на вътре да почне първия ред от параграфа.
+font-weight = Стилизиране дебелината на текста.( bold, bolder, initial, и т.н.)
+display = Позициониране на елементите.(inline, block, inline-blok)
+float = Позициониране на елеметите.(left, right, initial, inherit, none)
+ 
+ 
+Border:
+border-style  =  Стил на бордъра( непрекъснат,пунктир, точки)
+border-width  = Дебелина на бордъра.
+border-radius  = Заобляне на ъглите на бордъра.
+На падащо меню: position:relative на Родителя и position:absolute  на Наследника.
+ul = родител.  li = наследника.
+Ресет на селекторите:
+body, header, div, h1, h2, a, img, input, button, form, input, nav, ul, li, section, article, p, footer, time, aside {
+  margin: 0;
+  padding: 0;
+ }

@@ -1,0 +1,58 @@
+.clearfix
+	zoom1
+	&:after
+		content ''
+		display block
+		clear both
+		height 0
+		
+
+vlinear-gradient(from-color, from-pos, to-colr, t0-pos)
+	background: from-color; /* Old browsers */
+	background: -moz-linear-gradient(top,  from-color from-pos, to-color to-pos); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(from-pos,from-color), color-stop(to-pos,to-color)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  from-color from-pos,to-color to-pos); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  from-color from-pos,to-color to-pos); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  from-color from-pos,to-color to-pos); /* IE10+ */
+	background: linear-gradient(to bottom,  from-color from-pos,to-color to-pos); /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='from-color', endColorstr='to-color',GradientType=0 ); /* IE6-9 */
+
+
+// box(side, bg)
+// 	//error 'somthing went wrong'
+// 	width side
+// 	height side
+// 	background bg
+// 	border-radius 15px	
+// 	if light(bg)
+// 		border 1px solid darken(bg, 25%)
+// 	else
+// 	border 1px solid lighten(bg, 25%)
+
+// #root
+// 	box(150px, #ccc)
+	
+	clearfix()
+  @extend .clearfix
+
+linearGradient(stops)
+  w3cGradient = 'linear-gradient(to bottom, '
+  prefixedGradient = 'linear-gradient(top, '
+  
+  i = 1
+
+  for stop in stops
+    w3cGradient += stop
+    prefixedGradient += stop
+    if i is not length(stops)
+      w3cGradient += ', '
+      prefixedGradient += ', '
+    i += 1
+      
+  w3cGradient += ')'
+  prefixedGradient += ')'
+  
+  background unquote(w3cGradient)
+  background unquote('-webkit-' + prefixedGradient)
+  background unquote('-o-' + prefixedGradient)
+  background unquote('-ms-' + prefixedGradient)

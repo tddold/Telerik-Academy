@@ -4,36 +4,27 @@
 	<meta charset="utf-8">
 	<title>CSS Styling Exam Variant 2 - Task 1</title>
 	<link href="style.css" rel="stylesheet" />
-	<script src="libs/jquery-2.1.0.min.js"></script>
-	<script src="libs/jquery.xcolor.min.js"></script>
 </head>
 <body>
 	<div id="wrapper">
 		<header>
-			<div id="archive">
+			<div id="title">
+				<h1>
+					Nikolay Kostov's blog
+				</h1>
+				<h2>
+					Just another developer&trade;
+				</h2>
+			</div>
+			<nav id="nav">
 				<ul>
-					<li><a href="/archive/2009/">2009</a></li>
-					<li><a href="/archive/2010/">2010</a></li>
-					<li><a href="/archive/2011/">2011</a></li>
-					<li><a href="/archive/2012/">2012</a></li>
-					<li><a href="/archive/2013/">2013</a></li>
-					<li><a href="/archive/2014/">2014</a></li>
+					<li>Home</li>
+					<li>About me</li>
 				</ul>
-			</div>
-			<div class="clear"></div>
-			<div id="header">
-				<nav id="nav">
-					<ul>
-						<li><a href="/about/">about</a></li>
-						<li><a href="/blog/">blog</a></li>
-						<li><a href="/speaking/">speaking</a></li>
-						<li><a href="/books/">books</a></li>
-					</ul>
-				</nav>
-				<h1>Nikolay Kostov's blog</h1>
-			</div>
+			</nav>
 			<div class="clear"></div>
 		</header>
+		<div id="line"></div>
 		<div id="content">
 			<h1>Good luck!</h1>
 			<article>
@@ -44,6 +35,13 @@
 				<p>Donec velit turpis, vehicula at pharetra vitae, luctus quis metus. Integer nec est in lacus suscipit consectetur faucibus in lacus. Donec hendrerit dui in mi scelerisque, vestibulum auctor nisl pellentesque. Vivamus fringilla purus id feugiat porta. Pellentesque dapibus arcu risus, eget vehicula est sollicitudin nec. Phasellus sed velit ligula. Donec eu suscipit massa.</p>
 			</article>
 		</div>
+		<aside id="aside">
+			Search
+			<hr />
+			<form method="GET" action="/search">
+				<input type="search" />
+			</form>
+		</aside>
 	</div>
 </body>
 </html>

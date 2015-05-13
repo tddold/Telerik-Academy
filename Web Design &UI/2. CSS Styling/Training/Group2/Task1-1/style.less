@@ -1,0 +1,121 @@
+﻿.clearfix() {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+    }
+}
+
+html, body, div, header, h1, h2, nav, ul, li, article, p, aside, hr, form, input {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+.clear {
+    clear: both;
+}
+
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+
+    header {       
+        height: 97px;
+        margin-left: 5px;
+        background-image: url('images/header-bg.png');
+        box-sizing:border-box;
+
+        #title {
+            float: left;
+            padding: 22px 0 0 19px;
+
+            h1 {
+                color: #EEFFEE;
+                font-size: 34px;
+            }
+
+            h2 {
+                color: #C0C0C0;
+                font-size: 14px;
+                font-weight: lighter;
+            }
+        }
+
+        #nav {
+            float: right;
+            color: #CC6600;
+
+            ul {
+                margin-top:45px;
+                margin-right:25px;
+                li {
+                    margin-left:20px;
+                    display: inline-block;
+                    font-size:18px;
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+
+    #line{
+        height:5px;
+        margin-left:5px;
+        background-color:#39C518;
+    }
+
+    #content{
+        width:755px;
+        margin-top:20px;
+        margin-left:5px;
+        float:left;
+        text-align:justify;
+
+
+        h1{
+            margin-bottom:22px;
+            color:#59770E;
+            font-size:30px;
+        }
+
+        article{
+            color:#555555;
+            font-size:14px;
+            p{
+                margin-bottom:10px;
+            }
+        }
+    }
+
+    #aside{
+        width:195px;
+        float:left;
+        margin-top:20px;
+        margin-left:5px;
+        box-sizing:border-box;
+        text-transform:uppercase;
+        color:#59770E;
+        font-weight:bold;
+
+        hr{
+            margin-top:7px;
+        }
+
+        input{
+            width:155px;
+            height:20px;
+            margin-top:10px;
+        }
+    }
+}

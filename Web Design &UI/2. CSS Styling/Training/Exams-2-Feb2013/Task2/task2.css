@@ -1,0 +1,56 @@
+﻿body,
+ul,
+li,
+a,
+img,
+span {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+  font-size: 16px;
+}
+#wrapper {
+  width: 960px;
+  /*ul*/
+}
+#wrapper .notification-list {
+  list-style: none;
+  margin: 26px 25px;
+}
+#wrapper .notification-list li {
+  padding: 5px 13px;
+  display: inline-block;
+  border: 1px solid black;
+  background: #ababab;
+  background: -moz-linear-gradient(top, #ababab 0%, #dddddd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ababab), color-stop(100%, #dddddd));
+  background: -webkit-linear-gradient(top, #ababab 0%, #dddddd 100%);
+  background: -o-linear-gradient(top, #ababab 0%, #dddddd 100%);
+  background: -ms-linear-gradient(top, #ababab 0%, #dddddd 100%);
+  background: linear-gradient(to bottom, #ababab 0%, #dddddd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aaffef', endColorstr='#13ffd2', GradientType=0);
+}
+#wrapper .notification-list li:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+#wrapper .notification-list li:nth-child(2) {
+  width: 171px;
+}
+#wrapper .notification-list li:nth-child(3) {
+  border-top-right-radius: 10px;
+}
+#wrapper .notification-list li a {
+  text-decoration: none;
+  color: #777777;
+  letter-spacing: 2px;
+}
+#wrapper .notification-list li a img {
+  width: 15px;
+}
+#wrapper .notification-list li .content {
+  display: none;
+}
+/*# sourceMappingURL=task2.css.map */

@@ -1,436 +1,141 @@
+exports.runBeforeTests = function() {
+	$("body").css("padding", "0");
+	$("body").css("margin", "0");
+	$("html").css("padding", "0");
+	$("html").css("margin", "0");
+	$("#wrapper").css("padding", "0");
+	$("#wrapper").css("margin", "0");
+}
+
 exports.tests = [
-    {
-        name: 'font size',
-        points: 1,
-        func: function () {
-            return $('#wrapper .menu li .subtitle').css('font-size');
-        },
-        expected: '16px',
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'font family',
-        points: 1,
-        func: function () {
-            return $('#wrapper .menu li h3').css('font-family');
-        },
-        expected: "Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif",
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'width',
-        points: 1,
-        func: function () {
-            return $('#wrapper').css('width');
-        },
-        expected: "960px",
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list style',
-        points: 1,
-        func: function () {
-            return $('.menu').css('list-style-type');
-        },
-        expected: "none",
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list width',
-        points: 1,
-        func: function () {
-            return $('.menu > li').width();
-        },
-        expected: 180,
-        compare: 'equalDiff',
-        compareParam: 5
-    }, {
-        name: 'menu list height',
-        points: 1,
-        func: function () {
-            return $('.menu > li').height();
-        },
-        expected: 180,
-        compare: 'equalDiff',
-        compareParam: 5
-    }, {
-        name: 'menu list floating distance',
-        points: 1,
-        func: function () {
-            var lis = $('.menu > li');
-            var values = [];
-
-            for (var i = 0; i < 2; i++) {
-                var currentLi = $(lis[i]);
-                var left = currentLi.offset().left;
-                var width = currentLi.outerWidth();
-
-                var nextLi = $(lis[i + 1]);
-                var nextLeft = nextLi.offset().left;
-
-                values.push(nextLeft - (left + width));
-            }
-
-            if (values[0] == values[1]) {
-                return values[0];
-            }
-            else {
-                return 'invalid';
-            }
-        },
-        expected: 10,
-        compare: 'equalDiff',
-        compareParam: 5
-    }, {
-        name: 'menu list floating top',
-        points: 4,
-        func: function () {
-            var lis = $('.menu > li');
-            var values = [];
-
-            for (var i = 0; i < 3; i++) {
-                var currentLi = $(lis[i]);
-                var top = currentLi.offset().top;
-                values.push(top);
-            }
-
-            return values[0] == values[1] && values[1] == values[2];
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list floating',
-        points: 2,
-        func: function () {
-            var lis = $('.menu > li');
-           
-            return lis.css('float') == 'left' || lis.css('display') == 'inline' || lis.css('display') == 'inline-block';
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list height',
-        points: 4,
-        func: function () {
-            var lis = $('.menu > li');
-            var values = [];
-
-            for (var i = 0; i < 3; i++) {
-                var currentLi = $(lis[i]);
-                var top = currentLi.height();
-                values.push(top);
-            }
-
-            return values[0] == values[1] && values[1] == values[2];
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list gradient first color',
-        points: 5,
-        func: function () {
-            var lis = $('.menu > li').css('linearGradientColors');
-            return $.xcolor.distance('#727272', lis[0]);
-        },
-        expected: 0,
-        compare: 'equalDiff',
-        compareParam: 30
-    }, {
-        name: 'menu list gradient second color',
-        points: 5,
-        func: function () {
-            var lis = $('.menu > li').css('linearGradientColors');
-            return $.xcolor.distance('#ffffff', lis[1]);
-        },
-        expected: 0,
-        compare: 'equalDiff',
-        compareParam: 30
-    }, {
-        name: 'menu list border color',
-        points: 3,
-        func: function () {
-            var leftColor = $('.menu > li').css('border-left-color');
-            var rightColor = $('.menu > li').css('border-right-color');
-            var topColor = $('.menu > li').css('border-top-color');
-            var bottomColor = $('.menu > li').css('border-bottom-color');
-
-            if (leftColor == rightColor && rightColor == topColor && bottomColor == topColor && leftColor == "rgb(128, 128, 128)") {
-                return true;
-            }
-            else {
-                return false; 
-            }
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list border size',
-        points: 4,
-        func: function () {
-            var leftColor = $('.menu > li').css('border-left-width');
-            var rightColor = $('.menu > li').css('border-right-width');
-            var topColor = $('.menu > li').css('border-top-width');
-            var bottomColor = $('.menu > li').css('border-bottom-width');
-
-            if (leftColor == rightColor && rightColor == topColor && bottomColor == topColor && leftColor == "20px") {
-                return true;
-            }
-            else {
-                return false;
-            }
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list border style',
-        points: 4,
-        func: function () {
-            var leftColor = $('.menu > li').css('border-left-style');
-            var rightColor = $('.menu > li').css('border-right-style');
-            var topColor = $('.menu > li').css('border-top-style');
-            var bottomColor = $('.menu > li').css('border-bottom-style');
-
-            if (leftColor == rightColor && rightColor == topColor && bottomColor == topColor && leftColor == "solid") {
-                return true;
-            }
-            else {
-                return false;
-            }
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list text align',
-        points: 4,
-        func: function () {
-            var leftColor = $('.menu > li').css('text-align');
-
-            if (leftColor == 'center') {
-                return true;
-            }
-            else {
-                return false;
-            }
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list h3 color',
-        points: 2,
-        func: function () {
-            return $.xcolor.distance($('.menu li h3').css('color'), "rgb(255, 255, 255)");
-        },
-        expected: 0,
-        compare: 'equalDiff',
-        compareParam: 30
-    }, {
-        name: 'menu list click here',
-        points: 5,
-        func: function () {
-            return $('.menu > li .click-here').css('display');
-        },
-        expected: 'none',
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list click here text',
-        points: 5,
-        func: function () {
-            return $('.menu > li .click-here').css('text-transform');
-        },
-        expected: 'uppercase',
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list click here color',
-        points: 5,
-        func: function () {
-            return $('.menu > li .click-here').css('color');
-        },
-        expected: "rgb(255, 255, 255)",
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list .image-container img width',
-        points: 2,
-        func: function () {
-            return $('.menu > li .image-container img').width();
-        },
-        expected: 120,
-        compare: 'equalDiff',
-        compareParam: 10
-    }, {
-        name: 'menu list .image-container img height',
-        points: 2,
-        func: function () {
-            return $('.menu > li .image-container img').height();
-        },
-        expected: 100,
-        compare: 'equalDiff',
-        compareParam: 10
-    }, {
-        name: 'menu list .image-container img border size',
-        points: 2,
-        func: function () {
-            var leftColor = $('.menu > li .image-container img').css('border-left-width');
-            var rightColor = $('.menu > li .image-container img').css('border-right-width');
-            var topColor = $('.menu > li .image-container img').css('border-top-width');
-            var bottomColor = $('.menu > li .image-container img').css('border-bottom-width');
-
-            if (leftColor == rightColor && rightColor == topColor && bottomColor == topColor && (leftColor == "0px" || leftColor == null)) {
-                return true;
-            }
-            else {
-                return false;
-            }
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list content border style',
-        points: 1,
-        func: function () {
-            var leftColor = $('.menu > li .image-container img').css('border-left-style');
-            var rightColor = $('.menu > li .image-container img').css('border-right-style');
-            var topColor = $('.menu > li .image-container img').css('border-top-style');
-            var bottomColor = $('.menu > li .image-container img').css('border-bottom-style');
-
-            if (leftColor == rightColor && rightColor == topColor && bottomColor == topColor && (leftColor == "none" || leftColor == null)) {
-                return true;
-            }
-            else {
-                return false;
-            }
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list image border radius',
-        points: 5,
-        func: function () {
-            var leftColor = $('.menu > li .image-container img').css('border-top-left-radius');
-            var rightColor = $('.menu > li .image-container img').css('border-top-right-radius');
-            var topColor = $('.menu > li .image-container img').css('border-bottom-right-radius');
-            var bottomColor = $('.menu > li .image-container img').css('border-bottom-left-radius');
-
-            if (leftColor == rightColor && rightColor == topColor && bottomColor == topColor) {
-                return parseInt(leftColor);
-            }
-            else {
-                return false;
-            }
-        },
-        expected: 20,
-        compare: 'equalDiff',
-        compareParam: 5
-    }, {
-        name: 'menu list hover a',
-        points: 4,
-        func: function () {
-            var el = $('.menu > li');
-            el.toggleClass('hover');
-            var leftColor = $('.menu > li').css('border-left-color');
-            var rightColor = $('.menu > li').css('border-right-color');
-            var topColor = $('.menu > li').css('border-top-color');
-            var bottomColor = $('.menu > li').css('border-bottom-color');
-            el.toggleClass('hover');
-
-            if (leftColor == rightColor && rightColor == topColor && bottomColor == topColor && leftColor == "rgb(69, 69, 69)") {
-                return true;
-            }
-            else {
-                return false;
-            }
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list hover background color',
-        points: 1,
-        func: function () {
-            var el = $('.menu > li');
-            el.toggleClass('hover');
-            var value = $('.menu > li.hover').css('background-color');
-            el.toggleClass('hover');
-            return value;
-        },
-        expected: "rgb(128, 128, 128)",
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list hover background color',
-        points: 1,
-        func: function () {
-            var el = $('.menu > li');
-            el.toggleClass('hover');
-            var value = $('.menu > li.hover h3').css('text-decoration');
-            el.toggleClass('hover');
-            return value;
-        },
-        expected: "underline",
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list hover display block',
-        points: 8,
-        func: function () {
-            var el = $('.menu > li');
-            el.toggleClass('hover');
-            var value = $('.menu li.hover .subtitle').css('display');
-            el.toggleClass('hover');
-            return value;
-        },
-        expected: 'none',
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list hover display block',
-        points: 7,
-        func: function () {
-            var el = $('.menu > li');
-            el.toggleClass('hover');
-            var value = $('.menu li.hover .click-here').css('display');
-            el.toggleClass('hover');
-            return value;
-        },
-        expected: 'block',
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list hover image',
-        points: 4,
-        func: function () {
-            var el = $('.menu > li');
-            el.toggleClass('hover');
-            var value = $('.menu li.hover .image-container img').width();
-            el.toggleClass('hover');
-            return value > 120;
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    }, {
-        name: 'menu list hover image',
-        points: 4,
-        func: function () {
-            var el = $('.menu > li');
-            el.toggleClass('hover');
-            var value = $('.menu li.hover .image-container img').height();
-            el.toggleClass('hover');
-            return value > 100;
-        },
-        expected: true,
-        compare: 'equal',
-        compareParam: null
-    },
+	// Font sizes
+	{name:"font size #content text", points: 4, func:function(){
+		return $("#content>article>p").css("font-size");
+	}, expected: "14px", compare: "equal", compareParam: null},
+	
+	{name:"font size #header title", points: 4, func:function(){
+		return $("#header>h1").css("font-size");
+	}, expected: "28px", compare: "equal", compareParam: null},
+	
+	{name:"font size #archive elements", points: 4, func:function(){
+		return $("#archive>ul>li>a").css("font-size");
+	}, expected: "10px", compare: "equal", compareParam: null},
+	
+	{name:"font size #nav elements", points: 4, func:function(){
+		return $("#nav>ul>li>a").css("font-size");
+	}, expected: "18px", compare: "equal", compareParam: null},
+	
+	{name:"font size #content title", points: 4, func:function(){
+		return $("#content>h1").css("font-size");
+	}, expected: "24px", compare: "equal", compareParam: null},
+	
+	
+	// Content text
+	{name:"#content text color difference", points: 5, func:function(){
+		return $.xcolor.distance($("#content p").css("color"), "rgb(51, 51, 51)");
+	}, expected: 0, compare: "equalDiff", compareParam: 60},
+	
+	{name:"#content text is justified", points: 5, func:function(){
+		return $("#content>article>p").css("text-align");
+	}, expected: "justify", compare: "equal", compareParam: null},
+	
+	
+	// #archive elements
+	{name:"#archive elements text color difference", points: 3, func:function(){
+		return $.xcolor.distance($("#archive>ul>li>a").css("color"), "rgb(51, 51, 51)");
+	}, expected: 0, compare: "equalDiff", compareParam: 60},
+	
+	{name:"#archive links are not underlined", points: 4, func:function(){
+		return $("#archive>ul>li>a").css("text-decoration").indexOf("none") > -1;
+	}, expected: true, compare: "equal", compareParam: null},
+	
+	{name:"distance between two #archive links", points: 4, func:function(){
+		var a1 = $("#archive>ul>li>a").eq(0).offset().left;
+		var a2 = $("#archive>ul>li>a").eq(1).offset().left;
+		return Math.abs(a1 - a2);
+	}, expected: 34, compare: "equalDiff", compareParam: 4},
+	
+	{name:"#archive links are right floated", points: 4, func:function(){
+		return $("#archive>ul>li").eq(5).offset().left;
+	}, expected: 930, compare: "equalDiff", compareParam: 30},
+	
+	{name:"two #archive links are on the same line", points: 4, func:function(){
+		var a1 = $("#archive>ul>li>a").eq(0).offset().top;
+		var a2 = $("#archive>ul>li>a").eq(1).offset().top;
+		return Math.abs(a1 - a2);
+	}, expected: 0, compare: "equal", compareParam: null},
+	
+	{name:"almost no distance between #archive and #header", points: 4, func:function(){
+		var a1 = $("#archive").offset().top;
+		var a2 = $("#header").offset().top;
+		return Math.abs(a1 - a2);
+	}, expected: 17, compare: "equalDiff", compareParam: 5},
+	
+	
+	// Page
+	{name:"No padding or margin at the start of the page", points: 2, func:function(){
+		return $("#archive").offset().top;
+	}, expected: 0, compare: "equal", compareParam: null},
+	
+	
+	// Header
+	{name:"Header height", points: 4, func:function(){
+		return $("#header").outerHeight() - parseInt($("#header").css("border-bottom-width"));
+	}, expected: 64, compare: "equalDiff", compareParam: 5},
+	
+	{name:"Header has background image", points: 4, func:function(){
+		return $("#header").css("background-image").indexOf("topnav_divider.png") > -1 ||
+			$("#nav").css("background-image").indexOf("topnav_divider.png") > -1;
+	}, expected: true, compare: "equal", compareParam: null},
+	
+	
+	// Header menu
+	{name:"Color of the #header menu", points: 3, func:function(){
+		return $.xcolor.distance($("#nav>ul>li>a").css("color"), "rgb(255, 255, 255)");
+	}, expected: 0, compare: "equalDiff", compareParam: 10},
+	
+	{name:"#header links are not underlined", points: 4, func:function(){
+		return $("#nav>ul>li>a").css("text-decoration").indexOf("none") > -1;
+	}, expected: true, compare: "equal", compareParam: null},
+	
+	{name:"#nav elements are positioned correctly on left", points: 3, func:function(){
+		return $("#nav>ul>li>a").eq(0).offset().left;
+	}, expected: 50, compare: "equalDiff", compareParam: 5},
+	
+	{name:"#nav elements are positioned correctly on top", points: 3, func:function(){
+		return $("#nav>ul>li>a").eq(0).offset().top;
+	}, expected: 37, compare: "equalDiff", compareParam: 5},
+	
+	{name:"distance between two #nav links", points: 4, func:function(){
+		var a1 = $("#nav>ul>li>a").eq(0).offset().left;
+		var a2 = $("#nav>ul>li>a").eq(1).offset().left;
+		return Math.abs(a1 - a2);
+	}, expected: 71, compare: "equalDiff", compareParam: 5},
+	
+	{name:"two #header links are on the same line", points: 5, func:function(){
+		var a1 = $("#nav>ul>li>a").eq(0).offset().top;
+		var a2 = $("#nav>ul>li>a").eq(1).offset().top;
+		return Math.abs(a1 - a2);
+	}, expected: 0, compare: "equal", compareParam: null},
+	
+	{name:"#header links are capitalized", points: 4, func:function(){
+		return $("#nav>ul>li>a").css("text-transform").indexOf("capitalize") > -1 ||
+			$("#nav>ul>li>a").eq(0).width() == 47;
+	}, expected: true, compare: "equal", compareParam: null},
+	
+	
+	// Header title
+	{name:"Color of the #header title", points: 4, func:function(){
+		return $.xcolor.distance($("#header>h1").css("color"), "rgb(255, 255, 255)");
+	}, expected: 0, compare: "equalDiff", compareParam: 10},
+	
+	{name:"#header title is right floated", points: 3, func:function(){
+		return $("#header>h1").offset().left
+			+ parseInt($("#header>h1").css("padding-left"));
+	}, expected: 630, compare: "equalDiff", compareParam: 50},
+	
+	{name:"#header title is positioned correctly on right", points: 4, func:function(){
+		return $("#header>h1").offset().left
+			+ parseInt($("#header>h1").css("padding-left"));
+	}, expected: 645, compare: "equalDiff", compareParam: 15},
 ];

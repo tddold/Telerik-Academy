@@ -1,0 +1,82 @@
+﻿.liner-gradient(@from-col; @from-pos; @to-col; @to-pos) {
+    background: @from-col;
+    background: -moz-linear-gradient(top, @from-col @from-pos, @to-col @to-pos);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@from-pos,@from-col), color-stop(@to-pos,@to-col));
+    background: -webkit-linear-gradient(top, @from-col @from-pos,@to-col @to-pos);
+    background: -o-linear-gradient(top, @from-col @from-pos,@to-col @to-pos);
+    background: -ms-linear-gradient(top, @from-col @from-pos,@to-col @to-pos);
+    background: linear-gradient(to bottom, @from-col @from-pos,@to-col @to-pos);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaffef', endColorstr='#13ffd2',GradientType=0 );
+}
+
+
+body, div, p, ul, li, a {
+    padding: 0;
+    margin: 0;
+}
+
+
+html, body {
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+}
+
+#wrapper {
+    width: 960px;
+
+    .select-list {
+        position: relative;
+        margin: 26px;
+        /*ul*/
+        .all-items {
+            float: left;
+        }
+
+        a {
+            position: absolute;
+            top: 90px;
+
+            &.btn-unselect {
+                left: 154px;
+            }
+
+            &.btn-select {
+                left: 188px;
+            }
+        }
+
+        .selected-items {
+            float: left;
+            margin-left: 72px;
+
+            li:last-of-type {
+                &:not(.selected) {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .all-items, .selected-items {
+            width: 150px;
+            height: 200px;
+            list-style-type: none;
+            overflow-y: scroll;
+            .liner-gradient(#8169FF; 0%; #FFF; 100%);
+            border-top-left-radius: 5px;
+
+            li {
+                padding: 5px 0 6px 14px;
+                border-bottom: 1px solid black;
+
+
+                &::first-letter {
+                    text-decoration: underline;
+                }
+
+                &.selected {
+                    background-color: #6C4EFF;
+                }
+            }
+        }
+    }
+}
