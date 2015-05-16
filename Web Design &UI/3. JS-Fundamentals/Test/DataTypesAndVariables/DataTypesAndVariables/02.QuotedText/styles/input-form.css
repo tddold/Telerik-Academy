@@ -1,0 +1,24 @@
+﻿body div{
+    margin-bottom: 15px;
+}
+
+body div label{
+    font-family: Consolas;
+    font-size: 16px;
+}
+
+#start{
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border: 1px solid black;
+    background-color: #0094ff;
+    font-weight: bold;
+}
+
+#clear{
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border: 1px solid black;
+    background-color: red;
+    font-weight: bold;
+}
