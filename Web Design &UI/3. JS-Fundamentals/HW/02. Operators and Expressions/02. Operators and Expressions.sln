@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. OddOrEven", "01. OddOrEven\01. OddOrEven.csproj", "{C123DF19-CAC8-485C-9D98-D3FBCE1776A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "includes", "includes", "{11FF581B-3796-450A-82A9-04D1CF76127F}"
+	ProjectSection(SolutionItems) = preProject
+		..\Data-Types-and-Variables\01. JavaScript Literals\stayles\js-console.css = ..\Data-Types-and-Variables\01. JavaScript Literals\stayles\js-console.css
+		..\Data-Types-and-Variables\01. JavaScript Literals\scripts\js-console.js = ..\Data-Types-and-Variables\01. JavaScript Literals\scripts\js-console.js
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Devide by 7 and 5", "02. Devide by 7 and 5\02. Devide by 7 and 5.csproj", "{D82407FC-84E9-418F-9A72-3434F9916DF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Calculate rectangle area", "03. Calculate rectangle area\03. Calculate rectangle area.csproj", "{C516CC40-099D-4F57-9542-8961B850DFD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Is third digit 7", "04. Is third digit 7\04. Is third digit 7.csproj", "{62FEC7D2-A200-4533-8C35-CA8FF8F596C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Third bit of integer", "05. Third bit of integer\05. Third bit of integer.csproj", "{4AD90488-210E-421B-8E09-D48BA020BC46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Point inside Circle", "06. Point inside Circle\06. Point inside Circle.csproj", "{D48FB2FD-CDB7-4F9C-A297-569461B3CB1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Prime number", "07. Prime number\07. Prime number.csproj", "{BFF541DA-D2D8-4F71-88B6-06F065773A0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Calculate trapezoid area", "08. Calculate trapezoid area\08. Calculate trapezoid area.csproj", "{665A48AB-56A4-4DFF-A537-B8C5647481FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Point location", "09. Point location\09. Point location.csproj", "{A07161ED-9B41-4897-B8AD-F9F3B16F7DA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C123DF19-CAC8-485C-9D98-D3FBCE1776A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C123DF19-CAC8-485C-9D98-D3FBCE1776A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C123DF19-CAC8-485C-9D98-D3FBCE1776A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C123DF19-CAC8-485C-9D98-D3FBCE1776A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D82407FC-84E9-418F-9A72-3434F9916DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82407FC-84E9-418F-9A72-3434F9916DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82407FC-84E9-418F-9A72-3434F9916DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82407FC-84E9-418F-9A72-3434F9916DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C516CC40-099D-4F57-9542-8961B850DFD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C516CC40-099D-4F57-9542-8961B850DFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C516CC40-099D-4F57-9542-8961B850DFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C516CC40-099D-4F57-9542-8961B850DFD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62FEC7D2-A200-4533-8C35-CA8FF8F596C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FEC7D2-A200-4533-8C35-CA8FF8F596C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FEC7D2-A200-4533-8C35-CA8FF8F596C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FEC7D2-A200-4533-8C35-CA8FF8F596C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD90488-210E-421B-8E09-D48BA020BC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD90488-210E-421B-8E09-D48BA020BC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD90488-210E-421B-8E09-D48BA020BC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD90488-210E-421B-8E09-D48BA020BC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D48FB2FD-CDB7-4F9C-A297-569461B3CB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D48FB2FD-CDB7-4F9C-A297-569461B3CB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D48FB2FD-CDB7-4F9C-A297-569461B3CB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D48FB2FD-CDB7-4F9C-A297-569461B3CB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF541DA-D2D8-4F71-88B6-06F065773A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF541DA-D2D8-4F71-88B6-06F065773A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF541DA-D2D8-4F71-88B6-06F065773A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF541DA-D2D8-4F71-88B6-06F065773A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{665A48AB-56A4-4DFF-A537-B8C5647481FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665A48AB-56A4-4DFF-A537-B8C5647481FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665A48AB-56A4-4DFF-A537-B8C5647481FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665A48AB-56A4-4DFF-A537-B8C5647481FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07161ED-9B41-4897-B8AD-F9F3B16F7DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07161ED-9B41-4897-B8AD-F9F3B16F7DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07161ED-9B41-4897-B8AD-F9F3B16F7DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07161ED-9B41-4897-B8AD-F9F3B16F7DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

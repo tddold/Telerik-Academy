@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0CDCA47D-B48A-4203-905B-3294CC8595A5}</ProjectGuid>
+    <ProjectGuid>{665A48AB-56A4-4DFF-A537-B8C5647481FF}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_01.JavaScript_Literals</RootNamespace>
-    <AssemblyName>_01.JavaScript_Literals</AssemblyName>
+    <RootNamespace>_08.Calculate_trapezoid_area</RootNamespace>
+    <AssemblyName>_08.Calculate_trapezoid_area</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -66,8 +66,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="scripts\js-console.js" />
     <Content Include="scripts\script.js" />
-    <Content Include="stayles\style.css" />
+    <Content Include="styles\js-console.css" />
+    <Content Include="styles\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,9 +88,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>29635</DevelopmentServerPort>
+          <DevelopmentServerPort>29984</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:29635/</IISUrl>
+          <IISUrl>http://localhost:29984/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

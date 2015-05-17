@@ -3,12 +3,24 @@
 <head>
     <title>JavaScript Literals</title>
     <link href="styles/style.css" rel="stylesheet" />
-    <script src="scripts/script.js"></script>
+    <link href="styles/js-console.css" rel="stylesheet" />
 </head>
 <body>
-    <div>
-        Sstring variable with quoted text in it.
-        <p>Press F12 -> Open Console Tab</p>
-    </div>
+    <header>
+        <h1>Data Type and Variables</h1>
+        <h2>String variable with quoted text. - Task2</h2>
+    </header>
+    <section>
+        <form action="/" method="post">
+            <input type="button" name="result" value="Start " onclick="stringVariable()" />
+            <input type="button" name="clear" value="Clear" onclick="jsConsole.clearConsole()" />
+        </form>
+        <div id="js-console">
+            Sstring variable with quoted text in it.
+            <p>Press F12 -> Open Console Tab</p>
+        </div>
+    </section>
+    <script src="scripts/js-console.js"></script>
+    <script src="scripts/script.js"></script> 
 </body>
 </html>

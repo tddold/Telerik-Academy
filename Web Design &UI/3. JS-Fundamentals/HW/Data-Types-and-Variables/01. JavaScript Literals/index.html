@@ -3,12 +3,27 @@
 <head>
     <title>JavaScript Literals</title>
     <link href="stayles/style.css" rel="stylesheet" />
-    <script src="scripts/script.js"></script>
+    <link href="stayles/js-console.css" rel="stylesheet" />
+    
 </head>
 <body>
-    <div>
-        All possible JavaScript literals to different variables.
-        <p>Press F12 -> Open Console Tab</p>
-    </div>
+    <header>
+        <h1>Data Type and Variables</h1>
+        <h2>All JavaScript Literals, typeof on All Variables, typeof on null and undefined   - Task1, Task3, Task4</h2>
+    </header>
+    <section>
+        <form action="/" method="post">
+            <input type="button" name="result" value="Task1 " onclick="task1()"/>
+            <input type="button" name="result" value="Task2 " onclick="task2()" />
+            <input type="button" name="result" value="Task3 " onclick="task3()" />
+            <input type="button" name="clear" value="Clear" onclick="jsConsole.clearConsole()" />
+        </form>
+        <div id="js-console">
+            All possible JavaScript literals to different variables, and typeof all variables.
+            <p>Press F12 -> Open Console Tab</p>
+        </div>
+    </section>
+    <script src="scripts/js-console.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
