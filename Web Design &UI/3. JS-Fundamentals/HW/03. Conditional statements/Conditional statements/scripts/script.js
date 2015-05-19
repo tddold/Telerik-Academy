@@ -25,6 +25,13 @@ function task1() {
         greater,
         smaller;
 
+        var input = document.createElement("input");
+		input.type = "text";
+		input.className = "css-class-name"; // set the CSS class
+		container.appendChild(input); // put it into the DOM
+
+		 document.body.insertBefore(createElement, container); 
+
     console.log( a );
 
     if ( a > b ) {
