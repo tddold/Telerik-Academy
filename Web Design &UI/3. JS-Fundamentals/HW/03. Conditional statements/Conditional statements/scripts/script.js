@@ -146,6 +146,16 @@ function task3() {
 
 }
 
+function task4() {
+    jsConsole.clearConsole();
+
+    switch ( switch_on ) {
+        case 1: Console.log( 'message' ); break;
+        default:
+
+    }
+}
+
 
 
 function clearCon() {
