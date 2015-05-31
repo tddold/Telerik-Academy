@@ -22,23 +22,13 @@ header {
     text-align: center;
 }
 
-h1, h2, p, label{
+h1, h2 {
     color: ghostwhite;
     text-shadow: 1px 1px 1px #333;
 }
-h2{
-    text-align:left;
-}
-
-label{
-    margin-left:10px;
-}
-
 
 input {
-    width:60px;
     margin-left: 10px;
-    margin-top: 10px;
     padding: 5px 10px;
     border: 2px outset #9c9898;
     border-radius: 5px;

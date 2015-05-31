@@ -9,12 +9,13 @@ function task2() {
     document.getElementsByTagName( "p" )[1].innerHTML = "Problem 2. Numbers not divisible";
     document.getElementsByTagName( "p" )[0].innerHTML = "Write a script that prints all the numbers from 1 to N, that are not divisible by 3 and 7 at the same time";
 
-    var n = 100;
+    var i,
+        n = 100;
     jsConsole.writeLine('--------------------------------------');
 
-    for (var i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++) {
 
-        if (!(i % 3 === 0 && i % 7 === 0)) {
+        if (!(!(i % 3) && !(i % 7))) {
             if (i < n) {
                 jsConsole.write(i + ',');
             } else {

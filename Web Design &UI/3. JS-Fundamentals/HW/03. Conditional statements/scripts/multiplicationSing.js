@@ -13,11 +13,13 @@
  -1    -0.5    -5.1    -
  */
 
-var arrayA = [5, -2, -2, 0, -1],
+var i,
+    len,
+    arrayA = [5, -2, -2, 0, -1],
     arrayB = [2, -2, 4, -2.5, -0.5],
     arrayC = [2, 1, 3, 4, -5.1];
 
-for (var i = 0; i < arrayA.length; i++) {
+for (i = 0, len = arrayA.length; i < len; i+=1) {
     checkSing(arrayA[i], arrayB[i], arrayC[i]);
 }
 

@@ -17,9 +17,11 @@
  10    not a digit
  */
 
-var array = [2, 1, 0, 5, -0.1, 'hi', 9, 10];
+var i,
+	len,
+	array = [2, 1, 0, 5, -0.1, 'hi', 9, 10];
 
-for (var i = 0; i < array.length; i++) {
+for (i = 0, len = array.length; i < len; i+=1) {
     switch (array[i]) {
 
         case 0:

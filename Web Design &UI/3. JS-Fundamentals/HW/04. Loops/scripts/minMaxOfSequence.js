@@ -9,11 +9,13 @@ function task3(){
     document.getElementsByTagName( "p" )[1].innerHTML = "Problem 3. Min/Max of sequence";
     document.getElementsByTagName( "p" )[0].innerHTML = "Write a script that finds the max and min number from a sequence of numbers.";
 
-    var array = [5, 3, 2, 6, 4, 9, 7, 8],
+    var i,
+        len,
+        array = [5, 3, 2, 6, 4, 9, 7, 8],
         minNumber = Number.MAX_VALUE,
         maxNumber = Number.MIN_VALUE;
 
-    for (var i = 0; i < array.length; i++) {
+    for ( i = 0, len = array.length; i < len; i+=1) {
         if (array[i] < minNumber) {
             minNumber = array[i];
         } else if (array[i] > maxNumber) {

@@ -21,15 +21,17 @@
  999    Nine hundred and ninety nine
  */
 
-var array = [0, 9, 10, 12, 19, 25, 98, 98, 273, 400, 501, 617, 711, 999],
+var i,
+    len,
     firstNumber,
     secondNumber,
     thirdNumber,
     hundredsNumbers,
     tenthsNumbers,
-    numbers;
+    numbers,
+    array = [0, 9, 10, 12, 19, 25, 98, 98, 273, 400, 501, 617, 711, 999];
 
-for (var i = 0; i < array.length; i++) {
+for (i = 0, len = array.length; i < len; i+=1) {
     checkNumber(array[i].toString());
 }
 
@@ -132,7 +134,7 @@ function giveTwoDigitsNumbers(number) {
             break;
         case '3':
         case '13':
-            number = 'Òhirteen';
+            number = 'Thirteen';
             break;
         case '4':
         case '14':

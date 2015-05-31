@@ -13,13 +13,15 @@
  -3    -0.5    -1.1    -2    -0.1    -0.1
  */
 
-var arrayA = [5, -2, -2, 0, -3],
+var i,
+    len,
+    arrayA = [5, -2, -2, 0, -3],
     arrayB = [2, -22, 4, -2.5, -0.5],
     arrayC = [2, 1, 3, 0, -1.1],
     arrayD = [4, 0, 2, 5, -2],
     arrayE = [1, 0, 0, 5, -0.1];
 
-for (var i = 0; i < arrayA.length; i++) {
+for ( i = 0, len = arrayA.length; i < len; i+=1) {
     isBiggest(arrayA[i], arrayB[i], arrayC[i], arrayD[i], arrayE[i]);
 }
 

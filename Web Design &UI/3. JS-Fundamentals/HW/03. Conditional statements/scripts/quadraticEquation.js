@@ -14,12 +14,14 @@
  5    2    8    no real roots
  */
 
-var arrayA = [2, -1, -0.5, 5],
+var i,
+    len,
+    arrayA = [2, -1, -0.5, 5],
     arrayB = [5, 3, 4, 2],
     arrayC = [-3, 0, -8, 8];
 
-for (var i = 0; i < arrayA.length; i++) {
-    quadraticEquations(arrayA[i], arrayB[i], arrayC[i])
+for ( i = 0, len=arrayA.length; i < len; i+=1) {
+    quadraticEquations(arrayA[i], arrayB[i], arrayC[i]);
 }
 
 function quadraticEquations(a, b, c) {

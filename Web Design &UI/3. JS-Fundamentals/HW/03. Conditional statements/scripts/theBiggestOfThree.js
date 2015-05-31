@@ -11,11 +11,13 @@
  0	    -2.5	 5	     5
  -0.1	-0.5	-1.1	-0.1*/
 
-var arrayA = [5, -2, -2, 0, -0.1],
+var i,
+    len,
+    arrayA = [5, -2, -2, 0, -0.1],
     arrayB = [2, -2, 4, -2.5, -0.5],
     arrayC = [2, 1, 3, -2.5, -1.1];
 
-for (var i = 0; i < arrayA.length; i++) {
+for (i = 0, len = arrayA.length; i < len; i+=1) {
     console.log('Biggest number is: ' + isBiggest(arrayA[i], arrayB[i], arrayC[i]));
 }
 

@@ -12,18 +12,21 @@ function task1() {
     document.getElementsByTagName("p")[1].innerHTML = "Problem 1. Increase array members";
     document.getElementsByTagName("p")[0].innerHTML = "Write a script that allocates array of 20 integers and initializes each element by its index multiplied by 5. Print the obtained array on the console.";
 
-    var array = [];
+    var i,
+    	n = 20,
+    	array = [];
 
     jsConsole.writeLine('--------------------------------------');
 
 
-    for (var i = 0; i < 20; i++) {
+    for ( i = 0; i < n; i+=1) {
         array[i] = i * 5;
         if (i < 19) {
-            jsConsole.write(array[i] + ', ')
+            jsConsole.write(array[i] + ', ');
+            console.log(array[i] + ', ');
         } else {
-            jsConsole.write(array[i])
-
+            jsConsole.write(array[i]);
+            console.log(array[i]);
         }
     }
 
@@ -62,9 +65,11 @@ function task2() {
 }
 
 function compareArray(arrayA, arrayB) {
-    var equalArray;
+    var i,
+    	equalArray,
+    	maxLenghtArray = Math.min(arrayA.length, arrayB.length);
 
-    for (var i = 0; i < Math.min(arrayA.length, arrayB.length); i++) {
+    for ( i = 0; i < maxLenghtArray; i+=1) {
         if (arrayA[i] !== arrayB[i]) {
             arrayA < arrayB ? jsConsole.writeLine('Array A is smallest.') : jsConsole.writeLine('Array B is smallest.');
             arrayA < arrayB ? equalArray = -1 : equalArray = 1;
@@ -76,7 +81,7 @@ function compareArray(arrayA, arrayB) {
     jsConsole.writeLine();
 
 
-    if (equalArray === 0) {
+    if (!equalArray) {
         jsConsole.writeLine('Both array are equals.');
     } else if (equalArray === -1) {
         jsConsole.writeLine('Array A is smallest.');
@@ -101,14 +106,16 @@ function task3() {
     document.getElementsByTagName("p")[1].innerHTML = "Problem 3. Maximal sequence";
     document.getElementsByTagName("p")[0].innerHTML = "Write a script that finds the maximal sequence of equal elements in an array.";
 
-    var array = [2, 1, 1, 2, 3, 3, 2, 2, 2, 1],
+    var i,
+    	len,
+        number,
         count = 1,
         maxSequence = 0,
-        number;
+    	array = [2, 1, 1, 2, 3, 3, 2, 2, 2, 1];
 
-    for (var i = 1; i < array.length; i++) {
+    for ( i = 1, len=array.length; i < len; i+=1) {
         if (array[i] === array[i - 1]) {
-            count++;
+            count+=1;
         } else {
             if (count > maxSequence) {
                 maxSequence = count;
@@ -121,7 +128,7 @@ function task3() {
     jsConsole.writeLine('--------------------------------------');
 
 
-    for (var i = 0; i < maxSequence; i++) {
+    for ( i = 0; i < maxSequence; i+=1) {
         if (i < maxSequence - 1) {
             jsConsole.write(number + ', ');
             console.log(number + ', ');
@@ -154,8 +161,8 @@ function task4() {
     document.getElementsByTagName("p")[0].innerHTML = "Write a script that finds the maximal increasing sequence in an array.";
 
     var array = [3, 2, 3, 4, 2, 2, 4],
-        maxIncreasSequence = [array[0]],
-        tmp = [array[0]];
+    	tmp = [array[0]],
+        maxIncreasSequence = [array[0]];
 
     jsConsole.writeLine('--------------------------------------');
 
@@ -166,7 +173,10 @@ function task4() {
     jsConsole.writeLine('--------------------------------------');
 
     function maxIncreasingSequence(array) {
-        for (var i = 1; i < array.length; i++) {
+    	var i,
+    		len;
+
+        for ( i = 1, len = array.length; i < len; i+=1) {
             if (array[i] === array[i - 1] + 1) {
                 tmp.push(array[i]);
             } else {
@@ -212,8 +222,11 @@ function task5() {
     jsConsole.writeLine('--------------------------------------');
 
     function getSelectionSort(array) {
-        for (var i = 0; i < array.length - 1; i += 1) {
-            for (var j = i; j < array.length; j += 1) {
+    	var i,
+    		len;
+
+        for ( i = 0, len = array.length; i < len - 1; i += 1) {
+            for (var j = i; j < len; j += 1) {
                 if (array[i] > array[j]) {
                     tmp = [array[i]];
                     array[i] = array[j];
@@ -243,21 +256,25 @@ function task6() {
     document.getElementsByTagName("p")[1].innerHTML = "Problem 6. Most frequent number";
     document.getElementsByTagName("p")[0].innerHTML = "Write a script that finds the most frequent number in an array.";
 
-    var array = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3],
+    var tmp,
         number,
-        tmp,
         count = 1,
-        maxCount = 0;
+        maxCount = 0,     
+    	array = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3];
+       
 
     getMostFrequentNumber(array);
 
     function getMostFrequentNumber(array) {
-        for (var i = 1; i < array.length - 1; i += 1) {
+    	var i,
+    		len;
+
+        for ( i = 1, len = array.length; i < len - 1; i += 1) {
             tmp = array[i];
 
-            for (var j = i; j < array.length; j += 1) {
+            for (var j = i; j < len; j += 1) {
                 if (tmp === array[j]) {
-                    count++;
+                    count+=1;
                 }
             }
 
@@ -295,11 +312,12 @@ function task7() {
     document.getElementsByTagName("p")[1].innerHTML = "Problem 7. Binary search";
     document.getElementsByTagName("p")[0].innerHTML = "Write a script that finds the index of given element in a sorted array of integers by using the binary search algorithm.";
 
-    var array = [3, 2, 5, 4, 1, 9, 7, 6, 8],
-        findNumber = 3,
+    var mindIndex,
         minIndex = 0,
-        maxIndex = array.length - 1,
-        mindIndex;
+        findNumber = 3,
+    	array = [3, 2, 5, 4, 1, 9, 7, 6, 8],
+        maxIndex = array.length - 1;
+
 
     array.sort();
 

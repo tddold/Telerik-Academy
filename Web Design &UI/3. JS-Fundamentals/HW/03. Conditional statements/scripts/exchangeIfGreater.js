@@ -11,10 +11,12 @@
  5.5    4.5    4.5 5.5
  */
 
-var arrayA = [5, 3, 5.5],
+var i,
+	len,
+	arrayA = [5, 3, 5.5],
     arrayB = [2, 4, 4.5];
 
-for (var i = 0; i < arrayA.length; i++) {
+for (i = 0, len = arrayA.length; i < len; i+=1) {
     isGreater(arrayA[i], arrayB[i]);
 }
 

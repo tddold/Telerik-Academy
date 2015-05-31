@@ -9,9 +9,10 @@ function task1() {
     document.getElementsByTagName("p")[1].innerHTML = "Problem 1. Numbers";
     document.getElementsByTagName("p")[0].innerHTML = "Write a script that prints all the numbers from 1 to N.";
 
-    var n = 100;
+    var i,
+        n = 100;
     jsConsole.writeLine('--------------------------------------');
-    for (var i = 1; i <= n; i++) {
+    for ( i = 1; i <= n; i++) {
         if (i < n) {
             jsConsole.write(i + ',');
 

@@ -17,11 +17,13 @@
  1	     1	     1	      1     1     1
  */
 
-var arrayA = [5, -2, -2, 0, -1.1, 10, 1],
+var i,
+    len,
+    arrayA = [5, -2, -2, 0, -1.1, 10, 1],
     arrayB = [1, -2, 4, -2.5, -0.5, 20, 1],
     arrayC = [2, 1, 3, 5, -0.1, 30, 1];
 
-for (var i = 0; i < arrayA.length; i++) {
+for (i = 0, len = arrayA.length; i < len; i+=1) {
     console.log('Result is: ' );
     isSorted(arrayA[i], arrayB[i], arrayC[i]);
     console.log('');

@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="JSLintNet.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -68,7 +69,7 @@
   <ItemGroup>
     <Content Include="index.html" />
     <Content Include="scripts\js-console.js" />
-    <Content Include="scripts\script.js" />
+    <Content Include="scripts\scripts.js" />
     <Content Include="stayles\js-console.css" />
     <Content Include="stayles\style.css" />
     <Content Include="Web.config" />
