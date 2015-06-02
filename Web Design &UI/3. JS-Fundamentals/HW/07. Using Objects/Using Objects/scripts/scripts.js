@@ -102,7 +102,7 @@ function task2() {
 
     jsConsole.writeLine( '--------------------------------------' );
 
-    jsConsole.writeLine('Test array: ' + arr);
+    jsConsole.writeLine( 'Test array: ' + arr );
     jsConsole.writeLine( 'Result using function : ' + removeElement( arr, 1 ) );
     jsConsole.writeLine( 'Result using prototype: ' + arr.remove( 1 ) );
 
@@ -124,64 +124,103 @@ function task2() {
 
     }
 
-  
+
 
 
 
 }
 
 /**
- Problem 3. Occurrences of word
-Write a function that finds all the occurrences of word in a text.
-The search can be case sensitive or case insensitive.
-Use function overloading.
+Problem 3. Deep copy
+
+Write a function that makes a deep copy of an object.
+The function should work for both primitive and reference types.
 
  */
 
 function task3() {
     jsConsole.clearConsole();
 
-    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 3. Occurrences of word";
-    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 3. Occurrences of word";
-    document.getElementsByTagName( "p" )[0].innerHTML = "    Write a function that finds all the occurrences of word in a text. The search can be case sensitive or case insensitive. Use function overloading.";
+    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 3. Deep copy";
+    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 3. Deep copy";
+    document.getElementsByTagName( "p" )[0].innerHTML = " Write a function that makes a deep copy of an object. The function should work for both primitive and reference types.";
 
-    var text = 'Test text: hell, Hell, hellenist, Hellenist, hell ',
-        word = 'hell';
+    var i,
+        j,
+        copy,
+        obj = {
+            str: 'String',
+            num: 5,
+            arr: [1, 2, 3],
+            obj: {
+                name: 'Pesho',
+                age: 25,
+                sex: 'male',
+            }
+        };
+
 
     jsConsole.writeLine( '--------------------------------------' );
 
-    jsConsole.writeLine( 'All words found in the text with case sensitive: ' + countWord( text, word, false, true ) );
-    console.log( countWord( text, word, true, true ) );
+    jsConsole.writeLine( 'This is input obj:' + obj );
+    jsConsole.writeLine( obj.str + ' | ' + obj.num + ' | ' + obj.arr +
+        ' | ' + obj.obj.name + ' | ' + obj.obj.age + ' | ' + obj.obj.sex );
 
-    jsConsole.writeLine( 'All words found in the text without case sensitive: ' + countWord( text, word, false, false ) );
+    console.log( 'This is obj:' );
+    console.log( obj );
 
-    jsConsole.writeLine( 'All substring found in the text with case sensitive: ' + countWord( text, word, true, true ) );
-    console.log( countWord( text, word, false, true ) );
+    copy = deepCopy( null );
 
-    jsConsole.writeLine( 'All substring found in the text without case sensitive: ' + countWord( text, word, true, false ) );
+
+    jsConsole.writeLine( 'This is deepCopy - null: ' + copy );
+    console.log( 'This is deepCopy - null: ' + copy );
+
+    copy = deepCopy( obj );
+
+    jsConsole.writeLine( 'This is deepCopy - obj: ' + copy );
+    jsConsole.writeLine( 'Print deepCopy - obj: ');
+   
+    for ( i in copy ) {
+        jsConsole.write( i + ': ' );
+        if ( i !== 'obj' ) {
+            jsConsole.writeLine( copy[i] );
+
+        } else {
+            for ( j in copy[i] ) {
+                jsConsole.write( j + ': ' );
+                jsConsole.writeLine( copy[i][j] );
+                jsConsole.write( i + ': ' );
+            }
+        }
+    }
+
+
+    console.log( 'This is deepCopy - obj: ' + copy );
+    console.log( copy );
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
 
-    function countWord( text, word, isSubstring, caseSensetive ) {
-        var searchWord = '',
-            re,
-            format,
-            clearText,
-            result = [],
-            count = 0;
+    function deepCopy( obj ) {
+        var prop,
+            temp;
 
-        format = isSubstring ? word : '\\b' + word + '\\b';
-
-        if ( caseSensetive ) {
-            searchWord = new RegExp( format, 'gm' );
-        } else {
-            searchWord = new RegExp( format, 'gim' );
+        if ( obj === null || typeof ( obj ) !== 'object' ) {
+            return obj;
         }
 
-        result = text.match( searchWord );
+        temp = obj.constructor(); // changed
 
-        return result.length
+        for ( prop in obj ) {
+
+            temp[prop] = deepCopy( obj[prop] );
+
+            //if ( Object.prototype.hasOwnProperty.call( obj, prop ) ) {
+            //    temp[prop] = deepCopy( obj[prop] );
+            //}
+        }
+
+        return temp;
     }
 }
 
