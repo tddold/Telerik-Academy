@@ -178,8 +178,8 @@ function task3() {
     copy = deepCopy( obj );
 
     jsConsole.writeLine( 'This is deepCopy - obj: ' + copy );
-    jsConsole.writeLine( 'Print deepCopy - obj: ');
-   
+    jsConsole.writeLine( 'Print deepCopy - obj: ' );
+
     for ( i in copy ) {
         jsConsole.write( i + ': ' );
         if ( i !== 'obj' ) {
@@ -225,180 +225,200 @@ function task3() {
 }
 
 /**
-Problem 4. Number of elements
-Write a function to count the number of div elements on the web page
+Problem 4. Has property
+
+Write a function that checks if a given object contains a given property.
+
+var obj  = …;
+var hasProp = hasProperty(obj, 'length');
  */
 
 function task4() {
     jsConsole.clearConsole();
 
-    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 4. Number of elements";
-    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 4. Number of elements";
-    document.getElementsByTagName( "p" )[0].innerHTML = "Write a function to count the number of div elements on the web page";
+    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 4. Has property";
+    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 4. Has property";
+    document.getElementsByTagName( "p" )[0].innerHTML = "Write a function that checks if a given object contains a given property.";
 
-    var type = 'div';
+    var obj1 = {
+        lenght: undefined
+    },
+        obj2 = {
+            1: 'yes',
+            2: 'no'
+        };
 
     jsConsole.writeLine( '--------------------------------------' );
 
-    jsConsole.writeLine( 'Number of "div" tags in web pages is: ' + getNumberOfElements( type ) );
-    console.log( getNumberOfElements( type ) );
+    jsConsole.writeLine( 'This obj1 contains a property (lenght): ' + hasProperty( obj1, 'lenght' ) );
+    console.log( 'This obj1 contains a property (lenght): ' + hasProperty( obj1, 'lenght' ) );
+
+
+    jsConsole.writeLine( 'This obj2 contains a property (lenght): ' + hasProperty( obj2, 'lenght' ) );
+    console.log( 'This obj2 contains a property (lenght): ' + hasProperty( obj2, 'lenght' ) );
+
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
 
-    function getNumberOfElements( element ) {
-        var count = document.getElementsByTagName( element ).length;
-
-        return count;
+    function hasProperty( obj, prop ) {
+        return obj.hasOwnProperty( prop );
     }
 }
 
 /**
-Problem 5. Appearance count
-Write a function that counts how many times given number appears in given array.
-Write a test function to check if the function is working correctly.
+Problem 5. Youngest person
+
+Write a function that finds the youngest person in a given array of people and prints his/hers full name
+Each person has properties firstname, lastname and age.
+
+Example:
+
+var people = [
+  { firstname : 'Gosho', lastname: 'Petrov', age: 32 }, 
+  { firstname : 'Bay', lastname: 'Ivan', age: 81},… ];
  */
 
 function task5() {
     jsConsole.clearConsole();
 
-    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 5. Appearance count";
-    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 5. Appearance count";
-    document.getElementsByTagName( "p" )[0].innerHTML = "Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly.";
+    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 5. Youngest person";
+    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 5. Youngest person";
+    document.getElementsByTagName( "p" )[0].innerHTML = "Write a function that finds the youngest person in a given array of people and prints his/hers full name. Each person has properties firstname, lastname and age.";
 
-    var array = [3, 2, 2, 2, 3, 9, 4, 1, 1, 3, 2],
-        number = 2,
-        esspectResult = 4;
+    var people = [
+                { firstname: 'Gosho', lastname: 'Petrov', age: 32 },
+                { firstname: 'Bay', lastname: 'Ivan', age: 81 },
+                { firstname: 'Pesho', lastname: 'Peshev', age: 21 }
+    ];
 
     jsConsole.writeLine( '--------------------------------------' );
 
-    jsConsole.write( 'Search number is: ' + number + ' -> ' + 'Result is: ' + countNumber( array, number ) + ' -> ' + 'Test result - result is: ' + test( countNumber( array, number ), esspectResult ) );
-    console.log( 'Search number is: ' + number + 'Result is: ' + countNumber( array, number ) );
+    jsConsole.write( 'Youngest person is: ' + checkYoungestPerson( people ) );
+    console.log( 'Youngest person is: ' + checkYoungestPerson( people ) );
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
 
-    function countNumber( arr, number ) {
+    function checkYoungestPerson( arr ) {
         var i,
-            len,
-            count = 0;
+            fullName,
+            min = 1000;
 
-        for ( i = 0, len = arr.length; i < len; i += 1 ) {
-            if ( arr[i] === number ) {
-                count += 1;
+        for ( i in arr ) {
+            if ( arr[i].age < min ) {
+                fullName = arr[i].firstname + ' ' + arr[i].lastname;
             }
         }
 
-        return count;
-    }
-
-    function test( count, esspect ) {
-
-        if ( count === esspect ) {
-            return true;
-        } else {
-            return false;
-        }
+        return fullName;
     }
 }
 
 /**
-Problem 6. Larger than neighbours
-Write a function that checks if the element at given position in given array of integers is bigger than its two neighbours (when such exist).
+Problem 6.
+
+Write a function that groups an array of people by age, first or last name.
+The function must return an associative array, with keys - the groups, and values - arrays with people in this groups
+Use function overloading (i.e. just one function)
+
+Example:
+
+var people = {…};
+var groupedByFname = group(people, 'firstname');
+var groupedByAge= group(people, 'age');
  */
 
 function task6() {
     jsConsole.clearConsole();
 
-    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 6. Larger than neighbours";
-    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 6. Larger than neighbours";
-    document.getElementsByTagName( "p" )[0].innerHTML = "Write a function that checks if the element at given position in given array of integers is bigger than its two neighbours (when such exist).";
+    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 6.Groups people by age, first or last name";
+    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 6.Groups people by age, first or last name";
+    document.getElementsByTagName( "p" )[0].innerHTML = "Write a function that groups an array of people by age, first or last name. The function must return an associative array, with keys - the groups, and values - arrays with people in this groups. Use function overloading (i.e. just one function)";
 
-    var i,
-        len,
-        index,
-        array = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3];
-
-    index = checkBiggerIsTwoNeighbours( array );
-    jsConsole.writeLine( '--------------------------------------' );
-
-    jsConsole.writeLine( 'Test array: ' + array );
-
-    for ( i = 0, len = index.length; i < len; i += 1 ) {
-        jsConsole.writeLine( 'Index: ' + index[i] + ' -> ' + 'Value: ' + array[index[i]] );
-        console.log( 'Index: ' + index[i] + ' -> ' + 'Value: ' + array[index[i]] );
-    }
-
-    jsConsole.writeLine();
-    jsConsole.writeLine( '--------------------------------------' );
-
-    function checkBiggerIsTwoNeighbours( array ) {
-        var i,
-            len,
-            arr = [];
-
-        for ( i = 1, len = array.length; i < len - 1; i += 1 ) {
-            if ( array[i] > array[i - 1] && array[i] > array[i + 1] ) {
-                arr.push( i );
-            }
-        }
-
-        return arr;
-    }
-}
-
-
-/**
-Problem 7. First larger than neighbours
-Write a function that returns the index of the first element in array that is larger than its neighbours or -1, if there's no such element.
-Use the function from the previous exercise.
- */
-
-function task7() {
-    jsConsole.clearConsole();
-
-    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 7. First larger than neighbours";
-    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 7. First larger than neighbours";
-    document.getElementsByTagName( "p" )[0].innerHTML = "Write a function that returns the index of the first element in array that is larger than its neighbours or -1, if there's no such element. Use the function from the previous exercise.";
-
-    var i,
-        index,
-        testArray = [],
-        array = [
-                [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3],
-                [1, 2, 3, 4]
+    var prop,
+        groupByAge,
+        groupByFname,
+        groupByLname,
+        people = [
+                { firstname: 'Gosho', lastname: 'Petrov', age: 32 },
+                { firstname: 'Bay', lastname: 'Ivan', age: 81 },
+                { firstname: 'Pesho', lastname: 'Peshev', age: 21 },
+                { firstname: 'Ceko', lastname: 'Cekov', age: 21 },
+                { firstname: 'Misho', lastname: 'Mishev', age: 21 }
         ];
 
+    groupByAge = group( people, 'age' );
+
+    console.log( groupByAge );
+
+    for ( prop in people[0] ) {
+
+        jsConsole.writeLine( group( people, prop ) );
+        console.log( group( people, prop ) );
+
+    }
+
     jsConsole.writeLine( '--------------------------------------' );
 
-    for ( i in array ) {
-        testArray = array[i];
-        jsConsole.writeLine( 'Test array: ' + testArray );
-        index = checkBiggerIsTwoNeighbours( testArray );
+    jsConsole.writeLine( 'Group by first name: ' + group( people, 'firstname' ) );
+    console.log( 'Group by first name: ' + group( people, 'firstname' ) );
 
-        if ( index >= 0 ) {
-            jsConsole.writeLine( 'Index: ' + index + ' -> ' + 'Value: ' + testArray[index] );
-            console.log( 'Index: ' + index + ' -> ' + 'Value: ' + testArray[index] );
-        } else {
-            jsConsole.writeLine( 'Index: ' + index );
-            console.log( 'Index: ' + index );
-        }
-    }
+
+
+    jsConsole.writeLine( 'Group by last name: ' + group( people, 'lastname' ) );
+    console.log( 'Group by first name: ' + group( people, 'lastname' ) );
+
+
+    jsConsole.writeLine( 'Group by age: ' + group( people, 'age' ) );
+    console.log( 'Group by first name: ' + group( people, 'age' ) );
+
+
+
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
 
-    function checkBiggerIsTwoNeighbours( array ) {
+    function group( people, prop ) {
         var i,
-            len;
+            value,
+            result = {};
 
-        for ( i = 1, len = array.length; i < len - 1; i += 1 ) {
-            if ( array[i] > array[i - 1] && array[i] > array[i + 1] ) {
-                return i;
+        if ( prop === 'firstname' ) {
+            for ( i in people ) {
+                if ( result[people[i].firstname] ) {
+                    result[people[i].firstname].push[people[i]];
+                } else {
+                    result[people[i].firstname] = [people[i]];
+                }
             }
+
+            return result;
         }
 
-        return -1;
+        if ( prop === 'lastname' ) {
+            for ( i in people ) {
+                if ( result[people[i].lastname] ) {
+                    result[people[i].lastname].push[people[i]];
+                } else {
+                    result[people[i].lastname] = [people[i]];
+                }
+            }
+
+            return result;
+        }
+
+        if ( prop === 'age' ) {
+            for ( i in people ) {
+                if ( result[people[i].age] ) {
+                    result[people[i].age].push[people[i]];
+                } else {
+                    result[people[i].age] = [people[i]];
+                }
+            }
+
+            return result;
+        }
     }
 }
 
