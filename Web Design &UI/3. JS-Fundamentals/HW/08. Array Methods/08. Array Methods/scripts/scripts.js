@@ -64,7 +64,7 @@ function task1() {
     jsConsole.writeLine( '--------------------------------------' );
 
     function createPerson( firstName, lastName, age, gender ) {
-        var person = {
+        return {
             firstName: firstName,
             lastName: lastName,
             age: age,
@@ -74,7 +74,7 @@ function task1() {
             }
         }
 
-        return person;
+        /*return person;*/
     }
 
 
@@ -362,7 +362,7 @@ function task5() {
                     return this[i];
                 }
             }
-        }
+        };
     }
 
     jsConsole.writeLine( '--------------------------------------' );
@@ -388,7 +388,7 @@ function task5() {
     } );
 
 
-    jsConsole.writeLine(youngest);
+    jsConsole.writeLine( youngest );
     console.log( youngest );
 
     jsConsole.writeLine();
@@ -413,145 +413,96 @@ function task5() {
 }
 
 /**
-Problem 6.
+Problem 6. Group people
 
-Write a function that groups an array of people by age, first or last name.
-The function must return an associative array, with keys - the groups, and values - arrays with people in this groups
-Use function overloading (i.e. just one function)
-
-Example:
-
-var people = {…};
-var groupedByFname = group(people, 'firstname');
-var groupedByAge= group(people, 'age');
+Write a function that groups an array of persons by first letter of first name and returns the groups as a JavaScript Object
+Use Array#reduce
+Use only array methods and no regular loops (for, while)
  */
 
 function task6() {
     jsConsole.clearConsole();
 
-    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 6.Groups people by age, first or last name";
-    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 6.Groups people by age, first or last name";
-    document.getElementsByTagName( "p" )[0].innerHTML = "Write a function that groups an array of people by age, first or last name. The function must return an associative array, with keys - the groups, and values - arrays with people in this groups. Use function overloading (i.e. just one function)";
+    document.getElementsByTagName( "h2" )[0].innerHTML = "Problem 6. Group people";
+    document.getElementsByTagName( "p" )[1].innerHTML = "Problem 6. Group people";
+    document.getElementsByTagName( "p" )[0].innerHTML = "Write a function that groups an array of persons by first letter of first name and returns the groups as a JavaScript Object Use Array#reduce Use only array methods and no regular loops (for, while)";
 
-    var prop,
-        groupByAge,
-        groupByFname,
-        groupByLname,
-        people = [
-                { firstname: 'Gosho', lastname: 'Petrov', age: 32 },
-                { firstname: 'Bay', lastname: 'Ivan', age: 81 },
-                { firstname: 'Gosho', lastname: 'Peshev', age: 21 },
-                { firstname: 'Ceko', lastname: 'Petrov', age: 21 },
-                { firstname: 'Misho', lastname: 'Mishev', age: 21 }
-        ];
+    var i,
+        len,
+        result,
+        resultArr,
+        len = 10,
+        person = [],
+        firstName = ['Ivan', 'Pesho', 'Gosho', 'Pepo', 'Neno', 'Sasho'],
+        lastName = ['Ivanov', 'Peshev', 'Goshov', 'Nenov', 'Mishev', 'Kolev'];
 
-    groupByFname = group( people, 'firstname' );
-    groupByLname = group( people, 'lastname' )
-    groupByAge = group( people, 'age' );
+    for ( i = 0; i < len; i += 1 ) {
+        person.push( createPerson( firstName[randomNumber( 0, 5 )],
+                                   lastName[randomNumber( 0, 5 )],
+                                   age = randomNumber( 10, 25 ) ) );
+    }
 
     jsConsole.writeLine( '--------------------------------------' );
 
-    jsConsole.writeLine( 'Group by first name: ' );
+    jsConsole.writeLine( 'Test array:' );
+    console.log( 'Test array:' );
+    jsConsole.writeLine();
 
-    for ( prop in groupByFname ) {
-        jsConsole.writeLine( printObjArray( groupByFname[prop], 'firstname' ) );
-        console.log( printObjArray( groupByFname[prop], 'firstname' ) );
-    }
+    person.forEach( function ( item ) {
+        jsConsole.writeLine( item );
+        console.log( item );
+    } );
 
-    jsConsole.writeLine( 'Group by last name: ' );
+    jsConsole.writeLine();
+    jsConsole.writeLine( 'Group people is:' );
+    console.log( 'Group people is:' );
+    jsConsole.writeLine();
 
-    for ( prop in groupByLname ) {
-        jsConsole.writeLine( printObjArray( groupByLname[prop], 'lastname' ) );
-        console.log( printObjArray( groupByLname[prop], 'lastname' ) );
-    }
+    result = person.reduce( function ( obj, item ) {
+        if ( obj[item.firstName[0]] ) {
+            obj[item.firstName[0]].push( item );
+        } else {
+            obj[item.firstName[0]] = [item];
+        }
+        return obj;
+    }, {} );
 
-    jsConsole.writeLine( 'Group by age: ' );
 
-    for ( prop in groupByAge ) {
-        jsConsole.writeLine( printObjArray( groupByAge[prop], 'age' ) );
-        console.log( printObjArray( groupByAge[prop], 'age' ) );
-    }
+    resultArr = printObjArray( result );
+
+    resultArr.forEach( function ( item ) {
+        jsConsole.writeLine( item );
+        console.log( item );
+    } );
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
 
-    function group( people, prop ) {
-        var i,
-            value,
-            result = {};
 
-        if ( prop === 'firstname' ) {
-            for ( i in people ) {
-                if ( result[people[i].firstname] ) {
-                    result[people[i].firstname].push( people[i] );
-                } else {
-                    result[people[i].firstname] = [people[i]];
-                }
-            }
-
-            return result;
+    function printObjArray( arr ) {
+        var prop,
+            result = [];
+        for ( prop in arr ) {
+            result.push( prop + ' : ' + arr[prop] );
         }
-
-        if ( prop === 'lastname' ) {
-            for ( i in people ) {
-                if ( result[people[i].lastname] ) {
-                    result[people[i].lastname].push( people[i] );
-                } else {
-                    result[people[i].lastname] = [people[i]];
-                }
-            }
-
-            return result;
-        }
-
-        if ( prop === 'age' ) {
-            for ( i in people ) {
-                if ( result[people[i].age] ) {
-                    result[people[i].age].push( people[i] );
-                } else {
-                    result[people[i].age] = [people[i]];
-                }
-            }
-
-            return result;
-        }
+        return result;
     }
 
-    function printObjArray( arr, type ) {
-        var i,
-            len,
-            prop,
-            result = '&nbsp; &nbsp; &nbsp; &nbsp;';
-
-        len = arr.length;
-
-        for ( i = 0; i < len; i += 1 ) {
-            for ( prop in arr[i] ) {
-                if ( prop === type ) {
-                    result += ' : ' + arr[i][prop] + ' -> ' + fullName( arr );
-                }
+    function createPerson( firstName, lastName, age, gender ) {
+        var person = {
+            firstName: firstName,
+            lastName: lastName,
+            age: age,
+            toString: function () {
+                return this.firstName + ' ' + this.lastName + ', age: ' + this.age;
             }
-
-            function fullName( arr ) {
-                result = '';
-                len = arr.length;
-
-                for ( i = 0; i < len; i += 1 ) {
-
-                    if ( i < len - 1 ) {
-                        result += arr[i].firstname + ' ' + arr[i].lastname + ', ';
-
-                    } else {
-                        result += arr[i].firstname + ' ' + arr[i].lastname;
-
-                    }
-                }
-
-                return result;
-            }
-
-            return result;
         }
+
+        return person;
+    }
+
+    function randomNumber( min, max ) {
+        return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
     }
 }
 

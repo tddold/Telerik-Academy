@@ -28,8 +28,8 @@ function every() {
     jsConsole.writeLine( [1, 2, 3, 4].every( isOdd ) );
     jsConsole.writeLine( [1, 3, 5, 7].every( isOdd ) );
 
-    console.log( [1, 2, 3, 4].every( isOdd ) );           //false
-    console.log( [1, 3, 5, 7].every( isOdd ) );           //true
+    console.log( [1, 2, 3, 4].every( isOdd ) ); //false
+    console.log( [1, 3, 5, 7].every( isOdd ) ); //true
 
 
     jsConsole.writeLine();
@@ -44,11 +44,11 @@ function every() {
         return number > 18;
     }
 
-    jsConsole.writeLine( [22, 23].every( isGreaterThan18 ) );     //true
-    jsConsole.writeLine( [19, 18].every( isGreaterThan18 ) );     //false
+    jsConsole.writeLine( [22, 23].every( isGreaterThan18 ) ); //true
+    jsConsole.writeLine( [19, 18].every( isGreaterThan18 ) ); //false
 
-    console.log( [22, 23].every( isGreaterThan18 ) );     //true
-    console.log( [19, 18].every( isGreaterThan18 ) );     //false
+    console.log( [22, 23].every( isGreaterThan18 ) ); //true
+    console.log( [19, 18].every( isGreaterThan18 ) ); //false
 
 
     jsConsole.writeLine();
@@ -84,9 +84,9 @@ function some() {
     jsConsole.writeLine( [1, 3, 5, 7].some( isOdd ) );
     jsConsole.writeLine( [2, 4, 6, 8].some( isOdd ) );
 
-    console.log( [1, 2, 3, 4].some( isOdd ) );            //true
-    console.log( [1, 3, 5, 7].some( isOdd ) );            //true
-    console.log( [2, 4, 6, 8].some( isOdd ) );            //false
+    console.log( [1, 2, 3, 4].some( isOdd ) ); //true
+    console.log( [1, 3, 5, 7].some( isOdd ) ); //true
+    console.log( [2, 4, 6, 8].some( isOdd ) ); //false
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
@@ -100,13 +100,13 @@ function some() {
         return number > 18;
     }
 
-    jsConsole.writeLine( [22, 23].some( isGreaterThan18 ) );     //true
-    jsConsole.writeLine( [19, 18].some( isGreaterThan18 ) );     //true
-    jsConsole.writeLine( [17, 18].some( isGreaterThan18 ) );     //false
+    jsConsole.writeLine( [22, 23].some( isGreaterThan18 ) ); //true
+    jsConsole.writeLine( [19, 18].some( isGreaterThan18 ) ); //true
+    jsConsole.writeLine( [17, 18].some( isGreaterThan18 ) ); //false
 
-    console.log( [22, 23].some( isGreaterThan18 ) );     //true
-    console.log( [19, 18].some( isGreaterThan18 ) );     //true
-    console.log( [17, 18].some( isGreaterThan18 ) );     //false
+    console.log( [22, 23].some( isGreaterThan18 ) ); //true
+    console.log( [19, 18].some( isGreaterThan18 ) ); //true
+    console.log( [17, 18].some( isGreaterThan18 ) ); //false
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
@@ -140,9 +140,9 @@ function filter() {
     jsConsole.writeLine( '[' + [1, 3, 5, 7].filter( isOdd ) + ']' );
     jsConsole.writeLine( '[' + [2, 4, 6, 8].filter( isOdd ) + ']' );
 
-    console.log( [1, 2, 3, 4].filter( isOdd ) );            //[1, 3]
-    console.log( [1, 3, 5, 7].filter( isOdd ) );            //[1, 3, 5, 7]
-    console.log( [2, 4, 6, 8].filter( isOdd ) );            //[]
+    console.log( [1, 2, 3, 4].filter( isOdd ) ); //[1, 3]
+    console.log( [1, 3, 5, 7].filter( isOdd ) ); //[1, 3, 5, 7]
+    console.log( [2, 4, 6, 8].filter( isOdd ) ); //[]
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
@@ -161,11 +161,11 @@ function filter() {
     var numbers = [2, 3, 4, 5, 6, 7, 8];
 
 
-    jsConsole.writeLine( '[' + numbers.filter( inRange( 4, 7 ) ) + ']' );       //[4, 5, 6, 7]
-    jsConsole.writeLine( '[' + numbers.filter( inRange( 2, 4 ) ) + ']' );       //[2, 3, 4]
+    jsConsole.writeLine( '[' + numbers.filter( inRange( 4, 7 ) ) + ']' ); //[4, 5, 6, 7]
+    jsConsole.writeLine( '[' + numbers.filter( inRange( 2, 4 ) ) + ']' ); //[2, 3, 4]
 
-    console.log( numbers.filter( inRange( 4, 7 ) ) );       //[4, 5, 6, 7]
-    console.log( numbers.filter( inRange( 2, 4 ) ) );       //[2, 3, 4]
+    console.log( numbers.filter( inRange( 4, 7 ) ) ); //[4, 5, 6, 7]
+    console.log( numbers.filter( inRange( 2, 4 ) ) ); //[2, 3, 4]
 
 
     jsConsole.writeLine();
@@ -204,8 +204,8 @@ function reduce() {
     jsConsole.writeLine( sum );
     jsConsole.writeLine( product );
 
-    console.log( sum );               //10
-    console.log( product );           //24
+    console.log( sum ); //10
+    console.log( product ); //24
 
 
     jsConsole.writeLine();
@@ -216,7 +216,10 @@ function reduce() {
 
     jsConsole.writeLine( 'Flattens array' );
 
-    var arr = [1, [2, 3], [4], [5, 6], 7];
+    var arr = [1, [2, 3],
+        [4],
+        [5, 6], 7
+    ];
 
     function flatten( arr, item ) {
         if ( Array.isArray( item ) ) {
@@ -226,7 +229,7 @@ function reduce() {
         return arr.concat( [item] );
     }
 
-    jsConsole.writeLine( '[' + arr.reduce( flatten, [] ) + ']' );       //[ 1, 2, 3, 4, 5, 6, 7 ]
+    jsConsole.writeLine( '[' + arr.reduce( flatten, [] ) + ']' ); //[ 1, 2, 3, 4, 5, 6, 7 ]
 
     console.log( arr.reduce( flatten, [] ) ); //[ 1, 2, 3, 4, 5, 6, 7 ]
 
@@ -271,12 +274,13 @@ function map() {
     jsConsole.writeLine( 'Parses a matrix given as an array of rows into an array of arrays of numbers' );
 
     var lines = ['1 2 3',
-                '4 5 6'];
+        '4 5 6'
+    ];
     var matrix = lines.map( function ( line ) {
         return line.split( ' ' ).map( Number );
     } );
 
-    jsConsole.writeLine( '[' + matrix + ']' );// [[1, 2, 3], [4, 5, 6]]
+    jsConsole.writeLine( '[' + matrix + ']' ); // [[1, 2, 3], [4, 5, 6]]
     console.dir( matrix );
     console.log( matrix );
     console.log( matrix[0] );
@@ -293,11 +297,11 @@ function map() {
 
     var arrOfStrings = ['1', '2', '3', '4', '5', '6'],
         arrOfNumbers = arrOfStrings.map( Number );
-    jsConsole.writeLine( '[' + arrOfStrings + ']' );    // ['1', '2', '3', '4', '5', '6']
-    jsConsole.writeLine( '[' + arrOfNumbers + ']' );    // [1, 2, 3, 4, 5, 6]
+    jsConsole.writeLine( '[' + arrOfStrings + ']' ); // ['1', '2', '3', '4', '5', '6']
+    jsConsole.writeLine( '[' + arrOfNumbers + ']' ); // [1, 2, 3, 4, 5, 6]
 
-    console.log( arrOfStrings );     // ['1', '2', '3', '4', '5', '6']
-    console.log( arrOfNumbers );     // [1, 2, 3, 4, 5, 6]
+    console.log( arrOfStrings ); // ['1', '2', '3', '4', '5', '6']
+    console.log( arrOfNumbers ); // [1, 2, 3, 4, 5, 6]
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
@@ -341,8 +345,9 @@ function forEach() {
     function createPerson( name, age ) { };
 
     var people = [createPerson( 'Peter', 13 ),
-                  createPerson( 'John', 18 ),
-                  createPerson( 'Susan', 21 )];
+        createPerson( 'John', 18 ),
+        createPerson( 'Susan', 21 )
+    ];
 
 
     //people.forEach( function ( person ) {
@@ -385,13 +390,29 @@ function find() {
 
     var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+
+    /*Polyfills find*/
+    if ( !Array.prototype.find ) {
+        Array.prototype.find = function ( callback ) {
+            var i,
+                len;
+            for ( i = 0, len = this.lenght; i < len; i += 1 ) {
+                if ( callback( this[i], i, this ) ) {
+                    return this[i];
+                }
+            }
+            return undefined;
+        };
+    }
+
+
     jsConsole.writeLine( numbers.find( function ( item ) {
         return !!( item % 2 ) && item > 5;
-    } ) );            //prints 7
+    } ) ); //prints 7
 
     console.log( numbers.find( function ( item ) {
         return !!( item % 2 ) && item > 5;
-    } ) );            //prints 7
+    } ) ); //prints 7
 
 
     jsConsole.writeLine();
@@ -405,12 +426,12 @@ function find() {
 
     jsConsole.writeLine( numbers.find( function ( item, index ) {
         return index > 3 && !!( item % 2 );
-    } ) );            //prints 5
+    } ) ); //prints 5
 
 
     console.log( numbers.find( function ( item, index ) {
         return index > 3 && !!( item % 2 );
-    } ) );            //prints 5
+    } ) ); //prints 5
 
 
     jsConsole.writeLine();
@@ -440,13 +461,27 @@ function findIndex() {
 
     var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+    /*Polyfills findIndex*/
+    if ( !Array.prototype.findIndex ) {
+        Array.prototype.findIndex = function ( callback ) {
+            var i,
+                len;
+            for ( i = 0, len = this.lenght; i, len; i += 1 ) {
+                if ( callback( this[i], i, this ) ) {
+                    return i;
+                }
+            }
+            return -1;
+        };
+    }
+
     jsConsole.writeLine( numbers.findIndex( function ( item ) {
         return !!( item % 2 ) && item > 5;
-    } ) );            //prints 6(element 7)
+    } ) ); //prints 6(element 7)
 
     console.log( numbers.findIndex( function ( item ) {
         return !!( item % 2 ) && item > 5;
-    } ) );            //prints 6(element 7)
+    } ) ); //prints 6(element 7)
 
 
 
@@ -461,12 +496,12 @@ function findIndex() {
 
     jsConsole.writeLine( numbers.findIndex( function ( item, index ) {
         return index > 3 && !!( item % 2 );
-    } ) );            //prints 4(element 5)
+    } ) ); //prints 4(element 5)
 
 
     console.log( numbers.findIndex( function ( item, index ) {
         return index > 3 && !!( item % 2 );
-    } ) );            //prints 4(element 5)
+    } ) ); //prints 4(element 5)
 
 
 
@@ -475,14 +510,14 @@ function findIndex() {
 }
 
 /**
-Array#sort
-Signature: [].sort(callback);
-Callback: callback(obj1, obj2)
-Returns: undefined
-Behavior: sorts the items from the array, based on the callback()
-Support: everywhere
+ Array#sort
+ Signature: [].sort(callback);
+ Callback: callback(obj1, obj2)
+ Returns: undefined
+ Behavior: sorts the items from the array, based on the callback()
+ Support: everywhere
 
- */
+*/
 
 function sort() {
     jsConsole.clearConsole();
@@ -501,7 +536,7 @@ function sort() {
     } );
 
     jsConsole.writeLine( numbers );
-    console.log( numbers );             //[ 6, 5, 4, 2, 1 ]
+    console.log( numbers ); //[ 6, 5, 4, 2, 1 ]
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
@@ -513,16 +548,16 @@ function sort() {
     function createPerson( name, age ) { };
 
     var people = [createPerson( 'Peter', 13 ),
-                  createPerson( 'John', 18 ),
-                  createPerson( 'Susan', 21 )
+        createPerson( 'John', 18 ),
+        createPerson( 'Susan', 21 )
     ];
     people.sort( function ( p1, p2 ) {
         return p1.name > p2.name;
     } );
 
-    jsConsole.writeLine( people );           
+    jsConsole.writeLine( people );
 
-    console.log( people );              // John, Peter, Susan
+    console.log( people ); // John, Peter, Susan
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
@@ -546,16 +581,29 @@ function fill() {
 
     jsConsole.writeLine( '--------------------------------------' );
 
+    /*Polyfills fill*/
+    if ( !Array.prototype.fill ) {
+        Array.prototype.fill = function ( value ) {
+            var i,
+                len;
+            for ( i = 0, len = this.length; i < len; i += 1 ) {
+                this[i] = value;
+            }
+            return this;
+        };
+    }
+
     jsConsole.writeLine( 'Fills an array with the number 1 ' );
 
     var arr = [],
-     count = 15;
+        count = 15;
     arr[count - 1] = undefined;
-    arr.fill(1);
+    /*arr.length = count;*/
+    arr.fill( 1 );
 
 
     jsConsole.writeLine( arr );
-    console.log(arr);
+    console.log( arr );
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
@@ -568,11 +616,88 @@ function fill() {
         count = 5;
     arr[count - 1] = undefined;
 
-    arr.fill([1, 2, 3, 4, 5]);
+    arr.fill( [1, 2, 3, 4, 5] );
 
 
     jsConsole.writeLine( arr );
-    console.log(arr);
+    console.log( arr );
+
+    jsConsole.writeLine();
+    jsConsole.writeLine( '--------------------------------------' );
+
+    jsConsole.writeLine( '--------------------------------------' );
+
+    jsConsole.writeLine( 'Fill array with using map' );
+
+    var arr = [],
+        count = 5;
+    arr[count - 1] = undefined;
+
+    arr.fill( undefined );
+
+    jsConsole.writeLine( arr.map( function ( item ) {
+        return 'Item: ' + item;
+    } ) );
+    console.log( arr.map( function ( item ) {
+        return 'Item: ' + item;
+    } ) );
+
+    jsConsole.writeLine();
+    jsConsole.writeLine( '--------------------------------------' );
+}
+
+/**
+Chaining Array Methods
+Most of the array methods return a result
+So they can be chained
+Example: Fill an array with random digits, remove the even digits, return an array with the names of the remaining digits
+
+ */
+
+function chaining() {
+    jsConsole.clearConsole();
+
+    document.getElementsByTagName( "h2" )[0].innerHTML = "Chaining Array Methods";
+    document.getElementsByTagName( "p" )[1].innerHTML = "Chaining Array Methods";
+    document.getElementsByTagName( "p" )[0].innerHTML = "Most of the array methods return a result So they can be chained Example: Fill an array with random digits, remove the even digits, return an array with the names of the remaining digits";
+
+    jsConsole.writeLine( '--------------------------------------' );
+
+    var n = 10,
+        digits = [];
+
+    digits[n - 1] = undefined;
+
+    if ( !Array.prototype.fill ) {
+        Array.prototype.fill = function ( value ) {
+            var i,
+                len;
+            for ( i = 0, len = this.length; i < len; i += 1 ) {
+                this[i] = value;
+            }
+            return this;
+        };
+    }
+
+    function getRandomDigit() {
+        return ( Math.random() * 10 ) | 0;
+    }
+
+    function isOdd( item ) {
+        return !!( item % 2 );
+    }
+
+    function digitsToDigitName( digit ) {
+        return ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'][digit];
+    }
+
+    var digitName = digits.fill( 0 )
+        .map( getRandomDigit )
+        .filter( isOdd )
+        .map( digitsToDigitName );
+
+    jsConsole.writeLine( digitName );
+    console.log( digitName );
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
@@ -582,6 +707,6 @@ function fill() {
 function clearCon() {
     document.getElementsByTagName( "h2" )[0].innerHTML = "";
     document.getElementsByTagName( "p" )[0].innerHTML = "";
-    document.getElementsByTagName( "p" )[1].innerHTML = "Loops!";
+    document.getElementsByTagName( "p" )[1].innerHTML = "Array Methods!";
     jsConsole.clearConsole();
 }
