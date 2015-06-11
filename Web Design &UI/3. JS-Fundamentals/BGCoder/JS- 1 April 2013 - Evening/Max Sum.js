@@ -6,17 +6,17 @@ function solve(input) {
         i,
         j;
 
-    for(i = 0;i < N; i+=1){
+    for (i = 0; i < N; i += 1) {
         sum = arr[i];
         answer = Math.max(answer, sum);
-        for(j=i+1; j < N; j+=1){
+        for (j = i + 1; j < N; j += 1) {
             sum += arr[j];
-            if  (answer < sum){
+            if (answer < sum) {
                 answer = sum;
             }
         }
     }
-return answer;
+    return answer;
 }
 
 var tests = [
@@ -25,6 +25,6 @@ var tests = [
     ['9', '-9', '-8', '-8', '-7', '-6', '-5', '-1', '-7', '-6'],
 ];
 
-tests.forEach(function (test){
+tests.forEach(function(test) {
     console.log(solve(test));
 });
