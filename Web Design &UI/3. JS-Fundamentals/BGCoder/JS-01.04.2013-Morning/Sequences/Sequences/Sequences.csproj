@@ -65,6 +65,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="JoroTheNaughty.js" />
     <Content Include="sequences.js" />
     <Content Include="Web.config" />
   </ItemGroup>
