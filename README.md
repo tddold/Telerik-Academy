@@ -34,3 +34,9 @@
 4.  [OOP Principles - Part 1](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/04.%20OOP%20Principles%20-%20Part%201) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/04.%20OOP%20Principles%20-%20Part%201)) - 18.03.2015
 5.  [OOP Principles - Part 2](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/05.%20OOP%20Principles%20-%20Part%202) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/05.%20OOP%20Principles%20-%20Part%202)) - 18.03.2015
 6.  [Common Type System](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/06.%20Common%20Type%20System) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/06.%20Common%20Type%20System)) - 18.03.2015
+
+# Web Design &UI 
+
+## HTML Basics
+
+1. [HTML Forms and Frames](https://github.com/tddold/Telerik-Academy/tree/master/Web%20Design%20%26UI/1.%20HTML%20Basics/HW/HTML%20Forms%20and%20Frames) - ([conditions](https://github.com/TelerikAcademy/HTML/blob/master/3.%20HTML%20Fundamentals/README.md)) - 18.03.2015
