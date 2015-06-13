@@ -39,5 +39,5 @@
 
 ## HTML Basics
 
-1. [HTML Forms and Frames](https://github.com/tddold/Telerik-Academy/tree/master/Web%20Design%20%26UI/1.%20HTML%20Basics/HW/HTML%20Forms%20and%20Frames) - ([conditions](https://github.com/TelerikAcademy/HTML/blob/master/3.%20HTML%20Fundamentals/README.md)) - 18.03.2015
+1. [HTML Fundamentals](https://github.com/tddold/Telerik-Academy/tree/master/Web%20Design%20%26UI/1.%20HTML%20Basics/HW/HTML%20Fundamentals) - ([conditions](https://github.com/TelerikAcademy/HTML/blob/master/3.%20HTML%20Fundamentals/README.md)) - 18.03.2015
 2. [HTML Tables](https://github.com/tddold/Telerik-Academy/tree/master/Web%20Design%20%26UI/1.%20HTML%20Basics/HW/HTML%20Tables) - ([conditions](https://github.com/TelerikAcademy/HTML/blob/master/4.%20HTML%20Tables/README.md)) - 18.03.2015
