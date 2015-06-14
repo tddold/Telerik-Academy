@@ -32,9 +32,9 @@ function solve(input) {
             return 'Sadly the horse is doomed in ' + count + ' jumps';
         }
 
-        //if (viseted[row + ' ' + col]) {
+        // if (viseted[row + ' ' + col]) {
         //    return 'Sadly the horse is doomed in ' + count + ' jumps';
-        //}
+        // }
 
         dirNumber = matrix[row][col];
 
@@ -42,7 +42,8 @@ function solve(input) {
         count += 1;
 
         matrix[row][col] = 'X';
-        // visited = [row + ' ' + col] = true;
+        // viseted[row + ' ' + col] = true;
+        // console.log(viseted);
         switch (dirNumber) {
             case 1:
                 row += dir[0][0];

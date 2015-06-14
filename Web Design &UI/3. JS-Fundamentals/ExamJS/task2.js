@@ -78,7 +78,7 @@ function solve(params) {
         }
 
         // Your solution here
-        console.log( result); // or console.log('no');
+        console.log(result); // or console.log('no');
     }
 
     function getResult(row, col, endRow, endCol, dir, matrix) {
@@ -175,8 +175,8 @@ var tests = [
 
 //solve(tests);
 
- tests.forEach(function (test) {
- //console.log(solve(test));
- solve(test);
+tests.forEach(function (test) {
+    //console.log(solve(test));
+    solve(test);
 
- });
+});
