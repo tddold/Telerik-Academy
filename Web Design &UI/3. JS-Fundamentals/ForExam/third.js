@@ -117,7 +117,7 @@ console.log(parseFloat('c')+ ' -> ' + typeof(parseFloat('5')));
 
 var row,
 	col,
-	count,
+	count = 1,
 	rows = 5,
 	cols = 5,
 	matrix = [];
@@ -130,13 +130,8 @@ for(row = 0; row < rows; row += 1) {
      }
 }
 
-for(row = 0; row < rows; row += 1) {    
-      for ( col = 0; col < cols; col += 1){
-           console.log(matrix[row][col]);
-     }
+    console.log(matrix);
 
-     console.log('\n');
-}
 
 /*
 14. Ако искаме да копираме масив и новия да не е с референция към стария ,а да е изцяло нов:
