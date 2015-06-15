@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function Solve(input) {
     var i,
         len,
@@ -49,3 +50,11 @@ function createMatrix(rows, cols) {
     return matrix;
 
 }
+=======
+var a = 5;
+var b = 8;
+
+console.log( a );
+
+console.log( b );
+>>>>>>> 564f35eb0075cf4e910d40943568ac95d6826305

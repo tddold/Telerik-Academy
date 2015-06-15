@@ -117,7 +117,11 @@ console.log(parseFloat('c')+ ' -> ' + typeof(parseFloat('5')));
 
 var row,
 	col,
+<<<<<<< HEAD
 	count = 1,
+=======
+	count=1,
+>>>>>>> 564f35eb0075cf4e910d40943568ac95d6826305
 	rows = 5,
 	cols = 5,
 	matrix = [];
@@ -130,8 +134,15 @@ for(row = 0; row < rows; row += 1) {
      }
 }
 
+<<<<<<< HEAD
     console.log(matrix);
 
+=======
+
+
+     console.log(matrix);
+
+>>>>>>> 564f35eb0075cf4e910d40943568ac95d6826305
 
 /*
 14. Ако искаме да копираме масив и новия да не е с референция към стария ,а да е изцяло нов:

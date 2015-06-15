@@ -343,38 +343,37 @@ function task6() {
         people = [
                 { firstname: 'Gosho', lastname: 'Petrov', age: 32 },
                 { firstname: 'Bay', lastname: 'Ivan', age: 81 },
-                { firstname: 'Pesho', lastname: 'Peshev', age: 21 },
-                { firstname: 'Ceko', lastname: 'Cekov', age: 21 },
+                { firstname: 'Gosho', lastname: 'Peshev', age: 21 },
+                { firstname: 'Ceko', lastname: 'Petrov', age: 21 },
                 { firstname: 'Misho', lastname: 'Mishev', age: 21 }
         ];
 
+    groupByFname = group( people, 'firstname' );
+    groupByLname = group( people, 'lastname' )
     groupByAge = group( people, 'age' );
-
-    console.log( groupByAge );
-
-    for ( prop in people[0] ) {
-
-        jsConsole.writeLine( group( people, prop ) );
-        console.log( group( people, prop ) );
-
-    }
 
     jsConsole.writeLine( '--------------------------------------' );
 
-    jsConsole.writeLine( 'Group by first name: ' + group( people, 'firstname' ) );
-    console.log( 'Group by first name: ' + group( people, 'firstname' ) );
+    jsConsole.writeLine( 'Group by first name: ' );
 
+    for ( prop in groupByFname ) {
+        jsConsole.writeLine( printObjArray( groupByFname[prop], 'firstname' ) );
+        console.log( printObjArray( groupByFname[prop], 'firstname' ) );
+    }
 
+    jsConsole.writeLine( 'Group by last name: ' );
 
-    jsConsole.writeLine( 'Group by last name: ' + group( people, 'lastname' ) );
-    console.log( 'Group by first name: ' + group( people, 'lastname' ) );
+    for ( prop in groupByLname ) {
+        jsConsole.writeLine( printObjArray( groupByLname[prop], 'lastname' ) );
+        console.log( printObjArray( groupByLname[prop], 'lastname' ) );
+    }
 
+    jsConsole.writeLine( 'Group by age: ' );
 
-    jsConsole.writeLine( 'Group by age: ' + group( people, 'age' ) );
-    console.log( 'Group by first name: ' + group( people, 'age' ) );
-
-
-
+    for ( prop in groupByAge ) {
+        jsConsole.writeLine( printObjArray( groupByAge[prop], 'age' ) );
+        console.log( printObjArray( groupByAge[prop], 'age' ) );
+    }
 
     jsConsole.writeLine();
     jsConsole.writeLine( '--------------------------------------' );
@@ -387,7 +386,7 @@ function task6() {
         if ( prop === 'firstname' ) {
             for ( i in people ) {
                 if ( result[people[i].firstname] ) {
-                    result[people[i].firstname].push[people[i]];
+                    result[people[i].firstname].push( people[i] );
                 } else {
                     result[people[i].firstname] = [people[i]];
                 }
@@ -399,7 +398,7 @@ function task6() {
         if ( prop === 'lastname' ) {
             for ( i in people ) {
                 if ( result[people[i].lastname] ) {
-                    result[people[i].lastname].push[people[i]];
+                    result[people[i].lastname].push( people[i] );
                 } else {
                     result[people[i].lastname] = [people[i]];
                 }
@@ -411,10 +410,47 @@ function task6() {
         if ( prop === 'age' ) {
             for ( i in people ) {
                 if ( result[people[i].age] ) {
-                    result[people[i].age].push[people[i]];
+                    result[people[i].age].push( people[i] );
                 } else {
                     result[people[i].age] = [people[i]];
                 }
+            }
+
+            return result;
+        }
+    }
+
+    function printObjArray( arr, type ) {
+        var i,
+            len,
+            prop,
+            result = '&nbsp; &nbsp; &nbsp; &nbsp;';
+
+        len = arr.length;
+
+        for ( i = 0; i < len; i += 1 ) {
+            for ( prop in arr[i] ) {
+                if ( prop === type ) {
+                    result += ' : ' + arr[i][prop] + ' -> ' + fullName( arr );
+                }
+            }
+
+            function fullName( arr ) {
+                result = '';
+                len = arr.length;
+
+                for ( i = 0; i < len; i += 1 ) {
+
+                    if ( i < len - 1 ) {
+                        result += arr[i].firstname + ' ' + arr[i].lastname + ', ';
+
+                    } else {
+                        result += arr[i].firstname + ' ' + arr[i].lastname;
+
+                    }
+                }
+
+                return result;
             }
 
             return result;
@@ -425,7 +461,7 @@ function task6() {
 function clearCon() {
     document.getElementsByTagName( "h2" )[0].innerHTML = "";
     document.getElementsByTagName( "p" )[0].innerHTML = "";
-    document.getElementsByTagName( "p" )[1].innerHTML = "Loops!";
+    document.getElementsByTagName( "p" )[1].innerHTML = "Using Objects!";
     jsConsole.clearConsole();
 }
 
