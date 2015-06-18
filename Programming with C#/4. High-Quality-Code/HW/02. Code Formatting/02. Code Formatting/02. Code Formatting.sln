@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Code Formatting", "02. Code Formatting\02. Code Formatting.csproj", "{912A90E3-865F-4211-B125-5A96FC88CF19}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90C4DB15-92BB-4F3D-8915-D9A09FBC0073}"
+	ProjectSection(SolutionItems) = preProject
+		Code.js = Code.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

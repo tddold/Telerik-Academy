@@ -11,11 +11,10 @@
         private static StringBuilder output = new StringBuilder();
         private static EventHolder events = new EventHolder();       
 
-        public static void Main(string[] args)
+        public static void Main()
         {
             while (ExecuteNextCommand())
-            {
-                // TO DO        
+            {                      
             }
 
             Console.WriteLine(output);
@@ -75,6 +74,7 @@
             string location;
 
             GetParameters(command, "AddEvent", out date, out title, out location);
+
             events.AddEvent(date, title, location);
         }
 
@@ -137,60 +137,6 @@
             }
         }
 
-        public class Event : IComparable
-        {
-            private DateTime date;
-            private string title;
-            private string location;
-
-            public Event(DateTime date, string title, string location)
-            {
-                this.date = date;
-                this.title = title;
-                this.location = location;
-            }
-
-            public int CompareTo(object obj)
-            {
-                Event other = obj as Event;
-
-                int byDate = this.date.CompareTo(other.date);
-                int byTitle = this.title.CompareTo(other.title);
-                int byLocation = this.location.CompareTo(other.location);
-
-                if (byDate == 0)
-                {
-                    if (byTitle == 0)
-                    {
-                        return byLocation;
-                    }
-                    else
-                    {
-                        return byTitle;
-                    }
-                }
-                else
-                {
-                    return byDate;
-                }
-            }
-
-            public override string ToString()
-            {
-                StringBuilder toString = new StringBuilder();
-
-                toString.Append(this.date.ToString("yyyy-MM-ddTHH:mm:ss"));
-                toString.Append(" | " + this.title);
-
-                if (this.location != null && this.location != string.Empty)
-                {
-                    toString.Append(" | " + this.location);
-                }
-
-                return toString.ToString();
-            }
-        }
-
         public class EventHolder
         {
             private MultiDictionary<string, Event> byTitle = new MultiDictionary<string, Event>(true);
@@ -224,6 +170,7 @@
             public void ListEvents(DateTime date, int count)
             {
                 OrderedBag<Event>.View eventsToShow = this.byDate.RangeFrom(new Event(date, string.Empty, string.Empty), true);
+
                 int showed = 0;
 
                 foreach (var eventToShow in eventsToShow)
