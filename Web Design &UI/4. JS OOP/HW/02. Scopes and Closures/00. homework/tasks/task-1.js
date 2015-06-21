@@ -21,21 +21,24 @@
 */
 function solve() {
 	var library = (function () {
-
+		'use strict';
+		var books = [],
+			categories=[];
+		
 		function listBooks() {
-
+				return books.slice();
 		}
 
-		function addBook() {
-
+		function addBook(book) {
+			books.push(book);
 		}
 
 		function listCategories() {
-
+			return categories.slice();
 		}
 
-		function addCategory() {
-
+		function addCategory(categorie) {
+			categories.push(categorie);
 		}
 
 		return {
@@ -51,4 +54,4 @@ function solve() {
 	} ());
 	return library;
 }
-module.exports = solve;
+module.exports = solve();
