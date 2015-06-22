@@ -26,33 +26,30 @@ function solve() {
             categories = [];
 
         function listBooks(property) {
-            var prop;
+            var prop,
+                booksToReturn = [];
 
             if(property){
                 for(prop in property){
                     if(property.hasOwnProperty(prop)){
-                       books = books.filter(function(item){
+                        booksToReturn = books.filter(function(item){
                             return item[prop] === property[prop];
                         });
-                    } else {
-                        return [];
                     }
                 }
+            } else {
+                booksToReturn = books;
             }
 
-
-            return books.sort(function(a, b){
-                return a.id - b.id;
-            });
+            return booksToReturn;
         }
 
-
-        function isUniqueBookTitleAuthorIsbn(name, type) {
+        function isUniqueBookTitleAuthorIsbn(book, type) {
             var i,
                 len;
 
             for (i = 0, len = books.length; i < len; i += 1) {
-                if (name.type === books[i].type) {
+                if (book[type] === books[i][type]) {
                     return false;
                 }
             }
@@ -91,10 +88,6 @@ function solve() {
                 throw new Error('Book title must be unique');
             }
 
-            if (!isUniqueBookTitleAuthorIsbn(book, 'author')) {
-                throw new Error('Book author must be unique');
-            }
-
             if (!isUniqueBookTitleAuthorIsbn(book, 'isbn')) {
                 throw new Error('Book isbn must be unique');
             }
@@ -108,7 +101,7 @@ function solve() {
             checkTitleLength(book.title);
             checkTitleLength(book.category);
 
-            if (categories.indexOf(book.category) < 0) {
+            if (!categories[book.category]) {
                 addCategory(book.category);
             }
 
@@ -121,12 +114,13 @@ function solve() {
         }
 
         function listCategories() {
-            return categories.sort(function(a,b){
-                return a.id - b.id;
-            })
-                .map(function(item){
-                    return item.name;
-                });
+            var catergoriesToReturn = [];
+
+            for(var category in categories){
+                catergoriesToReturn.push(category);
+            }
+
+            return catergoriesToReturn;
         }
 
         return {
