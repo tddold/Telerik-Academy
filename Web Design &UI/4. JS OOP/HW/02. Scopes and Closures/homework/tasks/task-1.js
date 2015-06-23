@@ -99,6 +99,10 @@ function solve() {
                 throw new Error('Book isbn must be unique');
             }
 
+            if (!isUniqueBookTitleAuthorIsbn(book, 'book.category')) {
+                throw new Error('Book category must be unique');
+            }
+
             if (typeof book.isbn !== 'string' ||
                 (book.isbn.length !== 10 &&
                 book.isbn.length !== 13)) {
