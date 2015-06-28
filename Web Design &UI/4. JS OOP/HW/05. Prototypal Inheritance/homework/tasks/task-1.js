@@ -62,10 +62,13 @@
 
 
 function solve() {
+    'use strict';
     var domElement = (function () {
+
         function validAttribute(name) {
             var i,
-                len;
+                len,
+                strNumber;
 
             if (typeof name !== 'string' || name === '') {
                 return false;
@@ -82,7 +85,6 @@ function solve() {
                             return false;
                         }
                     }
-
                 }
             }
 
@@ -92,36 +94,127 @@ function solve() {
         var domElement = {
             init: function (type) {
                 this.type = type;
+                this.attributes = {};
+                this.children = [];
+                this.content = '';
+                this.parent = null;
                 return this;
             },
-            get type(){
+            get type() {
                 return this._type;
             },
-            set type(value){
-                if(!validAttribute(value)){
+            set type(value) {
+                if (!validAttribute(value)) {
                     throw new Error('domEement type is not valid!');
                 }
                 this._type = value;
             },
+            get content(){
+                return this._content;
+            },
+            set content(value){
+                this._content = value;
+            },
             appendChild: function (child) {
+                if (typeof  child !== 'string') {
+                    child.parent = this;
+                }
+                this.children.push(child);
+
+                return this;
             },
             addAttribute: function (name, value) {
                 if (!validAttribute(name)) {
                     throw new Error('Type is not valid!');
                 }
+                this.attributes[name] = value;
+                return this;
             },
-            removeAttribute:function(attribute){
-                if(attribute === undefined){
+            removeAttribute: function (attribute) {
+                if (this.attributes[attribute] === undefined) {
                     throw new Error('Non-existent attribute');
+                } else {
+                    delete this.attributes[attribute];
                 }
+                return this;
             },
             get innerHTML() {
-
+                return createInnerHtml(this);
             }
         };
+
+        function createInnerHtml(obj) {
+            var innerElement = '',
+                result;
+            if (obj.children.length > 0) {
+                obj.children.forEach(function (item) {
+                    if (typeof item === 'string') {
+                        innerElement += item;
+                    } else {
+                        innerElement += item.innerHTML;
+                    }
+                });
+                result = '<' + obj.type + parseAttributes(obj.attributes) + '>' + innerElement + '</' + obj.type + '>';
+            } else {
+                result = '<' + obj.type + parseAttributes(obj.attributes) + '>' + obj.content + '</' + obj.type + '>';
+            }
+
+            return result;
+        }
+
+        function parseAttributes(obj) {
+            var attr,
+                arr = [],
+                result = ' ';
+
+            for(attr in obj){
+                arr.push([attr, obj[attr]]);
+            }
+            arr.sort();
+            arr.forEach(function(item){
+                result += item[0] + '="' + item[1] + '" ';
+            });
+            return result.trimRight();
+        }
+
         return domElement;
     }());
+
     return domElement;
 }
+
+
+
+
+var domElement = solve();
+
+var meta = Object.create(domElement)
+    .init('meta')
+    .addAttribute('charset', 'utf-8');
+
+var head = Object.create(domElement)
+    .init('head')
+    .appendChild(meta);
+
+var div = Object.create(domElement)
+    .init('div')
+    .addAttribute('style', 'font-size: 42px');
+
+div.content = 'Hello, world!';
+
+var body = Object.create(domElement)
+    .init('body')
+    .appendChild(div)
+    .addAttribute('id', 'cuki')
+    .addAttribute('bgcolor', '#012345');
+
+var root = Object.create(domElement)
+    .init('html')
+    .appendChild(head)
+    .appendChild(body);
+
+console.log(root.innerHTML);
+/*Outputs:
+ <html><head><meta charset="utf-8"></meta></head><body bgcolor="#012345" id="cuki"><div style="font-size: 42px">Hello, world!</div></body></html>*/
 
 module.exports = solve;
