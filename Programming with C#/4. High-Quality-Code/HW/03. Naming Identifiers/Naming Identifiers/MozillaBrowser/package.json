@@ -1,0 +1,10 @@
+{
+  "name": "MozillaBrowser",
+  "version": "0.0.0",
+  "description": "MozillaBrowser",
+  "main": "app.js",
+  "author": {
+    "name": "Tdd",
+    "email": ""
+  }
+}
