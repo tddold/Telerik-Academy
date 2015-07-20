@@ -14,7 +14,10 @@
                 'down': +1
             },
             ball,
-            balls;
+            balls,
+            count,
+            i,
+            len;
 
 
         balls = (function () {
@@ -34,10 +37,17 @@
                 draw: {
                     value: function (ctx) {
                         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                        ctx.fillStyle = 'yellow';
+                        ctx.strokeStyle = 'purple';
+                        ctx.lineWidth = 2;
                         ctx.beginPath();
                         ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+                        ctx.fill();
                         ctx.stroke();
                     }
+                },
+                add:{
+
                 },
                 move: {
                     value: function () {
@@ -57,11 +67,11 @@
                         }
 
                         if (this.y < this.radius) {
-                            this.direction.x = 'down';
+                            this.direction.y = 'down';
                         }
 
                         if (this.y > maxY - this.radius) {
-                            this.direction.x = 'up';
+                            this.direction.y = 'up';
                         }
                     }
                 }
@@ -71,7 +81,12 @@
         }());
 
         ball = Object.create(balls)
-            .init(60, 60, 15, 5, direction);
+            .init(60, 60, 10, 5, direction);
+
+        count = 3;
+        for (i = 0; i < count; i+=1) {
+
+        }
 
         function animationFrame() {
             ball.dir(ctx.canvas.width, ctx.canvas.height);
