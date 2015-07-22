@@ -28,7 +28,7 @@
             Point endPoint = new Point(3, 2.5);
             bool vertical = IsHorizontal(startPoint.X, endPoint.X);
             bool horizontal = IsHorizontal(startPoint.Y, endPoint.Y);
-            var distance = CalcDistan(startPoint, endPoint);
+            var distance = CalcDistance(startPoint, endPoint);
             Console.WriteLine(distance);
             Console.WriteLine("Horizontal? " + vertical);
             Console.WriteLine("Vertical? " + horizontal);
@@ -42,7 +42,13 @@
             Console.WriteLine("{0} older than {1} -> {2}", peter.FirstName, stella.FirstName, peter.IsOlderThan(stella));
         }
 
-        private static object CalcDistan(Point startPoint, Point endPoint)
+        /// <summary>
+        /// The method calculates the distance between two points(X,Y).
+        /// </summary>
+        /// <param name="startPoint">First point.</param>
+        /// <param name="endPoint">Second point.</param>
+        /// <returns>Distance</returns>
+        private static object CalcDistance(Point startPoint, Point endPoint)
         {
             double firsValue = (endPoint.X - startPoint.X) * (endPoint.X - startPoint.X);
             double secondValue = (endPoint.Y - startPoint.Y) * (endPoint.Y - startPoint.Y);
@@ -50,6 +56,12 @@
             return distance;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
         private static bool IsHorizontal(double start, double end)
         {
             if (start == end)
@@ -60,6 +72,13 @@
             return false;
         }
 
+        /// <summary>
+        /// The method calculates the area of a triangle by given sides.
+        /// </summary>
+        /// <param name="sideA">First side.</param>
+        /// <param name="sideB">Second side.</param>
+        /// <param name="sideC">Thirdt side.</param>
+        /// <returns>The area of the triangle</returns>
         private static double CalcTriangleArea(double sideA, double sideB, double sideC)
         {
             if (sideA <= 0 || sideB <= 0 || sideC <= 0)
@@ -78,6 +97,11 @@
             return area;
         }
 
+        /// <summary>
+        /// The method takes digit(int) as a parameter and returns it as a word.
+        /// </summary>
+        /// <param name="number">Digit to be returned as s word.</param>
+        /// <returns>Word.</returns>
         private static string DigitAsWord(int number)
         {
             switch (number)
@@ -97,6 +121,11 @@
             return "Invalid number!";
         }
 
+        /// <summary>
+        /// The method find the largest number of the parameters.
+        /// </summary>
+        /// <param name="elements">Numbers to be compared</param>
+        /// <returns>The largest number</returns>
         private static int FindMax(params int[] elements)
         {
             if (elements == null || elements.Length == 0)
@@ -116,6 +145,11 @@
             return maxNumber;
         }
 
+        /// <summary>
+        /// The method prints on the console a number with the chosen format.
+        /// </summary>
+        /// <param name="number">Number for formatting</param>
+        /// <param name="format">Format type.</param>
         private static void PrintAsNumber(object number, string format)
         {
             if (format == "f")
