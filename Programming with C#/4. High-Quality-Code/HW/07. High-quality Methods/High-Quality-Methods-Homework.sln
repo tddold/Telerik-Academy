@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "Methods\Methods.csproj", "{C041AAA8-7BA0-4385-A678-1D9003C1952D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math Problem", "Math Problem\Math Problem.csproj", "{6A3C00AA-90F1-4FA1-9CF8-3B6C3B1BA69B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum of Differences", "Sum of Differences\Sum of Differences.csproj", "{555EAD22-6DA6-4878-942E-A5429F71095F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,14 @@ Global
 		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C041AAA8-7BA0-4385-A678-1D9003C1952D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A3C00AA-90F1-4FA1-9CF8-3B6C3B1BA69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3C00AA-90F1-4FA1-9CF8-3B6C3B1BA69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3C00AA-90F1-4FA1-9CF8-3B6C3B1BA69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3C00AA-90F1-4FA1-9CF8-3B6C3B1BA69B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{555EAD22-6DA6-4878-942E-A5429F71095F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{555EAD22-6DA6-4878-942E-A5429F71095F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{555EAD22-6DA6-4878-942E-A5429F71095F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{555EAD22-6DA6-4878-942E-A5429F71095F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
