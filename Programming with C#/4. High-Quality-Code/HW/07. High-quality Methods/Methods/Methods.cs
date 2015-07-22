@@ -24,10 +24,6 @@
             PrintAsNumber(0.75, "%");
             PrintAsNumber(2.30, "r");
 
-            // bool horizontal, vertical;
-            // Console.WriteLine(CalcDistance(3, -1, 3, 2.5, out horizontal, out vertical));
-            // Console.WriteLine("Horizontal? " + horizontal);
-            // Console.WriteLine("Vertical? " + vertical);
             Point startPoint = new Point(3, -1);
             Point endPoint = new Point(3, 2.5);
             bool vertical = IsHorizontal(startPoint.X, endPoint.X);
