@@ -24,7 +24,7 @@
         /// The method compare two students by their birth date.
         /// </summary>
         /// <param name="other">String that contains information about birth date.</param>
-        /// <returns>Boolean variable - true if the first students is older than the second, false - otherwise</returns>
+        /// <returns>Boolean variable - true if the first students is older than the second, false - otherwise.</returns>
         public bool IsOlderThan(Student other)
         {
             DateTime firstDate = DateTime.Parse(this.OtherInfo.Substring(this.OtherInfo.Length - 10));

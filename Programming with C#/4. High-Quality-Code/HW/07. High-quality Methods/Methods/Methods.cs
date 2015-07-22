@@ -47,7 +47,7 @@
         /// </summary>
         /// <param name="startPoint">First point.</param>
         /// <param name="endPoint">Second point.</param>
-        /// <returns>Distance</returns>
+        /// <returns>Distance.</returns>
         private static object CalcDistance(Point startPoint, Point endPoint)
         {
             double firsValue = (endPoint.X - startPoint.X) * (endPoint.X - startPoint.X);
@@ -57,11 +57,11 @@
         }
 
         /// <summary>
-        /// 
+        /// ТThe method that checks whether horizontal or not.
         /// </summary>
-        /// <param name="start"></param>
-        /// <param name="end"></param>
-        /// <returns></returns>
+        /// <param name="start">First parameter.</param>
+        /// <param name="end">Second parameter.</param>
+        /// <returns>Return True or False.</returns>
         private static bool IsHorizontal(double start, double end)
         {
             if (start == end)
@@ -77,8 +77,8 @@
         /// </summary>
         /// <param name="sideA">First side.</param>
         /// <param name="sideB">Second side.</param>
-        /// <param name="sideC">Thirdt side.</param>
-        /// <returns>The area of the triangle</returns>
+        /// <param name="sideC">Third side.</param>
+        /// <returns>The area of the triangle.</returns>
         private static double CalcTriangleArea(double sideA, double sideB, double sideC)
         {
             if (sideA <= 0 || sideB <= 0 || sideC <= 0)
@@ -124,8 +124,8 @@
         /// <summary>
         /// The method find the largest number of the parameters.
         /// </summary>
-        /// <param name="elements">Numbers to be compared</param>
-        /// <returns>The largest number</returns>
+        /// <param name="elements">Numbers to be compared.</param>
+        /// <returns>The largest number.</returns>
         private static int FindMax(params int[] elements)
         {
             if (elements == null || elements.Length == 0)
@@ -148,7 +148,7 @@
         /// <summary>
         /// The method prints on the console a number with the chosen format.
         /// </summary>
-        /// <param name="number">Number for formatting</param>
+        /// <param name="number">Number for formatting.</param>
         /// <param name="format">Format type.</param>
         private static void PrintAsNumber(object number, string format)
         {
