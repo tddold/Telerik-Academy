@@ -1,0 +1,18 @@
+{
+  "name": "KJS",
+  "version": "0.0.0",
+  "authors": [
+    "tddold <tdd@dekom.bg>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "kineticjs": "~5.1.0"
+  }
+}

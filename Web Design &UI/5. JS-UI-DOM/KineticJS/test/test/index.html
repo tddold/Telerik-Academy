@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test KineticJS</title>
+    <script src="bower_components/kineticjs/kinetic.js"></script>
+    <style>
+        div {
+            width = 500px;
+            height = 350px;
+            border: 1px solid black;
+        }
+
+        #container {
+            border: 1px solid black !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+
+        var stage = new Kinetic.Stage({
+            container: "container",
+            width: 500,
+            height: 350
+        });
+
+        var i,
+            count = 5,
+            layer = new Kinetic.Layer();
+
+        for (i = 0; i < count; i += 1) {
+            var ball = new Kinetic.Circle({
+                x: Math.random() * (stage.getWidth() - 30) + 15,
+                y: Math.random() * (stage.getHeight() - 30) + 15,
+                radius: 15,
+                fill: "pink",
+                stroke: 'purple'
+            });
+
+            layer.add(ball);
+
+
+        }
+
+
+        stage.add(layer);
+
+        var updateXs = Array.apply(null, { length: count })
+            .map(function () {
+                return 5;
+            }),
+            updateYs = Array.apply(null, { length: count })
+            .map(function () {
+                return 5
+            });
+
+
+        function animFrame() {
+            var balls = layer.find('Circle');
+            balls = forEach(function (ball, index) {
+
+
+                var updateX = updateXs[index],
+                    updateY = updateYs[index],
+                    x = ball.getX() + updateX,
+                    y = ball.getY() + updateY,
+                    r = ball.getRadius();
+
+                if (x - r < 0 || x + r > stage.getWidth()) {
+                    //updateX *= -1;
+                    var sign = updateX / Math.abs(updateX);
+                    updateX = -sign * Math.random() * 20;
+                }
+
+
+                if (y - r < 0 || y + r > stage.getHeight()) {
+                    // updateY *= -1
+                    var sign = updateY / Math.abs(updateY);
+                    updateY = -sign * Math.random() * 20;
+                }
+
+                if (balls.some(function (other) {
+                if (other === ball) {
+                    return false;
+                }
+                    var b1 = {
+                    x: ball.getX(),
+                    y: ball.getY(),
+                    r: ball.getRadius
+                },
+                    b2 = {
+                    x: other.getX(),
+                    y: other.getY(),
+                    r: other.getRadius
+                },
+                    d = Math.sqrt((b1.x - b2.x) * (b1.x - b2.x) +
+                                   (b1.y - b2.y) * (b1.y - b2.y));
+
+                    return d === (b1.r + b2.r);
+
+                })) {
+                    updateX *= -1;
+                    updateY *= -1;
+                }
+
+
+                ball.setX(ball.getX() + updateX);
+                ball.setY(ball.getY() + updateY);
+                updateXs[index] = updateX;
+                updateYs[index] = updateY;
+            });
+
+            layer.draw();
+
+            //setTimeout(animFrame, 20);
+            requestAnimationFrame(animFrame);
+        }
+
+        animFrame();
+    </script>
+    <!--<script src="script.js"></script>-->
+
+</body>
+</html>
