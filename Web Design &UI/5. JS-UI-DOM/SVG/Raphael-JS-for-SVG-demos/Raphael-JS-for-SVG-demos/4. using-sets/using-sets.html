@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Raphael Demos: Setting attributes</title>
+	<style>
+		svg{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<script src='../scripts/raphael-min.js'></script>
+	<script>
+	var paper, set;
+	paper = Raphael(50, 10, 550, 500);
+
+	paper.setStart();
+
+	paper.circle(75, 85, 75);
+	paper.rect(160, 85, 75, 45);
+	paper.text(10, 200, 'This is the text').attr({
+		'text-anchor': 'start'
+	});
+
+	set = paper.setFinish();
+	set.attr({
+		fill: 'black',
+		stroke: '#ccc',
+		'stroke-width': 2,
+		'font-size': '56px',
+		'font-family': 'Consolas'
+	});	
+
+	</script>
+</body>
+</html>

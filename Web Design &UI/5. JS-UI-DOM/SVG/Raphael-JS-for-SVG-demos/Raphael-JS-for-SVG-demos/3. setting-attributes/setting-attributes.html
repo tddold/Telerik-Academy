@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Raphael Demos: Setting attributes</title>
+</head>
+<body>
+	<script src='../scripts/raphael-min.js'></script>
+	<script>
+		var paper = Raphael(10, 10, 500, 500);
+		var rect = paper.rect(50, 90, 180, 80);
+		var rect2 = paper.rect(50, 90, 180, 80);
+
+		rect.attr({
+			fill: 'purple',
+			stroke: 'blue',
+			'stroke-width': 10
+		}).rotate(25, 170, 140);
+		console.log(rectPosition);
+	</script>
+</body>
+</html>

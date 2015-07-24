@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>MEAN</title>
+    <meta charset="utf-8" />
+    <style>
+        svg {
+            margin: 30px;
+            border: 1px solid black;
+        }
+    </style>
+    <link rel="stylesheet" href="svg-dom-styles.css">
+
+</head>
+<body>
+    <div id="root">
+        <svg id="the-svg" width="900" height="450"></svg>
+        <script src="script.js"></script>
+    </div>
+
+    <script src='bower_components/raphael-min.js'></script>
+    <script>
+        var paper = Raphael(10, 10, 500, 500);
+        var circle = paper.circle(110, 110, 100);
+    </script>
+</body>
+</html>
