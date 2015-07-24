@@ -1,49 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace InheritanceAndPolymorphism
+﻿namespace InheritanceAndPolymorphism
 {
-    public class OffsiteCourse
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    internal class OffsiteCourse : Course
     {
-        public string Name { get; set; }
-        public string TeacherName { get; set; }
-        public IList<string> Students { get; set; }
-        public string Town { get; set; }
+        private string town;
+
+        public OffsiteCourse(string name, string teacherName, IList<string> students, string town)
+            : base(name, teacherName, students)
+        {
+            this.Town = town;
+        }
+
+        public OffsiteCourse(string name, string teacherName, IList<string> students)
+            : base(name, teacherName, students)
+        {
+        }
 
         public OffsiteCourse(string name)
+            : base(name)
         {
-            this.Name = name;
-            this.TeacherName = null;
-            this.Students = new List<string>();
-            this.Town = null;
         }
 
-        public OffsiteCourse(string courseName, string teacherName)
+        public string Town
         {
-            this.Name = courseName;
-            this.TeacherName = teacherName;
-            this.Students = new List<string>();
-            this.Town = null;
-        }
-
-        public OffsiteCourse(string courseName, string teacherName, IList<string> students)
-        {
-            this.Name = courseName;
-            this.TeacherName = teacherName;
-            this.Students = students;
-            this.Town = null;
-        }
-
-        private string GetStudentsAsString()
-        {
-            if (this.Students == null || this.Students.Count == 0)
+            get
             {
-                return "{ }";
+                return this.town;
             }
-            else
+
+            set
             {
-                return "{ " + string.Join(", ", this.Students) + " }";
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Town cannot be null or empty");
+                }
+
+                this.town = value;
             }
         }
 
@@ -51,20 +46,15 @@ namespace InheritanceAndPolymorphism
         {
             StringBuilder result = new StringBuilder();
             result.Append("OffsiteCourse { Name = ");
-            result.Append(this.Name);
-            if (this.TeacherName != null)
-            {
-                result.Append("; Teacher = ");
-                result.Append(this.TeacherName);
-            }
-            result.Append("; Students = ");
-            result.Append(this.GetStudentsAsString());
-            if (this.Town != null)
+            result.Append(base.ToString());
+            if (!string.IsNullOrEmpty(this.Town))
             {
                 result.Append("; Town = ");
                 result.Append(this.Town);
             }
+
             result.Append(" }");
+
             return result.ToString();
         }
     }

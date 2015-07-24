@@ -1,26 +1,15 @@
-﻿using System;
-
-namespace Abstraction
+﻿namespace Abstraction
 {
-    abstract class Figure
+    using System;
+
+    public abstract class Figure : IFigure
     {
-        public virtual double Width { get; set; }
-        public virtual double Height { get; set; }
-        public virtual double Radius { get; set; }
-
-        public Figure()
+        protected Figure()
         {
         }
 
-        public Figure(double radius)
-        {
-            this.Radius = radius;
-        }
+        public abstract double CalcPerimeter();
 
-        public Figure(double width, double height)
-        {
-            this.Width = width;
-            this.Height = height;
-        }
+        public abstract double CalcSurface();
     }
 }

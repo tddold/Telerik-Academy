@@ -1,54 +1,44 @@
-﻿using System;
-
-namespace Abstraction
+﻿namespace Abstraction
 {
-    class Circle : Figure
-    {
-        public double Radius { get; set; }
+    using System;
 
-        public Circle()
-        {
-        }
+    internal class Circle : Figure
+    {
+        private double radius;
 
         public Circle(double radius)
         {
             this.Radius = radius;
         }
 
-        public override double Width
+        public double Radius
         {
             get
             {
-                throw new NotImplementedException("Circle does not have Width");
+                return this.radius;
             }
+
             set
             {
-                throw new NotImplementedException("Circle does not have Width");
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("Radius mast be a positive number.");
+                }
+
+                this.radius = value;
             }
         }
 
-        public override double Height
-        {
-            get
-            {
-                throw new NotImplementedException("Circle does not have Height");
-            }
-            set
-            {
-                throw new NotImplementedException("Circle does not have Height");
-            }
-        }
-
-        public double CalcPerimeter()
+        public override double CalcPerimeter()
         {
             double perimeter = 2 * Math.PI * this.Radius;
             return perimeter;
         }
 
-        public double CalcSurface()
+        public override double CalcSurface()
         {
-            double surface = Math.PI * this.Radius * this.Radius;
-            return surface;
+            double area = Math.PI * this.Radius * this.Radius;
+            return area;
         }
     }
 }
