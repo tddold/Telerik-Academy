@@ -1,0 +1,19 @@
+{
+  "name": "WithRaphaelSVG",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tddold/Telerik-Academy",
+  "authors": [
+    "Todor Dakov <tdd@dekom.bg>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "raphael": "~2.1.4"
+  }
+}
