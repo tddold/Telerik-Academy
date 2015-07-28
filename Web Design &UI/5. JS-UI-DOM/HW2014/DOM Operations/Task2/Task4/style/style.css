@@ -1,0 +1,9 @@
+﻿body {
+    width: 500px;
+    height:500px;
+}
+
+span {
+    display:inline-block;
+    padding:10px;
+}
