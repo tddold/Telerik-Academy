@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. SolarSystem", "01. SolarSystem\01. SolarSystem.csproj", "{DEB1BA3C-2A62-43FC-B713-6DCD810164BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Math Oper Perform", "02. Math Oper Perform\02. Math Oper Perform.csproj", "{7DD82290-076D-40E0-BF5D-CC121BDA8C43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Math Adv Perform", "03. Math Adv Perform\03. Math Adv Perform.csproj", "{58CFEE8D-703C-4358-9EAD-71A804BCC143}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Sorting Algorith Perform", "04. Sorting Algorith Perform\04. Sorting Algorith Perform.csproj", "{E5EDFCBD-0449-40A4-B807-A5B81D08943C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEB1BA3C-2A62-43FC-B713-6DCD810164BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB1BA3C-2A62-43FC-B713-6DCD810164BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB1BA3C-2A62-43FC-B713-6DCD810164BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB1BA3C-2A62-43FC-B713-6DCD810164BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD82290-076D-40E0-BF5D-CC121BDA8C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD82290-076D-40E0-BF5D-CC121BDA8C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD82290-076D-40E0-BF5D-CC121BDA8C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD82290-076D-40E0-BF5D-CC121BDA8C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58CFEE8D-703C-4358-9EAD-71A804BCC143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58CFEE8D-703C-4358-9EAD-71A804BCC143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58CFEE8D-703C-4358-9EAD-71A804BCC143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58CFEE8D-703C-4358-9EAD-71A804BCC143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5EDFCBD-0449-40A4-B807-A5B81D08943C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5EDFCBD-0449-40A4-B807-A5B81D08943C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5EDFCBD-0449-40A4-B807-A5B81D08943C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5EDFCBD-0449-40A4-B807-A5B81D08943C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
