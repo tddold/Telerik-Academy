@@ -2,23 +2,44 @@
 using System.Collections.Generic;
 using System.Text;
 
-class ExceptionsHomework
+public class ExceptionsHomework
 {
     public static T[] Subsequence<T>(T[] arr, int startIndex, int count)
     {
+        if (arr == null || arr.Length == 0)
+        {
+            throw new ArgumentException("Array cannot be null or empty.");
+        }
+
+        if (startIndex < 0 || arr.Length <= startIndex)
+        {
+            throw new ArgumentOutOfRangeException("StartIndex must be in rang (0, arr.length - 1)");
+        }
+
+        if (count < 0)
+        {
+            throw new ArgumentException("Count cannot be negative.");
+        }
+
         List<T> result = new List<T>();
         for (int i = startIndex; i < startIndex + count; i++)
         {
             result.Add(arr[i]);
         }
+
         return result.ToArray();
     }
 
     public static string ExtractEnding(string str, int count)
     {
+        if (string.IsNullOrEmpty(str))
+        {
+            throw new ArgumentException("String cannot be null or empty.");
+        }
+
         if (count > str.Length)
         {
-            return "Invalid count!";
+            throw new ArgumentOutOfRangeException("Count cannot be greater than the string.length.");
         }
 
         StringBuilder result = new StringBuilder();
@@ -26,58 +47,46 @@ class ExceptionsHomework
         {
             result.Append(str[i]);
         }
+
         return result.ToString();
     }
 
-    public static void CheckPrime(int number)
+    public static string CheckPrime(int number)
     {
         for (int divisor = 2; divisor <= Math.Sqrt(number); divisor++)
         {
             if (number % divisor == 0)
             {
-                throw new Exception("The number is not prime!");
+                return number + " is not prime.";
             }
         }
+
+        return number + " is a prime.";
     }
 
-    static void Main()
+    private static void Main()
     {
         var substr = Subsequence("Hello!".ToCharArray(), 2, 3);
         Console.WriteLine(substr);
 
         var subarr = Subsequence(new int[] { -1, 3, 2, 1 }, 0, 2);
-        Console.WriteLine(String.Join(" ", subarr));
+        Console.WriteLine(string.Join(" ", subarr));
 
         var allarr = Subsequence(new int[] { -1, 3, 2, 1 }, 0, 4);
-        Console.WriteLine(String.Join(" ", allarr));
+        Console.WriteLine(string.Join(" ", allarr));
 
         var emptyarr = Subsequence(new int[] { -1, 3, 2, 1 }, 0, 0);
-        Console.WriteLine(String.Join(" ", emptyarr));
+        Console.WriteLine(string.Join(" ", emptyarr));
 
         Console.WriteLine(ExtractEnding("I love C#", 2));
         Console.WriteLine(ExtractEnding("Nakov", 4));
         Console.WriteLine(ExtractEnding("beer", 4));
-        Console.WriteLine(ExtractEnding("Hi", 100));
 
-        try
-        {
-            CheckPrime(23);
-            Console.WriteLine("23 is prime.");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("23 is not prime");
-        }
+        // Throw exeption.
+        //// Console.WriteLine(ExtractEnding("Hi", 100));
 
-        try
-        {
-            CheckPrime(33);
-            Console.WriteLine("33 is prime.");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("33 is not prime");
-        }
+        Console.WriteLine(CheckPrime(23));
+        Console.WriteLine(CheckPrime(33));
 
         List<Exam> peterExams = new List<Exam>()
         {

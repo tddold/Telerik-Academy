@@ -1,30 +1,34 @@
 ﻿using System;
-using System.Linq;
 using System.Diagnostics;
+using System.Linq;
 
 public class AssertionsHomework
 {
     public static void SelectionSort<T>(T[] arr) where T : IComparable<T>
     {
-        Debug.Assert(IsArrayValid(arr, 2), "Array cannot be null and shuld contain at least 2 elements to be sorted");
+        var validateArray = IsArrayValid(arr, 2);
+        Debug.Assert(validateArray, "Array cannot be null and shuld contain at least 2 elements to be sorted");
 
-        for (int index = 0; index < arr.Length-1; index++)
+        for (int index = 0; index < arr.Length - 1; index++)
         {
             int minElementIndex = FindMinElementIndex(arr, index, arr.Length - 1);
             Swap(ref arr[index], ref arr[minElementIndex]);
         }
     }
+
     public static int BinarySearch<T>(T[] arr, T value) where T : IComparable<T>
     {
-        Debug.Assert(IsArrayValid(arr, 1), "Array cannot be null or empty.");
+        var validateArray = IsArrayValid(arr, 1);
+        Debug.Assert(validateArray, "Array cannot be null or empty.");
         return BinarySearch(arr, value, 0, arr.Length - 1);
     }
 
-  
-    private static int FindMinElementIndex<T>(T[] arr, int startIndex, int endIndex) 
+    private static int FindMinElementIndex<T>(T[] arr, int startIndex, int endIndex)
         where T : IComparable<T>
     {
-        Debug.Assert(IsArrayValid(arr, 1) && startIndex <= endIndex, "Array cannot be null or empty, and startIndex cannot be bigger than endIndex.");
+        var validateArray = IsArrayValid(arr, 1);
+        Debug.Assert(validateArray && startIndex <= endIndex, "Array cannot be null or empty, and startIndex cannot be bigger than endIndex.");
+
         int minElementIndex = startIndex;
         for (int i = startIndex + 1; i <= endIndex; i++)
         {
@@ -33,6 +37,7 @@ public class AssertionsHomework
                 minElementIndex = i;
             }
         }
+
         return minElementIndex;
     }
 
@@ -43,11 +48,11 @@ public class AssertionsHomework
         y = oldX;
     }
 
-
-    private static int BinarySearch<T>(T[] arr, T value, int startIndex, int endIndex) 
+    private static int BinarySearch<T>(T[] arr, T value, int startIndex, int endIndex)
         where T : IComparable<T>
     {
-        Debug.Assert(IsArrayValid(arr, 1) && startIndex <= endIndex, "Array cannot be null or empty, and startIndex cannot be bigger than endIndex.");
+        var validateArray = IsArrayValid(arr, 1);
+        Debug.Assert(validateArray && startIndex <= endIndex, "Array cannot be null or empty, and startIndex cannot be bigger than endIndex.");
         while (startIndex <= endIndex)
         {
             int midIndex = (startIndex + endIndex) / 2;
@@ -55,12 +60,13 @@ public class AssertionsHomework
             {
                 return midIndex;
             }
+
             if (arr[midIndex].CompareTo(value) < 0)
             {
                 // Search on the right half
                 startIndex = midIndex + 1;
             }
-            else 
+            else
             {
                 // Search on the right half
                 endIndex = midIndex - 1;
@@ -70,6 +76,7 @@ public class AssertionsHomework
         // Searched value not found
         return -1;
     }
+
     private static bool IsArrayValid<T>(T[] arr, int numberOfElements)
     {
         if (arr == null || arr.Length < numberOfElements)
@@ -80,7 +87,7 @@ public class AssertionsHomework
         return true;
     }
 
-    static void Main()
+    private static void Main()
     {
         int[] arr = new int[] { 3, -1, 15, 4, 17, 2, 33, 0 };
         Console.WriteLine("arr = [{0}]", string.Join(", ", arr));
