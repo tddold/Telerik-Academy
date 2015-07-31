@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public class MergeSortAlgorithm<T> : ISorter<T> where T : IComparable
+    public class MergeSortAlgorithm<T> : ISorter<T> where T : IComparable<T>
     {
         private T[] temp;
 
@@ -53,7 +53,7 @@
 
             while (leftPointer <= middlrIndex)
             {
-                this.temp[tempPointer++] = collection[rightPointer++];
+                this.temp[tempPointer++] = collection[leftPointer++];
             }
 
             while (rightPointer <= rightIndex)

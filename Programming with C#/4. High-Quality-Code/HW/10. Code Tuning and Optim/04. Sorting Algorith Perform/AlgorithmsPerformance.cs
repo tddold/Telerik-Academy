@@ -5,12 +5,20 @@
     using System.Linq;
     using Performance.Algorithms;
 
+    /// <summary>
+    ///  How it works:
+    ///     1) Test with no sorted random elements
+    ///     2) Test with sorted ascending elements
+    ///     3) Test with sorted descending elements
+    ///     4) After each performance test - function AreSequencesEqual(arr1, arr2) is executed
+    ///        to guarantee that all the arrays are correctly sorted
+    /// </summary>
     internal class AlgorithmsPerformance
     {
-        private static readonly Stopwatch sw = new Stopwatch();
         private const int Capacity = 10000; // test it with 10 elements
+        private static readonly Stopwatch Sw = new Stopwatch();
 
-        static void Main()
+        private static void Main()
         {
             PerformTestWithIntegers();
             PerformTestWithDoubles();
@@ -58,7 +66,7 @@
         private static void TestWithIntegers(bool areSorted = false, bool isReversed = true)
         {
             var randomIntegers = Utils.GetArrayWithRandomIntegers(Capacity);
-            sw.Reset();
+            Sw.Reset();
 
             if (areSorted)
             {
@@ -74,11 +82,11 @@
 
             var quickSortCollection = randomIntegers.ToList();
 
-            sw.Start();
+            Sw.Start();
             new QuickSortAlgorithm<int>().Sort(quickSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("QuickSort: " + sw.Elapsed);
+            Console.WriteLine("QuickSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -86,11 +94,11 @@
 
             var mergeSortCollection = randomIntegers.ToList();
 
-            sw.Restart();
+            Sw.Restart();
             new MergeSortAlgorithm<int>().Sort(mergeSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("MergeSort: " + sw.Elapsed);
+            Console.WriteLine("MergeSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -98,11 +106,11 @@
 
             var insertionSortCollection = randomIntegers.ToList();
 
-            sw.Restart();
+            Sw.Restart();
             new InsertionSortAlgorithm<int>().Sort(insertionSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("InsertionSort: " + sw.Elapsed);
+            Console.WriteLine("InsertionSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -110,11 +118,11 @@
 
             var selectionSortCollection = randomIntegers.ToList();
 
-            sw.Restart();
+            Sw.Restart();
             new SelectionSortAlgorithm<int>().Sort(selectionSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("SelectionSort: " + sw.Elapsed);
+            Console.WriteLine("SelectionSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -133,7 +141,7 @@
         private static void TestWithDoubles(bool areSorted = false, bool isReversed = true)
         {
             var randomDoubles = Utils.GetArrayWithRandomDoubles(Capacity);
-            sw.Reset();
+            Sw.Reset();
 
             if (areSorted)
             {
@@ -149,11 +157,11 @@
 
             var quickSortCollection = randomDoubles.ToList();
 
-            sw.Start();
+            Sw.Start();
             new QuickSortAlgorithm<double>().Sort(quickSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("QuickSort: " + sw.Elapsed);
+            Console.WriteLine("QuickSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -161,11 +169,11 @@
 
             var mergeSortCollection = randomDoubles.ToList();
 
-            sw.Restart();
+            Sw.Restart();
             new MergeSortAlgorithm<double>().Sort(mergeSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("MergeSort: " + sw.Elapsed);
+            Console.WriteLine("MergeSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -173,11 +181,11 @@
 
             var insertionSortCollection = randomDoubles.ToList();
 
-            sw.Restart();
+            Sw.Restart();
             new InsertionSortAlgorithm<double>().Sort(insertionSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("InsertionSort: " + sw.Elapsed);
+            Console.WriteLine("InsertionSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -185,11 +193,11 @@
 
             var selectionSortCollection = randomDoubles.ToList();
 
-            sw.Restart();
+            Sw.Restart();
             new SelectionSortAlgorithm<double>().Sort(selectionSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("SelectionSort: " + sw.Elapsed);
+            Console.WriteLine("SelectionSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -208,7 +216,7 @@
         private static void TestWithStrings(bool areSorted = false, bool isReversed = true)
         {
             var randomStrings = Utils.GetArrayWithRandomStrings(Capacity);
-            sw.Reset();
+            Sw.Reset();
 
             if (areSorted)
             {
@@ -224,11 +232,11 @@
 
             var quickSortCollection = randomStrings.ToList();
 
-            sw.Start();
+            Sw.Start();
             new QuickSortAlgorithm<string>().Sort(quickSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("QuickSort: " + sw.Elapsed);
+            Console.WriteLine("QuickSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -236,11 +244,11 @@
 
             var mergeSortCollection = randomStrings.ToList();
 
-            sw.Restart();
+            Sw.Restart();
             new MergeSortAlgorithm<string>().Sort(mergeSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("MergeSort: " + sw.Elapsed);
+            Console.WriteLine("MergeSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -248,11 +256,11 @@
 
             var insertionSortCollection = randomStrings.ToList();
 
-            sw.Restart();
+            Sw.Restart();
             new InsertionSortAlgorithm<string>().Sort(insertionSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("InsertionSort: " + sw.Elapsed);
+            Console.WriteLine("InsertionSort: " + Sw.Elapsed);
 
             #endregion
 
@@ -260,11 +268,11 @@
 
             var selectionSortCollection = randomStrings.ToList();
 
-            sw.Restart();
+            Sw.Restart();
             new SelectionSortAlgorithm<string>().Sort(selectionSortCollection);
-            sw.Stop();
+            Sw.Stop();
 
-            Console.WriteLine("SelectionSort: " + sw.Elapsed);
+            Console.WriteLine("SelectionSort: " + Sw.Elapsed);
 
             #endregion
 
