@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="container">
+        <button id="btn1">CLICK ME!</button>
+        <button id="btn2">CLICK ME!</button>
+        <button id="btn3">CLICK ME!</button>
+        <button id="btn4">CLICK ME!</button>
+        <button id="btn5">CLICK ME!</button>
+        <button id="btn6">CLICK ME!</button>
+        <button id="btn7">CLICK ME!</button>
+        <button id="btn8">CLICK ME!</button>
+
+    </div>
+    <script>
+        var container = document.getElementById('container');
+
+        container.addEventListener('click', function (ev) {
+            console.log(ev.target);
+            console.log(56);
+        }, false)
+    </script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

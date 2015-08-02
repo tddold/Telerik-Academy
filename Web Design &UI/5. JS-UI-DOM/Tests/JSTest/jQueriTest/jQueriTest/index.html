@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuary</title>
+    <meta charset="utf-8" />
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        li {
+            border: 1px solid black;
+            display: block;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">CLick</button>
+    <ul id="root" class="main-menu">
+        <li class="menu">Pesho</li>
+        <li>Gosho</li>
+        <li>Ivan</li>
+        <li>Stamat</li>
+        <li>Unufri</li>
+    </ul>
+
+    <ul id="repos"></ul>
+
+    <script src="libs/jquery-2.1.4.js"></script>
+    <script>
+        var $this = $(this);
+        $this.text('Loading...');
+        $.get('https://api.github.com/users/tddold/repos', function (result) {
+            $this.text('Loa repo');
+            var ul = $('#repos');
+
+            for (var i = 0; i < result.length; i++) {
+                ul.append('<li>' + result[i].name + '</li>');
+            }
+
+            console.log(result);
+        });
+
+        console.log(5);
+
+        //$('ul').on('click', 'li', function () {
+        //    $(this).css('color', 'red');
+
+        //});
+
+        //var css = $('li').css('color');
+
+        //console.log(css);
+
+        //$("#btn").click(function () {
+        //    var $this = $(this);
+        //    $this.text('Hide ul');
+        //    var $ul = $('ul');
+
+        //    if ($ul.hasClass('hidden')) {
+        //        $this.text('Hide');
+        //    } else {
+        //        $this.text('Show');
+        //    }
+
+        //    $ul.toggleClass('hidden');
+
+        //});
+
+        //var $button = $('<button />')
+        //    .text('button')
+        //    .on('click', function () {
+        //        alert('hi');
+        //    });
+
+        //$button.appendTo('#root');
+
+    </script>
+</body>
+</html>

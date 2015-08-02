@@ -1,13 +1,6 @@
 (function () {
 	'use strict'
 	var list;
-	
-	
-	list = document.getElementById("trainers-list");
-	
-	printElementInfo(list);
-	
-	printElementInfo(document.body);
 
 	function printElementInfo(element) {
 		var log = console.log.bind(console),
@@ -26,4 +19,10 @@
 		log("-".repeat(100));
 	}
 	
+
+	list = document.getElementById("trainers-list");
+
+	printElementInfo(list);
+
+	printElementInfo(document.body);
 } ());
