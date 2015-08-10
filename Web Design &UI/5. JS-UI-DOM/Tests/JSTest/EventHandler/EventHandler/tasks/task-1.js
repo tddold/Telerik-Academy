@@ -20,7 +20,11 @@ Create a function that takes an id or DOM element and:
         The id is either not a string or does not select any DOM element 
 */
 
-// Validators--------------------------------------------
+
+
+
+function solve() {
+	// Validators--------------------------------------------
 var validator = {
     validateExistingId: function (id) {
         if (!isExistingId(id)) {
@@ -48,9 +52,7 @@ function isExistingId(id) {
 }
 
 // Validators--------------------------------------------
-
-
-function solve() {
+	
     return function (selector) {
         var i,
             len,
