@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace RotatingWallkInMatrix.Tests
+﻿namespace RotatingWallkInMatrix.Tests
 {
     using System;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -27,7 +26,7 @@ namespace RotatingWallkInMatrix.Tests
             byte n = 1;
             var expectedMatrix = new int[,]
             {
-                {1 }
+                { 1 }
             };
 
             var actualMatrix = Matrix.GenerrateMatrix(n);
@@ -43,8 +42,8 @@ namespace RotatingWallkInMatrix.Tests
             byte n = 2;
             var expectedMatrix = new int[,]
             {
-                {1, 4},
-                {3, 2}
+                { 1, 4 },
+                { 3, 2 }
             };
 
             var actualMatrix = Matrix.GenerrateMatrix(n);
@@ -60,9 +59,9 @@ namespace RotatingWallkInMatrix.Tests
             byte n = 3;
             var expectedMatrix = new int[,]
             {
-                {1, 7, 8 },
-                {6, 2, 9 },
-                {5, 4, 3 }
+                { 1, 7, 8 },
+                { 6, 2, 9 },
+                { 5, 4, 3 }
             };
 
             var actualMatrix = Matrix.GenerrateMatrix(n);

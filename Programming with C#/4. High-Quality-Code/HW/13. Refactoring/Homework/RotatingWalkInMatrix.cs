@@ -1,9 +1,10 @@
 ﻿namespace RotatingWalkInMatrix
 {
     using System;
+
     public class RotatingWalkInMatrix
     {        
-        static void Main()
+        internal static void Main()
         {
             byte matrixSize = ReadInput();
             var generatedMatrix = Matrix.GenerrateMatrix(matrixSize);
@@ -25,7 +26,7 @@
             return n;
         }
 
-        public static void PrintMatrix(int[,] matrix)
+        private static void PrintMatrix(int[,] matrix)
         {
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
