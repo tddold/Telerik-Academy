@@ -57,25 +57,29 @@
             //    input = Console.ReadLine(  );
             //}
             int n = 3;
-            int[,] matrica = new int[n, n];
+            int[,] matrix = new int[n, n];
             int step = n, k = 1, i = 0, j = 0, dx = 1, dy = 1;
             while (true)
             { //malko e kofti tova uslovie, no break-a raboti 100% : )
-                matrica[i, j] = k;
+                matrix[i, j] = k;
 
-                if (!proverka(matrica, i, j)) { break; } // prekusvame ako sme se zadunili
-                if (i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrica[i + dx, j + dy] != 0)
+                if (!proverka(matrix, i, j)) { break; } // prekusvame ako sme se zadunili
+                if (i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrix[i + dx, j + dy] != 0)
 
 
-                    while ((i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrica[i + dx, j + dy] != 0)) { change(ref dx, ref dy); }
+                    while ((i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrix[i + dx, j + dy] != 0)) { change(ref dx, ref dy); }
                 i += dx; j += dy; k++;
             }
-            for (int p = 0; p < n; p++)
-            {
-                for (int q = 0; q < n; q++) Console.Write("{0,3}", matrica[p, q]);
-                Console.WriteLine();
-            }
-            find_cell(matrica, out i, out j);
+            //for (int p = 0; p < n; p++)
+            //{
+            //    for (int q = 0; q < n; q++) Console.Write("{0,3}", matrix[p, q]);
+            //    Console.WriteLine();
+            //}
+
+            PrintMatrix(matrix);
+
+
+            find_cell(matrix, out i, out j);
             if (i != 0 && j != 0)
             { // taka go napravih, zashtoto funkciqta ne mi davashe da ne si definiram out parametrite
                 dx = 1; dy = 1;
@@ -83,18 +87,27 @@
 
                 while (true)
                 { //malko e kofti tova uslovie, no break-a raboti 100% : )
-                    matrica[i, j] = k;
-                    if (!proverka(matrica, i, j)) { break; }// prekusvame ako sme se zadunili
-                    if (i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrica[i + dx, j + dy] != 0)
+                    matrix[i, j] = k;
+                    if (!proverka(matrix, i, j)) { break; }// prekusvame ako sme se zadunili
+                    if (i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrix[i + dx, j + dy] != 0)
 
 
-                        while ((i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrica[i + dx, j + dy] != 0)) change(ref dx, ref dy);
+                        while ((i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrix[i + dx, j + dy] != 0)) change(ref dx, ref dy);
                     i += dx; j += dy; k++;
                 }
+
             }
-            for (int pp = 0; pp < n; pp++)
+           
+        }
+
+        public static void PrintMatrix(int[,] matrix)
+        {
+            for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                for (int qq = 0; qq < n; qq++) Console.Write("{0,3}", matrica[pp, qq]);
+                for (int column = 0; column < matrix.GetLength(1); column++)
+                {
+                    Console.Write("{0,3}", matrix[row, column]);
+                }
 
                 Console.WriteLine();
             }
