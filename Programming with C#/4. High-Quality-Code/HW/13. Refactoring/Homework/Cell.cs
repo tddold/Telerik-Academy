@@ -1,4 +1,4 @@
-﻿namespace GameFifteen
+﻿namespace RotatingWalkInMatrix
 {
     using System;
     public class Cell
