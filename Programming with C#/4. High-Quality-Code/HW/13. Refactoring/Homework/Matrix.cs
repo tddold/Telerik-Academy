@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace RotatingWalkInMatrix
+﻿namespace RotatingWalkInMatrix
 {
+    using System;
     class Matrix
     {
     }
