@@ -37,6 +37,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cell.cs" />
     <Compile Include="RotatingWalkInMatrix.cs" />
     <Compile Include="Matrix.cs" />
   </ItemGroup>
