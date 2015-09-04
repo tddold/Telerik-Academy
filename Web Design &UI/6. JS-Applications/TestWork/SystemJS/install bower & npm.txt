@@ -1,0 +1,9 @@
+Install
+
+1. bower init
+2. bower install --save system.js
+3. bower install --save jequery
+4. npm init
+5. npm install --save babel-core
+6. npm install --save http-server
+7. bower install --save handlebars

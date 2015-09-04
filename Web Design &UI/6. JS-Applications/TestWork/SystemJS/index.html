@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SystemJS</title>
+  </head>
+  <body>
+
+<script src="bower_components/system.js/dist/system.js"></script>
+
+<script>
+  System.config({
+    transpiler:'babel',
+
+    map:{
+      babel:'./node_modules/babel-core/browser.js',
+    }
+  });
+
+  System.import('app/app.js');
+</script>
+  </body>
+</html>

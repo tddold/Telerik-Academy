@@ -1,0 +1,20 @@
+{
+  "name": "SystemJS",
+  "version": "0.0.0",
+  "authors": [
+    "tddold <tdd@dekom.bg>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "~4.0.2",
+    "jquery": "~2.1.4",
+    "system.js": "~0.18.17"
+  }
+}
