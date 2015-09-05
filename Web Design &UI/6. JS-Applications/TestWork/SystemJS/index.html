@@ -11,13 +11,19 @@
 <script>
   System.config({
     transpiler:'babel',
-
+    // paths:{
+    //   test:'iojs node_modules/http-server/bin/http-server -p 8123'
+    // },
     map:{
       babel:'./node_modules/babel-core/browser.js',
     }
   });
 
-  System.import('app/app.js');
+  System.import('app/app.js')
+  .then(function(app){
+    var $list = app.render(['Home','About','Contacts','index']);
+    $list.appendTo(document.body);
+  });
 </script>
   </body>
 </html>
