@@ -1,0 +1,41 @@
+'.source.js, .text.html.basic':
+  'My Promise':
+    'prefix': 'pro'
+    'body': """
+    var promise = new Promise(function(resolve, reject){
+      $1
+    });
+    return promise;
+    """
+  'My script':
+    'prefix': 'scr'
+    'body': """
+    <script>
+      $1
+    </script>
+    """
+  'My function':
+    'prefix': 'func'
+    'body': """
+    function(){
+      $1
+    }
+    """
+  'My functionA':
+    'prefix': 'funa'
+    'body': """
+    function($1){
+      $2
+    }
+    """
+  'My scriptSrc':
+    'prefix': 'src'
+    'body': '<script src="$1"></script>'
+
+
+Emmet
+Highlight Selected
+Jsformat
+Jshint
+Linter
+
