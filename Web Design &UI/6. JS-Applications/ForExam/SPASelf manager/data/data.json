@@ -1,0 +1,92 @@
+{
+  "users": [
+    {
+      "username": "tdd",
+      "passHash": "40bd001563085fc35165329ea1ff5c5ecbdbbeef",
+      "usernameLower": "tdd",
+      "authKey": "undefinedIFZKjI*=Wl$=aoS#_PXsMXK*-Sye_dswj=&P&F+^VAr-)vuvmRx",
+      "id": "5555fde3-24d3-497b-9293-de09196f7e5b",
+      "todos": [
+        {
+          "id": 143273,
+          "text": "Test",
+          "state": true,
+          "category": "Home"
+        },
+        {
+          "id": 309445,
+          "text": "Prob",
+          "state": false,
+          "category": "Probi"
+        },
+        {
+          "id": 335388,
+          "text": "Proba and Test",
+          "state": false,
+          "category": "Proba and Test"
+        },
+        {
+          "id": 412078,
+          "text": "c++",
+          "state": true,
+          "category": "Cool staff"
+        },
+        {
+          "id": 440144,
+          "text": "c#",
+          "state": false,
+          "category": "Othe cool staff"
+        },
+        {
+          "id": 295045,
+          "text": "test2",
+          "state": false,
+          "category": "Home"
+        }
+      ],
+      "events": [
+        {
+          "id": 19949,
+          "title": "start",
+          "category": "Othe cool staff",
+          "date": null,
+          "creatorId": "5555fde3-24d3-497b-9293-de09196f7e5b",
+          "users": [
+            "5555fde3-24d3-497b-9293-de09196f7e5b"
+          ]
+        },
+        {
+          "id": 69201,
+          "title": "sssss",
+          "category": "Home",
+          "date": null,
+          "creatorId": "5555fde3-24d3-497b-9293-de09196f7e5b",
+          "users": [
+            "5555fde3-24d3-497b-9293-de09196f7e5b"
+          ]
+        },
+        {
+          "id": 114433,
+          "title": "Go home",
+          "category": "link",
+          "date": null,
+          "creatorId": "5555fde3-24d3-497b-9293-de09196f7e5b",
+          "users": [
+            "5555fde3-24d3-497b-9293-de09196f7e5b"
+          ]
+        },
+        {
+          "id": 306617,
+          "title": "aaaa",
+          "category": "aaaaa",
+          "description": "aaaa",
+          "date": "2015-09-28T23:30:00.000Z",
+          "creatorId": "5555fde3-24d3-497b-9293-de09196f7e5b",
+          "users": [
+            "5555fde3-24d3-497b-9293-de09196f7e5b"
+          ]
+        }
+      ]
+    }
+  ]
+}

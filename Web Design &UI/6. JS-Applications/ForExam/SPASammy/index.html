@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SPA Sammy</title>
+  </head>
+  <body
+
+    <a href="#"></a>
+    <a href="#/">Home</a>
+    <a href="#/items">Details</a>
+
+  <div id="content">
+
+  </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/sammy/lib/sammy.js"></script>
+
+
+    <script>
+      var sammyApp = Sammy('#content', function () {
+        this.get('#/', function(){
+          this.redirect('#/home');
+      });
+
+        this.get('#/home', function () {
+          $('#content').html('Home');
+        });
+
+        this.get('#/items', function(){
+          var page = this.params.page
+              size = this.params.size;
+          console.log(page, size);
+        var items = [1,2,3];
+        items.forEach(function(item){
+          $('<a/>')
+          .css('display', 'block')
+          .attr('href', '#/items/' + item)
+          .html('Go to item ' + item)
+          .appendTo('#content');
+        })
+        });
+
+        this.get('#/items/:id',function(){
+          $('#content').html('Item with id ' + this.params.id)
+        })
+
+        $(function () {
+          sammyApp.run('#/');
+        });
+      });
+    </script>
+  </body>
+</html>

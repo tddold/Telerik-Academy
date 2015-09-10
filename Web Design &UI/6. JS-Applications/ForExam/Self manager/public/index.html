@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Self manager</title>
+    <meta charset="utf-8" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css">
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="bower_components/jt.timepicker/jquery.timepicker.css">
+</head>
+<body>
+    <header class="nav navbar">
+        <div class="container row">
+            <h1 class="text-center">Self manager</h1>
+        </div>
+        <nav class="navbar navbar-default">
+          <div class="nav navbar-nav col-md-10">
+            <ul class="nav navbar-nav">
+                <li><a href="#/home">Home</a></li>
+                <li><a href="#/todos">TODOs</a></li>
+                <li><a href="#/events">Events</a></li>
+            </ul>
+          </div>
+          <div class="nav navbar-nav col-md-2">
+            <a href="#/register">Register or Login</a>
+          </div>
+        </nav>
+    </header>
+
+    <section id="main" class="container">
+        <div id="container">
+          <!-- <h2 id="total-posts">Last 100 posts:</h2>
+        <div id="posts"> -->
+        </div>
+    </section>
+
+    <footer>
+        <h4 class="text-center">&copy:Telerik Akademy 20015</h4>
+    </footer>
+
+
+
+    <!--  Libs-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/sammy/lib/sammy.js"></script>
+    <script src="bower_components/system.js/dist/system.js"></script>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+
+
+    <!-- <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/sammy/lib/sammy.js"></script>
+        <script src="bower_components/js-sha1/src/sha1.js"></script>
+        <script src="bower_components/system.js/dist/system.js"></script>
+        <script src="node_modules/babel-core/browser.js"></script> -->
+
+        <script type="text/babel">
+          System.config({
+            transpiler:'babel',
+            map:{
+              jquery:'bower_components/jquery/dist/jquery.js',
+              handlebars:'bower_components/handlebars/handlebars.js',
+              sammy:'bower_components/sammy/lib/sammy.js',
+              sha1:'bower_components/sha1/index.js',
+              toastr:'bower_components/toastr/toastr.js',
+              jqueryui:'bower_components/jquery-ui/jquery-ui.js',
+              timepicker:'bower_components/jt.timepicker/jquery.timepicker.js',
+              lodash:'bower_components/lodash/lodash.js'
+            }
+          });
+
+          System.import('js/app.js');
+        </script>
+
+</body>
+</html>

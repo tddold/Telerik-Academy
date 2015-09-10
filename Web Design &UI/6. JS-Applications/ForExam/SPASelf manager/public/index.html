@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Self manager</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/toastr/toastr.css">
+  <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="bower_components/jt.timepicker/jquery.timepicker.css">
+</head>
+
+<body>
+  <div id="root">
+    <header>
+      <div class="row">
+      <h1 class="page-header col-md-9">Self Manager</h1>
+        <div class="col-md-3">
+          <a href="#/register">Register or Login</a>
+        </div>
+      </div>
+      <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/todos">My TODOs</a></li>
+          <li><a href="#/events">My Events</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="content">
+    </div>
+  </div>
+
+
+  <!--  Lib-->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/sammy/lib/sammy.js"></script>
+  <script src="bower_components/handlebars/handlebars.js"></script>
+  <script src="bower_components/sha1/index.js"></script>
+  <script src="bower_components/toastr/toastr.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+  <script src="bower_components/jt.timepicker/jquery.timepicker.js"></script>
+  <script src="bower_components/lodash/lodash.js"></script>
+
+  <!--  App: Controllers-->
+  <script src="js/controllers/home-controller.js"></script>
+  <script src="js/controllers/users-controller.js"></script>
+  <script src="js/controllers/todos-controller.js"></script>
+  <script src="js/controllers/events-controller.js"></script>
+
+  <!--  APP: setup-->
+  <script src="js/templates.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/data.js"></script>
+
+
+</body>
+
+</html>

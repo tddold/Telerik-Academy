@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Spa Server Sammy</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+  <a class="btn btn-info" href="#/">Home</a>
+  <a class="btn btn-info" href="#/items">Detail</a>
+
+  <div id="content">
+
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/sammy/lib/sammy.js"></script>
+  <script src="bower_components/handlebars/handlebars.js"></script>
+
+
+  <script>
+    var db = function(){
+
+        var items = [
+          {name:'John', id:1000},
+          {name:'Jane', id:1001},
+          {name:'Pesh', id:1002}];
+
+          function getAJAX(){
+            var promise = new Promise(function (resolve,reject) {
+              $.ajax({
+                url:'app/items',
+                method:'GET',
+                contentType:'aplication/json',
+                success:function(res){
+                  resolve(res);
+                },
+                error:function(err){
+                  reject(err);
+                }
+              });
+            });
+            return promise;
+          }
+
+          function get(){
+            var promise = new Promise(function (resolve,reject) {
+              resolve({
+              result:items,
+              length:items.length
+              });
+            });
+            return promise;
+          }
+
+          function getById(id) {
+            id = +id;
+            var promise = new Promise(function(resolve,reject){
+              for (var i = 0; i < items.length; i+=1) {
+                if (items[i].id === id) {
+                  resolve({
+                    result:items[i]
+                  });
+                  return;
+                }
+            }
+            reject({
+              msg:'Invalid id'
+            });
+          });
+
+          return promise;
+        }
+
+          var lastId = 0;
+          function save(item) {
+            var promise = new Promise(function (resolve,  reject) {
+              item.id = lastId +=1;
+              items.push(item);
+              resolve(item)
+            });
+            return promise;
+          }
+      return {
+        get:get,
+        getById:getById,
+        save:save
+      };
+    }();
+  </script>
+
+  <script>
+    var templates = function () {
+      var loadedTemplates = [];
+    function get(templateName) {
+      var promise = new Promise(function(resolve, reject){
+        if (loadedTemplates[templateName]) {
+          resolve(loadedTemplates[templateName]);
+          return;
+        }
+        var url = 'templates/' + templateName + '.handlebars';
+      $.ajax({
+        url:url,
+        success:function(html){
+          loadedTemplates[templateName] = html;
+          resolve(html);
+        },
+        error:function(){
+          reject(err);
+        }
+      });
+    });
+    return promise;
+  }
+      return{
+        get:get
+      }
+    }();
+  </script>
+
+
+  <script>
+  var handlebars = handlebars || Handlebars;
+  var Handlebars = handlebars || Handlebars;
+    var sammyApp = Sammy('#content', function(){
+          this.get('#/', function(){
+            this.redirect('#/home');
+          });
+
+          this.get('#/home', function(){
+            $('#content').html('Items');
+          });
+
+          this.get('#/items', function(){
+            var items;
+            db.get()
+              .then(function(res){
+              items = res.result;
+              return templates.get('items')
+            })
+            .then(function(html){
+              var template = handlebars.compile(html);
+              $('#content').html(template({
+                items:items
+              }));
+            });
+          });
+
+          this.get('#/items/:id', function(){
+            var item;
+            db.getById(this.params.id)
+              .then(function(res){
+                item = res.result;
+                console.log(item);
+                return templates.get('item-details');
+            })
+            .then(function(html){
+              var template = handlebars.compile(html);
+              $('#content').html(template(item));
+            })
+          });
+
+          $(function(){
+            sammyApp.run('#/');
+          });
+      });
+  </script>
+</body>
+
+</html>

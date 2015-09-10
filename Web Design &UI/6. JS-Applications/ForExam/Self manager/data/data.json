@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "username": "tdd",
+      "passHash": "40bd001563085fc35165329ea1ff5c5ecbdbbeef",
+      "usernameLower": "tdd",
+      "authKey": "undefinedIFZKjI*=Wl$=aoS#_PXsMXK*-Sye_dswj=&P&F+^VAr-)vuvmRx",
+      "id": "5555fde3-24d3-497b-9293-de09196f7e5b",
+      "todos": [
+        {
+          "id": 143273,
+          "text": "Test",
+          "state": true,
+          "category": "Home"
+        },
+        {
+          "id": 309445,
+          "text": "Prob",
+          "state": false,
+          "category": "Probi"
+        },
+        {
+          "id": 335388,
+          "text": "Proba and Test",
+          "state": false,
+          "category": "Proba and Test"
+        },
+        {
+          "id": 412078,
+          "text": "c++",
+          "state": true,
+          "category": "Cool staff"
+        },
+        {
+          "id": 440144,
+          "text": "c#",
+          "state": false,
+          "category": "Othe cool staff"
+        },
+        {
+          "id": 295045,
+          "text": "test2",
+          "state": false,
+          "category": "Home"
+        },
+        {
+          "id": 794683,
+          "text": "1",
+          "state": false,
+          "category": "1"
+        },
+        {
+          "id": 27088,
+          "text": "test",
+          "state": false,
+          "category": "Home"
+        }
+      ],
+      "events": [
+        {
+          "id": 306617,
+          "title": "aaaa",
+          "category": "aaaaa",
+          "description": "aaaa",
+          "date": "2015-09-28T23:30:00.000Z",
+          "creatorId": "5555fde3-24d3-497b-9293-de09196f7e5b",
+          "users": [
+            "5555fde3-24d3-497b-9293-de09196f7e5b"
+          ]
+        }
+      ]
+    },
+    {
+      "username": "123",
+      "passHash": "40bd001563085fc35165329ea1ff5c5ecbdbbeef",
+      "usernameLower": "123",
+      "authKey": "undefinedNmukVGlqAU&gzUwMsztlxVxCvwzvejNXEZAIy_)xibJW_khJET&",
+      "id": "b3af9107-9db1-43c2-b553-e75150c8b952"
+    },
+    {
+      "username": "1234",
+      "passHash": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+      "usernameLower": "1234",
+      "authKey": "undefinedvcdBKRuXs@^tbauxko_AA@AM#Ra!J$c*Mx(wyIcR)DY^rO=Tb#F",
+      "id": "73b52157-9c6b-4eed-8caa-beabba87a937",
+      "todos": [
+        {
+          "id": 336525,
+          "text": "system",
+          "state": false,
+          "category": "ECMA Script 6"
+        }
+      ]
+    }
+  ]
+}

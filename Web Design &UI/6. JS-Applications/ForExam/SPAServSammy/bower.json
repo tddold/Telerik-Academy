@@ -1,0 +1,21 @@
+{
+  "name": "SPAServSammy",
+  "version": "0.0.0",
+  "authors": [
+    "tddold <tdd@dekom.bg>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "handlebars": "~4.0.2",
+    "jquery": "~2.1.4",
+    "sammy": "~0.7.6"
+  }
+}
