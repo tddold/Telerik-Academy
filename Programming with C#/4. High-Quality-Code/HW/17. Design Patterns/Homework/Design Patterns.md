@@ -2,7 +2,7 @@
 1.	Цел на шаблона  - да ограничава създаването на инстанция от даден клас до една единствена и да предоставя глобален достъп до нея.
 2.	Структура:
 
- <p align="center"><a href="http://telerikacademy.com//"><img src="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Picture/Singleton.png" /></a></p>
+ <p align="center"><a href="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Picture/Singleton.png"><img src="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Picture/Singleton.png" /></a></p>
  
 3.	Приложения:
 	-	a.	клас управляващ появяването на диалогови прозорци
