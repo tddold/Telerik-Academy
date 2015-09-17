@@ -13,10 +13,6 @@
  - Система е много сложна или трудна за разбиране.
 4.	Свързани шаблони – “Abstract Factory” и “Sigleton”
 
-### Структура
-Пример за дизайн Фасада модел в UML.png
-<p align="center"><a href="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Picture/Facade.png"><img src="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Picture/Facade.png" /></a></p>
-
 Примерен код:
 ```
 namespace Facade.Example
