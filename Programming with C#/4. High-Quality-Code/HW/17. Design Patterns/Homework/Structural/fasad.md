@@ -3,7 +3,7 @@
 1.	Цел на шаблона  - предоставяне на интерфейс за достъп до сложна системата от класове.
 2.	Структура:
  
-<p align="center"><a href="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Picture/Facade.png"><img src="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Picture/Facade.png" /></a></p>
+<p align="center"><a href="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Structural/Picture/Facade.png"><img src="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Structural/Picture/Facade.png" /></a></p>
 
 3.	Приложения: - Уеб услугите (web services) могат да се разглеждат като реализация на фасада, когато нямат собствена бизнес логика, а са дефинирани за предоставяне на достъп до дадена система.
 4.	Свързани шаблони – “Abstract Factory” и “Sigleton”
@@ -31,7 +31,7 @@
 This is an abstract example of how a client ("you") interacts with a facade (the "computer") to a complex system (internal computer parts, like CPU and HardDrive).
 
 Примерен код:
-'''
+```
 namespace Facade.Example
 {
     using System;
@@ -161,4 +161,4 @@ namespace Facade.Example
     }
 }
 
-'''
+```
