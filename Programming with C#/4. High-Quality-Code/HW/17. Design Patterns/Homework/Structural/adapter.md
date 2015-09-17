@@ -7,6 +7,7 @@
 
 2.	Структура:
 
+<p align="center"><a href="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Structural/Picture/adapter.gif"><img src="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Structural/Picture/adapter.gif" /></a></p>
 
 
 3.	Приложения: 
