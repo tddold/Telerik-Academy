@@ -30,66 +30,135 @@
 Пример
 This is an abstract example of how a client ("you") interacts with a facade (the "computer") to a complex system (internal computer parts, like CPU and HardDrive).
 
-# C Sharp
-
-namespace IVSR.Designpattern.Facade
+Примерен код:
+'''
+namespace Facade.Example
 {
-    class SubsystemA
+    using System;
+
+    /// <summary>
+    /// MainApp startup
+    /// Facade Design Pattern.
+    /// </summary>
+    public class MainApp
     {
-        public string OperationA1()
+        /// <summary>
+        /// Entry point into console application.
+        /// </summary>
+        public static void Main()
         {
-            return "Subsystem A, Method A1\n";
-        }
-        public string OperationA2()
-        {
-            return "Subsystem A, Method A2\n";
+            // Facade
+            Mortgage mortgage = new Mortgage();
+
+            // Evaluate mortgage eligibility for customer
+            Customer customer = new Customer("Pesho");
+
+            bool eligible = mortgage.IsEligible(customer, 125000);
+
+            Console.WriteLine();
+            Console.WriteLine("{0} has been {1}", customer.Name, eligible ? "Approved" : "Rejected");
         }
     }
-
-    class SubsystemB
+    
+    /// <summary>
+    /// Subsystem A
+    /// </summary>
+    internal class Loan
     {
-        public string OperationB1()
+        public bool HasNoBadLoans(Customer c)
         {
-            return "Subsystem B, Method B1\n";
-        }
+            Console.WriteLine("Check loans for {0}", c.Name);
 
-        public string OperationB2()
-        {
-            return "Subsystem B, Method B2\n";
+            return true;
         }
     }
-
-    class SubsystemC
+    
+    /// <summary>
+    /// Subsystem B
+    /// </summary>
+    internal class Credit
     {
-        public string OperationC1()
+        public bool HasGoodCredit(Customer c)
         {
-            return "Subsystem C, Method C1\n";
-        }
+            Console.WriteLine("Check credit for {0}", c.Name);
 
-        public string OperationC2()
-        {
-            return "Subsystem C, Method C2\n";
+            return true;
         }
     }
-
-    public class Facade
+    
+    /// <summary>
+    /// Subsystem C
+    /// </summary>
+    internal class Bank
     {
-        private SubsystemA a = new SubsystemA();
-        private SubsystemB b = new SubsystemB();
-        private SubsystemC c = new SubsystemC();
-        public void Operation1()
+        public bool HasSufficientSavings(Customer c, int amount)
         {
-            Console.WriteLine("Operation 1\n" +
-            a.OperationA1() +
-            a.OperationA2() +
-            b.OperationB1());
+            Console.WriteLine("Check bank for " + c.Name);
+
+            return true;
         }
-        public void Operation2()
+    }
+    
+    /// <summary>
+    /// Out customer class
+    /// </summary>
+    public class Customer
+    {
+        private string name;
+
+        // Constructor
+        public Customer(string name)
         {
-            Console.WriteLine("Operation 2\n" +
-            b.OperationB2() +
-            c.OperationC1() +
-            c.OperationC2());
+            this.name = name;
+        }
+
+        // Gets the name
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Our Facade class
+    /// </summary>
+    public class Mortgage
+    {
+        private Bank bank = new Bank();
+
+        private Loan loan = new Loan();
+
+        private Credit credit = new Credit();
+
+        public bool IsEligible(Customer cust, int amount)
+        {
+            Console.WriteLine(
+                "{0} applies for {1:C} loan\n",
+                cust.Name, 
+                amount);
+
+            bool eligible = true;
+
+            // Check creditworthyness of applicant
+            if (!this.bank.HasSufficientSavings(cust, amount))
+            {
+                eligible = false;
+            }
+            else if (!this.loan.HasNoBadLoans(cust))
+            {
+                eligible = false;
+            }
+            else if (!this.credit.HasGoodCredit(cust))
+            {
+                eligible = false;
+            }
+
+            return eligible;
         }
     }
 }
+
+'''
