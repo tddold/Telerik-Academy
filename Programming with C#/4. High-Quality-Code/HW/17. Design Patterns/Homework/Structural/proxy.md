@@ -2,7 +2,7 @@
 1.	Цел на шаблона - предоставяне на заместник или контейнер за даден реален обект, позволявайки контролиран достъп до него.
 2.	Структура:
 
-
+<p align="center"><a href="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Structural/Picture/Proxy.png"><img src="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Structural/Picture/Proxy.png" /></a></p>
 
 3.	Приложения: 
 	-	има множество приложения – примерно: 
