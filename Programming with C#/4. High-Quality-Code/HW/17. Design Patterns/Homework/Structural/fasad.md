@@ -1,3 +1,13 @@
+
+#Facade
+1.	Цел на шаблона  - предоставяне на интерфейс за достъп до сложна системата от класове.
+2.	Структура:
+ 
+<p align="center"><a href="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Picture/Facade.png"><img src="https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Picture/Facade.png" /></a></p>
+
+3.	Приложения: - Уеб услугите (web services) могат да се разглеждат като реализация на фасада, когато нямат собствена бизнес логика, а са дефинирани за предоставяне на достъп до дадена система.
+4.	Свързани шаблони – “Abstract Factory” и “Sigleton”
+5.	
 В модела фасада,  фасада е обект, който предвижда опростена интерфейс за по-голямо обединение на код, като например библиотека клас. A фасада може да:
 
 направи софтуерна библиотека лесна за използване, разбират и тестове, тъй като фасадата има удобни методи за общи задачи;
