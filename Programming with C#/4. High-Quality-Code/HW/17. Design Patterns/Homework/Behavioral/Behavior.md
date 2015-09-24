@@ -14,7 +14,7 @@
 ### Недостатък
 * Най-големия недостатък на този шаблон за дизайн е, че много лесно може да бъде "счупен", ако например програмистта който го имплементира забрави да добави връзка за следващия Handler на дадена заявка.
 ### Клас диаграма:
-![alt text](chainOfResponsibility.png "Chain of Responsibilit Design Pattern UML Diagram")
+![alt text](images/chainOfResponsibility.png "Chain of Responsibilit Design Pattern UML Diagram")
 
 Примерен код:
 
@@ -101,7 +101,7 @@
 ### Известни употреби
 * C# sorting strategy, hashing algorithms strategies, encrypting algorithms strategies
 ### Клас диаграма:
-![alt text](strategy.gif "Strategy Design Pattern UML Diagram") 
+![alt text](images/strategy.gif "Strategy Design Pattern UML Diagram") 
 
 Примерен код: 
 
@@ -255,7 +255,7 @@
 * При закачане на много слушатели и при липса на откачане на тези, които вече не се интересуват от настъпване на дадено събитие, може да настъпи "memory leak". 
 * При закачане на анонимни методи няма как да бъдат разкачени повече
 ### Клас диаграма:
-![alt text](observer.gif "Observer Design Pattern UML Diagram")
+![alt text](images/observer.gif "Observer Design Pattern UML Diagram")
 
 Примерен код: 
 
@@ -408,7 +408,7 @@
 ### Сродни модели
 * Iterator Pattern
 ### Клас диаграма:
-![alt text](visitor.gif "Visitor Design Pattern UML Diagram")
+![alt text](images/visitor.gif "Visitor Design Pattern UML Diagram")
 
 Примерен код: 
 
@@ -596,4 +596,4 @@
 	}
 	  ```
 
-This is [on GitHub](https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Structural/adapter.md).
+This is [on GitHub](https://github.com/tddold/Telerik-Academy/blob/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Behavioral/Behavior.md).
