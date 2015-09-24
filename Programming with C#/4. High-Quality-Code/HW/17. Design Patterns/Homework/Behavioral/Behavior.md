@@ -14,7 +14,7 @@
 ### Недостатък
 * Най-големия недостатък на този шаблон за дизайн е, че много лесно може да бъде "счупен", ако например програмистта който го имплементира забрави да добави връзка за следващия Handler на дадена заявка.
 ### Клас диаграма:
-![alt text](images/chainOfResponsibility.png "Chain of Responsibilit Design Pattern UML Diagram")
+![alt text](https://raw.githubusercontent.com/tddold/Telerik-Academy/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Behavioral/images/chainOfResponsibility.png "Chain of Responsibilit Design Pattern UML Diagram")
 
 Примерен код:
 
