@@ -430,7 +430,7 @@
 * Iterator Pattern
 
 ### Клас диаграма:
-![alt text]https://raw.githubusercontent.com/tddold/Telerik-Academy/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Behavioral/images/visitor.gif "Visitor Design Pattern UML Diagram")
+![alt text](https://raw.githubusercontent.com/tddold/Telerik-Academy/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/17.%20Design%20Patterns/Homework/Behavioral/images/visitor.gif "Visitor Design Pattern UML Diagram")
 
 Примерен код: 
 
