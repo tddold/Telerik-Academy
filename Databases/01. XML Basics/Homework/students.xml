@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <students culture="en-US"
+ xmlns="http://www.nakov.com/schemas/library"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.nakov.com/schemas/library file://./library.xsd">
+	<student>
+		<name>Pesho</name>
+		<sex>Male</sex>
+		<birth_date>01.01.1990</birth_date>
+		<phone>+359123456789</phone>
+		<email>abv@abv.bg</email>
+		<course>3</course>
+		<specialty>QA</specialty>
+		<FN>1122334455</FN>
+		<exams>
+			<exam>
+				<name>C#1</name>
+				<tutor>N Kostov</tutor>
+				<score>5.00</score>
+			</exam>
+			<exam>
+				<name>C#2</name>
+				<tutor>N Kostov</tutor>
+				<score>4.00</score>
+			</exam>
+			<exam>
+				<name>C# OOP</name>
+				<tutor>I Kenov</tutor>
+				<score>4.00</score>
+			</exam>
+		</exams>
+	</student>
+	<student>
+		<name>John</name>
+		<sex>Male</sex>
+		<birth_date>01.01.1990</birth_date>
+		<phone>+3592211335544</phone>
+		<email>bbb@abv.bg</email>
+		<course>3</course>
+		<specialty>QA</specialty>
+		<FN>6622113355</FN>
+		<exams>
+			<exam>
+				<name>C#1</name>
+				<tutor>N Kostov</tutor>
+				<score>6.00</score>
+			</exam>
+			<exam>
+				<name>C#2</name>
+				<tutor>N Kostov</tutor>
+				<score>6.00</score>
+			</exam>
+			<exam>
+				<name>C# OOP</name>
+				<tutor>I Kenov</tutor>
+				<score>5.00</score>
+			</exam>
+		</exams>
+	</student>
+	<student>
+		<name>Meri</name>
+		<sex>Female</sex>
+		<birth_date>01.01.1990</birth_date>
+		<phone>+3596655448822</phone>
+		<email>aza@abv.bg</email>
+		<course>3</course>
+		<specialty>QA</specialty>
+		<FN>125254325</FN>
+		<exams>
+			<exam>
+				<name>C#1</name>
+				<tutor>N Kostov</tutor>
+				<score>5.00</score>
+			</exam>
+			<exam>
+				<name>C#2</name>
+				<tutor>N Kostov</tutor>
+				<score>6.00</score>
+			</exam>
+			<exam>
+				<name>C# OOP</name>
+				<tutor>I Kenov</tutor>
+				<score>6.00</score>
+			</exam>
+		</exams>
+	</student>
+</students>
