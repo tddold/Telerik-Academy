@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. XML Catalogue", "01. XML Catalogue\01. XML Catalogue.csproj", "{19005FD7-6B4E-4ED3-A838-042CF1AF6E9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Parse XML", "02. Parse XML\02. Parse XML.csproj", "{CFA339C4-5C3E-4188-A9D7-FD259C092C42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Parse XML using XPath", "03. Parse XML using XPath\03. Parse XML using XPath.csproj", "{EDD34C23-5D1C-40AC-93EF-C80F0ACA7BB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Remove XML Element", "04. Remove XML Element\04. Remove XML Element.csproj", "{FEE3E446-E446-4C82-8E2B-57304A7BE6AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19005FD7-6B4E-4ED3-A838-042CF1AF6E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19005FD7-6B4E-4ED3-A838-042CF1AF6E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19005FD7-6B4E-4ED3-A838-042CF1AF6E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19005FD7-6B4E-4ED3-A838-042CF1AF6E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFA339C4-5C3E-4188-A9D7-FD259C092C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA339C4-5C3E-4188-A9D7-FD259C092C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA339C4-5C3E-4188-A9D7-FD259C092C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA339C4-5C3E-4188-A9D7-FD259C092C42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD34C23-5D1C-40AC-93EF-C80F0ACA7BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD34C23-5D1C-40AC-93EF-C80F0ACA7BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD34C23-5D1C-40AC-93EF-C80F0ACA7BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD34C23-5D1C-40AC-93EF-C80F0ACA7BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE3E446-E446-4C82-8E2B-57304A7BE6AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE3E446-E446-4C82-8E2B-57304A7BE6AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE3E446-E446-4C82-8E2B-57304A7BE6AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE3E446-E446-4C82-8E2B-57304A7BE6AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

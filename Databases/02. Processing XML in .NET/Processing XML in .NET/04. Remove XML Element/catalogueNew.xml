@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalogue xmlns:catalogue="urn:catalogue">
+  <album>
+    <name>American Life</name>
+    <artist>Madonna</artist>
+    <year>2008</year>
+    <producer>Warner Bros.</producer>
+    <price>12</price>
+    <song>
+      <title>Die Another Day </title>
+      <duration>4</duration>
+    </song>
+    <song>
+      <title>Hollywood</title>
+      <duration>4</duration>
+    </song>
+    <song>
+      <title>Easy Ride</title>
+      <duration>3</duration>
+    </song>
+  </album>
+  <album>
+    <name>By The Way</name>
+    <artist>Red Hot Chili Peppers</artist>
+    <year>2002</year>
+    <producer>Rick Rubin</producer>
+    <price>9</price>
+    <song>
+      <title>Universally Speaking</title>
+      <duration>3</duration>
+    </song>
+    <song>
+      <title>The Zephyr Song</title>
+      <duration>4</duration>
+    </song>
+    <song>
+      <title>On Mercury</title>
+      <duration>3</duration>
+    </song>
+  </album>
+  <album>
+    <name>Californication</name>
+    <artist>Red Hot Chili Peppers</artist>
+    <year>1999</year>
+    <producer>Rick Rubin</producer>
+    <price>8</price>
+    <song>
+      <title>Parallel Universe</title>
+      <duration>3</duration>
+    </song>
+    <song>
+      <title>Around the World</title>
+      <duration>4</duration>
+    </song>
+    <song>
+      <title>This Velvet Glove</title>
+      <duration>3</duration>
+    </song>
+  </album>
+</catalogue>
