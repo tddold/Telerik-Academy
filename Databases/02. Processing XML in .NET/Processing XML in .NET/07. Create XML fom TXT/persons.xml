@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<persons>
+  <person>
+    <name>Petar Petrov</name>
+    <address>Bulgaria, Sofia</address>
+    <phone>+359887123456789</phone>
+  </person>
+  <person>
+    <name>Ivan Ivanov</name>
+    <address>Bulgaria, Plovdiv</address>
+    <phone>+359088812345654</phone>
+  </person>
+</persons>

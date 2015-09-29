@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Parse XML using XPath",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Remove XML Element", "04. Remove XML Element\04. Remove XML Element.csproj", "{FEE3E446-E446-4C82-8E2B-57304A7BE6AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Xml Reader", "05. Xml Reader\05. Xml Reader.csproj", "{5338AA63-CC86-4C6B-BCE6-09CFB42DDC8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Extract Songs using LINQ", "06. Extract Songs using LINQ\06. Extract Songs using LINQ.csproj", "{5FB75900-FAF1-46E1-B287-33DD185F13CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Create XML fom TXT", "07. Create XML fom TXT\07. Create XML fom TXT.csproj", "{5E437D86-74D1-4990-B4B6-9E687772E242}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,18 @@ Global
 		{FEE3E446-E446-4C82-8E2B-57304A7BE6AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE3E446-E446-4C82-8E2B-57304A7BE6AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE3E446-E446-4C82-8E2B-57304A7BE6AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5338AA63-CC86-4C6B-BCE6-09CFB42DDC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5338AA63-CC86-4C6B-BCE6-09CFB42DDC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5338AA63-CC86-4C6B-BCE6-09CFB42DDC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5338AA63-CC86-4C6B-BCE6-09CFB42DDC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB75900-FAF1-46E1-B287-33DD185F13CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB75900-FAF1-46E1-B287-33DD185F13CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB75900-FAF1-46E1-B287-33DD185F13CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB75900-FAF1-46E1-B287-33DD185F13CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E437D86-74D1-4990-B4B6-9E687772E242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E437D86-74D1-4990-B4B6-9E687772E242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E437D86-74D1-4990-B4B6-9E687772E242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E437D86-74D1-4990-B4B6-9E687772E242}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
