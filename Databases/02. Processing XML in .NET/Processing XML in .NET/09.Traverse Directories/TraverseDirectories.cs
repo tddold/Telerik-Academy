@@ -1,11 +1,11 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml;
-
-namespace _09.Traverse_Directories
+﻿namespace _09.Traverse_Directories
 {
+    using System;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Xml;
+
     internal class TraverseDirectories
     {
         private const string RootDirectory = "../../";
@@ -24,8 +24,8 @@ namespace _09.Traverse_Directories
             using (var writer = new XmlTextWriter(File, Encoding.GetEncoding("utf-8")))
             {
                 writer.Formatting = Formatting.Indented;
-                writer.IndentChar = ' ';
-                writer.Indentation = 2;
+                writer.IndentChar = '\t';
+                writer.Indentation = 1;
 
                 writer.WriteStartDocument();
                 writer.WriteStartElement("directories");
