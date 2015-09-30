@@ -24,7 +24,7 @@ namespace _09.Traverse_Directories
             using (var writer = new XmlTextWriter(File, Encoding.GetEncoding("utf-8")))
             {
                 writer.Formatting = Formatting.Indented;
-                writer.IndentChar = '\t';
+                writer.IndentChar = ' ';
                 writer.Indentation = 2;
 
                 writer.WriteStartDocument();
