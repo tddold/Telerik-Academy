@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Extract Songs using LIN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Create XML fom TXT", "07. Create XML fom TXT\07. Create XML fom TXT.csproj", "{5E437D86-74D1-4990-B4B6-9E687772E242}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Create Album XML", "08. Create Album XML\08. Create Album XML.csproj", "{BB923E60-38D0-411A-B2F9-2A507B61665E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.Traverse Directories", "09.Traverse Directories\09.Traverse Directories.csproj", "{2D13E943-3955-4FA9-812A-E3213E80465E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{5E437D86-74D1-4990-B4B6-9E687772E242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E437D86-74D1-4990-B4B6-9E687772E242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E437D86-74D1-4990-B4B6-9E687772E242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB923E60-38D0-411A-B2F9-2A507B61665E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB923E60-38D0-411A-B2F9-2A507B61665E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB923E60-38D0-411A-B2F9-2A507B61665E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB923E60-38D0-411A-B2F9-2A507B61665E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D13E943-3955-4FA9-812A-E3213E80465E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D13E943-3955-4FA9-812A-E3213E80465E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D13E943-3955-4FA9-812A-E3213E80465E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D13E943-3955-4FA9-812A-E3213E80465E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

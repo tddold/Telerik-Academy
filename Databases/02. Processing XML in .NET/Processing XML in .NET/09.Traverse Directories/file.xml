@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<directories>
+		<dir d2p1:name="" xmlns:d2p1="09.Traverse Directories">
+				<file d3p1:name="" xmlns:d3p1="09.Traverse Directories.csproj" />
+				<file d3p1:name="" xmlns:d3p1="09.Traverse Directories.csproj.user" />
+				<file d3p1:name="" xmlns:d3p1="App.config" />
+				<file d3p1:name="" xmlns:d3p1="file.xml" />
+				<file d3p1:name="" xmlns:d3p1="TraverseDirectories.cs" />
+				<dir d3p1:name="" xmlns:d3p1="bin">
+						<dir d4p1:name="" xmlns:d4p1="Debug">
+								<file d5p1:name="" xmlns:d5p1="09.Traverse Directories.exe" />
+								<file d5p1:name="" xmlns:d5p1="09.Traverse Directories.exe.config" />
+								<file d5p1:name="" xmlns:d5p1="09.Traverse Directories.pdb" />
+								<file d5p1:name="" xmlns:d5p1="09.Traverse Directories.vshost.exe" />
+								<file d5p1:name="" xmlns:d5p1="09.Traverse Directories.vshost.exe.config" />
+						</dir>
+				</dir>
+				<dir d3p1:name="" xmlns:d3p1="obj">
+						<dir d4p1:name="" xmlns:d4p1="Debug">
+								<file d5p1:name="" xmlns:d5p1="09.Traverse Directories.csproj.FileListAbsolute.txt" />
+								<file d5p1:name="" xmlns:d5p1="09.Traverse Directories.csprojResolveAssemblyReference.cache" />
+								<file d5p1:name="" xmlns:d5p1="09.Traverse Directories.exe" />
+								<file d5p1:name="" xmlns:d5p1="09.Traverse Directories.pdb" />
+								<file d5p1:name="" xmlns:d5p1="DesignTimeResolveAssemblyReferencesInput.cache" />
+								<file d5p1:name="" xmlns:d5p1="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+								<file d5p1:name="" xmlns:d5p1="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+								<file d5p1:name="" xmlns:d5p1="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+						</dir>
+				</dir>
+				<dir d3p1:name="" xmlns:d3p1="Properties">
+						<file d4p1:name="" xmlns:d4p1="AssemblyInfo.cs" />
+				</dir>
+		</dir>
+</directories>

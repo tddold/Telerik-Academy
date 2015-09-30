@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<albums>
+	<album>
+		<name>Thriller</name>
+		<artist>Michael Jackson</artist>
+	</album>
+	<album>
+		<name>American Life</name>
+		<artist>Madonna</artist>
+	</album>
+	<album>
+		<name>By The Way</name>
+		<artist>Red Hot Chili Peppers</artist>
+	</album>
+	<album>
+		<name>Californication</name>
+		<artist>Red Hot Chili Peppers</artist>
+	</album>
+</albums>
