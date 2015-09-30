@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E66CD85-1EFD-4C5A-8ECA-62D817D1C8B4}</ProjectGuid>
+    <ProjectGuid>{2EE6E0FF-AE32-4650-BB4F-D0DED9943E01}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_10.Traverse_Directories_Using_LINQ</RootNamespace>
-    <AssemblyName>_10.Traverse_Directories_Using_LINQ</AssemblyName>
+    <RootNamespace>_11.Extract_Price_Albums</RootNamespace>
+    <AssemblyName>11.Extract Price Albums</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TraverseDirectoriesUsingLINQ.cs" />
+    <Compile Include="ExtractPriceAlbums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="file.xml" />
+    <Content Include="catalogue.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E66CD85-1EFD-4C5A-8ECA-62D817D1C8B4}</ProjectGuid>
+    <ProjectGuid>{673276AD-08D8-4600-B46E-F5838BB8A597}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_10.Traverse_Directories_Using_LINQ</RootNamespace>
-    <AssemblyName>_10.Traverse_Directories_Using_LINQ</AssemblyName>
+    <RootNamespace>_01.Student_XML</RootNamespace>
+    <AssemblyName>_01.Student_XML</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TraverseDirectoriesUsingLINQ.cs" />
+    <Compile Include="StudentsXML.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="file.xml" />
+    <Content Include="students.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

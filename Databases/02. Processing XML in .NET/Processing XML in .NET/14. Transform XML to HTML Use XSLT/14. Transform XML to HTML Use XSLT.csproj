@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E66CD85-1EFD-4C5A-8ECA-62D817D1C8B4}</ProjectGuid>
+    <ProjectGuid>{74C02EFC-3245-4079-A57E-6918ACB34F5F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_10.Traverse_Directories_Using_LINQ</RootNamespace>
-    <AssemblyName>_10.Traverse_Directories_Using_LINQ</AssemblyName>
+    <RootNamespace>_14.Transform_XML_to_HTML_Use_XSLT</RootNamespace>
+    <AssemblyName>_14.Transform_XML_to_HTML_Use_XSLT</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TraverseDirectoriesUsingLINQ.cs" />
+    <Compile Include="TransformXmlToHtmlUseXSLT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="catalogue.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="file.xml" />
+    <Content Include="catalogue.html" />
+    <Content Include="catalogue.xml" />
+    <Content Include="catalogue.xslt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

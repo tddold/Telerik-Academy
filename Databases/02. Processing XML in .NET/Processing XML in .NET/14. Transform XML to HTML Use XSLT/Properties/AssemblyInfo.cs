@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("10. Traverse Directories Using LINQ")]
+[assembly: AssemblyTitle("14. Transform XML to HTML Use XSLT")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("10. Traverse Directories Using LINQ")]
+[assembly: AssemblyProduct("14. Transform XML to HTML Use XSLT")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5e66cd85-1efd-4c5a-8eca-62d817d1c8b4")]
+[assembly: Guid("74c02efc-3245-4079-a57e-6918acb34f5f")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -7,7 +7,7 @@
     {
         static void Main()
         {
-            XmlDocument doc = new XmlDocument();
+            var doc = new XmlDocument();
             doc.Load("../../catalogue.xml");
 
             var rootNode = doc.DocumentElement;

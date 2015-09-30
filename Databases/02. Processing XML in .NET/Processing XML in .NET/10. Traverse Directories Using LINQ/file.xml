@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<directories>
+  <dir name="10. Traverse Directories Using LINQ">
+    <file name="10. Traverse Directories Using LINQ.csproj" />
+    <file name="10. Traverse Directories Using LINQ.csproj.user" />
+    <file name="App.config" />
+    <file name="file.xml" />
+    <file name="TraverseDirectoriesUsingLINQ.cs" />
+    <dir name="bin">
+      <dir name="Debug">
+        <file name="_10.Traverse_Directories_Using_LINQ.exe" />
+        <file name="_10.Traverse_Directories_Using_LINQ.exe.config" />
+        <file name="_10.Traverse_Directories_Using_LINQ.pdb" />
+        <file name="_10.Traverse_Directories_Using_LINQ.vshost.exe" />
+        <file name="_10.Traverse_Directories_Using_LINQ.vshost.exe.config" />
+      </dir>
+      <dir name="Release" />
+    </dir>
+    <dir name="obj">
+      <dir name="Debug">
+        <file name="10. Traverse Directories Using LINQ.csproj.FileListAbsolute.txt" />
+        <file name="10. Traverse Directories Using LINQ.csprojResolveAssemblyReference.cache" />
+        <file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+        <file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+        <file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+        <file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+        <file name="_10.Traverse_Directories_Using_LINQ.exe" />
+        <file name="_10.Traverse_Directories_Using_LINQ.pdb" />
+        <dir name="TempPE" />
+      </dir>
+    </dir>
+    <dir name="Properties">
+      <file name="AssemblyInfo.cs" />
+    </dir>
+  </dir>
+</directories>

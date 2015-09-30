@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+<students>
+  <student culture="en-US">
+    <name>Pesho Petrov</name>
+    <sex>Male</sex>
+    <birth_date>26/09/1990</birth_date>
+    <phone>+3591234567890</phone>
+    <email>abv@abv.bg</email>
+    <course>Informatic-Math</course>
+    <specialty>Math</specialty>
+    <faculty-number>10001234</faculty-number>
+    <exams>
+      <exam>
+        <name>Math Part I</name>
+        <tutor>Mr Bean</tutor>
+        <score>6</score>
+      </exam>
+      <exam>
+        <name>Math Part II</name>
+        <tutor>Mr Bean</tutor>
+        <score>5</score>
+      </exam>
+      <exam>
+        <name>Math Part III</name>
+        <tutor>Doctor Dolittle</tutor>
+        <score>6+</score>
+      </exam>
+    </exams>
+  </student>
+  <student>
+    <name>Georgi Georgiev</name>
+    <sex>Male</sex>
+    <birth_date>22/05/1991</birth_date>
+    <phone>+3591234567899</phone>
+    <email>bav@abv.bg</email>
+    <course>Informatic-Math</course>
+    <specialty>Math</specialty>
+    <faculty-number>10001235</faculty-number>
+    <exams>
+      <exam>
+        <name>Math Part I</name>
+        <tutor>Mr Bean</tutor>
+        <score>5</score>
+      </exam>
+      <exam>
+        <name>Math Part II</name>
+        <tutor>Mr Bean</tutor>
+        <score>5</score>
+      </exam>
+      <exam>
+        <name>Math Part III</name>
+        <tutor>Doctor Dolittle</tutor>
+        <score>5</score>
+      </exam>
+    </exams>
+  </student>
+  <student>
+    <name>Ptia Ivanova</name>
+    <sex>Female</sex>
+    <birth_date>20/01/1990</birth_date>
+    <phone>+3591234567898</phone>
+    <email>vab@abv.bg</email>
+    <course>Informatic-Math</course>
+    <specialty>Math</specialty>
+    <faculty-number>10001236</faculty-number>
+    <exams>
+      <exam>
+        <name>Math Part I</name>
+        <tutor>Mr Bean</tutor>
+        <score>6</score>
+      </exam>
+      <exam>
+        <name>Math Part II</name>
+        <tutor>Mr Bean</tutor>
+        <score>6</score>
+      </exam>
+      <exam>
+        <name>Math Part III</name>
+        <tutor>Doctor Dolittle</tutor>
+        <score>6</score>
+      </exam>
+    </exams>
+  </student>
+</students>

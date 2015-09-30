@@ -1,12 +1,7 @@
 ﻿namespace _10.Traverse_Directories_Using_LINQ
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Xml;
     using System.Xml.Linq;
 
     internal class TraverseDirectoriesUsingLINQ
@@ -16,46 +11,43 @@
 
         private static void Main()
         {
-            CreateXmlDirectoriesTree();
+            CreateXmlDirectoryTree();
+
             Console.WriteLine("Document {0} was created.", File);
         }
 
-        private static void CreateXmlDirectoriesTree()
+        private static void CreateXmlDirectoryTree()
         {
             var rootDirectory = new DirectoryInfo(RootDirectory);
-
-            var file = new XDocument(File);
-
-
-            TraverseRootDirectory(rootDirectory);
-
-
-
+            var rootDirTree = GetDirTree(rootDirectory);
+            var xmlDoc = new XDocument(rootDirTree);
+            xmlDoc.Save(File);
         }
 
-        private static void TraverseRootDirectory(DirectoryInfo rootDirectory)
+        private static XElement GetDirTree(DirectoryInfo rootDirTree)
         {
-            
+            var directory = new XElement("directories");
+            var subDirectory = GetSubDirectoryTree(rootDirTree);
+            directory.Add(subDirectory);
+            return directory;
+        }
 
-            if (!rootDirectory.GetFiles().Any() && rootDirectory.GetDirectories().Any())
+        private static XElement GetSubDirectoryTree(DirectoryInfo rootDirectory)
+        {
+            var xmlDir = new XElement("dir", new XAttribute("name", rootDirectory.Name));
+
+            foreach (var file in rootDirectory.GetFiles())
             {
-                return;
+                var xmlFile = new XElement("file", new XAttribute("name", file.Name));
+                xmlDir.Add(xmlFile);
             }
 
-            var directories =
-                new XElement("directories",
-                    new XAttribute( "dir", rootDirectory.GetDirectories()),
-                       
-                        foreach (var file in rootDirectory.GetFiles())
-                        {
-                            new XAttribute("file", file.Name);
-                        },  
-                        )
-                    )
+            foreach (var dir in rootDirectory.GetDirectories())
+            {
+                xmlDir.Add(GetSubDirectoryTree(dir));
+            }
 
-
-
-                );
+            return xmlDir;
         }
     }
 }

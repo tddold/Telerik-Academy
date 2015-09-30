@@ -16,7 +16,7 @@
 
         private static void GenerateAlbumXML()
         {
-            XmlTextWriter writer = new XmlTextWriter(NewFile, Encoding.GetEncoding("utf-8"));
+            var writer = new XmlTextWriter(NewFile, Encoding.GetEncoding("utf-8"));
             using (writer)
             {
                 writer.WriteStartDocument();

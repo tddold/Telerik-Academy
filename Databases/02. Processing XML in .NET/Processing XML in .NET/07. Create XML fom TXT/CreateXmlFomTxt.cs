@@ -16,7 +16,7 @@
             var fileStream = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.Read);
             var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, 128);
 
-            XElement personsXml = new XElement("persons");
+            var personsXml = new XElement("persons");
 
             string name = string.Empty;
             string address = string.Empty;
