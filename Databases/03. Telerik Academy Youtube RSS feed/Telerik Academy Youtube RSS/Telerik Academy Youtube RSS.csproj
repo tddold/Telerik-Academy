@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HtmlPageGenerator.cs" />
-    <Compile Include="IListVideo.cs" />
+    <Compile Include="Link.cs" />
     <Compile Include="TelerikAcademyYoutubeRSS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility.cs" />

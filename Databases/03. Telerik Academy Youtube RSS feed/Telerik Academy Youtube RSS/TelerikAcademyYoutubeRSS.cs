@@ -32,7 +32,7 @@
             CreateHtmlPage(pocoObject);
         }
 
-        private static void CreateHtmlPage(IList<IListVideo> pocoObject)
+        private static void CreateHtmlPage(IEnumerable<Video> pocoObject)
         {
             var htmlGenerator = new HtmlPageGenerator();
             htmlGenerator.CreateHtmlPage(HtmlPagePath, pocoObject);
@@ -40,19 +40,23 @@
             Console.WriteLine("\n-> Html page was created successfully...\n");
         }
 
-        private static IList<IListVideo> ConvertJsonToPoco(string json)
+        private static IEnumerable<Video> ConvertJsonToPoco(string json)
         {
             Console.WriteLine("\n------------------- JSON to POCO Objects: -------------------\n");
 
             var jsonObj = JObject.Parse(json);
             var videoEntry = jsonObj["feed"]["entry"];
 
-            var poco = videoEntry
-                .Select(v => JsonConvert.DeserializeObject<Video>(v.ToString()))
-                .Cast<IListVideo>()
-                .ToList();
+            var video = videoEntry
+                .Select(v => JsonConvert.DeserializeObject<Video>(v.ToString()));
+            int count = 0;
+            foreach (var item in video)
+            {
+                count++;
+                Console.WriteLine(">{3}.\nTitle: {0}\nId:{1}\nLink:{2}\n", item.Title, item.Id, item.Link.Href, count);
+            }
 
-            return poco;
+            return video;
         }
 
         private static IEnumerable<object> SelectAllTitle(string json)

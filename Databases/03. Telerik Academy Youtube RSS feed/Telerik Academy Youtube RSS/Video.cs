@@ -2,14 +2,15 @@
 {
     using Newtonsoft.Json;
 
-    public class Video : IListVideo
+    public class Video
     {
         [JsonProperty("title")]
         public string Title { get; set; }
 
-        public override string ToString()
-        {
-            return string.Format("Item: Title: {0}", this.Title);
-        }
+        [JsonProperty("link")]
+        public Link Link { get; set; }
+
+        [JsonProperty("yt:videoId")]
+        public string Id { get; set; }
     }
 }

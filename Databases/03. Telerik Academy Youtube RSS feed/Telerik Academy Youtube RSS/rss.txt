@@ -21,7 +21,7 @@
    <uri>http://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw</uri>
   </author>
   <published>2015-10-02T13:01:01+00:00</published>
-  <updated>2015-10-02T23:32:28+00:00</updated>
+  <updated>2015-10-04T11:32:49+00:00</updated>
   <media:group>
    <media:title>Моделиране на данни</media:title>
    <media:content url="https://www.youtube.com/v/Wu1K7UHk9XA?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
@@ -35,8 +35,8 @@
 
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
-    <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="135"/>
+    <media:starRating count="2" average="3.00" min="1" max="5"/>
+    <media:statistics views="173"/>
    </media:community>
   </media:group>
  </entry>
@@ -51,7 +51,7 @@
    <uri>http://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw</uri>
   </author>
   <published>2015-10-02T06:33:14+00:00</published>
-  <updated>2015-10-02T16:32:02+00:00</updated>
+  <updated>2015-10-04T11:34:21+00:00</updated>
   <media:group>
    <media:title>Осигуряване на качеството на софтуера (Ники)</media:title>
    <media:content url="https://www.youtube.com/v/q20Ilob2LX0?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
@@ -65,8 +65,8 @@
 
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
-    <media:starRating count="2" average="3.00" min="1" max="5"/>
-    <media:statistics views="66"/>
+    <media:starRating count="3" average="2.33" min="1" max="5"/>
+    <media:statistics views="78"/>
    </media:community>
   </media:group>
  </entry>
@@ -96,7 +96,7 @@
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="50"/>
+    <media:statistics views="63"/>
    </media:community>
   </media:group>
  </entry>
@@ -126,7 +126,7 @@
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="99"/>
+    <media:statistics views="103"/>
    </media:community>
   </media:group>
  </entry>
@@ -141,7 +141,7 @@
    <uri>http://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw</uri>
   </author>
   <published>2015-10-01T12:08:23+00:00</published>
-  <updated>2015-10-02T16:31:45+00:00</updated>
+  <updated>2015-10-04T11:38:35+00:00</updated>
   <media:group>
    <media:title>Mocking с Moq и JustMock</media:title>
    <media:content url="https://www.youtube.com/v/-R6aeupYHMQ?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
@@ -155,8 +155,8 @@
 
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
-    <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="100"/>
+    <media:starRating count="1" average="1.00" min="1" max="5"/>
+    <media:statistics views="113"/>
    </media:community>
   </media:group>
  </entry>
@@ -171,7 +171,7 @@
    <uri>http://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw</uri>
   </author>
   <published>2015-09-30T22:16:30+00:00</published>
-  <updated>2015-10-02T20:44:21+00:00</updated>
+  <updated>2015-10-04T12:38:39+00:00</updated>
   <media:group>
    <media:title>Въведение в базите данни (Ники)</media:title>
    <media:content url="https://www.youtube.com/v/Kvy1hesBrLE?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
@@ -185,8 +185,8 @@
 
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
-    <media:starRating count="3" average="5.00" min="1" max="5"/>
-    <media:statistics views="261"/>
+    <media:starRating count="4" average="5.00" min="1" max="5"/>
+    <media:statistics views="296"/>
    </media:community>
   </media:group>
  </entry>
@@ -216,7 +216,7 @@
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="218"/>
+    <media:statistics views="241"/>
    </media:community>
   </media:group>
  </entry>
@@ -246,7 +246,7 @@
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="291"/>
+    <media:statistics views="321"/>
    </media:community>
   </media:group>
  </entry>
@@ -276,7 +276,7 @@
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="389"/>
+    <media:statistics views="418"/>
    </media:community>
   </media:group>
  </entry>
@@ -306,7 +306,7 @@
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
     <media:starRating count="6" average="5.00" min="1" max="5"/>
-    <media:statistics views="195"/>
+    <media:statistics views="201"/>
    </media:community>
   </media:group>
  </entry>
@@ -336,7 +336,7 @@
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="745"/>
+    <media:statistics views="768"/>
    </media:community>
   </media:group>
  </entry>
@@ -366,7 +366,7 @@
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
     <media:starRating count="3" average="5.00" min="1" max="5"/>
-    <media:statistics views="514"/>
+    <media:statistics views="524"/>
    </media:community>
   </media:group>
  </entry>
@@ -396,7 +396,7 @@
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
     <media:starRating count="4" average="5.00" min="1" max="5"/>
-    <media:statistics views="286"/>
+    <media:statistics views="301"/>
    </media:community>
   </media:group>
  </entry>
@@ -453,7 +453,7 @@
 Следете за предстоящи безплатни обучения на Академията на Телерик във Facebook: http://www.facebook.com/TelerikAcademy.</media:description>
    <media:community>
     <media:starRating count="23" average="5.00" min="1" max="5"/>
-    <media:statistics views="1236"/>
+    <media:statistics views="1241"/>
    </media:community>
   </media:group>
  </entry>
