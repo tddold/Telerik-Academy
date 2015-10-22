@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-05.08.ReteiveDataFromMSSQLDB", "01-05.08.ReteiveDataFromMSSQLDB\01-05.08.ReteiveDataFromMSSQLDB.csproj", "{F970D1AF-825A-4657-BF4C-FF2C678C97C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-07.ExcelOLEDB", "06-07.ExcelOLEDB\06-07.ExcelOLEDB.csproj", "{549B8AFB-21CC-44C2-ACE8-39E7AA9FF755}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.MySqlDB", "09.MySqlDB\09.MySqlDB.csproj", "{59AB5F97-9FF9-4B6F-898F-1D53448D0F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.SQLite", "10.SQLite\10.SQLite.csproj", "{F80CD64C-2F70-49DF-A5C4-A849F05B7969}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F970D1AF-825A-4657-BF4C-FF2C678C97C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F970D1AF-825A-4657-BF4C-FF2C678C97C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F970D1AF-825A-4657-BF4C-FF2C678C97C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F970D1AF-825A-4657-BF4C-FF2C678C97C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{549B8AFB-21CC-44C2-ACE8-39E7AA9FF755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{549B8AFB-21CC-44C2-ACE8-39E7AA9FF755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{549B8AFB-21CC-44C2-ACE8-39E7AA9FF755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{549B8AFB-21CC-44C2-ACE8-39E7AA9FF755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59AB5F97-9FF9-4B6F-898F-1D53448D0F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59AB5F97-9FF9-4B6F-898F-1D53448D0F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59AB5F97-9FF9-4B6F-898F-1D53448D0F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59AB5F97-9FF9-4B6F-898F-1D53448D0F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F80CD64C-2F70-49DF-A5C4-A849F05B7969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80CD64C-2F70-49DF-A5C4-A849F05B7969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80CD64C-2F70-49DF-A5C4-A849F05B7969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80CD64C-2F70-49DF-A5C4-A849F05B7969}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -270,6 +270,196 @@ GO
 --	FROM Users
 --	WHERE Password IS NULL
 
+--- 25. Write a SQL query to display the average 
+--- employee salary by department and job title.
 
-select *
-from Users
+SELECT FLOOR(AVG(e.Salary)), d.Name, e.JobTitle
+FROM Employees e 
+JOIN Departments d
+    ON e.DepartmentID = d.DepartmentID
+GROUP BY d.Name, e.JobTitle
+ORDER BY d.Name
+
+--- 26. Write a SQL query to display the minimal employee 
+--- salary by department and job title along with the 
+--- name of some of the employees that take it.
+
+SELECT FLOOR(MIN(e.Salary)), d.Name, e.JobTitle, MIN(CONCAT(e.FirstName, ' ', e.LastName))
+FROM Employees e 
+JOIN Departments d
+    ON e.DepartmentID = d.DepartmentID
+GROUP BY d.Name, e.JobTitle
+ORDER BY d.Name
+
+--- 27. Write a SQL query to display the town 
+--- where maximal number of employees work.
+
+SELECT TOP 1 t.Name, COUNT(e.EmployeeID) as EmployeesCount
+FROM Employees e 
+JOIN Addresses a
+     ON e.AddressID = a.AddressID
+JOIN Towns t
+     ON t.TownID = a.TownID
+GROUP BY t.Name
+ORDER BY EmployeesCount DESC
+
+--- 28. Write a SQL query to display the number of managers from each town.
+
+SELECT t.Name, COUNT(e.EmployeeID) as ManagersCount
+FROM Employees e 
+JOIN Addresses a
+     ON e.AddressID = a.AddressID
+JOIN Towns t
+     ON t.TownID = a.TownID
+GROUP BY t.Name
+ORDER BY ManagersCount DESC
+
+--- 29. Write a SQL to create table WorkHours to store work reports 
+--- for each employee (employee id, date, task, hours, comments). 
+--- Don't forget to define  identity, primary key and appropriate foreign key. 
+---
+--- Issue few SQL statements to insert, update and delete of some data in the table.
+--- Define a table WorkHoursLogs to track all changes in the WorkHours table with triggers.
+---
+--- For each change keep the old record data, the new record data and the 
+--- command (insert / update / delete).
+
+--- TABLE: WorkHours
+CREATE TABLE WorkHours (
+    WorkReportId int IDENTITY,
+    EmployeeId Int NOT NULL,
+    OnDate DATETIME NOT NULL,
+    Task nvarchar(256) NOT NULL,
+    Hours Int NOT NULL,
+    Comments nvarchar(256),
+    CONSTRAINT PK_Id PRIMARY KEY(WorkReportId),
+    CONSTRAINT FK_Employees_WorkHours 
+        FOREIGN KEY (EmployeeId)
+        REFERENCES Employees(EmployeeId)
+) 
+GO
+
+--- INSERT
+DECLARE @counter int;
+SET @counter = 20;
+WHILE @counter > 0
+BEGIN
+    INSERT INTO WorkHours(EmployeeId, OnDate, Task, [Hours])
+    VALUES (@counter, GETDATE(), 'TASK: ' + CONVERT(varchar(10), @counter), @counter)
+    SET @counter = @counter - 1
+END
+
+--- UPDATE
+UPDATE WorkHours
+SET Comments = 'Work hard or go home!'
+WHERE [Hours] > 10
+
+--- DELETE
+DELETE FROM WorkHours
+WHERE EmployeeId IN (1, 3, 5, 7, 13)
+
+--- TABLE: WorkHoursLogs
+CREATE TABLE WorkHoursLogs (
+    WorkLogId int,
+    EmployeeId Int NOT NULL,
+    OnDate DATETIME NOT NULL,
+    Task nvarchar(256) NOT NULL,
+    Hours Int NOT NULL,
+    Comments nvarchar(256),
+    [Action] nvarchar(50) NOT NULL,
+    CONSTRAINT FK_Employees_WorkHoursLogs
+        FOREIGN KEY (EmployeeId)
+        REFERENCES Employees(EmployeeId),
+    CONSTRAINT [CC_WorkReportsLogs] CHECK ([Action] IN ('Insert', 'Delete', 'DeleteUpdate', 'InsertUpdate'))
+) 
+GO
+
+--- TRIGGER FOR INSERT
+CREATE TRIGGER tr_InsertWorkReports ON WorkHours FOR INSERT
+AS
+INSERT INTO WorkHoursLogs(WorkLogId, EmployeeId, OnDate, Task, [Hours], Comments, [Action])
+    SELECT WorkReportId, EmployeeID, OnDate, Task, [Hours], Comments, 'Insert'
+    FROM inserted
+GO
+
+--- TRIGGER FOR DELETE
+CREATE TRIGGER tr_DeleteWorkReports ON WorkHours FOR DELETE
+AS
+INSERT INTO WorkHoursLogs(WorkLogId, EmployeeId, OnDate, Task, [Hours], Comments, [Action])
+    SELECT WorkReportId, EmployeeID, OnDate, Task, [Hours], Comments, 'Delete'
+    FROM deleted
+GO
+
+--- TRIGGER FOR UPDATE
+CREATE TRIGGER tr_UpdateWorkReports ON WorkHours FOR UPDATE
+AS
+INSERT INTO WorkHoursLogs(WorkLogId, EmployeeId, OnDate, Task, [Hours], Comments, [Action])
+    SELECT WorkReportId, EmployeeID, OnDate, Task, [Hours], Comments, 'InsertUpdate'
+    FROM inserted
+
+INSERT INTO WorkHoursLogs(WorkLogId, EmployeeId, OnDate, Task, [Hours], Comments, [Action])
+    SELECT WorkReportId, EmployeeID, OnDate, Task, [Hours], Comments, 'DeleteUpdate'
+    FROM deleted
+GO
+
+--- TEST TRIGGERS
+DELETE FROM WorkHoursLogs
+
+INSERT INTO WorkHours(EmployeeId, OnDate, Task, [Hours])
+VALUES (25, GETDATE(), 'TASK: 25', 25)
+
+DELETE FROM WorkHours
+WHERE EmployeeId = 25
+
+UPDATE WorkHours
+SET Comments = 'Updated'
+WHERE EmployeeId = 2
+
+--- 30. Start a database transaction, delete all employees from 
+--- the 'Sales' department along with all dependent records from 
+--- the pother tables. At the end rollback the transaction.
+
+BEGIN TRAN
+
+ALTER TABLE Departments
+DROP CONSTRAINT FK_Departments_Employees
+GO
+
+DELETE e FROM Employees e
+JOIN Departments d
+    ON e.DepartmentID = d.DepartmentID
+WHERE d.Name = 'Sales'
+
+--- ROLLBACK TRAN
+--- COMMIT TRAN
+
+--- 31. Start a database transaction and drop the table EmployeesProjects.
+--- Now how you could restore back the lost table data?
+
+BEGIN TRANSACTION
+
+DROP TABLE EmployeesProjects
+
+--- ROLLBACK TRANSACTION
+--- COMMIT TRANSACTION
+
+--- 32. Find how to use temporary tables in SQL Server. Using temporary 
+--- tables backup all records from EmployeesProjects and restore them back 
+--- after dropping and re-creating the table.
+
+BEGIN TRANSACTION
+
+SELECT * 
+INTO #TempEmployeesProjects  --- Create new table
+FROM EmployeesProjects
+
+DROP TABLE EmployeesProjects
+
+SELECT * 
+INTO EmployeesProjects --- Create new table
+FROM #TempEmployeesProjects;
+
+DROP TABLE #TempEmployeesProjects
+
+--- ROLLBACK TRANSACTION
+--- COMMIT TRANSACTION
