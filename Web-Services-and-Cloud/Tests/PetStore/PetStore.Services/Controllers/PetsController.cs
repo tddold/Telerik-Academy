@@ -1,24 +1,45 @@
 ﻿namespace PetStore.Services.Controllers
 {
-    using System.Net;
-    using System.Net.Http;
+   
+    using PetStore.Models;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Threading.Tasks;
     using System.Web.Http;
+    using Data;
+    using Models.Pets;
 
     public class PetsController : ApiController
     {
-        public IHttpActionResult Get()
+        PetStoreDbContext db = new PetStoreDbContext();
+
+        public async Task<IHttpActionResult> Get()
         {
-            return this.Ok();
+            var pets = await this.db
+                .Pets
+                .ToListAsync();
+
+            return this.Ok(this.db.Pets.ToList());
         }
 
-        public IHttpActionResult Get(int id)
-        {
-            return this.Ok();
-        }
-
-        public void Post()
+        public IHttpActionResult Post(int id, PetRequestModel pet)
         {
 
+            if (!this.ModelState.IsValid)
+            {
+                return this.BadRequest(this.ModelState);
+            }
+
+            var dbPet = new Pet
+            {
+                Name = pet.Name,
+                Age = pet.Age
+            };
+
+            this.db.Pets.Add(dbPet);
+            this.db.SaveChanges();
+
+            return this.Ok(pet);
         }
     }
 }
