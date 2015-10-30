@@ -48,8 +48,8 @@ The number of elementary steps is `~n*(n-1)`, `end = n-1`
 ### Answer
 The algorithm complexity is `O(n*m)`.
 ### Explanation
-*	Worst Case: Every member is even and the inner loop will iterate m times on every n time for the rows, so that the running time will be `O(n*m)`.
-*	Average Case: n/2 member is even and the inner loop will iterate m times on every n/2 time for the rows, so that the running time will be `O(n*m)`, steps is `~m*n/2`.
+*	Worst Case: Every member is even and the inner loop will iterate m times on every `n` time for the rows, so that the running time will be `O(n*m)`.
+*	Average Case: `n/2` member is even and the inner loop will iterate m times on every `n/2` time for the rows, so that the running time will be `O(n*m)`, steps is `~m*n/2`.
 *	Best Case: Every member is odd and the inner loop will never iterate, so that the running time will be only for the outer -> `O(n)`.
 
 ###	Task3
@@ -59,7 +59,7 @@ The algorithm complexity is `O(n*m)`.
   - Assume the input matrix has size of `n * m`.
 
 
-	```cs
+  ```cs
   long CalcSum(int[,] matrix, int row)
   {
       long sum = 0;
