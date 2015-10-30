@@ -1,0 +1,24 @@
+﻿namespace _03.SortInputElements
+{
+    /*
+    3. Write a program that reads a sequence of integers (List<int>) ending with an empty line and 
+    sorts them in an increasing order.*/
+
+    using System;
+    using System.Linq;
+    using Utility;
+
+    public class SortInputElements
+    {
+        public static void Main()
+        {
+            var listOfNumbers = ConsoleUtility.ReadSequenceOfElements<int>();
+
+            var sortedSequence = listOfNumbers
+                .OrderBy(s => s)
+                .ToList();
+
+            Console.WriteLine("Sorted elements: {0}", string.Join(",", sortedSequence));
+        }
+    }
+}
