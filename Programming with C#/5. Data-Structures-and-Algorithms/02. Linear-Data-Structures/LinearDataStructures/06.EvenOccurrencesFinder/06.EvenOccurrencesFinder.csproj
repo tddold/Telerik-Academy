@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{97E6A137-FD47-42F8-ABA4-826E88865D76}</ProjectGuid>
+    <ProjectGuid>{4D8C0B3B-47FF-468C-85AF-3E1555785191}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_04.LongestEqualSubseq</RootNamespace>
-    <AssemblyName>_04.LongestEqualSubseq</AssemblyName>
+    <RootNamespace>_06.EvenOccurrencesFinder</RootNamespace>
+    <AssemblyName>06.EvenOccurrencesFinder</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LongestEqualSubsequance.cs" />
+    <Compile Include="EvenOccurrencesFinder.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

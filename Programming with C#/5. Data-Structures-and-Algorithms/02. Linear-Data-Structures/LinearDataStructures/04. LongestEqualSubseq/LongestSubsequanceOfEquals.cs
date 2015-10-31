@@ -9,18 +9,22 @@
     using System.Linq;
     using Utility;
 
-    public class LongestEqualSubsequance
+    public class LongestSubsequanceOfEquals
     {
         public static void Main()
         {
+            Console.WriteLine("Enter number for collection of numbers.");
+            Console.WriteLine("Each one on a different rows.");
+            Console.WriteLine("If row is empty end the collection.");
+
             var listOfNumbers = ConsoleUtility.ReadSequenceOfElements<int>().ToList();
 
-            var subsequenceOfEqualNumbers = ExtractLongestSubsequenceOfEqualOfNumbers(listOfNumbers);
+            var subsequenceOfEqualNumbers = FindLongestSubsequence(listOfNumbers);
 
-            Console.WriteLine("The longest subsequance of equal elements is: {0}", string.Join(", ", subsequenceOfEqualNumbers));
+            Console.WriteLine("The longest subsequence of equal elements is: {0}", string.Join(", ", subsequenceOfEqualNumbers));
         }
 
-        private static List<int> ExtractLongestSubsequenceOfEqualOfNumbers(IList<int> sequence)
+        public static List<int> FindLongestSubsequence(IList<int> sequence)
         {
             var bestCounter = 1;
             var currentCounter = 1;
@@ -45,9 +49,16 @@
                 }
             }
 
-            for (int i = 0; i < bestCounter; i++)
+            if (bestCounter == 1)
             {
-                longestEqualSubsequance.Add(resultNumber);
+                longestEqualSubsequance.Add(sequence[sequence.Count - 1]);
+            }
+            else
+            {
+                for (int i = 0; i < bestCounter; i++)
+                {
+                    longestEqualSubsequance.Add(resultNumber);
+                }
             }
 
             return longestEqualSubsequance;

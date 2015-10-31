@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. SumAndAverOfSecuence", "01. SumAndAverOfSecuence\01. SumAndAverOfSecuence.csproj", "{6C50AA21-916E-4BC1-931D-87C0B1FBAECC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SumAndAverOfSecuence", "01. SumAndAverOfSecuence\01.SumAndAverOfSecuence.csproj", "{6C50AA21-916E-4BC1-931D-87C0B1FBAECC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{D828F238-5469-4CCD-B10C-7A934157490F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. ReverseSequence", "02. ReverseSequence\02. ReverseSequence.csproj", "{A117099A-808E-4A91-A6F9-FEDD0EC59AA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ReverseSequence", "02. ReverseSequence\02.ReverseSequence.csproj", "{A117099A-808E-4A91-A6F9-FEDD0EC59AA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. SortInputElements", "03. SortInputElements\03. SortInputElements.csproj", "{9F65B9E4-A98C-4985-8FD6-F9DCB7A0ECBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SortInputElements", "03. SortInputElements\03.SortInputElements.csproj", "{9F65B9E4-A98C-4985-8FD6-F9DCB7A0ECBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. LongestEqualSubseq", "04. LongestEqualSubseq\04. LongestEqualSubseq.csproj", "{97E6A137-FD47-42F8-ABA4-826E88865D76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.LongestEqualSubseq", "04. LongestEqualSubseq\04.LongestEqualSubseq.csproj", "{97E6A137-FD47-42F8-ABA4-826E88865D76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearDataStruct.Test", "LinearDataStruct.Test\LinearDataStruct.Test.csproj", "{821B58BB-4C83-478B-BCF3-1CC675B9DCE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.RemoveNegativeNumbers", "05.RemoveNegativeNumbers\05.RemoveNegativeNumbers.csproj", "{A21E5D9F-6251-46D1-AA07-5E1285F26898}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.EvenOccurrencesFinder", "06.EvenOccurrencesFinder\06.EvenOccurrencesFinder.csproj", "{4D8C0B3B-47FF-468C-85AF-3E1555785191}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{97E6A137-FD47-42F8-ABA4-826E88865D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97E6A137-FD47-42F8-ABA4-826E88865D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97E6A137-FD47-42F8-ABA4-826E88865D76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{821B58BB-4C83-478B-BCF3-1CC675B9DCE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{821B58BB-4C83-478B-BCF3-1CC675B9DCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{821B58BB-4C83-478B-BCF3-1CC675B9DCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{821B58BB-4C83-478B-BCF3-1CC675B9DCE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21E5D9F-6251-46D1-AA07-5E1285F26898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21E5D9F-6251-46D1-AA07-5E1285F26898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21E5D9F-6251-46D1-AA07-5E1285F26898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21E5D9F-6251-46D1-AA07-5E1285F26898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D8C0B3B-47FF-468C-85AF-3E1555785191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D8C0B3B-47FF-468C-85AF-3E1555785191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D8C0B3B-47FF-468C-85AF-3E1555785191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D8C0B3B-47FF-468C-85AF-3E1555785191}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

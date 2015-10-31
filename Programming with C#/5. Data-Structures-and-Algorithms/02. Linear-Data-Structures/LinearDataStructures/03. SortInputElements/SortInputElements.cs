@@ -12,6 +12,10 @@
     {
         public static void Main()
         {
+            Console.WriteLine("Enter number for collection of numbers.");
+            Console.WriteLine("Each one on a different rows.");
+            Console.WriteLine("If row is empty end the collection.");
+
             var listOfNumbers = ConsoleUtility.ReadSequenceOfElements<int>();
 
             var sortedSequence = listOfNumbers
