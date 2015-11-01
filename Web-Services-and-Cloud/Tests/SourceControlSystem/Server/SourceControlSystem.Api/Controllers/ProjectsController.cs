@@ -6,6 +6,8 @@
     using Data;
     using Models.Projects;
     using SourceControlSystem.Models;
+    using System.Data.Entity.Validation;
+    using System.Diagnostics;
 
     public class ProjectsController : ApiController
     {
@@ -37,14 +39,13 @@
 
             var result = this.db
                 .SoftwareProjects
-                .Where(pr => pr.Name == id)
+                .Where(pr =>
+                    pr.Name == id &&
+                    (!pr.Private ||
+                        (pr.Private &&
+                            pr.Users.Any(u => u.UserName == this.User.Identity.Name))))
+                    .Select(SoftwareProjectDetailsResponseModel.FromModel)
                 .FirstOrDefault();
-
-            if (result.Private &&
-                !result.Users.Any(u => u.UserName == this.User.Identity.Name))
-            {
-                return this.Unauthorized();
-            }
 
             if (result == null)
             {
@@ -69,15 +70,32 @@
                 CreatedOn = DateTime.Now
             };
 
-            this.db.Users.Add(currentUser);
+            newProject.Users.Add(currentUser);
             this.db.SoftwareProjects.Add(newProject);
-            this.db.SaveChanges();
+            //this.db.SaveChanges();
+
+            try
+            {
+                this.db.SaveChanges();
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        Trace.TraceInformation("Property: {0} Error: {1}",
+                                                validationError.PropertyName,
+                                                validationError.ErrorMessage);
+                    }
+                }
+            }
 
             return this.Ok(newProject.Id);
         }
 
-        [Route("api/project/all")]
-        public IHttpActionResult Get(int page, int pageSize)
+        [Route("api/projects/all")]
+        public IHttpActionResult Get(int page, int pageSize = 10)
         {
             var result = this.db
                  .SoftwareProjects
