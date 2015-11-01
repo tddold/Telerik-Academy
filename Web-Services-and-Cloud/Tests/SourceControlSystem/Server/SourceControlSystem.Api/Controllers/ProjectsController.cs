@@ -1,8 +1,10 @@
 ﻿namespace SourceControlSystem.Api.Controllers
 {
-    using Data;
+    using System;
     using System.Linq;
     using System.Web.Http;
+    using Data;
+    using Models.Projects;
 
     public class ProjectsController : ApiController
     {
@@ -18,6 +20,7 @@
                 .SoftwareProjects
                 .OrderByDescending(pr => pr.CreatedOn)
                 .Take(10)
+                .Select(SoftwareProjectDetailsResponseModel.FromModel)
                 .ToList();
 
             return this.Ok(result);
@@ -50,10 +53,25 @@
             return this.Ok(result);
         }
 
-        //public IHttpActionResult Post()
-        //{
+        [Authorize]
+        public IHttpActionResult Post()
+        {
 
-        //}
+        }
+
+        [Route("api/project/all")]
+        public IHttpActionResult Get(int page, int pageSize)
+        {
+            var result = this.db
+                 .SoftwareProjects
+                 .OrderByDescending(pr => pr.CreatedOn)
+                 .Skip((page-1) * pageSize)
+                 .Take(pageSize)
+                 .Select(SoftwareProjectDetailsResponseModel.FromModel)
+                 .ToList();
+
+            return this.Ok(result);
+        }
 
     }
 }

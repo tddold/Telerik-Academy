@@ -182,6 +182,8 @@
     </Compile>
     <Compile Include="Models\Account\AccountBindingModels.cs" />
     <Compile Include="Models\Account\AccountViewModels.cs" />
+    <Compile Include="Models\Projects\SaveProjectRequestModel.cs" />
+    <Compile Include="Models\Projects\SoftwareProjectDetailsResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />

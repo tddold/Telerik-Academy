@@ -15,7 +15,7 @@
                 {
                     Id = pr.Id,
                     Name = pr.Name,
-                    CreateOn = pr.CreateOn,
+                    CreateOn = pr.CreatedOn,
                     TotalUsers = pr.Users.Count()
                 };
             }
