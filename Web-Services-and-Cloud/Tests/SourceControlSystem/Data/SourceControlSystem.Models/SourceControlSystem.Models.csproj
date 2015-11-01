@@ -66,6 +66,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SourceControlSystem.Common\SourceControlSystem.Common.csproj">
+      <Project>{de7da149-3700-4ebc-ab2d-58f2b0440050}</Project>
+      <Name>SourceControlSystem.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

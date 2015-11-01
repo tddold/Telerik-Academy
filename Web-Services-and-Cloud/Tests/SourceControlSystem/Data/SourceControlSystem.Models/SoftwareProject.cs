@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using Common.Constants;
 
     public class SoftwareProject
     {
@@ -17,12 +18,12 @@
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(100)]
+        [MaxLength(ValidationConstants.MaxProjectName)]
         public string Name { get; set; }
 
         public bool Private { get; set; }
 
-        [MaxLength(1000)]
+        [MaxLength(ValidationConstants.MaxProjectDescription)]
         public string Description { get; set; }
 
         public DateTime CreatedOn { get; set; }

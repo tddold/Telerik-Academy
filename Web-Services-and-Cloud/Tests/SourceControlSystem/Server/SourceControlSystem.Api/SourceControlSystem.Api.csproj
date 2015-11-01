@@ -208,6 +208,10 @@
       <Project>{cbc9a496-e979-47ed-af83-f36e10fbef23}</Project>
       <Name>SourceControlSystem.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\SourceControlSystem.Common\SourceControlSystem.Common.csproj">
+      <Project>{de7da149-3700-4ebc-ab2d-58f2b0440050}</Project>
+      <Name>SourceControlSystem.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -5,6 +5,7 @@
     using System.Web.Http;
     using Data;
     using Models.Projects;
+    using SourceControlSystem.Models;
 
     public class ProjectsController : ApiController
     {
@@ -54,9 +55,25 @@
         }
 
         [Authorize]
-        public IHttpActionResult Post()
+        public IHttpActionResult Post(SaveProjectRequestModel model)
         {
+            var currentUser = this.db
+                .Users
+                .FirstOrDefault(u => u.UserName == this.User.Identity.Name);
 
+            var newProject = new SoftwareProject
+            {
+                Name = model.Name,
+                Description = model.Description,
+                Private = model.Private,
+                CreatedOn = DateTime.Now
+            };
+
+            this.db.Users.Add(currentUser);
+            this.db.SoftwareProjects.Add(newProject);
+            this.db.SaveChanges();
+
+            return this.Ok(newProject.Id);
         }
 
         [Route("api/project/all")]
@@ -65,7 +82,7 @@
             var result = this.db
                  .SoftwareProjects
                  .OrderByDescending(pr => pr.CreatedOn)
-                 .Skip((page-1) * pageSize)
+                 .Skip((page - 1) * pageSize)
                  .Take(pageSize)
                  .Select(SoftwareProjectDetailsResponseModel.FromModel)
                  .ToList();
