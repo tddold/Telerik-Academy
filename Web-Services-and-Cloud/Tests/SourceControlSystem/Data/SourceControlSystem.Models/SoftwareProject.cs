@@ -1,5 +1,6 @@
 ﻿namespace SourceControlSystem.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
@@ -23,6 +24,8 @@
 
         [MaxLength(1000)]
         public string Description { get; set; }
+
+        public DateTime CreatedOn { get; set; }
 
         public virtual ICollection<User> Users
         {

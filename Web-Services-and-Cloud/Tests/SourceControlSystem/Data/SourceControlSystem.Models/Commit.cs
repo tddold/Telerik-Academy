@@ -14,9 +14,9 @@
 
         public virtual User User { get; set; }
 
-        public int SoftwearProjectId { get; set; }
+        public int SoftwareProjectId { get; set; }
 
-        public SoftwareProject SoftwearProject { get; set; }
+        public SoftwareProject SoftwareProject { get; set; }
 
     }
 }

@@ -1,11 +1,8 @@
 ﻿namespace SourceControlSystem.Api.Controllers
 {
+    using Data;
     using System.Linq;
     using System.Web.Http;
-    using Data;
-    using Models.Projects;
-    using SourceControlSystem.Models;
-    using System;
 
     public class ProjectsController : ApiController
     {
@@ -19,9 +16,8 @@
         {
             var result = this.db
                 .SoftwareProjects
-                .OrderByDescending(pr => pr.CreateOn)
+                .OrderByDescending(pr => pr.CreatedOn)
                 .Take(10)
-                .Select(SoftwareProjectDetailsResponseModel.FromModel)
                 .ToList();
 
             return this.Ok(result);
@@ -36,12 +32,12 @@
             }
 
             var result = this.db
-                .SoftwareProject
+                .SoftwareProjects
                 .Where(pr => pr.Name == id)
                 .FirstOrDefault();
 
             if (result.Private &&
-                result.Users.Any(u => u.UserName == this.User.Identity.Name))
+                !result.Users.Any(u => u.UserName == this.User.Identity.Name))
             {
                 return this.Unauthorized();
             }
@@ -54,41 +50,10 @@
             return this.Ok(result);
         }
 
-        [Authorize]
-        public IHttpActionResult Post(SaveProjectRequestModel model)
-        {
-            var currentUser = this.db
-                .Users
-                .FirstOrDefault(u => u.UserName == this.User.Identity.Name);
+        //public IHttpActionResult Post()
+        //{
 
-            var newProject = new SoftwareProject
-            {
-                Name = model.Name,
-                Description = model.Description,
-                Private = model.Private,
-                CreateOn = DateTime.Now
-            };
+        //}
 
-            newProject.Users.Add(currentUser);
-
-            this.db.SoftwareProject.Add(newProject);
-            this.db.SaveChanges();
-
-            return this.Ok(newProject.Id);
-        }
-
-        [Route("api/projects/all")]
-        public IHttpActionResult Get(int page, int pageSize)
-        {
-            var result = this.db
-           .SoftwareProjects
-           .OrderByDescending(pr => pr.CreateOn)
-           .Skip((page - 1) * pageSize)
-           .Take(pageSize)
-           .Select(SoftwareProjectDetailsResponseModel.FromModel)
-           .ToList();
-
-            return this.Ok(result);
-        }
     }
 }
