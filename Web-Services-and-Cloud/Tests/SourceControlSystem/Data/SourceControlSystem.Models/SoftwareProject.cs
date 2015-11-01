@@ -11,7 +11,7 @@
         public SoftwareProject()
         {
             this.users = new HashSet<User>();
-            this.commits = new HashSet<User>();
+            this.commits = new HashSet<Commit>();
         }
         public int Id { get; set; }
 
