@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoftwareProject.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
