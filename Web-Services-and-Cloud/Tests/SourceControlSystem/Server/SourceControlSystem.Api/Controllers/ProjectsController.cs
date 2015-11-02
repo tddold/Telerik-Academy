@@ -9,24 +9,22 @@
     using System.Data.Entity.Validation;
     using System.Diagnostics;
     using Common.Constants;
+    using Services.Data.Contracts;
+    using Services.Data;
 
     public class ProjectsController : ApiController
     {
-        private readonly IRepository<SoftwareProject> projects;
-        private readonly IRepository<User> users;
+        private readonly IProjectsService projects;
 
         public ProjectsController()
         {
-            var db = new SourseControlSystemDbContext();            
-            this.users = new EfGenericRepository<User>(db);
+            var db = new SourseControlSystemDbContext();
+            this.projects = new ProjectsService();
         }
         public IHttpActionResult Get()
         {
             var result = this.projects
-                .All()
-                .OrderByDescending(pr => pr.CreatedOn)
-                .Skip(0)
-                .Take(GlobalConstants.DefaultPageSize)
+                .All(page: 1)
                 .Select(SoftwareProjectDetailsResponseModel.FromModel)
                 .ToList();
 
@@ -62,50 +60,25 @@
         [Authorize]
         public IHttpActionResult Post(SaveProjectRequestModel model)
         {
-            var currentUser = this.users
-                .All()
-                .FirstOrDefault(u => u.UserName == this.User.Identity.Name);
-
-            var newProject = new SoftwareProject
+            if (!this.ModelState.IsValid)
             {
-                Name = model.Name,
-                Description = model.Description,
-                Private = model.Private,
-                CreatedOn = DateTime.Now
-            };
-
-            newProject.Users.Add(currentUser);
-            this.projects.Add(newProject);
-            //this.db.SaveChanges();
-
-            try
-            {
-                this.projects.SaveChanges();
-            }
-            catch (DbEntityValidationException dbEx)
-            {
-                foreach (var validationErrors in dbEx.EntityValidationErrors)
-                {
-                    foreach (var validationError in validationErrors.ValidationErrors)
-                    {
-                        Trace.TraceInformation("Property: {0} Error: {1}",
-                                                validationError.PropertyName,
-                                                validationError.ErrorMessage);
-                    }
-                }
+                return this.BadRequest(this.ModelState);
             }
 
-            return this.Ok(newProject.Id);
+            var createdProjectId = this.projects.Add(
+                model.Name,
+                model.Description,
+                this.User.Identity.Name,
+                model.Private);
+
+            return this.Ok(createdProjectId);
         }
 
         [Route("api/projects/all")]
         public IHttpActionResult Get(int page, int pageSize = GlobalConstants.DefaultPageSize)
         {
             var result = this.projects
-                 .All()
-                 .OrderByDescending(pr => pr.CreatedOn)
-                 .Skip((page - 1) * pageSize)
-                 .Take(pageSize)
+                 .All(page, pageSize)
                  .Select(SoftwareProjectDetailsResponseModel.FromModel)
                  .ToList();
 
