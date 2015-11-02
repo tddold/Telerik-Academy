@@ -1,13 +1,9 @@
 ﻿namespace SourceControlSystem.Api.Controllers
 {
-    using System;
     using System.Linq;
     using System.Web.Http;
     using Data;
     using Models.Projects;
-    using SourceControlSystem.Models;
-    using System.Data.Entity.Validation;
-    using System.Diagnostics;
     using Common.Constants;
     using Services.Data.Contracts;
     using Services.Data;
@@ -16,11 +12,11 @@
     {
         private readonly IProjectsService projects;
 
-        public ProjectsController()
+        public ProjectsController(IProjectsService projectsService)
         {
-            var db = new SourseControlSystemDbContext();
-            this.projects = new ProjectsService();
+            this.projects = projectsService;
         }
+
         public IHttpActionResult Get()
         {
             var result = this.projects
