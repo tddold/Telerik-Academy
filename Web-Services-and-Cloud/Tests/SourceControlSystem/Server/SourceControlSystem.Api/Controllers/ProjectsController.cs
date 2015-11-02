@@ -11,16 +11,19 @@
 
     public class ProjectsController : ApiController
     {
-        private readonly SourseControlSystemDbContext db;
+        private readonly IRepository<SoftwareProject> projects;
+        private readonly IRepository<User> users;
 
         public ProjectsController()
         {
-            this.db = new SourseControlSystemDbContext();
+            var db = new SourseControlSystemDbContext();
+            this.projects = new EfGenericRepository<SoftwareProject>(db);
+            this.users = new EfGenericRepository<User>(db);
         }
         public IHttpActionResult Get()
         {
-            var result = this.db
-                .SoftwareProjects
+            var result = this.projects
+                .All()
                 .OrderByDescending(pr => pr.CreatedOn)
                 .Take(10)
                 .Select(SoftwareProjectDetailsResponseModel.FromModel)
@@ -37,8 +40,8 @@
                 return this.BadRequest("Project name cannot be null or empty.");
             }
 
-            var result = this.db
-                .SoftwareProjects
+            var result = this.projects
+                .All()
                 .Where(pr =>
                     pr.Name == id &&
                     (!pr.Private ||
@@ -58,8 +61,8 @@
         [Authorize]
         public IHttpActionResult Post(SaveProjectRequestModel model)
         {
-            var currentUser = this.db
-                .Users
+            var currentUser = this.users
+                .All()
                 .FirstOrDefault(u => u.UserName == this.User.Identity.Name);
 
             var newProject = new SoftwareProject
@@ -71,12 +74,12 @@
             };
 
             newProject.Users.Add(currentUser);
-            this.db.SoftwareProjects.Add(newProject);
+            this.projects.Add(newProject);
             //this.db.SaveChanges();
 
             try
             {
-                this.db.SaveChanges();
+                this.projects.SaveChanges();
             }
             catch (DbEntityValidationException dbEx)
             {
@@ -97,8 +100,8 @@
         [Route("api/projects/all")]
         public IHttpActionResult Get(int page, int pageSize = 10)
         {
-            var result = this.db
-                 .SoftwareProjects
+            var result = this.projects
+                 .All()
                  .OrderByDescending(pr => pr.CreatedOn)
                  .Skip((page - 1) * pageSize)
                  .Take(pageSize)
