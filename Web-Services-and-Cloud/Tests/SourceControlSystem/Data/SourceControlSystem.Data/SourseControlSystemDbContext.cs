@@ -4,7 +4,7 @@
     using Models;
     using System.Data.Entity;
 
-    public class SourseControlSystemDbContext : IdentityDbContext<User>
+    public class SourseControlSystemDbContext : IdentityDbContext<User>, ISourseControlSystemDbContext
     {
         public SourseControlSystemDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

@@ -10,8 +10,11 @@ namespace SourceControlSystem.Api.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Ninject.Extensions.Conventions;
     using Services.Data.Contracts;
     using Services.Data;
+    using Data;
+    using Common.Constants;
 
     public static class NinjectConfig
     {
@@ -63,7 +66,16 @@ namespace SourceControlSystem.Api.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IProjectsService>().To<ProjectsService>();
+            kernel.Bind<ISourseControlSystemDbContext>()
+                .To<SourseControlSystemDbContext>()
+                .InRequestScope();
+
+
+            kernel.Bind(typeof(IRepository<>)).To(typeof(EfGenericRepository<>));
+
+            kernel.Bind(b => b.From(Assemblies.DataService)
+                .SelectAllClasses()
+                .BindDefaultInterface());
         }
     }
 }

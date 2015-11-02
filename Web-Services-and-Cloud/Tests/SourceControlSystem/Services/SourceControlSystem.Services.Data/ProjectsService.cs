@@ -12,11 +12,12 @@
         private readonly IRepository<SoftwareProject> projects;
         private readonly IRepository<User> users;
 
-        public ProjectsService()
+        public ProjectsService(
+            IRepository<SoftwareProject> projectsRepo,
+            IRepository<User> usersRepo)
         {
-            var db = new SourseControlSystemDbContext();
-            this.projects = new EfGenericRepository<SoftwareProject>(db);
-            this.users = new EfGenericRepository<User>(db);
+            this.projects = projectsRepo;
+            this.users = usersRepo;
         }
 
         public int Add(string name, string description, string creator, bool isPrivate = false)

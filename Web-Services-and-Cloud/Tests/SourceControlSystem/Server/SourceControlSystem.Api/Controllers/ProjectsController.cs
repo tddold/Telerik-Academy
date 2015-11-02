@@ -2,11 +2,9 @@
 {
     using System.Linq;
     using System.Web.Http;
-    using Data;
     using Models.Projects;
     using Common.Constants;
     using Services.Data.Contracts;
-    using Services.Data;
 
     public class ProjectsController : ApiController
     {
