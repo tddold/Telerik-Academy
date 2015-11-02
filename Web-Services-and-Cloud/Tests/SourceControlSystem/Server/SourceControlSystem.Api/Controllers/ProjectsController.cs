@@ -8,6 +8,7 @@
     using SourceControlSystem.Models;
     using System.Data.Entity.Validation;
     using System.Diagnostics;
+    using Common.Constants;
 
     public class ProjectsController : ApiController
     {
@@ -16,8 +17,7 @@
 
         public ProjectsController()
         {
-            var db = new SourseControlSystemDbContext();
-            this.projects = new EfGenericRepository<SoftwareProject>(db);
+            var db = new SourseControlSystemDbContext();            
             this.users = new EfGenericRepository<User>(db);
         }
         public IHttpActionResult Get()
@@ -25,7 +25,8 @@
             var result = this.projects
                 .All()
                 .OrderByDescending(pr => pr.CreatedOn)
-                .Take(10)
+                .Skip(0)
+                .Take(GlobalConstants.DefaultPageSize)
                 .Select(SoftwareProjectDetailsResponseModel.FromModel)
                 .ToList();
 
@@ -98,7 +99,7 @@
         }
 
         [Route("api/projects/all")]
-        public IHttpActionResult Get(int page, int pageSize = 10)
+        public IHttpActionResult Get(int page, int pageSize = GlobalConstants.DefaultPageSize)
         {
             var result = this.projects
                  .All()
