@@ -8,7 +8,7 @@
     {
         public static void Main()
         {
-            var numbers = new List<int>() { 4, 2, 2, 5, 2, 3, 2, 3, 1, 5, 2 };
+            var numbers = new List<int> { 4, 2, 2, 5, 2, 3, 2, 3, 1, 5, 2 };
             var isOddNumberOfTime = false;
             var extractedElements = FindElementsUsingHashSet(numbers, isOddNumberOfTime);
             PrintResult(numbers, extractedElements);

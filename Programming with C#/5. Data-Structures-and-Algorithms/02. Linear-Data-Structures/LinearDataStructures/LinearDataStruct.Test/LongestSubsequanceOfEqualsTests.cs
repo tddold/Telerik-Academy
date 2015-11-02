@@ -11,7 +11,7 @@
         [TestMethod]
         public void ShouldReturnLastLongestSubsequence()
         {
-            var collection = new List<int>() { 1, 1, 1, 3, 2, 2, 3, 3, 3 };
+            var collection = new List<int> { 1, 1, 1, 3, 2, 2, 3, 3, 3 };
             var longestSubsequence = LongestSubsequanceOfEquals.FindLongestSubsequence(collection).ToList();
             var expectedLongestSubsequence = new List<int> { 3, 3, 3 };
 
@@ -21,7 +21,7 @@
         [TestMethod]
         public void ShouldReturnLastLongestSubsequenceIsOneNumber()
         {
-            var collection = new List<int>() { 1, 2, 3, 4 };
+            var collection = new List<int> { 1, 2, 3, 4 };
             var longestSubsequence = LongestSubsequanceOfEquals.FindLongestSubsequence(collection).ToList();
             var expectedLongestSubsequence = new List<int>() { 4 };
 
@@ -31,7 +31,7 @@
         [TestMethod]
         public void ShouldReturnLongestSubsequenceAtTheBeginning()
         {
-            var collection = new List<int>() { 1, 1, 1, 1, 1, 1, 2, 3, 3, 3 };
+            var collection = new List<int> { 1, 1, 1, 1, 1, 1, 2, 3, 3, 3 };
             var longestSubsequence = LongestSubsequanceOfEquals.FindLongestSubsequence(collection).ToList();
             var expectedLongestSubsequence = new List<int>() { 1, 1, 1, 1, 1, 1 };
 
@@ -41,7 +41,7 @@
         [TestMethod]
         public void ShouldReturnOnlyOneSubsequenceAtTheEnd()
         {
-            var collection = new List<int>() { 1, 2, 2, 3, 3, 3, 4, 4, 4, 4 };
+            var collection = new List<int> { 1, 2, 2, 3, 3, 3, 4, 4, 4, 4 };
             var longestSubsequence = LongestSubsequanceOfEquals.FindLongestSubsequence(collection).ToList();
             var expectedLongestSubsequence = new List<int>() { 4, 4, 4, 4 };
 
@@ -51,7 +51,7 @@
         [TestMethod]
         public void ShouldReturnOnlyOneSubsequenceAtTheMiddle()
         {
-            var collection = new List<int>() { 1, 2, 2, 3, 3, 3, 3, 4, 4, 4 };
+            var collection = new List<int> { 1, 2, 2, 3, 3, 3, 3, 4, 4, 4 };
             var longestSubsequence = LongestSubsequanceOfEquals.FindLongestSubsequence(collection).ToList();
             var expectedLongestSubsequence = new List<int>() { 3, 3, 3, 3 };
 
