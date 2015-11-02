@@ -2,10 +2,11 @@
 {
     using System.Linq;
     using System.Web.Http;
-    using Models.Projects;
-    using Common.Constants;
-    using Services.Data.Contracts;
     using System.Web.Http.Cors;
+    using Common.Constants;
+    using Models.Projects;
+    using Services.Data.Contracts;
+    using AutoMapper.QueryableExtensions;
 
     public class ProjectsController : ApiController
     {
@@ -20,8 +21,8 @@
         public IHttpActionResult Get()
         {
             var result = this.projects
-                .All(page: 1)
-                .Select(SoftwareProjectDetailsResponseModel.FromModel)
+                .All()
+                .ProjectTo<SoftwareProjectDetailsResponseModel>()
                 .ToList();
 
             return this.Ok(result);
@@ -42,7 +43,7 @@
                     (!pr.Private ||
                         (pr.Private &&
                             pr.Users.Any(u => u.UserName == this.User.Identity.Name))))
-                    .Select(SoftwareProjectDetailsResponseModel.FromModel)
+                    .ProjectTo<SoftwareProjectDetailsResponseModel>()
                 .FirstOrDefault();
 
             if (result == null)
@@ -75,7 +76,7 @@
         {
             var result = this.projects
                  .All(page, pageSize)
-                 .Select(SoftwareProjectDetailsResponseModel.FromModel)
+                 .ProjectTo<SoftwareProjectDetailsResponseModel>()
                  .ToList();
 
             return this.Ok(result);

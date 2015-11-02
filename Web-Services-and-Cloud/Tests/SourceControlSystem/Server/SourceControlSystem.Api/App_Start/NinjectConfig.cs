@@ -11,10 +11,9 @@ namespace SourceControlSystem.Api.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Ninject.Extensions.Conventions;
-    using Services.Data.Contracts;
-    using Services.Data;
     using Data;
     using Common.Constants;
+    using Infrastucture;
 
     public static class NinjectConfig
     {
@@ -50,6 +49,7 @@ namespace SourceControlSystem.Api.App_Start
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
+                ObjectFactory.Initialize(kernel);
                 RegisterServices(kernel);
                 return kernel;
             }
