@@ -5,6 +5,7 @@
     using Models.Projects;
     using Common.Constants;
     using Services.Data.Contracts;
+    using System.Web.Http.Cors;
 
     public class ProjectsController : ApiController
     {
@@ -15,6 +16,7 @@
             this.projects = projectsService;
         }
 
+        [EnableCors("*", "*", "*")]
         public IHttpActionResult Get()
         {
             var result = this.projects
