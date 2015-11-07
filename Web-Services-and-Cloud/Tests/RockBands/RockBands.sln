@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3F42005A-D02F-40D3-B4A0-58D8F7613684}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E8A9FAE5-AEF1-44B0-901A-4CF7F52F5072}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{DC465FBC-578C-4AFE-9F86-F0FD94713120}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{4DE8538D-F3E3-4900-8DC5-4B74C165150D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockBands.Api", "Server\RockBands.Api\RockBands.Api.csproj", "{287DF05A-F4B6-4F25-AD67-5ED7B487EA8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockBands.Model", "Data\RockBands.Model\RockBands.Model.csproj", "{990075DF-250C-4A9E-B5D5-6099499C7832}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{287DF05A-F4B6-4F25-AD67-5ED7B487EA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287DF05A-F4B6-4F25-AD67-5ED7B487EA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287DF05A-F4B6-4F25-AD67-5ED7B487EA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287DF05A-F4B6-4F25-AD67-5ED7B487EA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{990075DF-250C-4A9E-B5D5-6099499C7832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990075DF-250C-4A9E-B5D5-6099499C7832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990075DF-250C-4A9E-B5D5-6099499C7832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990075DF-250C-4A9E-B5D5-6099499C7832}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{287DF05A-F4B6-4F25-AD67-5ED7B487EA8A} = {E8A9FAE5-AEF1-44B0-901A-4CF7F52F5072}
+		{990075DF-250C-4A9E-B5D5-6099499C7832} = {DC465FBC-578C-4AFE-9F86-F0FD94713120}
+	EndGlobalSection
+EndGlobal
