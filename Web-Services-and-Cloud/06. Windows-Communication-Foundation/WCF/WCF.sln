@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.DatePicker.Console", "01.DatePicker.Console\01.DatePicker.Console.csproj", "{A0B467DB-4F76-40D4-A0D5-A5112E619EED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.DatePicker.Services", "DatePicker.Services\01.DatePicker.Services.csproj", "{45C8FF22-70B1-4B8D-A967-009854E023C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.SubstringModule.Console", "02.SubstringModule.Console\02.SubstringModule.Console.csproj", "{AB5FD07C-ADB1-4B39-A3EB-87DBCC5944AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.SubstringModule.Service", "02.SubstringModule.Service\02.SubstringModule.Service.csproj", "{17A5841D-065B-449F-A7C9-0643A9A7AC9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.SubstringModule.Web", "02. SubstringModule.Web\02.SubstringModule.Web.csproj", "{278E4755-4823-40EA-A659-73005AB157AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0B467DB-4F76-40D4-A0D5-A5112E619EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B467DB-4F76-40D4-A0D5-A5112E619EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B467DB-4F76-40D4-A0D5-A5112E619EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B467DB-4F76-40D4-A0D5-A5112E619EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45C8FF22-70B1-4B8D-A967-009854E023C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C8FF22-70B1-4B8D-A967-009854E023C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C8FF22-70B1-4B8D-A967-009854E023C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C8FF22-70B1-4B8D-A967-009854E023C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB5FD07C-ADB1-4B39-A3EB-87DBCC5944AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5FD07C-ADB1-4B39-A3EB-87DBCC5944AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5FD07C-ADB1-4B39-A3EB-87DBCC5944AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5FD07C-ADB1-4B39-A3EB-87DBCC5944AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A5841D-065B-449F-A7C9-0643A9A7AC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A5841D-065B-449F-A7C9-0643A9A7AC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A5841D-065B-449F-A7C9-0643A9A7AC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A5841D-065B-449F-A7C9-0643A9A7AC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{278E4755-4823-40EA-A659-73005AB157AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278E4755-4823-40EA-A659-73005AB157AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{278E4755-4823-40EA-A659-73005AB157AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278E4755-4823-40EA-A659-73005AB157AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
