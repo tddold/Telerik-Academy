@@ -10,7 +10,7 @@
     {
         private const int N = 4;
         private const int K = 2;
-        private static int[] loops = new int[N];
+        private static readonly int[] Loops = new int[N];
 
         public static void Main()
         {
@@ -27,7 +27,7 @@
 
             for (int i = startIndex; i < N; i++)
             {
-                loops[depht] = i;
+                Loops[depht] = i;
                 Combinations(i + 1, depht + 1);
             }
         }
@@ -36,7 +36,7 @@
         {
             for (int i = 0; i < K; i++)
             {
-                Console.Write("{0} ", loops[i] + 1);
+                Console.Write("{0} ", Loops[i] + 1);
             }
 
             Console.WriteLine();

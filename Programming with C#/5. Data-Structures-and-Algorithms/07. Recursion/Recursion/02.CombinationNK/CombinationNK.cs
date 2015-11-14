@@ -6,7 +6,7 @@
     {
         private const int N = 3;
         private const int K = 2;
-        private static int[] loops = new int[N];
+        private static readonly int[] loops = new int[N];
 
         public static void Main()
         {
