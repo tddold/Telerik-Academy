@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.IronMQReceiver", "01.IronMQReceiver\01.IronMQReceiver.csproj", "{1E2BB70E-F7B0-4283-8787-919CB63B3511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.IronMQSender", "01.IronMQSender\01.IronMQSender.csproj", "{3B80AE66-C8EA-422E-92FB-8D081F7B5586}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Dropbox", "04.Dropbox\04.Dropbox.csproj", "{2873E6F0-EE42-4E5F-A493-9CC025C232B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PubNubAPI", "03.PubNubAPI\03.PubNubAPI.csproj", "{817C9575-71DC-476D-B9A5-5AC1BDF4C78F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E2BB70E-F7B0-4283-8787-919CB63B3511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E2BB70E-F7B0-4283-8787-919CB63B3511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E2BB70E-F7B0-4283-8787-919CB63B3511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E2BB70E-F7B0-4283-8787-919CB63B3511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B80AE66-C8EA-422E-92FB-8D081F7B5586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B80AE66-C8EA-422E-92FB-8D081F7B5586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B80AE66-C8EA-422E-92FB-8D081F7B5586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B80AE66-C8EA-422E-92FB-8D081F7B5586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2873E6F0-EE42-4E5F-A493-9CC025C232B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2873E6F0-EE42-4E5F-A493-9CC025C232B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2873E6F0-EE42-4E5F-A493-9CC025C232B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2873E6F0-EE42-4E5F-A493-9CC025C232B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817C9575-71DC-476D-B9A5-5AC1BDF4C78F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817C9575-71DC-476D-B9A5-5AC1BDF4C78F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817C9575-71DC-476D-B9A5-5AC1BDF4C78F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817C9575-71DC-476D-B9A5-5AC1BDF4C78F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
