@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_ICompanyService" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:1337/Company" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_ICompanyService" contract="ICompanyService"
+                name="BasicHttpBinding_ICompanyService" />
+        </client>
+    </system.serviceModel>
+</configuration>
+
+
+
+<behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <!-- To avoid disclosing metadata information, set the values below to false before deployment -->
+          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true"/>
+          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <protocolMapping>
+        <add binding="basicHttpsBinding" scheme="https" />
+    </protocolMapping>    
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" />
+	
+	 <system.serviceModel>
+    <behaviors>
+      !!!!......................
+    </behaviors>
+    <services>
+      !!!!........................
+    </services>
+  </system.serviceModel>
+  
+  
+   <system.serviceModel>
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="restfulEndpointBehavior">
+          <webHttp/>
+        </behavior>
+      </endpointBehaviors>
+      <serviceBehaviors>
+        <behavior name="restfulServiceBehavior">
+          <serviceMetadata httpGetEnabled="True"/>
+          <serviceDebug includeExceptionDetailInFaults="True"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <services>
+      <service name="Tests.Api.QuestionsService" behaviorConfiguration="restfulServiceBehavior">
+        <endpoint address="" behaviorConfiguration="restfulEndpointBehavior" contract="Tests.Api.IQuestionsService" binding="webHttpBinding">
+        </endpoint>
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost/questions"/>
+          </baseAddresses>
+        </host>
+      </service>
+    </services>
+  </system.serviceModel>
+  
+  
+   <connectionStrings>
+    <add name="DefaultConnection" connectionString="Data Source=.\SqlExpress; Initial Catalog=TestDb; Integrated Security = true" providerName="System.Data.SqlClient"/>
+  </connectionStrings>

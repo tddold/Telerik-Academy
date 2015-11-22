@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Staircases", "01.Staircases\01.Staircases.csproj", "{648C2033-E0F1-4B83-9C41-BB96F3AC7EA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Card game", "02.Card game\02.Card game.csproj", "{6C582A1B-5BDE-476E-BFDD-55EBFCF31FC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.StairsDinamic", "01.StairsDinamic\01.StairsDinamic.csproj", "{378CE79F-4864-408B-B96C-C853EEC96DC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{648C2033-E0F1-4B83-9C41-BB96F3AC7EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{648C2033-E0F1-4B83-9C41-BB96F3AC7EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{648C2033-E0F1-4B83-9C41-BB96F3AC7EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{648C2033-E0F1-4B83-9C41-BB96F3AC7EA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C582A1B-5BDE-476E-BFDD-55EBFCF31FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C582A1B-5BDE-476E-BFDD-55EBFCF31FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C582A1B-5BDE-476E-BFDD-55EBFCF31FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C582A1B-5BDE-476E-BFDD-55EBFCF31FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{378CE79F-4864-408B-B96C-C853EEC96DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{378CE79F-4864-408B-B96C-C853EEC96DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{378CE79F-4864-408B-B96C-C853EEC96DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{378CE79F-4864-408B-B96C-C853EEC96DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
