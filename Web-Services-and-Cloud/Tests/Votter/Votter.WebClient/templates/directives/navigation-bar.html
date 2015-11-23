@@ -1,0 +1,43 @@
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#/" class="navbar-brand">RateMyGirlfriend</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#/vote-for-persons/">Vote for persons</a>
+                </li>
+                <li>
+                    <a href="#/ranklist/">Ranklist</a>
+                </li>
+                <li>
+                    <a href="#/upload-picture">Upload picture</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" ng-hide="isLoggedIn">
+                <li>
+                    <a href="#/signup/">Register</a>
+                </li>
+                <li>
+                    <a href="#/signin/">Login</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" ng-show="isLoggedIn">
+                <li>
+                    <a>Hello, {{ username }}</a>
+                </li>
+                <li>
+                    <a ng-click="signOut()">Sign out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

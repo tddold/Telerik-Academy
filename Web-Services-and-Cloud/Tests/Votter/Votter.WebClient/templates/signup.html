@@ -1,0 +1,9 @@
+﻿<div class="container col-md-12" ng-controller="RegistrationController">
+    <form name="newUserForm" class="form-signin" role="form">
+        <h2 class="form-signin-heading">Please sign up</h2>
+        <input type="email" class="form-control" placeholder="Email address" required="" autofocus="" ng-model="email">
+        <input type="password" class="form-control sign-in-password-input" placeholder="Password" required="" ng-model="password">
+        <input type="password" class="form-control sign-in-confirm-password-input" placeholder="Confirm Password" required="" ng-model="confirmPassword">
+        <button class="btn btn-lg btn-primary btn-block sign-in-button" type="submit" ng-disabled="newUserForm.$pristine || newUserForm.$invalid || password != confirmPassword" ng-click="signUp(email, password, confirmPassword)">Sign up</button>
+    </form>
+</div>

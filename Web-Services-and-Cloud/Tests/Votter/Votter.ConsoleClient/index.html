@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<div pub-key="pub-c-dd2f112e-5678-40ab-83e5-9f78932acd02"
+     sub-key="sub-c-aa397582-3f4a-11e4-8c81-02ee2ddab7fe"
+     ssl="off" origin="pubsub.pubnub.com" id="pubnub">
+
+</div>
+<script src=http://cdn.pubnub.com/pubnub-3.5.3.min.js></script>
+<div id="messagesArea" style="width:300px; height:300px"></div>
+<script>
+        (function() {
+            document.write("")
+            PUBNUB.subscribe({
+                channel: "team-papaya",
+                callback: function (message) {
+                    document.getElementById('messagesArea').innerHTML += message + '\n';
+                }
+            });
+        })();
+</script>
+</html>
