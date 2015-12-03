@@ -1,11 +1,10 @@
 ﻿namespace Matches
 {
+    /* http://bgcoder.com/Contests/Practice/Index/268#2 */
+
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     public class Start
     {
@@ -70,7 +69,7 @@ put-=42;";
         }
         public static void Main()
         {
-            // MockInput();
+           // MockInput();
 
             string str1 = Console.ReadLine();
             string str2 = Console.ReadLine();
