@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees", "Trees\Trees.csproj", "{31DE0CAC-0E31-4A47-A236-084AECD97B45}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreesMemoziation", "Trees\TreesMemoziation.csproj", "{31DE0CAC-0E31-4A47-A236-084AECD97B45}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReesDP", "ReesDP\ReesDP.csproj", "{1F0685D0-FDEB-435D-B165-332855973E1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubsetSum", "SubsetSum\SubsetSum.csproj", "{AB26EB77-FDFE-40D2-B1F2-6253DC67C20A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubsetSumDP", "SubsetSum\SubsetSumDP.csproj", "{AB26EB77-FDFE-40D2-B1F2-6253DC67C20A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphsBFS", "GraphsBFS\GraphsBFS.csproj", "{0A8FEB12-8B66-4625-9A95-02535437ADDD}"
 EndProject
@@ -40,6 +40,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreesRequrent", "TreesRequrent\TreesRequrent.csproj", "{1774F914-944A-4B73-A817-A3F066280BA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabinKarpHash", "RabinKarpHash\RabinKarpHash.csproj", "{6A948517-6C8D-42BB-8AF9-E9DFB462311F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreesDP", "TreesDP\TreesDP.csproj", "{A1609680-A366-4346-91F4-CC1F447768D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{6A948517-6C8D-42BB-8AF9-E9DFB462311F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A948517-6C8D-42BB-8AF9-E9DFB462311F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A948517-6C8D-42BB-8AF9-E9DFB462311F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1609680-A366-4346-91F4-CC1F447768D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1609680-A366-4346-91F4-CC1F447768D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1609680-A366-4346-91F4-CC1F447768D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1609680-A366-4346-91F4-CC1F447768D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
