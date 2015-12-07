@@ -25,46 +25,42 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="jumbotron" ng-controller="ArtistDetailsController" ng-cloak>
+    <div class="container clearfix" ng-controller="ArtistDetailsController">
+        <div class="jumbotron">
             <div class="row">
                 <div class="col-md-6">
-                    <h1>{{ artist.name }}</h1>
-                    <p>
-                        <strong>Created: </strong>{{ artist.created }}
-                    </p>
-                    <p>
-                        <strong>More information: </strong>
-                        <button class="btn btn-sm pull-right" ng-click="showMoreInfo()">{{ showInfoText }}</button>
-                        <div class="panel panel-default" ng-hide="hideInformation">
-                            <div class="panel-body">
-                    <p>
-                        <strong>Location: </strong>{{ artist.additionalInformation.location }}
-                    </p>
-                    <p>
-                        <strong>Albums: </strong>{{ artist.additionalInformation.albums }}
-                    </p>
-                    <p>
-                        <strong>Singles: </strong>{{ artist.additionalInformation.singles }}
-                    </p>
+                    <h1>{{ artist.name | uppercase }}</h1>
+                    <h2><strong>Since:</strong><span class="pull-right">{{ artist.created }}</span></h2>
+                    <div>
+                        <p><strong>Location: </strong><span class="pull-right">{{ artist.additionalInformation.location }}</span></p>
+                        <p>
+                            <strong>Band members: </strong>
+                            <button class="btn btn-sm pull-right" ng-click="showAndHideMembers()">{{ bandMembersShowText }}</button>
+                            <div class="well" ng-show="bandMembersShown">
+                                <ul class="list-group">
+                                    <li class="list-group-item" ng-class="bandMembers" ng-class-even="evenBandMembers" ng-repeat="member in artist.additionalInformation.bandMember">
+                                        <span ng-style="customStyle">{{ member }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </p>
+                    </div>
+                    <div>
+                        <p><strong>Records: </strong>{{ artist.additionalInformation.albums }} albums and {{ artist.additionalInformation.singles }} singles
+                            <button class="btn btn-sm pull-right" ng-click="showAndHideRecords()">{{ bandRecordsShowText }}</button>
+                            <div class="well" ng-show="bandRecordsShown">
+                                Pesho
+                            </div>
+                        </p>
+                    </div>
                 </div>
-
+                <div class="col-md-6 image-container">
+                    <img ng-src="{{ artist.image }}" alt="{{ artist.name }}" />
+                </div>
             </div>
-            </p>
-            <p>
-                <strong>Band members: </strong><button class="btn btn-sm pull-right" ng-click="showBandMembers()">{{ showBandMembersText }}</button>
-                <ul class="list-group" ng-hide="hideBandMembers">
-                    <li class="list-group-item text-center" ng-repeat="member in artist.additionalInformation.bandMember" ng-class-odd="grayBackgroundClass">
-                        <a href="#" ng-style="boldFontCss" ng-class="blueTextClass">{{ member }}</a> 
-                    </li>
-                </ul>
-            </p>
-        </div>
-        <div class="col-md-6">
-            <img src="{{ artist.image }}" />
         </div>
     </div>
-    </div>
+
 
 
     <footer class="text-center">

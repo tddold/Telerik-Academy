@@ -45,39 +45,41 @@ musicApp.controller('ArtistDetailsController',
 
         $scope.artist = artist;
 
-        $scope.hideInformation = true;
-        $scope.showMoreInfo = showMoreInfo;
-        $scope.showInfoText = "Show";
-        $scope.showBandMembers = showBandMembers;
-        $scope.hideBandMembers = true;
-        $scope.showBandMembersText = "Show";
+        $scope.bandMembersShown = false;
+        $scope.bandMembersShowText = 'Show';
+        $scope.showAndHideMembers = showAndHideBandMembers;
 
-        $scope.boldFontCss = {
+        $scope.bandMembers = "band-members";
+        $scope.evenBandMembers = "even-band-members";
+
+
+        $scope.customStyle = {
             fontWeight: 'bold',
-            textDecoration:'underline'
         };
 
-        $scope.blueTextClass = 'blue-text';
-        $scope.grayBackgroundClass = 'gray-background';
+        $scope.bandRecordsShowText = 'Info';
+        $scope.bandRecordsShown = false;
+        $scope.showAndHideRecords = showAndHideRecords;
 
-        function showMoreInfo() {
-            if ($scope.hideInformation == true) {
-                $scope.showInfoText = "Hide";
-                $scope.hideInformation = false;
-            } else {
-                $scope.showInfoText = "Show";
-                $scope.hideInformation = true;
-            }
-        }
 
-        function showBandMembers() {
-            if ($scope.hideBandMembers) {
-                $scope.showBandMembersText = "Hide";
-                $scope.hideBandMembers = false;
+        function showAndHideBandMembers() {
+            if ($scope.bandMembersShown == false) {
+                $scope.bandMembersShowText = "Hide";
+                $scope.bandMembersShown = true;
             } else {
-                $scope.showBandMembersText = "Show";
-                $scope.hideBandMembers = true;
+                $scope.bandMembersShowText = "Show";
+                $scope.bandMembersShown = false;
             }
-        }
+        
+
+            function showAndHideRecords() {
+                if ($scope.bandRecordsShown == false) {
+                    $scope.bandRecordsShowText = "Hide";
+                    $scope.bandRecordsShown = true;
+                } else {
+                    $scope.bandRecordsShowText = "View";
+                    $scope.bandRecordsShown = false;
+                }
+            }
     }
 );
