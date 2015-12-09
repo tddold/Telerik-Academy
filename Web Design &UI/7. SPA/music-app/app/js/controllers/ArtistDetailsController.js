@@ -15,8 +15,8 @@ musicApp.controller('ArtistDetailsController',
             },
             albums: [{
                 id: 1,
-                name: "Hibrid Theory",
-                image: "/img/hibrid-theory.jpg",
+                name: "Hybrid Theory",
+                image: "/img/hybrid-theory.jpg",
                 year: 1999,
                 songs: 12,
                 rating: 0,
@@ -24,7 +24,7 @@ musicApp.controller('ArtistDetailsController',
                 statis: 1
             }, {
                 id: 2,
-                name: "Meteora",
+                name: "Meteor",
                 image: "/img/meteora.jpg",
                 year: 2003,
                 songs: 10,
@@ -54,12 +54,17 @@ musicApp.controller('ArtistDetailsController',
 
 
         $scope.customStyle = {
-            fontWeight: 'bold',
-        };
+            fontWeight: 'bold'
+        }
 
         $scope.bandRecordsShowText = 'Info';
         $scope.bandRecordsShown = false;
         $scope.showAndHideRecords = showAndHideRecords;
+
+        $scope.upVoteRating = upVoteRating;
+        $scope.downVoteRating = downVoteRating;
+
+        $scope.sort = 'id';
 
 
         function showAndHideBandMembers() {
@@ -70,16 +75,27 @@ musicApp.controller('ArtistDetailsController',
                 $scope.bandMembersShowText = "Show";
                 $scope.bandMembersShown = false;
             }
-        
+        }
 
-            function showAndHideRecords() {
-                if ($scope.bandRecordsShown == false) {
-                    $scope.bandRecordsShowText = "Hide";
-                    $scope.bandRecordsShown = true;
-                } else {
-                    $scope.bandRecordsShowText = "View";
-                    $scope.bandRecordsShown = false;
-                }
+        function showAndHideRecords() {
+            if ($scope.bandRecordsShown == false) {
+                $scope.bandRecordsShowText = "Hide";
+                $scope.bandRecordsShown = true;
+            } else {
+                $scope.bandRecordsShowText = "View";
+                $scope.bandRecordsShown = false;
             }
+        }
+
+        function upVoteRating(album) {
+            album.rating++;
+        }
+
+        function downVoteRating(album) {
+            if (album.rating > 0) {
+                album.rating--;
+            }
+        }
+
     }
 );

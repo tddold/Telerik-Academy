@@ -46,19 +46,73 @@
                         </p>
                     </div>
                     <div>
-                        <p><strong>Records: </strong>{{ artist.additionalInformation.albums }} albums and {{ artist.additionalInformation.singles }} singles
+                        <p>
+                            <strong>Records: </strong>{{ artist.additionalInformation.albums }} albums and {{ artist.additionalInformation.singles }} singles
                             <button class="btn btn-sm pull-right" ng-click="showAndHideRecords()">{{ bandRecordsShowText }}</button>
-                            <div class="well" ng-show="bandRecordsShown">
-                                Pesho
-                            </div>
+                            <div class="container" ng-show="bandRecordsShown">
+                                <div class="row">
+                                    Sort:
+                                    <select ng-model="sort">
+                                        <option value="id" selected="selected">Default</option>
+                                        <option value="value">Name</option>
+                                        <option value="year">Year</option>
+                                        <option value="price">Price</option>
+                                        <option value="-rating">Rating</option>
+                                    </select>
+                                    <div class="pull-right">
+                                        Search:
+                                        <input type="text" ng-model="search" />
+                                    </div>
+                                </div>
+                                <br />
+                                <ul class="nav nav-tabs">
+                                    <li ng-repeat="album in artist.albums |limitTo:3 |orderBy: sort | filter: search">
+                                        <a href="#album-{{ album.id }}" data-toggle="tab">{{ album.name }} ({{album.rating }})</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">See all...</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade" id="album-{{ album.id }}" ng-repeat="album in artist.albums |limitTo:3">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body row">
+                                                <div class="col-md-6">
+                        <p>
+                            <strong>{{ album.name | uppercase }}</strong>
+                        </p>
+                        <p>
+                            <strong>Year: {{ album.year }}</strong>
+                        </p>
+                        <p>
+                            <strong>Price: {{ album.price | number:2 | currency}}</strong>
+                        </p>
+                        <p>
+                            <strong>Songs: {{ album.songs }}</strong>
+                        </p>
+                        <p>
+                            <strong>Rating: {{ album.rating }}</strong>
+                            <button class="btn btn-sm" ng-click="downVoteRating(album)">-</button>
+                            <button class="btn btn-sm" ng-click="upVoteRating(album)">+</button>
                         </p>
                     </div>
+                    <div class="col-md-6 image-container">
+                        <img ng-src="{{ album.image }}" src="" alt="{{ album.name}}" />
+                    </div>
                 </div>
-                <div class="col-md-6 image-container">
-                    <img ng-src="{{ artist.image }}" alt="{{ artist.name }}" />
-                </div>
+
             </div>
         </div>
+    </div>
+    </div>
+    </p>
+    </div>
+    </div>
+    <div class="col-md-6 image-container">
+        <img ng-src="{{ artist.image }}" alt="{{ artist.name }}" />
+    </div>
+    </div>
+    </div>
     </div>
 
 
