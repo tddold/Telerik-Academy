@@ -48,6 +48,16 @@
     height: 100%;
 }
 
+input.ng-invalid.ng-dirty.form-validation {
+    background-color: pink;
+    !important;
+}
+
+input.ng-valid.ng-dirty.form-validation {
+    background-color: greenyellow;
+    !important;
+}
+
 input.ng-dirty.ng-invalid {
     background-color: pink;
     !important;
