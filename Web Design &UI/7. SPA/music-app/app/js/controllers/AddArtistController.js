@@ -1,10 +1,11 @@
 ﻿'use strict'
 
-musicApp.controller('EditArtistController',
-    function EditArtistController($scope) {
+musicApp.controller('AddArtistController',
+    function AddArtistController($scope, artistData) {
 
-        $scope.saveArtist = function (artist, newArtisForm) {
-            if (newArtisForm.$valid) {
+        $scope.saveArtist = function (artist, addArtisForm) {
+            if (addArtisForm.$valid) {
+                artistData.saveArtist(artist);
             alert('Artist saved:' + artist.name + ' ' + artist.created); //TODO save artist
             } else {
                 alert('Invalid data');

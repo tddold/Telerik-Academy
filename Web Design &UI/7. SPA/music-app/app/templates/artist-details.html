@@ -1,36 +1,10 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>Music Artists</title>
-    <meta charset="utf-8" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
-</head>
-<body ng-app="musicApp" ng-controller="PageController">
-    <div class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="../" class="navbar-brand">Music Artists</a>
-
-            </div>
-            <div class="navbar-collapse collapse" id="navbar-main">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="add-artist.html">Add Artist</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container clearfix" ng-controller="ArtistDetailsController">
-        <div class="jumbotron">
+﻿
+        <div class="jumbotron" ng-controller="ArtistDetailsController">
             <div class="row">
                 <div class="col-md-6">
                     <h1>{{ artist.name | uppercase }}</h1>
                     <h2><strong>Since:</strong><span class="pull-right">{{ artist.created }}</span></h2>
+
                     <div>
                         <p><strong>Location: </strong><span class="pull-right">{{ artist.additionalInformation.location }}</span></p>
                         <p>
@@ -44,7 +18,9 @@
                                 </ul>
                             </div>
                         </p>
+
                     </div>
+
                     <div>
                         <p>
                             <strong>Records: </strong>{{ artist.additionalInformation.albums }} albums and {{ artist.additionalInformation.singles }} singles
@@ -67,7 +43,7 @@
                                 <br />
                                 <ul class="nav nav-tabs">
                                     <li ng-repeat="album in artist.albums |limitTo:3 |orderBy: sort | filter: search">
-                                        <a href="#album-{{ album.id }}" data-toggle="tab">{{ album.name }} ({{album.rating }})</a>
+                                        <a href="#album-{{ album.id }}" target="_self" data-toggle="tab">{{ album.name }} ({{album.rating }})</a>
                                     </li>
                                     <li>
                                         <a href="#">See all...</a>
@@ -98,6 +74,7 @@
                         <p>
                             <strong>Status: {{ album.status | status }}</strong>
                         </p>
+
                     </div>
                     <div class="col-md-6 image-container">
                         <img ng-src="{{ album.image }}" src="" alt="{{ album.name}}" />
@@ -107,8 +84,8 @@
             </div>
         </div>
     </div>
+
     </div>
-    </p>
     </div>
     </div>
     <div class="col-md-6 image-container">
@@ -116,23 +93,3 @@
     </div>
     </div>
     </div>
-    </div>
-
-
-
-        <hr />
-    <footer class="text-center">
-        <small>
-            <strong>Author:</strong>  {{ author }}, <strong>Copyright:</strong> {{author}} 2015
-        </small>
-    </footer>
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/bootstrap/bootstrap.min.js"></script>
-    <script src="lib/angular/angular.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers/PageController.js"></script>
-    <script src="js/controllers/ArtistDetailsController.js"></script>
-    <script src="js/filters/status.js"></script>
-    <script src="js/services/artistData.js"></script>
-</body>
-</html>

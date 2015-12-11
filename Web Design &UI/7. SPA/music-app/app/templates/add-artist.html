@@ -1,35 +1,7 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>Music Artists</title>
-    <meta charset="utf-8" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
-</head>
-<body ng-app="musicApp" ng-controller="PageController">
-    <div class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="../" class="navbar-brand">Music Artists</a>
-
-            </div>
-            <div class="navbar-collapse collapse" id="navbar-main">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="add-artist.html">Add Artist</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container clearfix" ng-controller="EditArtistController">
+﻿    <div class="jumbotron" ng-controller="AddArtistController" ng-cloak>
         <div class="row">
             <div class="col-md-6">
-                <form class="form-horizontal" name="newArtistForm">
-                    <h1>Artist</h1>
+                <form class="form-horizontal" name="addArtistForm">
                     <fieldset>
                         <legend>Main Information</legend>
                         <div class="form-group">
@@ -76,30 +48,15 @@
                     </fieldset>
                     <div class="form-group">
                         <div class="pull-right">
-                            <button class="btn btn-default" ng-disabled="newArtistForm.$invalid" ng-click="saveArtist(artist, newArtistForm)">Save</button>
+                            <button class="btn btn-default" ng-disabled="addArtistForm.$invalid" ng-click="saveArtist(artist, addArtistForm)">Save</button>
                             <button class="btn btn-default" ng-click="cancel()">Cancel</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="col-md-6 image-container">
-                <img src="" ng-src="{{artist.image}}" />
+                <img ng-src="{{artist.image}}" />
             </div>
         </div>
     </div>
-    <hr />
-    <footer class="text-center">
-        <small>
-            <strong>Author:</strong>  {{ author }}, <strong>Copyright:</strong> {{author}} 2015
-        </small>
-    </footer>
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/bootstrap/bootstrap.min.js"></script>
-    <script src="lib/angular/angular.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers/ArtistDetailsController.js"></script>
-    <script src="js/controllers/EditArtistController.js"></script>
-    <script src="js/controllers/PageController.js"></script>
-    <script src="js/filters/status.js"></script>
-</body>
-</html>
+   

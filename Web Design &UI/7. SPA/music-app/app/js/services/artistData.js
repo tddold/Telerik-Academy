@@ -1,20 +1,19 @@
 ﻿'use strict';
 
-musicApp.factory('artistData', function ($http, $q, $log) {
+musicApp.factory('artistData', function ($resource) {
+
+    var resource = $resource('/data/artist/:id', { id: '@id' });
 
     return {
         getArtist: function (id) {
-            var defer = $q.defer();
-
-            $http({ method: 'GET', url: 'data/artist/1' + id })
-            .success(function (data, status, header, config) {
-                defer.resolve(data);
-            })
-            .error(function (data, status, header, config) {
-               defer.reject(data);
-            });
-
-            return defer.promise;
+            return resource.get({ id: id });
+        },
+        saveArtist: function (artist) {
+            artist.id = 999;
+            resource.save(artist);
+        },
+        getAllArtists: function () {
+            resource.query();
         }
     }
 });

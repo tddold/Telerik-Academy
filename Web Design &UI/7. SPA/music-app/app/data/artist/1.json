@@ -1,5 +1,5 @@
 ﻿{
-  "artist": {
+  
     "id": 1,
     "name": "Linkin Park",
     "image": "/img/1.jpg",
@@ -43,4 +43,4 @@
       }
     ]
   }
-}
+
