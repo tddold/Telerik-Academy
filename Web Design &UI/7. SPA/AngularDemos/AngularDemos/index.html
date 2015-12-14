@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-cloak>
+    <div ng-controller="HomeController as vm">
+
+    </div>
+
+    <script>
+        angular.module('myApp', [])
+            .factory('identity', function () {
+                var currentUser = undefined;
+
+                function register(user) {
+                    // register user
+                }
+
+                function login(user) {
+                    // login user
+                }
+
+                function logout() {
+                    // logout user
+                }
+
+                function isAdmin(user) {
+                    return false;
+                }
+
+                return {
+                    register: register,
+                    login: login,
+                    logout: logout,
+                    isAdmin: isAdmin
+                };
+            })
+        .controller('HomeController',
+            ['identity', function HomeController(identity) {
+                logger.log('Zdrasti!');
+            }]);;
+    </script>
+</body>
+</html>
