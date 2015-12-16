@@ -7,6 +7,6 @@
         vm.hi = 'Hi';
     }
 
-    angular.module('catApp.controller')
+    angular.module('catApp.controllers')
     .controller('HomeController', [HomeController]);
 }());

@@ -8,14 +8,15 @@
 
         vm.register = function (user, registerForm) {
             if (registerForm.$valid) {
+                console.log('...Registering user...');
                 auth.register(user)
-                .then(function () {
-                    console.log('Works!');
+                    .then(function () {
+                        console.log('WORK')
                 });
             }
         };
     }
 
-    angular.module('catApp.controller')
-    .controller('RegisterController', ['auth', RegisterController]);
+    angular.module('catApp.controllers')
+        .controller('RegisterController', ['auth', RegisterController])
 }());

@@ -358,7 +358,7 @@ namespace TheBigCatProject.Server.Controllers
                 })
                 .FirstOrDefaultAsync();
 
-            if (user==null)
+            if (user == null)
             {
                 return InternalServerError(new Exception("Somthing bad:("));
             }

@@ -5,7 +5,7 @@
         var CONTROLLER_VIEW_MODEL_NAME = 'vm';
 
         $locationProvider.html5Mode(true);
-
+                
         $routeProvider
         .when('/', {
             templateUrl: 'partials/home/home.html',
@@ -20,12 +20,11 @@
         })
         .otherwise({ redirectTo: '/' })
     }
-
-
+    
     angular.module('catApp.services', [])
-    angular.module('catApp.controller', ['catApp.services'])
+    angular.module('catApp.controllers', ['catApp.services'])
 
-    angular.module('catApp', ['ngRoute', 'ngCookies', 'catApp.controller'])
+    angular.module('catApp', ['ngRoute', 'ngCookies', 'catApp.controllers'])
     .config(['$routeProvider', '$locationProvider', config])
-    .constant('baseUrl', 'http://localhost:59613/');
+    //.constant('baseUrl', 'http://localhost:59613/');
 }());

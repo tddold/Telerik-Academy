@@ -1,22 +1,21 @@
 ﻿(function () {
     'use strict';
 
-    var authService = function authService($http, $q, $cookies, identity, baseUrl) {
+    var authService = function authService($http, $q, $cookies, identity) {
         var TOKEN_KEY = 'authentication'; // cookie key
 
         // register
         var register = function register(user) {
-            var defered = $q.defer();
+            var deferred = $q.defer();
 
-            $http.post(baseUrl + '/api/account/register', user)
+            $http.post('/api/account/register', user)
             .then(function () {
-                defered.resolve(true);
+                deferred.resolve(true);
             }, function (err) {
-                defered.reject(err);
+                deferred.reject(err);
             });
 
-
-            return defered.promise;
+            return deferred.promise;
         }
 
         var login = function login(user) {
@@ -26,7 +25,7 @@
             var data = "grant_type=password&username=" + (user.username || '') + '&password=' + (user.password || '');
 
             // set header in order to prevent Angular making data to JSON
-            $http.post(baseUrl + '/Token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+            $http.post('/Token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
                 .success(function (response) {
                     var tokenValue = response.access_token; // token for authorized access
 
@@ -37,7 +36,7 @@
                     // save cookie for refresh scenarios
                     $cookies.put(TOKEN_KEY, tokenValue, { expires: theBigDay });
 
-                    // set default Authorization header so that we do not need to provide the header with evry request
+                    // set default Authorization header so that we do not need to provide the header with every request
                     $http.defaults.headers.common.Authorization = 'Bearer ' + tokenValue;
 
                     getIdentity().then(function () {
@@ -78,7 +77,6 @@
         };
     };
 
-    angular
-        .module('catApp.services')
-        .factory('auth', ['$http', '$q', '$cookies', 'identity', 'baseUrl', authService]);
+    angular.module('catApp.services')
+        .factory('auth', ['$http', '$q', '$cookies', 'identity', authService]);
 }());
