@@ -8,8 +8,8 @@ namespace TheBigCatProject.Server
     {
         public static void Register(HttpConfiguration config)
         {
-            var corsAttribute = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(corsAttribute);
+            //var corsAttribute = new EnableCorsAttribute("*", "*", "*");
+            //config.EnableCors(corsAttribute);
 
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.

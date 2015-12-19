@@ -103,6 +103,8 @@
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="partials\home\home.html" />
+    <Content Include="partials\identity\login.html" />
+    <Content Include="scripts\app\common\main-controller.js" />
     <Content Include="scripts\app\identity\auth-service.js" />
     <Content Include="partials\identity\register.html" />
     <Content Include="scripts\angular-mocks.js" />
@@ -122,6 +124,7 @@
     <Content Include="scripts\app\app.js" />
     <Content Include="scripts\app\home\home-controller.js" />
     <Content Include="scripts\app\identity\identity-service.js" />
+    <Content Include="scripts\app\identity\login-controller.js" />
     <Content Include="scripts\app\identity\register-controller.js" />
     <Content Include="styles\site.css" />
     <Content Include="Web.config" />

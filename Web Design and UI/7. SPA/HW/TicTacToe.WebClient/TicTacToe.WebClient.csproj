@@ -66,7 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\favicon.ico" />
     <Content Include="packages.config" />
+    <Content Include="scripts\app\identity\auth-service.js" />
+    <Content Include="scripts\app\identity\identity-service.js" />
     <Content Include="scripts\lib\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -81,7 +84,7 @@
     <Content Include="partials\identity\register.html" />
     <Content Include="scripts\app\app.js" />
     <Content Include="scripts\app\home\home-controller.js" />
-    <Content Include="scripts\app\identity\regidter-controller.js" />
+    <Content Include="scripts\app\identity\register-controller.js" />
     <Content Include="scripts\lib\angular-mocks.js" />
     <None Include="scripts\lib\angular.intellisense.js" />
     <Content Include="scripts\lib\angular.js" />

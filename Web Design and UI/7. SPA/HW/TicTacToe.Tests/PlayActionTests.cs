@@ -52,11 +52,11 @@ namespace TicTacToe.Tests
                     userIdProviderMock.Object);
 
             var result = controller.Play(new PlayRequestDataModel()
-                {
-                    GameId = gameId.ToString(),
-                    Col = 1,
-                    Row = 1,
-                });
+            {
+                GameId = gameId.ToString(),
+                Col = 1,
+                Row = 1,
+            });
 
             Assert.AreEqual(GameState.TurnO, game.State);
         }

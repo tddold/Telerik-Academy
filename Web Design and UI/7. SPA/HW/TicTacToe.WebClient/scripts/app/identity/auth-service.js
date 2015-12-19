@@ -5,37 +5,37 @@
         var TOKEN_KEY = 'authentication'; // cookie key
 
         var register = function register(user) {
-            var defered = $q.defer();
+            var deferd = $q.defer();
 
             $http.post(baseUrl + 'api/account/register', user)
-                .then(function () {
-                    defered.resolve(true);
-                }, function (err) {
-                    defered.reject(err);
-                });
+            .then(function () {
+                deferd.resolve(true);
+            }, function (err) {
+                deferd.reject(err);
+            });
 
-            return defered.promise;
+            return deferd.promise;
         }
 
         var login = function login(user) {
             var deferred = $q.defer();
 
-            // process data with url encoded format because API expects it this way
+            // process data with url encoded format because API expect is this way
             var data = "grant_type=password&username=" + (user.username || '') + '&password=' + (user.password || '');
 
             // set header in order to prevent Angular making data to JSON
-            $http.post(baseUrl + 'Token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+            $http.post(baseUrl + '/Token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
                 .success(function (response) {
-                    var tokenValue = response.access_token; // token for authorized access
+                    var tokenValue = response.access_token; // token for authorizes access
 
-                    // cookie expiration date (set it to whatever you want)
+                    // cookie expiration date(st it to whatever you want)
                     var theBigDay = new Date();
                     theBigDay.setHours(theBigDay.getHours() + 72);
 
                     // save cookie for refresh scenarios
                     $cookies.put(TOKEN_KEY, tokenValue, { expires: theBigDay });
 
-                    // set default Authorization header so that we do not need to provide the header with every request
+                    // set default Authorization header so that we do not need to provide the header every request
                     $http.defaults.headers.common.Authorization = 'Bearer ' + tokenValue;
 
                     getIdentity().then(function () {
@@ -52,7 +52,7 @@
         var getIdentity = function () {
             var deferred = $q.defer();
 
-            $http.get(baseUrl + 'api/account/identity')
+            $http.get('/api/account/identity')
                 .success(function (identityResponse) {
                     identity.setUser(identityResponse);
                     deferred.resolve(identityResponse);
@@ -77,6 +77,6 @@
     };
 
     angular
-        .module('catApp.services')
+        .module('ticTacToeApp.services')
         .factory('auth', ['$http', '$q', '$cookies', 'identity', 'baseUrl', authService]);
 }());

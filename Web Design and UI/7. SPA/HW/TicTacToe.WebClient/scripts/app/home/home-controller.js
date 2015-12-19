@@ -1,10 +1,10 @@
 ﻿(function () {
     'use strict';
-
+    
     function HomeController() {
         var vm = this;
 
-        vm.hi = 'Hi!';
+        vm.hi = 'Hi!!!';
     }
 
     angular.module('ticTacToeApp.controllers')

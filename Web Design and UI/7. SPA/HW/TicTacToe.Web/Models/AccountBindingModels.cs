@@ -35,6 +35,9 @@ namespace TicTacToe.Web.Models
     public class RegisterBindingModel
     {
         [Required]
+        public string DisplayName { get; set; }
+
+        [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
 

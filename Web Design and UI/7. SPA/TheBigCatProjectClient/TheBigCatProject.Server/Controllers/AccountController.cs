@@ -342,6 +342,7 @@ namespace TheBigCatProject.Server.Controllers
             return Ok();
         }
 
+        [HttpGet]
         [Authorize]
         public async Task<IHttpActionResult> Identity()
         {

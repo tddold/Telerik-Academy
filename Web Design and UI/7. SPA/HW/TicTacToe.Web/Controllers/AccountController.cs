@@ -17,6 +17,9 @@ using TicTacToe.Web.Models;
 using TicTacToe.Web.Providers;
 using TicTacToe.Web.Results;
 using TicTacToe.Models;
+using TicTacToe.Data;
+using System.Linq;
+using System.Data.Entity;
 
 namespace TicTacToe.Web.Controllers
 {
@@ -126,7 +129,7 @@ namespace TicTacToe.Web.Controllers
 
             IdentityResult result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword,
                 model.NewPassword);
-            
+
             if (!result.Succeeded)
             {
                 return GetErrorResult(result);
@@ -259,9 +262,9 @@ namespace TicTacToe.Web.Controllers
             if (hasRegistered)
             {
                 Authentication.SignOut(DefaultAuthenticationTypes.ExternalCookie);
-                
-                 ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
-                    OAuthDefaults.AuthenticationType);
+
+                ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
+                   OAuthDefaults.AuthenticationType);
                 ClaimsIdentity cookieIdentity = await user.GenerateUserIdentityAsync(UserManager,
                     CookieAuthenticationDefaults.AuthenticationType);
 
@@ -329,7 +332,7 @@ namespace TicTacToe.Web.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new User() { UserName = model.Email, Email = model.Email };
+            var user = new User() {UserName=model.Email, DisplayName = model.DisplayName, Email = model.Email };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
@@ -339,6 +342,33 @@ namespace TicTacToe.Web.Controllers
             }
 
             return Ok();
+        }
+
+        [Authorize]
+        public async Task<IHttpActionResult> Identity()
+        {
+            var userId = this.User.Identity.GetUserId();
+
+            var db = new TicTacToeDbContext();
+
+            var user = await db.Users
+                .Where(u => u.Id == userId)
+                .Select(u => new
+                {
+                    u.Id,
+                    u.DisplayName,
+                    u.Age,
+                    u.Email,
+                    u.UserName
+                })
+                .FirstOrDefaultAsync();
+
+            if (user == null)
+            {
+                return InternalServerError(new Exception("Something bar:("));
+            }
+
+            return this.Json(user);
         }
 
         // POST api/Account/RegisterExternal
@@ -369,7 +399,7 @@ namespace TicTacToe.Web.Controllers
             result = await UserManager.AddLoginAsync(user.Id, info.Login);
             if (!result.Succeeded)
             {
-                return GetErrorResult(result); 
+                return GetErrorResult(result);
             }
             return Ok();
         }

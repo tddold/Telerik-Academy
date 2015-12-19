@@ -24,15 +24,17 @@
             controllerAs: CONTROLLER_VIEW_MODEL_NAME
         })
         .when('/identity/register', {
-            templateUrl: 'partials/identity/registe.html',
+            templateUrl: 'partials/identity/register.html',
             controller: 'RegisterController',
             controllerAs: CONTROLLER_VIEW_MODEL_NAME
         })
-        .otherwise({ redirect: '/' })
+        .otherwise({ redirect: '/' });
     }
 
-    angular.module('ticTacToeApp.controllers', []);
+    angular.module('ticTacToeApp.services', []);
+    angular.module('ticTacToeApp.controllers', ['ticTacToeApp.services']);
 
-    angular.module('ticTacToeApp', ['ngRoute', 'ticTacToeApp.controllers'])
-    .config('$routeProvider', '$locationProvider', config);
+    angular.module('ticTacToeApp', ['ngRoute', 'ngCookies', 'ticTacToeApp.controllers'])
+    .config(['$routeProvider', '$locationProvider', config])
+    .constant('baseUrl', 'http://localhost:33257/');
 }());
