@@ -8,6 +8,12 @@
     <link href="styles/site.css" rel="stylesheet" />
     <link href="/img/favicon.ico" rel="shortcut icon" />
     <link rel="icon" />
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-cookies.js"></script>
 </head>
 <body ng-app="catApp" ng-cloak ng-controller="MainController as vm">
     <div class="navbar navbar-default navbar-fixed-top">
@@ -25,7 +31,12 @@
                     <li>
                         <a href="/">Home</a>
                     </li>
-
+                    <li ng-if="vm.globallySetCurrentUser">
+                        <a href="/cats/add">Add Cat</a>
+                    </li>
+                    <li>
+                        <a href="/cats">All Cats</a>
+                    </li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right" ng-if="!vm.globallySetCurrentUser">
@@ -73,18 +84,21 @@
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-cookies.js"></script>
+
 
     <script src="scripts/app/app.js"></script>
     <script src="scripts/app/common/main-controller.js"></script>
+    <script src="scripts/app/common/data-service.js"></script>
     <script src="scripts/app/identity/register-controller.js"></script>
     <script src="scripts/app/identity/login-controller.js"></script>
+    <script src="scripts/app/cats/add-cat-controller.js"></script>
+    <script src="scripts/app/cats/search-cats-controller.js"></script>
+    <script src="scripts/app/cats/cat-service.js"></script>
+    <script src="scripts/app/cats/listed-cats-directive.js"></script>
     <script src="scripts/app/home/home-controller.js"></script>
     <script src="scripts/app/identity/auth-service.js"></script>
     <script src="scripts/app/identity/identity-service.js"></script>
+    <script src="scripts/kendo.web.min.js"></script>
+    <script src="scripts/kendo.web.min.intellisense.js"></script>
 </body>
 </html>

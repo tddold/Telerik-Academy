@@ -1,0 +1,22 @@
+﻿<table class="table table-bordered ">
+    <tr>
+        <th class="text-center">Driver</th>
+        <th class="text-center">From</th>
+        <th class="text-center">To</th>
+        <th class="text-center">Departure Time</th>
+    </tr>
+    <tr ng-repeat="trips in vm.trips">
+        <td class="text-center">
+            <a href="#/trips/{{trips.id}}">{{trips.driverName}}</a>
+        </td>
+        <td class="text-center">
+            {{trips.from}}
+        </td>
+        <td class="text-center">
+            {{trips.to}}
+        </td>
+        <td class="text-center">
+            {{trips.departureDate}}
+        </td>
+    </tr>
+</table>

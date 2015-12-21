@@ -1,0 +1,84 @@
+(function () {
+    'use strict';
+
+
+    angular.module()
+}());
+
+------------------------------------------------------------------------
+
+(function () {
+    'use strict';
+
+    function HomeController() {
+        var vm = this;
+
+    }
+
+    angular.module('myApp.controllers')
+    .controller('HomeController', [HomeController])
+}());
+----------------------------------------------------------------------
+ function getStats() {
+            var defered = $q.defer();
+
+            return defered.promise;
+        }
+
+return {
+	getStats: getStats
+}
+
+-------------------------------------------------------------------------
+ <div class="row">
+        <div class="col-md-3 text-center">
+
+        </div>
+    </div>
+	
+------------------------------------------------------------------------	
+(function () {
+    'use strict';
+
+    function trips() {
+        
+        return {
+
+        }
+    }
+
+  
+
+    angular.module('myApp.services')
+  .factory('trips', ['$http', '$q', 'baseServiceUrl', 'notifier', trips])
+}());
+-----------------------------------------------------------
+(function () {
+    'use strict';
+
+    function data($http, $q, baseServiceUrl, notifier) {
+
+        function get() {
+
+        }
+
+        function post() {
+
+        }
+
+        function put() {
+
+        }
+
+        return {
+            get: get,
+            post: post,
+            put: put
+        }
+    }
+
+
+
+    angular.module('myApp.services')
+  .factory('data', ['$http', '$q', 'baseServiceUrl', 'notifier', data])
+}());

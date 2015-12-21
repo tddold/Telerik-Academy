@@ -102,8 +102,16 @@
     <Content Include="favicon.ico" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
+    <Content Include="partials\cats\add-cat.html" />
+    <Content Include="partials\cats\listed-cats-directive.html" />
+    <Content Include="partials\cats\search-cats.html" />
     <Content Include="partials\home\home.html" />
     <Content Include="partials\identity\login.html" />
+    <Content Include="scripts\app\cats\add-cat-controller.js" />
+    <Content Include="scripts\app\cats\cat-service.js" />
+    <Content Include="scripts\app\cats\listed-cats-directive.js" />
+    <Content Include="scripts\app\cats\search-cats-controller.js" />
+    <Content Include="scripts\app\common\data-service.js" />
     <Content Include="scripts\app\common\main-controller.js" />
     <Content Include="scripts\app\identity\auth-service.js" />
     <Content Include="partials\identity\register.html" />
@@ -112,6 +120,7 @@
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\kendo.web.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,6 +135,8 @@
     <Content Include="scripts\app\identity\identity-service.js" />
     <Content Include="scripts\app\identity\login-controller.js" />
     <Content Include="scripts\app\identity\register-controller.js" />
+    <None Include="scripts\kendo.web.min.intellisense.js" />
+    <Content Include="scripts\kendo.web.min.js" />
     <Content Include="styles\site.css" />
     <Content Include="Web.config" />
   </ItemGroup>
