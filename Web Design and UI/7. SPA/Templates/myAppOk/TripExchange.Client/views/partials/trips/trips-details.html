@@ -1,0 +1,27 @@
+﻿<div class="container">
+    <div class="row text-center">
+        <h1>
+            {{vm.name}} - {{vm.date}}
+            <button class="btn btn-sm btn-info pull-right" ng-click="joinTrip(trip.id)">Join Trip</button>
+        </h1>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-4 text-center">
+            From: <strong>{{vm.from}}</strong>
+        </div>
+        <div class="col-md-4 text-center">
+            To: <strong>{{vm.to}}</strong>
+        </div>
+        <div class="col-md-4 text-center">
+            Number of free seats: <strong>{{vm.seats}}</strong>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12 text-center">
+            Passengers: {{vm.passengers}}
+        </div>
+    </div>
+
+</div>

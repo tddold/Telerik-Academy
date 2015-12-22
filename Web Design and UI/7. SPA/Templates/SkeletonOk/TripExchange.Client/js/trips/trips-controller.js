@@ -27,6 +27,7 @@
         }
 
         vm.filterTrips = function () {
+            debugger;
             trips.filterTrips(vm.request)
                 .then(function (filteredTrips) {
                     vm.trips = filteredTrips;

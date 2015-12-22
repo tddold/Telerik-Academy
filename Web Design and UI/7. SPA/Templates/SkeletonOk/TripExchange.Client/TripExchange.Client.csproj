@@ -71,6 +71,8 @@
     <Content Include="img\ok.jpg" />
     <Content Include="js\common\beautiful-date.js" />
     <Content Include="js\common\data.js" />
+    <Content Include="js\drivers\all-drivers-directive.js" />
+    <Content Include="js\drivers\drivers-controller.js" />
     <Content Include="js\drivers\drivers-service.js" />
     <Content Include="js\home\home-controller.js" />
     <Content Include="js\home\statistics-service.js" />
@@ -877,7 +879,9 @@
     <Content Include="lib\jquery\jquery.min.js" />
     <Content Include="lib\toastr\toastr.js" />
     <Content Include="lib\toastr\toastr.min.js" />
+    <Content Include="views\directives\all-drivers-directive.html" />
     <Content Include="views\directives\all-trips-directive.html" />
+    <Content Include="views\partials\drivers\all-drivers.html" />
     <Content Include="views\partials\home\home.html" />
     <Content Include="views\partials\identity\login.html" />
     <Content Include="views\partials\identity\register.html" />

@@ -1,0 +1,48 @@
+﻿<div class="container">
+    <h2 class="text-center">
+        Drivers
+    </h2>
+
+    <div class="row" ng-show="vm.identity.isAuthenticated()">
+        <div class="col-md-6">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div>
+                        <select class="form-control" id="name-drivers"  ng-model="vm.request.name">
+                            <option ng-repeat="driver in vm.drivers" value="{{driver.name}}">
+                                {{driver.name}}
+                            </option>
+                        </select>                       
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+
+                <button class="btn btn-info" ng-click="vm.filterDriversByName(vm.request.name)">Filter</button>
+            </div>
+
+        </div>
+        <div class="col-md-3 col-md-offset-3">
+            <div class="col-md-3">
+                <button class="btn btn-info" ng-click="vm.prevPage()">&lt;&lt;</button>
+            </div>
+            <div class="col-md-6">
+                <input type="number" ng-model="vm.request.page" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-info" ng-click="vm.nextPage()">&gt;&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div ng-show="vm.drivers && vm.drivers.length > 0">
+        <div all-drivers></div>
+    </div>
+    <div ng-hide="vm.drivers && vm.drivers.length > 0">
+        <h2 class="text-center">No results!</h2>
+    </div>
+
+</div>

@@ -5,11 +5,12 @@
 
         function get(url, queryParams) {
             var defered = $q.defer();
-
+            
             var authHeader = authorization.getAuthorizationHeader();
 
             $http.get(baseServiceUrl + '/' + url, { params: queryParams, headers: authHeader })
             .then(function (response) {
+                
                 notifier.success('Get response');
 
                 defered.resolve(response.data);
@@ -41,8 +42,22 @@
             return defered.promise;
         }
 
-        function put() {
-            throw new Error('Not implemented!');
+        function put(url, id) {
+            var defered = $q.defer();
+            var authHeader = authorization.getAuthorizationHeader();
+
+            $http.put(baseServiceUrl + '/' + url + '/' + id, { headers: authHeader })
+            .then(function (response) {
+                notifier.success(response);
+
+                defered.resolve(response.data);
+            }, function (err) {
+                err = getErrorMessage(err);
+                notifier.error(err);
+                defered.reject(err);
+            })
+
+            return defered.promise;
         }
 
         notifier.success('Data service Ok');

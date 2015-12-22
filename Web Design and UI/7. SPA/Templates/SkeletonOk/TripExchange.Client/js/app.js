@@ -1,10 +1,11 @@
 (function () {
     'use strict';
 
-    function config($routeProvider) {
+    function config($routeProvider, $locationProvider) {
         var CONTROLLER_AS_VIEW_MODEL = 'vm';
         var PARTIALS_PREFIX = 'views/partials/';
 
+        $locationProvider.html5Mode(true);
 
         $routeProvider
             .when('/', {
@@ -20,19 +21,24 @@
                 controller: 'TripsController',
                 controllerAs: CONTROLLER_AS_VIEW_MODEL
             })
-             .when('/trips/details/:id/:name', {
+            .when('/trips/create', {
+                templateUrl: PARTIALS_PREFIX + 'trips/create-trips.html',
+                controller: 'CreateTripsController',
+                controllerAs: CONTROLLER_AS_VIEW_MODEL
+            })
+             .when('/trips/details/:id/:name/:from/:to/:date/:seats/:pass', {
                  templateUrl: PARTIALS_PREFIX + 'trips/trips-details.html',
                  controller: 'TripsDetailsController',
+                 controllerAs: CONTROLLER_AS_VIEW_MODEL
+             })
+             .when('/drivers', {
+                 templateUrl: PARTIALS_PREFIX + 'drivers/all-drivers.html',
+                 controller: 'DriversController',
                  controllerAs: CONTROLLER_AS_VIEW_MODEL
              })
             .when('/register', {
                 templateUrl: PARTIALS_PREFIX + 'identity/register.html',
                 controller: 'SignUpCtrl'
-            })
-            .when('/trips/create', {
-                templateUrl: PARTIALS_PREFIX + 'trips/create-trips.html',
-                controller: 'CreateTripsController',
-                controllerAs: CONTROLLER_AS_VIEW_MODEL
             })
             .otherwise({ redirectTo: '/' });
     }
@@ -42,7 +48,7 @@
     angular.module('myApp.filters', []);
     angular.module('myApp.controllers', ['myApp.services']);
     angular.module('myApp', ['ngRoute', 'ngCookies', 'kendo.directives', 'myApp.controllers', 'myApp.directives', 'myApp.filters']).
-        config(['$routeProvider', config])
+        config(['$routeProvider', '$locationProvider', config])
         .value('toastr', toastr)
         .constant('baseServiceUrl', 'http://spa2014.bgcoder.com');
 }());

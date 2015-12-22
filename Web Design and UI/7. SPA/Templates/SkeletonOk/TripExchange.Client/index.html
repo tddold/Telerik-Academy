@@ -5,6 +5,7 @@
     <title>Trip Exchange</title>
     <link href="/img/favicon.ico" rel="shortcut icon" />
     <link rel="icon" />
+    <base href="/">
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="../css/toastr.min.css" />
@@ -16,7 +17,7 @@
     <div class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a href="#/" class="navbar-brand">Trip Exchange</a>
+                <a href="/" class="navbar-brand">Trip Exchange</a>
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -26,10 +27,10 @@
             <div class="navbar-collapse collapse" id="navbar-main">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#/trips">Trips</a>
+                        <a href="/trips">Trips</a>
                     </li>
                     <li>
-                        <a href="#/">Drivers</a>
+                        <a href="/drivers">Drivers</a>
                     </li>
                 </ul>
                 <div ng-include="'views/partials/identity/login.html'"></div>
@@ -71,6 +72,8 @@
     <script src="js/trips/trips-detail-controller.js"></script>
     <script src="js/trips/all-trips-directive.js"></script>
     <script src="js/drivers/drivers-service.js"></script>
+    <script src="js/drivers/drivers-controller.js"></script>
+    <script src="js/drivers/all-drivers-directive.js"></script>
     <script src="js/identity/auth.js"></script>
     <script src="js/identity/authorization.js"></script>
     <script src="js/identity/identity.js"></script>

@@ -20,12 +20,17 @@
             return data.post(TRIPS_URL, trip);
         }
 
+        function join(id, trip) {
+            return data.put(TRIPS_URL, id);
+        }
+
         notifier.success('Trips service Ok');
         console.log('trip-service Ok');
         return {
             gstPublicTrips: gstPublicTrips,
             createTrip: createTrip,
-            filterTrips: filterTrips
+            filterTrips: filterTrips,
+            join:join
         }
     }
 
