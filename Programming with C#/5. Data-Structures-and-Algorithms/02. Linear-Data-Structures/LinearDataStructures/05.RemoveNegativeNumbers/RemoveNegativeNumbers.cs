@@ -19,6 +19,7 @@
 
             var collection = ConsoleUtility.ReadSequenceOfElements<int>().ToList();
 
+
             var positiveSequence = RemoveNegativeNumbersFromCollection(collection);
 
             Console.WriteLine("Positive collection is: {0}", string.Join(", ", positiveSequence));

@@ -1,0 +1,16 @@
+{
+  "name": "upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "formidable": "^1.0.17",
+    "fs-extra": "^0.26.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
