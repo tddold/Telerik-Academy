@@ -1,0 +1,14 @@
+{
+  "name": "MEAN-Stack-WS",
+  "version": "0.0.0",
+  "description": "MEAN Stack WS",
+  "main": "app.js",
+  "author": {
+    "name": "User",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  }
+}
