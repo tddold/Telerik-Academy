@@ -1,0 +1,13 @@
+{
+  "name": "MogoDbAndMongoos",
+  "version": "0.0.0",
+  "description": "MogoDbAndMongoos",
+  "main": "app.js",
+  "author": {
+    "name": "tdd",
+    "email": ""
+  },
+  "dependencies": {
+    "mongoose": "^4.3.4"
+  }
+}
