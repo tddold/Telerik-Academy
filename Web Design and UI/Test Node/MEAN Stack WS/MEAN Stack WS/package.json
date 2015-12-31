@@ -2,7 +2,7 @@
   "name": "MEAN-Stack-WS",
   "version": "0.0.0",
   "description": "MEAN Stack WS",
-  "main": "app.js",
+  "main": "server.js",
   "author": {
     "name": "User",
     "email": ""

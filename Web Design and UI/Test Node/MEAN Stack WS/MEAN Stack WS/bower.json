@@ -1,0 +1,26 @@
+{
+  "name": "MEAN-Stack-WS",
+  "description": "MEAN Stack WS",
+  "main": "server.js",
+  "authors": [
+    "User"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tddold/Telerik-Academy",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "toastr": "~2.1.2",
+    "angular": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "angular-route": "~1.4.8"
+  }
+}
