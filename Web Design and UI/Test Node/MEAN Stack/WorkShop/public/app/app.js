@@ -6,13 +6,13 @@
             
             $locationProvider.html5Mode(true);
             
-            $routeProvider
-            .when('/', {
-                templateUrl: 'partials/home/home.ht,l',
-                controler: 'HomeController',
-                controllerAs: CONTROLLER_VIEW_MODEL_NAME
-            })
-            .otherwise({ redirectTo: '/' });
+            //$routeProvider
+            //.when('/', {
+            //    templateUrl: 'partials/home/home.ht,l',
+            //    controler: 'HomeController',
+            //    controllerAs: CONTROLLER_VIEW_MODEL_NAME
+            //})
+            //.otherwise({ redirectTo: '/' });
         };
         
         angular.module('app.services', []);

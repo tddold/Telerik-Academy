@@ -956,6 +956,7 @@
     <Compile Include="public\lib\toastr\toastr.min.js" />
     <Compile Include="server.js" />
     <Content Include=".bowerrc" />
+    <Content Include=".gitignore" />
     <Content Include="bower.json" />
     <Content Include="node_modules\.bin\jade" />
     <Content Include="node_modules\.bin\jade.cmd" />
