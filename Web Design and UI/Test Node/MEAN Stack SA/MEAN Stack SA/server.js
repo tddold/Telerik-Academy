@@ -1,6 +1,19 @@
-﻿var http = require('http');
-var port = process.env.port || 1337;
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-}).listen(port);
+﻿var express = require('express'),
+    stylus = require('stylus'),
+    bodyParser = require('body-parser'),
+    mogoose = require('mongoose'),
+    env = process.env.NOD_ENV || 'development',
+    port = process.env.PORT || 3030,
+    app = express(),
+    messageSchema,
+    messageFormDataBase,
+    Message,
+    db;
+
+debugger;
+
+app.set('view engine', 'jade');
+app.set('view', __dirname + '/server/view');
+
+
+app.use(express.static(__dirname + '/public'));
