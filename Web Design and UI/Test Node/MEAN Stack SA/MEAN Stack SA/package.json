@@ -1,0 +1,13 @@
+{
+  "name": "MEAN-Stack-SA",
+  "version": "0.0.0",
+  "description": "MEAN Stack SA",
+  "main": "server.js",
+  "author": {
+    "name": "tdd",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
