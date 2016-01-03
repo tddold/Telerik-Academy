@@ -188,3 +188,5 @@ FakesAssemblies/
 
 /public/lib/
 /bower_components
+
+*.ntvs_analysis.dat
