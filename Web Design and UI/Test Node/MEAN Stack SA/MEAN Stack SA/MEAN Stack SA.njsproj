@@ -3806,6 +3806,7 @@
     <Compile Include="node_modules\stylus\node_modules\source-map\test\source-map\test-source-node.js" />
     <Compile Include="node_modules\stylus\node_modules\source-map\test\source-map\test-util.js" />
     <Compile Include="node_modules\stylus\node_modules\source-map\test\source-map\util.js" />
+    <Compile Include="public\app\account\login-controller.js" />
     <Compile Include="public\app\app.js" />
     <Compile Include="public\app\home\home-controller.js" />
     <Compile Include="public\lib\angular-cookies\angular-cookies.js" />
@@ -6257,10 +6258,10 @@
     <Content Include="server\views\includes\layout.jade" />
     <Content Include="server\views\includes\scripts.jade" />
     <Content Include="server\views\index.jade" />
-    <Content Include="server\views\partials\featured-course.jade" />
-    <Content Include="server\views\partials\home.jade" />
-    <Content Include="server\views\partials\login.jade" />
-    <Content Include="server\views\partials\new-course.jade" />
+    <Content Include="public\app\home\featured-course.jade" />
+    <Content Include="public\app\home\home.jade" />
+    <Content Include="public\app\account\login.jade" />
+    <Content Include="public\app\home\new-course.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="node_modules\" />
@@ -7485,7 +7486,7 @@
     <Folder Include="public\lib\toastr\" />
     <Folder Include="server\views\" />
     <Folder Include="server\views\includes\" />
-    <Folder Include="server\views\partials\" />
+    <Folder Include="public\app\account\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

@@ -42,7 +42,7 @@ db.on('error', function (err) {
 });
 
 app.get('/partials/:partialArea/:partialName', function (req, res) {
-    res.render('partials/' + req.params.partialArea + '/' + req.params.partialName);
+    res.render('../../public/app/' + req.params.partialArea + '/' + req.params.partialName);
 });
 
 app.get('*', function (req, res) {
