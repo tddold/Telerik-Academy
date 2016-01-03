@@ -13,8 +13,14 @@
 debugger;
 
 app.set('view engine', 'jade');
-app.set('view', __dirname + '/server/view');
-
+app.set('views', __dirname + '/server/views');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(stylus.middleware({
+    src: __dirname + '/public',
+    compile: function (str, path) {
+        return stylus(str).set('filename', path);
+    }
+}));
 
 app.use(express.static(__dirname + '/public'));
 
