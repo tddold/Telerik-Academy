@@ -181,3 +181,4 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+/Web Design and UI/Test Node/MEAN Stack SA/MEAN Stack SA/.ntvs_analysis.dat
