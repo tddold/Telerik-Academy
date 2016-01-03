@@ -10,7 +10,7 @@
     Message,
     db;
 
-debugger;
+
 
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/server/views');

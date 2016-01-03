@@ -3,7 +3,7 @@
     
     function HomeController() {
         var vm = this;
-        debugger;
+  
         vm.hello = 'Hello Angular!';
     };
     
