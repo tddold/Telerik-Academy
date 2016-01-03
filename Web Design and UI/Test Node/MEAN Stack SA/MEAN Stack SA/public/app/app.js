@@ -8,7 +8,7 @@
         
         $routeProvider
             .when('/', {
-            templateUrl: '/partials/home',
+            templateUrl: '/partials/main/home',
             controller: 'HomeController',
             controllerAs: CONTROLLER_VEW_MODEL_NAME
         })
