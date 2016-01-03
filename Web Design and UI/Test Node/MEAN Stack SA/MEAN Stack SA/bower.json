@@ -1,0 +1,19 @@
+{
+  "name": "MEAN-Stack-SA",
+  "description": "MEAN Stack SA",
+  "main": "server.js",
+  "authors": [
+    "tdd"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tddold/Telerik-Academy",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/lib",
+    "test",
+    "tests"
+  ]
+}
