@@ -6,7 +6,7 @@
     port = process.env.PORT || 3030,
     app = express(),
     messageSchema,
-    messageFormDataBase,
+    messageFromDataBase,
     Message,
     db;
 
@@ -17,3 +17,17 @@ app.set('view', __dirname + '/server/view');
 
 
 app.use(express.static(__dirname + '/public'));
+
+
+
+app.get('/partials/:partialName', function (req, res) {
+    res.render('partials/' + req.params.partialName);
+});
+
+app.get('*', function (req, res) {
+    res.render('index', { message: messageFromDataBase });
+});
+
+app.listen(port);
+console.log('Server running on port: ' + port);
+console.log(env);
