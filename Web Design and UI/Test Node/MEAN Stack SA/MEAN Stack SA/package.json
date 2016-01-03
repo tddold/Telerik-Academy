@@ -8,6 +8,11 @@
     "email": ""
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "body-parser": "^1.14.2",
+    "bower": "^1.7.2",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "mongoose": "^4.3.4",
+    "stylus": "^0.53.0"
   }
 }
