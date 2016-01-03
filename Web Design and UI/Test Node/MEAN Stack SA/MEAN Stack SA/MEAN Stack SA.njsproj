@@ -31,6 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="server.js" />
+    <Content Include=".bowerrc" />
+    <Content Include=".gitignore" />
+    <Content Include=".ntvs_analysis.dat" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
