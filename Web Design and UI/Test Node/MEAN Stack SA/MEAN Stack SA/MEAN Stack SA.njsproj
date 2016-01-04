@@ -3930,6 +3930,10 @@
     <Compile Include="public\lib\toastr\toastr.js" />
     <Compile Include="public\lib\toastr\toastr.min.js" />
     <Compile Include="server.js" />
+    <Compile Include="server\config\config.js" />
+    <Compile Include="server\config\express.js" />
+    <Compile Include="server\config\mongoose.js" />
+    <Compile Include="server\config\routes.js" />
     <Content Include=".bowerrc" />
     <Content Include=".gitignore" />
     <Content Include=".ntvs_analysis.dat" />
@@ -7484,6 +7488,7 @@
     <Folder Include="public\lib\jquery\src\traversing\var\" />
     <Folder Include="public\lib\jquery\src\var\" />
     <Folder Include="public\lib\toastr\" />
+    <Folder Include="server\config\" />
     <Folder Include="server\views\" />
     <Folder Include="server\views\includes\" />
     <Folder Include="public\app\account\" />
