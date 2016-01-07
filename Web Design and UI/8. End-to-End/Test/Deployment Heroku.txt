@@ -1,0 +1,34 @@
+Deployment
+===============
+1. Register in Heroku, and install Heroku Toolbelt
+2. Use --version to find node and npm versions, and them to engines as object in package.json (use x for last number)
+node version - v4.2.4
+npm version - 2.14.12
+
+3. Add Procfile and "web: node server.js"
+4. Change port to process.env.PORT || 3030
+5. Go to MongoLab and register account, create new database, create user, and copy the connection string with user information
+MongoDb in mongodb: https://mongolab.com/databases/means
+acc:castle
+pass:???
+--------------------
+Conection String:  mongodb://<dbuser>:<dbpassword>@ds037015.mongolab.com:37015/means
+user: admin
+pass: means1234
+
+
+6. Add environmert and diff conn string
+7. Set NODE_ENV to development
+8. Commit, 
+	heroku login,
+	heroku create,
+	heroku config:set NODE_ENV=production,
+	git push heroku master,
+	heroku ps:scale=1,
+	heroku open,
+	heroku logs
+9. If problem - 
+	heroku keys:add,
+	ssh-keygen (if you do not have one),
+	heroku keys,
+	heroku keys:clear (or copy keys to Git directory)
