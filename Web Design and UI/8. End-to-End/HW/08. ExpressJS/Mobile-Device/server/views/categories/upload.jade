@@ -1,0 +1,9 @@
+extends ../shared/layout
+
+block content
+    div(id="title" class='container')
+        h1 Upload file
+        form#uploadForm(ref='uploadForm' method='post' encType='multipart/form-data')
+            input.form-control(type='file' name='sampleFile')
+            br
+            input.btn.btn-md.btn-primary(type='submit' value='Upload!')

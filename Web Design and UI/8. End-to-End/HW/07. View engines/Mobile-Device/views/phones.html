@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to our site!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header"><a href="/" class="navbar-brand">Jade HW</a></div>
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/phones">Phones</a></li>
+          <li><a href="/tablets">Tablets</a></li>
+          <li><a href="/wearables">Wearables</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      .container.text-center
+          .row
+              hr
+              .col-md-12
+                  .panel.panel-primary
+                      .panel-heading
+                          h3.panel-title= title
+                  hr
+                  table.table-striped.table-hover
+                          tr
+                              each phone in data
+                                  td
+                                      .jumbotron
+                                          .cell= phone.manufacturer
+                                          .cell= phone.model
+                                          .cell= phone.display
+                                          .cell= phone.capacity
+                                          .cell= phone.price
+                                          hr
+                                          img.img-responsive(style="height: 90px" src=phone.src)
+                                          a(href=phone.src) Link
+                                          hr
+                                          .cell.btn.btn-primary BUY
+    </div>
+    <hr>
+    <footer>
+      <p class="text-center">Copyright &copy;</p>
+      <p class="text-center">Telerik Academy 2015/2016r</p>
+    </footer>
+  </body>
+</html>

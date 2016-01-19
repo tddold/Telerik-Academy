@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Calculator(ASP.NET Web F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Calculator (ASP.NET MVC)", "02.Calculator (ASP.NET MVC)\02.Calculator (ASP.NET MVC).csproj", "{A2B85D4A-9940-4AC2-A483-B70B559F02DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ImageHandler", "03.ImageHandler\03.ImageHandler.csproj", "{DE618583-4314-4079-8464-C9B329E8ED02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A2B85D4A-9940-4AC2-A483-B70B559F02DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2B85D4A-9940-4AC2-A483-B70B559F02DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2B85D4A-9940-4AC2-A483-B70B559F02DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE618583-4314-4079-8464-C9B329E8ED02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE618583-4314-4079-8464-C9B329E8ED02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE618583-4314-4079-8464-C9B329E8ED02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE618583-4314-4079-8464-C9B329E8ED02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

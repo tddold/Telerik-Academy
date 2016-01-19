@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    div(class='container')
+        .container.text-center
+            .row
+                hr
+                .col-md-12
+                    .panel.panel-primary
+                        .panel-heading
+                            h3.panel-title= title
+                    hr
+                    table.table-striped.table-hover.col-lg-12
+                        tr
+                            each tab in data
+                                td
+                                    .jumbotron
+                                        .cell= tab.manufacturer
+                                        .cell= tab.model
+                                        .cell= tab.display
+                                        .cell= tab.capacity
+                                        .cell= tab.price
+                                        hr
+                                        img.img-responsive(style="height: 150px" src=tab.src)
+                                        hr
+                                        a(href=tab.src)
+                                            strong Link
+                                        hr
+                                        .cell.btn.btn-primary BUY
+
+
+
+

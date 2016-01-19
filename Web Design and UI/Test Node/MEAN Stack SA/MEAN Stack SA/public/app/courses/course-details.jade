@@ -1,0 +1,5 @@
+.container
+    h2 {{ vm.course.title }}
+    p {{ vm.course.published | date }}
+    ul
+        li(ng-repeat="tag in vm.courses.tags") {{ tag}}

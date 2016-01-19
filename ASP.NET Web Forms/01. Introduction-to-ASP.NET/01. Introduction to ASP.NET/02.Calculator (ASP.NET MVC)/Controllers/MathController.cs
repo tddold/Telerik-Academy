@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-
-namespace _02.Calculator__ASP.NET_MVC_.Controllers
+﻿namespace _02.Calculator__ASP.NET_MVC_.Controllers
 {
-    public class MathController : ApiController
+    using System.Linq;
+    using System.Web.Http;
+    using System.Web.Mvc;
+
+    public class MathController : Controller
     {
-        public ActionResult Index(double? firstNumber, double? secondNumber)
+        public ActionResult Calculator(double? firstNumber, double? secondNumber)
         {
             if (firstNumber.HasValue && secondNumber.HasValue)
             {
@@ -23,7 +20,7 @@ namespace _02.Calculator__ASP.NET_MVC_.Controllers
             }
 
             this.ViewBag.Sum = this.ViewBag.firstNumber = this.ViewBag.secondNumber = 0;
-            return this.View();
+            return View();
         }
     }
 }

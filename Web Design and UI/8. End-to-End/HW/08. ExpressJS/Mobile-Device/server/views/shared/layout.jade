@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+    head
+        title
+            | Welcome to our site!
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    body
+        nav.navbar.navbar-inverse
+            .container-fluid
+                .navbar-header
+                    a.navbar-brand(href='/') View engine
+                ul.nav.navbar-nav
+                    each cat in [{path: '/', name: 'Home'},{path: '/phones', name: 'Phones'},{path: '/tablets', name: 'Tablets'},{path: '/wearables', name: 'Wearables'}]
+                        li
+                            a(href=cat.path)= cat.name
+                ul.nav.navbar-nav.navbar-right
+                    if (currentUser)
+                        li
+                            a(href="/upload") File upload
+                        li
+                            a(href="/profile") #{currentUser.username}'s profile
+                        li
+                            a(href="/logout") Logout
+                    else
+                        li
+                            a(href="/register") Register
+                        li
+                            a(href="/login") Login
+        block content
+        hr
+        footer
+            p.text-center
+                | Copyright &copy;
+            p.text-center
+                | Telerik Academy 2015/2016r

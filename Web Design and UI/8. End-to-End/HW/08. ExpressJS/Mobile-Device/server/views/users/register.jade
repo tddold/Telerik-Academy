@@ -1,0 +1,18 @@
+extends ../shared/layout
+
+block content
+    .container
+        form(method="post")
+            label(for="username") Username
+            input(id="username" class="form-control" type="text" name="username" placeholder="Username")
+            br
+            label(for="password") Password
+            input(id="password" class="form-control" type="password" name="password" placeholder="Password")
+            br
+            label(for="confirm-password") Confirm Password
+            input(id="confirm-password" class="form-control" type="password" name="confirmPassword" placeholder="Confirm password")
+            br
+            label(for="age") Age
+            input(id="age" class="form-control" type="number" name="age" placeholder="Age")
+            br
+            input(type="submit" class="btn btn-lg" value="Register")

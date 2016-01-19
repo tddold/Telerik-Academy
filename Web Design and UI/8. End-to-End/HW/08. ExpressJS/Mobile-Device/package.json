@@ -1,0 +1,30 @@
+{
+  "name": "express-hw",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "connect-busboy": "0.0.2",
+    "cookie-parser": "^1.4.0",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "express-session": "^1.12.1",
+    "fs": "0.0.2",
+    "jade": "~1.11.0",
+    "mongoose": "^4.3.4",
+    "morgan": "~1.6.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "~2.3.0",
+    "stylus": "0.42.3"
+  }
+}

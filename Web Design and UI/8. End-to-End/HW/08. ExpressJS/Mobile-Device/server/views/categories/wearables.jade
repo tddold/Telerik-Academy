@@ -1,0 +1,34 @@
+extends ../shared/layout
+
+block content
+    div(class='container')
+        .container.text-center
+            .row
+                hr
+                .col-md-12
+                    .panel.panel-primary
+                        .panel-heading
+                            h3.panel-title= title
+                    hr
+                    table.table-striped.table-hover.col-lg-12
+                        tr
+                            each watch in data
+                                td.center
+                                    .jumbotron
+
+                                        .cell= watch.manufacturer
+                                        .cell= watch.model
+                                        .cell= watch.display
+                                        .cell= watch.capacity
+                                        .cell= watch.price
+                                        hr
+                                        img.img-responsive(style="height: 80px" src=watch.src)
+                                        hr
+                                        a(href=watch.src)
+                                             strong Link
+                                        hr
+                                        .cell.btn.btn-primary BUY
+
+
+
+

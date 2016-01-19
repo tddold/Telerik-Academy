@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  head
+    title Grunt homework
+    link(rel='stylesheet', href='styles/styles.css')
+  body
+    .root
+      #gallery
+        .gallery-list
+          each img in [1,2,3,4]
+              img(src='images/'+img+'.jpg' width='150px' height='170px')
+
+      div
+        img(id="current" src="images/1.jpg" width='150px' height='170px')
+      button(type="button" onclick="displayPreviousImage()") Previous
+      button(type="button" onclick="displayNextImage()") Next
+
+    script(src='scripts/scripts.js')

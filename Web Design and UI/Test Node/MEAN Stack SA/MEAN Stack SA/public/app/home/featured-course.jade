@@ -1,3 +1,3 @@
 ﻿div(ng-repeat="course in vm.courses | filter: {featured: true}")
-    | {{ course.name }}
+    a(href="/courses/{{ course._id }}") {{ course.title }}
    

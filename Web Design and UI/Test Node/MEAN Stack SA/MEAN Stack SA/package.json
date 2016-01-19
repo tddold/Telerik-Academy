@@ -7,6 +7,9 @@
     "node": "4.2.x",
     "npm": "2.14.x"
   },
+  "scripts": {
+    "start": "nodemon server"
+  },
   "author": {
     "name": "tdd",
     "email": ""
@@ -17,6 +20,11 @@
     "cookie-parser": "^1.4.0",
     "express": "^4.13.3",
     "express-session": "^1.12.1",
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-plumber": "^1.0.1",
+    "gulp-stylus": "^2.2.0",
     "jade": "^1.11.0",
     "mongoose": "^4.3.4",
     "passport": "^0.3.2",

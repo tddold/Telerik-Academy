@@ -1,0 +1,29 @@
+extends ../shared/layout
+
+block content
+   .container
+        .container.text-center
+            .row
+                hr
+                .col-md-12
+                    .panel.panel-primary
+                        .panel-heading
+                            h3.panel-title= title
+                    hr
+                    table.table-striped.table-hover.col-lg-12
+                            tr
+                                each phone in data
+                                    td
+                                        .jumbotron
+                                            .cell= phone.manufacturer
+                                            .cell= phone.model
+                                            .cell= phone.display
+                                            .cell= phone.capacity
+                                            .cell= phone.price
+                                            hr
+                                            img.img-responsive(style="height: 90px" src=phone.src)
+                                            hr
+                                            a(href=phone.src)
+                                                strong Link
+                                            hr
+                                            .cell.btn.btn-primary BUY
