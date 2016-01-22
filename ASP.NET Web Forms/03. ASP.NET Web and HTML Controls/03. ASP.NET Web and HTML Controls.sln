@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Registration form", "03.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Web Calculator", "05.Web Calculator\05.Web Calculator.csproj", "{8540C122-7486-46F4-BB2D-532BD5C1015C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Tic-tac-toe", "04.Tic-tac-toe\04.Tic-tac-toe.csproj", "{45808BBE-4D8E-4B5A-B1A0-66A15F9F6CCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8540C122-7486-46F4-BB2D-532BD5C1015C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8540C122-7486-46F4-BB2D-532BD5C1015C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8540C122-7486-46F4-BB2D-532BD5C1015C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45808BBE-4D8E-4B5A-B1A0-66A15F9F6CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45808BBE-4D8E-4B5A-B1A0-66A15F9F6CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45808BBE-4D8E-4B5A-B1A0-66A15F9F6CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45808BBE-4D8E-4B5A-B1A0-66A15F9F6CCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
