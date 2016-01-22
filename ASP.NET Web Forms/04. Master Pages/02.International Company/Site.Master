@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_02.International_Company.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>International Company</title>
+    <link href="Styles/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <asp:ContentPlaceHolder ID="HeaderContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+        <div>International business company</div>
+    </header>
+
+    <form id="mainForm" runat="server">
+        <asp:ContentPlaceHolder ID="PageContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+    <footer>Stores &copy; Global 2016</footer>
+</body>
+</html>
