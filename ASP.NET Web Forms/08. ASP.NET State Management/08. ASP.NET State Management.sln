@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BrowserAndIP", "01.BrowserAndIP\01.BrowserAndIP.csproj", "{CAE39C68-3256-4C55-9E8E-76BD2E13429F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Session", "02.Session\02.Session.csproj", "{35A8AA34-2832-40EC-9DB8-D1E9EDA1FE6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Cookies", "03.Cookies\03.Cookies.csproj", "{176B7A33-E60A-45C0-9E5B-C5F3BDA54882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.ViewState", "04.ViewState\04.ViewState.csproj", "{7E73FE73-8054-4286-844B-2C8A9CC9DCA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.WebCounter", "05.WebCounter\05.WebCounter.csproj", "{36E80E5D-CEEE-491B-92AA-97E328C7B589}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.WebCounterDB", "05.WebCounterDB\05.WebCounterDB.csproj", "{9AFBBFF8-A47F-4C1C-AEE6-406B1B711493}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. TicTacToe.Web", "06. TicTacToe.Web\06. TicTacToe.Web.csproj", "{8E661DA2-1DAA-40B1-B907-4A9DAB5C0A73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAE39C68-3256-4C55-9E8E-76BD2E13429F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE39C68-3256-4C55-9E8E-76BD2E13429F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE39C68-3256-4C55-9E8E-76BD2E13429F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE39C68-3256-4C55-9E8E-76BD2E13429F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A8AA34-2832-40EC-9DB8-D1E9EDA1FE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A8AA34-2832-40EC-9DB8-D1E9EDA1FE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A8AA34-2832-40EC-9DB8-D1E9EDA1FE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A8AA34-2832-40EC-9DB8-D1E9EDA1FE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{176B7A33-E60A-45C0-9E5B-C5F3BDA54882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{176B7A33-E60A-45C0-9E5B-C5F3BDA54882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{176B7A33-E60A-45C0-9E5B-C5F3BDA54882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{176B7A33-E60A-45C0-9E5B-C5F3BDA54882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E73FE73-8054-4286-844B-2C8A9CC9DCA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E73FE73-8054-4286-844B-2C8A9CC9DCA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E73FE73-8054-4286-844B-2C8A9CC9DCA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E73FE73-8054-4286-844B-2C8A9CC9DCA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36E80E5D-CEEE-491B-92AA-97E328C7B589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36E80E5D-CEEE-491B-92AA-97E328C7B589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36E80E5D-CEEE-491B-92AA-97E328C7B589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36E80E5D-CEEE-491B-92AA-97E328C7B589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AFBBFF8-A47F-4C1C-AEE6-406B1B711493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AFBBFF8-A47F-4C1C-AEE6-406B1B711493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AFBBFF8-A47F-4C1C-AEE6-406B1B711493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AFBBFF8-A47F-4C1C-AEE6-406B1B711493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E661DA2-1DAA-40B1-B907-4A9DAB5C0A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E661DA2-1DAA-40B1-B907-4A9DAB5C0A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E661DA2-1DAA-40B1-B907-4A9DAB5C0A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E661DA2-1DAA-40B1-B907-4A9DAB5C0A73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
