@@ -30,14 +30,14 @@
 
 1. [Defining Classes - Part 1](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/01.%20Defining%20Classes%20-%201) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/01.%20Defining%20Classes%20-%20Part%201)) - 10.03.2015
 2.  [Defining Classes - Part 2](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/02.%20Defining%20Classes%20-%202) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/02.%20Defining%20Classes%20-%20Part%202/README.md)) - 16.03.2015
-3.  [Ext-Methods-Deleg-Lamb-LINQ](https://github.com/tddold/Te/README.mdlerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/03.%20Ext-Methods-Deleg-Lamb-LINQ) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/03.%20Extension-Methods-Delegates-Lambda-LINQ/README.md)) - 18.03.2015
-4.  [OOP Principles - Part 1](https://github.com/tddold/Telerik-Aca/README.mddemy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/04.%20OOP%20Principles%20-%20Part%201) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/04.%20OOP%20Principles%20-%20Part%201/README.md)) - 18.03.2015
-5.  [OOP Principles - Part 2](https://github.com/tddold/Tel/README.mderik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/05.%20OOP%20Principles%20-%20Part%202) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/05.%20OOP%20Principles%20-%20Part%202/README.md)) - 18.03.2015
-6.  [Common Type System](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/02.%20Code%20Formatting) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/06.%20Common%20Type%20System/README.md)) - 18.03.2015
+3.  [Ext-Methods-Deleg-Lamb-LINQ](https://github.com/tddold/Te/README.mdlerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/03.%20Ext-Methods-Deleg-Lamb-LINQ) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/03.%20Extension-Methods-Delegates-Lambda-LINQ/homework)) - 18.03.2015
+4.  [OOP Principles - Part 1](https://github.com/tddold/Telerik-Aca/README.mddemy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/04.%20OOP%20Principles%20-%20Part%201) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/04.%20OOP-Principles-Part-1/homework)) - 18.03.2015
+5.  [OOP Principles - Part 2](https://github.com/tddold/Tel/README.mderik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/05.%20OOP%20Principles%20-%20Part%202) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/05.%20OOP%20Principles%20-%20Part%202/README.mdhttps://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/05.%20OOP-Principles-Part-2/homework)) - 18.03.2015
+6.  [Common Type System](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/02.%20Code%20Formatting) - ([conditions](https://github.com/TelerikAcademy/Object-Oriented-Programming/tree/master/06.%20Common-Type-System/homework)) - 18.03.2015
 
 ## High-Quality-Code
 
-1. [Code Formatting](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/01.%20Defining%20Classes%20-%201) - ([conditions](https://github.com/TelerikAcademy/High-Quality-Code/blob/master/02.%20Code%20Formatting/Homeworkmd)) - 15.10.2015
+1. [Code Formatting](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/01.%20Defining%20Classes%20-%201) - ([conditions](https://github.com/TelerikAcademy/High-Quality-Code/blob/master/02.%20Code%20Formatting/Homework)) - 15.10.2015
 
 # Web Design &UI 
 
