@@ -38,8 +38,8 @@
 ## High-Quality-Code
 
 1. [Code Formatting](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/4.%20High-Quality-Code/HW/03.%20Naming%20Identifiers/Naming%20Identifiers) - ([conditions](https://github.com/TelerikAcademy/High-Quality-Code/blob/master/02.%20Code%20Formatting/Homework)) - 05.07.2015
-2. [Naming Identifiers](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/01.%20Defining%20Classes%20-%201) - ([conditions]https://github.com/TelerikAcademy/High-Quality-Code/tree/master/03.%20Naming%20Identifiers/Homework)) - 05.07.2015
-3. [Code Documentation and Comments](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/01.%20Defining%20Classes%20-%201) - ([conditions]https://github.com/TelerikAcademy/High-Quality-Code/tree/master/03.%20Naming%20Identifiers/Homework)) - 05.07.2015
+2. [Naming Identifiers](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/01.%20Defining%20Classes%20-%201) - ([conditions](https://github.com/TelerikAcademy/High-Quality-Code/tree/master/03.%20Naming%20Identifiers/Homework)) - 05.07.2015
+3. [Code Documentation and Comments](https://github.com/tddold/Telerik-Academy/tree/master/Programming%20with%20C%23/3.%20C%23%20OOP/HW/01.%20Defining%20Classes%20-%201) - ([conditions](https://github.com/TelerikAcademy/High-Quality-Code/tree/master/03.%20Naming%20Identifiers/Homework)) - 05.07.2015
 
 # Web Design &UI 
 
