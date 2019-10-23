@@ -8,6 +8,6 @@
     "email": ""
   },
   "dependencies": {
-    "mongoose": "^4.3.4"
+    "mongoose": "^5.7.6"
   }
 }
