@@ -26,7 +26,7 @@
     "gulp-plumber": "^1.0.1",
     "gulp-stylus": "^2.2.0",
     "jade": "^1.11.0",
-    "mongoose": "^4.3.4",
+    "mongoose": "^5.7.12",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "stylus": "^0.53.0"
