@@ -23,7 +23,7 @@
   "dependencies": {
     "chai": "^3.2.0",
     "handlebars": "^3.0.3",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "jsdom": "^5.6.1",
     "mocha": "^2.2.5",
     "sinon": "^1.15.4",
